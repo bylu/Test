@@ -1,0 +1,104 @@
+/*common.css*/
+body{font-family:'Microsoft Yahei';background-color:#ededed;}
+ .payList,.showPayBtns,.showPayTips{width:100%;float: left}
+    .moneydiv{width:96%;float:left;margin:0% 2%; border:1px dashed #a1a1a1;}
+    .choosePayFangshi{margin-left:3%;width:97%;float: left;}
+    .choosePayFangshi ul li{
+    	width:30%;
+    	float: left;
+    	display: inline-block;
+    	padding:3% 0%;
+    	text-align: center;
+    	border-bottom:2px solid #45c018;
+    	color:#000;
+    	background-color: #fff;
+    }
+    .choosePayFangshi ul li.active{
+    	background-color: #45c018;
+    	color:#fff;
+    }
+	.paylistshow{width:100%;float: left;}
+	.moneydiv li{
+    	float:left;
+    	position:relative;
+    	display:inline-block;
+    	width:25%;
+    	padding:4% 0%;
+    	margin:3% 0% 3% 5%;
+    	text-align:center;
+    	cursor:pointer;
+    	border:1.5px solid #a1a1a1;
+    	border-radius:0.2em;
+    	color:#000;
+    }
+    .moneydiv li:hover{background-color: #45c018;}
+    .moneydiv li.on{
+    	    border:1.5px solid #80d063;
+    		background-image:url('../../images/wx_shop/moneychecked.png');
+    		background-size: 100% 100%;
+    		background-repeat: no-repeat;
+    		color:#45c018;
+    	}
+    .cardmoneydiv{
+    	width:96%;float:left;margin:0% 2%; border:1px dashed #a1a1a1;
+    }
+	.cardmoneydiv li{
+		float:left;
+    	position:relative;
+    	display:inline-block;
+    	width:46%;
+    	/*height:15%;*/
+		padding:5% 0%;
+    	margin:3% 2% 2% 2%;
+    	cursor:pointer;
+    	background: url('../../images/wx_shop/normalYueka.png') no-repeat;
+    	background-size: 100% 100%;
+	}
+	
+    .cardmoneydiv li .leftimg{width:36%;float: left;margin:0% 7%;}
+    .cardmoneydiv li .goodinfo{width:48%;float: left;margin:0% 1%;}
+    .cardmoneydiv li label{width:100%; margin:0% 0% 9% 0%;float: left;font-size:15px;font-weight: bold;}
+	.cardmoneydiv li span{width:100%;float: left;font-size:15px}
+	.cardmoneydiv li.click{
+		background: url('../../images/wx_shop/clickYueka.png') no-repeat;
+		background-size: 100% 100%;
+		color:#45c018;
+	}
+    .tips{text-align:center;}
+    .errordiv{width:100%;float:left;text-align:center;margin:1% 0%;}
+    .errorgameid{color:#E64340;}
+    .showdiscount{position:absolute;top:0;left:0;width:40%;}
+    img{width:100%;}
+    .weui_cells{margin-top:0.5em;background: transparent;}
+    .weui_cell{width:98%;margin:0 1%;}
+    .weui_cells:before{width:98%;margin:0 1%;}
+
+    .weui_cell_bd label{color:#E64340;}
+    .weui_cells_form .weui_cell_hd{padding-right:2.3em;}
+    .luckbean{width:100%;float: left;text-align: center;margin:4% 0% 1% 0%;}
+    .luckBeanNum{color:#ff0000;font-size:1.1rem;padding:0% 1%;}
+    .luckbean p{width:98%;margin:0 1%;font-size: 14px;}
+    /*
+    .btnBank{
+    		width:48%;
+    		margin:0% 1%;
+    		float: left;
+    		display: inline-block;
+    		background: url('../../images/wx_shop/btnBankNormal.png') no-repeat;
+    		background-size: contain;
+    		padding:10% 0%;
+    	}
+    .btnBank:hover{background: url('../../images/wx_shop/btnBankXuanZhong.png') no-repeat;}
+    .btnZFB{
+    	width:48%;
+		margin:0% 1%;
+		float: left;
+		display: inline-block;
+		background: url('../../images/wx_shop/btnZFBNormal.png') no-repeat;
+		background-size: contain;
+		padding:10% 0%;
+    }
+    .btnZFB:hover{background: url('../../images/wx_shop/btnZFBXuanZhong.png') no-repeat;}
+    */
+   .btnOtherPay{width:48%;margin:0% 1%;float: left;display: inline-block;}
+  

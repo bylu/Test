@@ -1,0 +1,31 @@
+/* 通用图片列表_普通式 */ 
+.picList{list-style:none;}
+.picList li{ width:250px; } 
+.picList .pic{ text-align:center; line-height:0px;  } 
+.picList .pic img{width:190px; height:127px;} 
+.picList .pic a:hover img{ border-color:#f00;  } 
+.picList .title{ line-height:24px;width:100%;text-align: center;} 
+/* 多个左滚动 - 公用类 */ 
+.leftLoop{ overflow:hidden; position:relative; margin-top:15px; height:190px; width:816px;margin-left:20px;} 
+.leftLoop .prev{
+ width: 10px;
+float: right;
+margin-right: 5px;
+background-image: url(../images/right_jt.png);
+background-repeat: no-repeat;
+background-position: 0% 50%;
+height: 110px;
+}
+.leftLoop  .next{ 
+    width: 25px;
+float: left;
+margin-left: 5px;
+margin-right: 4px;
+background-image: url(../images/left_jt.png);
+background-repeat: no-repeat;
+background-position: 0% 50%;
+height: 110px;
+}
+.leftLoop .bd{height: 130px;}
+.leftLoop .bd ul{ overflow:hidden; zoom:1; } 
+.leftLoop .bd ul li{ text-align:center;width:250px;float:left;display:inline;height:190px; } 

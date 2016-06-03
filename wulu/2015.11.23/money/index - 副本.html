@@ -1,0 +1,510 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>财富榜-789棋牌游戏中心</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<meta name="renderer" content="webkit">
+<link type="text/css" href="css/index.css" rel="stylesheet" />
+<link type="text/css" href="css/idealog.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="lktopnav">
+	<div class="nav_zt">   
+		<div class="nav_left">   
+			<a href="http://www.789game.com" title="789游戏中心" target="_blank" class="nav_logo">
+			    <img src="images/logo-1.png" style="margin-top:5px;" width="77" height="21">
+			</a>    	
+			<div class="classic">  
+				  
+			</div>    
+		</div>   
+		<div class="nav_right">  
+			<ul class="right_list"> 
+				<li style="display: block; cursor:pointer;" >
+					<span  class="userloginclick">
+					</span>
+				</li>  
+				<li>
+					<img src="images/regist.jpg" width="17" height="11"><a id="topnav_regist" href="http://www.789game.com/register.html" target="_blank" title="注册" rel="nofollow">注册</a>
+				</li>    
+				<li>
+					<img src="images/download.jpg" width="16" height="11"><a href="http://www.789game.com/down.aspx"  title=" 下载游戏">下载游戏</a>
+				</li>   
+				<li>
+					<img src="images/home.jpg" width="16" height="11"><a href="http://www.789game.com" target="_blank" title="返回官网" >返回官网</a>
+				</li>  
+				<li>
+					<img src="images/rmb.jpg" width="16" height="10"><a href="http://pay.789game.com/" target="_blank" title="充值" rel="nofollow">充值</a>
+				</li>   
+			</ul>  
+		</div>
+	</div>
+</div>
+	<div class="zt">
+		<div class="userLogin" id="loginUserInput" style="display:none;">
+			<h2>用户登录</h2>
+			<div class="showUserInfo">
+				<ul>
+					<li>
+						<div class="loginText" id="accountName">
+							<span class="textName"></span>
+							<input id="txtSsoAccount" type="text" value="" class="tip" placeholder="请输入用户名">
+						</div>
+				    </li>
+					<li>
+						<div class="loginText" id="accountSec">
+							<span class="textPsd"></span>
+							<input id="txtSsoPassword" type="password" value="" class="tip" placeholder="请输入密码">
+						</div>
+				    </li>
+					<li>
+						<div class="loginText">
+							<div class="loginBtn" id="loginButtons"></div>
+							<div class="loginTips">
+							还没有789账号？<a href="http://www.789game.com/register.html" target="_blank">立即注册！</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p id="showerrorMsg"></p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="userlogin">
+			<div class="userloginbtn"><a></a></div>
+			<div class="userloginedinfos" style="display:none;">
+				<ul>
+					<li style="width:180px;">
+						<span>游戏&nbsp;&nbsp;ID：</span><label id="userloginedaccount"></label><br/>
+						<span>昵&nbsp;&nbsp;&nbsp;&nbsp;称：</span><label id="usernickname"></label>
+						
+					</li>
+					<li style="width:170px;">
+						<span>财&nbsp;&nbsp;&nbsp;&nbsp;富：</span><label id="userloginedmoney"></label><span>幸运豆</span><br/>
+						<span>游戏时长：</span><label id="userloginedtime"></label><span>分钟</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="top1">
+			<div class="leftbar">
+				<a id="showUserInfoMsg1"></a>
+				<a id="showUserInfoMsg2"></a>
+			</div>
+			<div class="rightinfos">
+				<ul>
+					<li>
+						<label style="text-align:center;">名次</label>
+						<span style="text-align:center;">昵称</span>
+						<span style="text-align:center;">财富</span>
+						<span style="text-align:center;">奖励</span>
+					</li>
+				</ul>
+				<ul id="today"></ul>
+				<ul id="yesterday" style="display:none;"><ul>
+				
+			</div>
+			<div class="zhuyi">
+			    <label>注:排名每小时更新一次。当天排名结束后将根据排行榜排名与第二天上午10:00发放奖券奖励。</label>
+			</div>
+		</div>
+		<div class="top2">
+			<div class="left3">
+				<p>规则详情：</p>
+				<p>1、活动每天从0点开始，23:59分结束；通过玩家在除二人牛牛,二人麻将及中国象棋游戏以外的所有游戏中一天的赢累计和输累计之和即玩家游戏财富进行排名；</p>
+			    <p>2、排名计算详情：取玩家在游戏中一整天的所有赢取的分数和输掉的分数(取正值)进行累计相加 ，例如玩家小明在2月20日第一次输掉30万幸运豆，第二次赢取了40万幸运豆， 第三次赢取了40万幸运豆；那么小明当天的财富值为110万幸运豆；在当天的排名中排在第三名， 那么小明可获得800万奖券；</p>
+				<p>3、玩家每天所获相关奖励在第二天上午进行发放，可在游戏大厅左上角显示“奖券”处查看；</p>
+				<p>4、玩家所拥有的奖券可在礼品商城中进行兑换，兑换完成后，您可参与玩家风采活动，将免费获得50万幸运豆(注：玩家风采活动仅限实物兑换，并需要您与实物合影后发送给客服: )</p>
+				<p>5、玩家兑换实物礼品将在年后三个工作日内进行发放，届时我们将会联系玩家确认相关资料，请保持电话通畅。</p>
+				<p>温馨提示：因春节放假，兑换的实物年后进行发放。具体物品到达时间视物流公司具体情况而定。</p>
+				<p>如有任何疑问，欢迎您随时拨打客服电话：400-0371-814 或联系24小时在线客服<script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzkzODA2MTM1MF8xMDUzMDBfNDAwMDM3MTgxNF8"></script></p>
+				<p>本活动最终解释权归789游戏中心所有。</p>
+				</div>
+		</div>
+	</div>
+<div class="index_bg01"></div>                       
+<div class="index_bg02"></div>
+<div class="index_bg03"></div>
+<div class="index_bg04"></div>
+<div class="index_bg05"></div>
+<div class="index_bg06">
+	<div class="footer">
+		<div>
+			<p><script type="text/javascript" src="js/footer.js" ></script></p>
+			<p>健康游戏忠告：抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+		</div>
+	</div>
+</div>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery.iDialog.js"></script>
+	<script type="text/javascript">
+		//获取当前时间
+		Date.prototype.pattern=function(fmt) {         
+			var o = {         
+			"M+" : this.getMonth()+1, //月份         
+			"d+" : this.getDate(), //日         
+			"h+" : this.getHours()%12 == 0 ? 12 : this.getHours()%12, //小时         
+			"H+" : this.getHours(), //小时         
+			"m+" : this.getMinutes(), //分         
+			"s+" : this.getSeconds(), //秒         
+			"q+" : Math.floor((this.getMonth()+3)/3), //季度         
+			"S" : this.getMilliseconds() //毫秒         
+			};         
+			var week = {         
+			"0" : "/u65e5",         
+			"1" : "/u4e00",         
+			"2" : "/u4e8c",         
+			"3" : "/u4e09",         
+			"4" : "/u56db",         
+			"5" : "/u4e94",         
+			"6" : "/u516d"        
+			};         
+			if(/(y+)/.test(fmt)){         
+				fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));         
+			}         
+			if(/(E+)/.test(fmt)){         
+				fmt=fmt.replace(RegExp.$1, ((RegExp.$1.length>1) ? (RegExp.$1.length>2 ? "/u661f/u671f" : "/u5468") : "")+week[this.getDay()+""]);         
+			}         
+			for(var k in o){         
+				if(new RegExp("("+ k +")").test(fmt)){         
+					fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));         
+				}         
+			}         
+			return fmt;         
+		}     
+		var date = new Date();      
+		var localTime=date.pattern("yyyy-MM-dd HH:mm:ss");
+	
+		//登录的判断
+		function checkInput() {
+			if (document.getElementById("txtSsoAccount").value == "") {
+				$("#showerrorMsg").html("请输入您的用户名");
+				document.getElementById("txtSsoAccount").focus();
+				return false;
+			}
+			if (document.getElementById("txtSsoPassword").value == "") {
+				$("#showerrorMsg").html("请输入您的密码");
+				document.getElementById("txtSsoPassword").focus();
+				return false;
+			}
+			return true;
+		}
+		
+		function changeScore(score){
+			return Math.floor(score/10000)+"万";
+		}
+		
+		
+		function  givePeice(n){
+			var msg='';
+			switch(n){
+				case 0:
+				msg='获得1000万奖券';
+				break;
+				case 1:
+				msg='获得900万奖券';
+				break;
+				case 2:
+				msg='获得800万奖券';
+				break;
+				case 3:
+				msg='获得660万奖券';
+				break;
+				case 4:
+				msg='获得520万奖券';
+				break;
+				case 5:
+				msg='获得350万奖券';
+				break;
+				case 6:
+				msg='获得200万奖券';
+				break;
+				case 7:
+				msg='获得100万奖券';
+				break;
+				case 8:
+				msg='获得80万奖券';
+				break;			
+				case 9:
+				msg='获得60万奖券';
+				break;			
+			}
+		return msg;
+			
+		}
+		
+		function changeNum(num){
+		var msg='';
+		switch(num){
+			case 0:
+			msg='第一名';
+			break;
+			case 1:
+			msg='第二名';
+			break;
+			case 2:
+			msg='第三名';
+			break;
+			case 3:
+			msg='第四名';
+			break;
+			case 4:
+			msg='第五名';
+			break;
+			case 5:
+			msg='第六名';
+			break;
+			case 6:
+			msg='第七名';
+			break;
+			case 7:
+			msg='第八名';
+			break;
+			case 8:
+			msg='第九名';
+			break;			
+			case 9:
+			msg='第十名';
+			break;				
+		}
+	return msg;
+	}
+	
+		//获取url参数
+        function GetRequest() {
+            var url = location.search; //获取url中"?"符后的字串
+            var theRequest = new Object();
+            if (url.indexOf("?") != -1) {
+                var str = url.substr(1);
+                strs = str.split("&");
+                for (var i = 0; i < strs.length; i++) {
+                    theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+                }
+            }
+            return theRequest;
+        }
+
+		
+        $(document).ready(function(){
+	        $("#txtSsoAccount").blur(function(){$("#showerrorMsg").html("");});
+			$("#txtSsoPassword").blur(function(){$("#showerrorMsg").html("");});
+			//点击顶部登录按钮时弹出登录框
+			$(".userloginbtn").click(function(){
+				if(localTime >'2015-02-11 23:59:59' && localTime <'2015-02-25 23:59:59' ){
+					iDialog({
+					id:"login",
+					title:'用户登录',
+					padding: '0px 0px 0px 0px',
+					lock:true,
+					fixed:true,
+					width:380,
+					height:320,
+					content:document.getElementById('loginUserInput')
+					});	
+				}else{
+				  alert("活动还没开始");
+				}
+			});
+			/*排名的切换*/
+			$("#showUserInfoMsg1").click(function(){
+				$("#today").css("display","block");
+				$("#yesterday").css("display","none");
+				$(this).css("background","url(images/btn_jrpm02.png) no-repeat");
+				$("#showUserInfoMsg2").css("background","url(images/btn_zrpm01.png) no-repeat");
+			});
+			$("#showUserInfoMsg2").click(function(){
+				$("#today").css("display","none");
+				$("#yesterday").css("display","block");
+				$(this).css("background","url(images/btn_zrpm02.png) no-repeat");
+				$("#showUserInfoMsg1").css("background","url(images/btn_jrpm01.png) no-repeat");
+			});
+			
+			var showTodayMsg='';
+		    var showYesterdayMsg='';
+			/*今天的数据*/
+			$.ajax({
+			   async:false,
+			   url: 'http://api.789game.com/index.php/Api/Newyearact/getTodayTreasureRank.php',
+			   type: "GET",
+			   dataType: 'jsonp',
+			   jsonp: 'jsoncallback',
+			   data:{},
+			   success: function (json) {
+			   if(json!=null && json!='' && json.length>0){
+				for(var i=0;i<json.length;i++){
+				showTodayMsg+="<li><label>"+changeNum(i)+"</label><span style=\"padding-left: 0px;\">"+json[i]['nickname']+"</span><span>累计"+changeScore(json[i]['score'])+"幸运豆</span><span>"+givePeice(i)+"</span></li>"
+					}
+				}
+				$("#today").html(showTodayMsg);
+			   },
+			   error: function(xhr){
+			   }
+			});	
+			
+			/*昨天的数据*/
+			$.ajax({
+			   async:false,
+			   url: 'http://api.789game.com/index.php/Api/Newyearact/getYesterdayTreasureRank.php',
+			   type: "GET",
+			   dataType: 'jsonp',
+			   jsonp: 'jsoncallback',
+			   data:{},
+			   success: function (json) {
+			   if(json!=null && json!='' && json.length>0){
+				for(var i=0;i<json.length;i++){
+				showYesterdayMsg+="<li><label>"+changeNum(i)+"</label><span style=\"padding-left: 0px;\">"+json[i]['nickname']+"</span><span>累计"+changeScore(json[i]['score'])+"幸运豆</span><span>"+givePeice(i)+"</span></li>"
+					}
+				}
+				$("#yesterday").html(showYesterdayMsg);
+			   },
+			   error: function(xhr){
+			   }
+			});	
+			
+			//页面加载的时候判断是否从大厅过来	
+			var Request = new Object();
+            Request = GetRequest();
+            var userID = Request['UserID'];
+			var userPwd=Request['PWD'];
+			$.ajax({
+					async:false,
+						url: 'http://api.789game.com/index.php/Api/Newyearact/getLoginUserDetail.php',
+						type: "GET",
+						dataType: 'jsonp',
+						jsonp: 'jsoncallback',
+						data:{},
+						success: function (json) {
+						if(json!="0"){
+								$("#usernickname").html(json.nickname);
+								$("#userloginedaccount").html(json.gameid);//游戏id
+								$("#userloginedtime").html(json.playtimecount); //游戏时长
+								$("#userloginedmoney").html(json.treasureinfo) //财富值
+								$(".userloginedinfos").css("display","block");
+								$(".userloginbtn").css("display","none");
+							}else{
+									if('undefined' !=typeof(userID) && 'undefined'!=typeof(userPwd) && userID !='' && userPwd !=''){
+										$.ajax({
+											async:false,
+												url: 'http://api.789game.com/index.php/Api/Newyearact/loginGame.php',
+												type: "GET",
+												dataType: 'jsonp',
+												jsonp: 'jsoncallback',
+												data:{'logincert':userID,'loginpwd':userPwd},
+											    success: function (json) {
+												if(json=="1"){
+													alert("你填写的登陆账号或者密码不正确!请重新填写!")
+												}else if(json=="2"){
+										        }else if(json==55){
+										        	alert("亲，活动还没开始！");
+										        }else{
+													$.ajax({
+														async:false,
+														url: 'http://api.789game.com/index.php/Api/Newyearact/getLoginUserDetail.php',
+														type: "GET",
+														dataType: 'jsonp',
+														jsonp: 'jsoncallback',
+														data:{},
+														success: function (json) {
+														if(json!="0"){
+															$("#usernickname").html(json.nickname);
+															$("#userloginedaccount").html(json.gameid);//游戏id
+															$("#userloginedtime").html(json.playtimecount); //游戏时长
+															$("#userloginedmoney").html(json.treasureinfo) //财富值
+															$(".userloginedinfos").css("display","block");
+															$(".userloginbtn").css("display","none");
+													         }else{
+														       //alert(json);
+														     }
+														   },
+														  error: function(xhr){
+														}
+													});	
+										        }
+									       },
+									     error: function(xhr){
+									}
+								});	
+							}						
+						}
+					},
+				error: function(xhr){
+				alert("请求出错,请检查相关度网络状况");
+				}
+			});
+		
+		$(document).keydown(function(e) {
+				var theEvent = window.event || e;
+				var code = theEvent.keyCode || theEvent.which;
+				if (code === 13) {
+					$("#loginButtons").click();
+					return false;
+				}
+			});
+		//登录按钮的事件
+			$("#loginButtons").click(function(){
+					if(checkInput()){
+						$.ajax({
+							async:false,
+							url: 'http://api.789game.com/index.php/Api/Newyearact/loginWeb.php',
+							type: "GET",
+							dataType: 'jsonp',
+							jsonp: 'jsoncallback',
+							data:{'logincert':$("#txtSsoAccount").val(),'loginpwd':$("#txtSsoPassword").val()},
+							success: function (json) {
+								if(json==55){
+								$.dialog.get['login'].hide();
+							    alert("亲，活动还没开始！");
+								}else{
+									if(json==0){
+									 $.ajax({
+										async:false,
+										url: 'http://api.789game.com/index.php/Api/Newyearact/getLoginUserDetail.php',
+										type: "GET",
+										dataType: 'jsonp',
+										jsonp: 'jsoncallback',
+										data:{},
+										success: function (json) {
+											if(json!="0"){
+												$("#usernickname").html(json.nickname);
+												$("#userloginedaccount").html(json.gameid);//游戏id
+												$("#userloginedtime").html(json.playtimecount); //游戏时长
+												$("#userloginedmoney").html(json.treasureinfo) //财富值
+												$(".userloginedinfos").css("display","block");
+												$(".userloginbtn").css("display","none");
+												$.dialog.get['login'].hide();
+											}else{
+											//alert(json);
+											}
+										},
+										error: function(xhr){
+										alert("请求出错,请检查相关度网络状况");
+										}
+									});
+									}else if(json==2){
+									  alert("请认真填写登录信息！");
+									}else if(json==1){
+										alert("用户名不存在");
+									}
+								}
+							},
+							error: function(xhr){
+							alert("请求出错,请检查相关度网络状况");
+							}
+						});	
+					}else{
+						if($("#txtSsoAccount").val() == ""){
+							$("#showerrorMsg").html("请输入您的用户名");
+						}else if($("#txtSsoPassword").val()==""){
+							$("#showerrorMsg").html("请输入您的密码");
+						}else if($("#txtSsoCode").val() == ""){
+							$("#showerrorMsg").html("请输入验证码");
+						}
+					}
+				});
+		});
+	</script>
+</body>
+</html>

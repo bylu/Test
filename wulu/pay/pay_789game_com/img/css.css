@@ -1,0 +1,47 @@
+.paySuc{
+width:377px;
+height:253px;
+margin:0px auto;
+background:url(suc.png) no-repeat;
+}
+.payFalse{
+width:377px;
+height:253px;
+margin:0px auto;
+background:url(false.png) no-repeat;
+}
+.showPayInfo{
+width:275px;
+float:left;
+margin-top:80px;
+height:125px;
+margin-left:100px;
+display:inline;
+}
+.showPayFalseInfo{
+width:377px;
+float:left;
+margin-top:85px;
+height:125px;
+}
+.showPayInfo p{
+width:100%;
+float:left;
+font-size:16px;
+height:40px;
+line-height:40px;
+*height:40px;
+display:inline;
+}
+.showPayFalseInfo p{
+width:320px;
+font-size:16px;
+text-align:center;
+line-height:25px;
+height:25px;
+margin:0px auto;
+}
+.showPayInfo p span ,.showPayInfo p label ,.showPayFalseInfo span{
+float:left;
+display:inline;
+}

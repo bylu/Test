@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="alipayCode.aspx.cs" Inherits="Game.Web.alipayCode" %>

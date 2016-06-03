@@ -1,0 +1,515 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/> 
+    <link rel="stylesheet" href="css/wx_shop/weui.css"/>
+    <link rel="stylesheet" href="css/wx_shop/example.css"/>
+    <link rel="stylesheet" href="css/wx_shop/common.css"/>
+    <script src="js/wx_shop/zepto.min.js"></script>
+    <script src="js/wx_shop/example.js"></script>
+    <script src="js/wx_shop/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="js/wx_gift_bag/layer.m.js" type="text/javascript"></script>
+    <title>捕鱼微支付</title>
+    <body ontouchstart style="background:#ededed">
+    <script type="text/javascript">
+        // 设置 cookie
+        /*function setCookie(name, value)
+        {
+            // 获取当前时间-
+            var date = new Date();
+            var expireDays = 1;
+            // 将date设置为1天以后的时间
+            date.setTime(date.getTime() + expireDays * 24 * 3600 * 1000);
+            // 将cookie设置为1天后过期-
+            document.cookie = name + "=" + escape(value) + "; expire=" + date.toGMTString();
+        }
+        //调用微信JS api 支付
+        function jsApiCall(){
+            WeixinJSBridge.invoke(
+                'getBrandWCPayRequest',
+                        function(res){
+                    // WeixinJSBridge.log(res.err_msg);
+                    // alert(res.err_code+res.err_desc+res.err_msg);
+                    // alert(res.err_msg);
+                    if ( res.err_msg == "get_brand_wcpay_request:ok" ) {
+                        $('.pay_result_error_msg').html('恭喜您充值成功, 请前往游戏内查收!');
+                        var cookieVal = $('.cookie_val').html();
+                        var cookieValArr = cookieVal.split('.');
+                        var server = cookieValArr[0];
+                        var gameid = cookieValArr[1];
+                        if (server && gameid) {
+                            if ('A' == server) {
+                                server = 1;
+                            } else if ('B' == server) {
+                                server = 2;
+                            }
+                            setCookie('server_id', server);
+                            setCookie('game_id', gameid);
+                        }
+                    }
+                    if ( res.err_msg == "get_brand_wcpay_request:cancel" ) {
+                        $('.pay_result_error_msg').html('用户取消充值');
+                    }
+                    if ( res.err_msg == "get_brand_wcpay_request:fail" ) {
+                        $('.pay_result_error_msg').html('充值失败, 请联系客服');
+                    }
+                    $('.pay_result_error_confirm').html('继续充值');
+                }
+            );
+        }
+
+        function callpay(){
+            if (typeof WeixinJSBridge == "undefined"){
+                if( document.addEventListener ){
+                    document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+                }else if (document.attachEvent){
+                    document.attachEvent('WeixinJSBridgeReady', jsApiCall); 
+                    document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+                }
+            }else{
+                jsApiCall();
+            }
+        }*/
+    </script>
+
+
+    <div class="container js_container">
+        <div class="page prepare_pay">
+            <div class="bd">
+                <div class="weui_cells weui_cells_form">
+                    <div class="weui_cell weui_cell_select weui_select_before" style="background: #fff;">
+                        <div class="weui_cell_hd">
+                            <select class="weui_select" name="serverid" id="serverid">
+                                <option value="0">请选择</option>
+                                <option value="1"  >A.</option>
+                                <option value="2"  >B.</option>
+                            </select>
+                        </div>
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <input class="weui_input" type="text" name="gameid" id="gameid" value="" placeholder="请输入游戏ID">
+                        </div>
+                    </div>
+                    <div class="errordiv">
+                        <label class="errorgameid"></label>
+                    </div>
+                    <!--选择支付方式begin-->
+                    <div class="choosePayFangshi">
+                        <ul>
+                            <li class="active">购买幸运豆</li>
+                            <li>购买道具</li>
+                        </ul>
+                    </div>
+                    <!--充值卡支付-->
+                    <div class="payList">
+                        <!--微信支付-->
+                        <div class="paylistshow" style="display:none;" >
+                            <div class="weui_cell">
+                                <ul class="moneydiv">
+                                    <li class="on" real_pay="5" proid="1" luckBean="50000" paymoney="5">5元
+                                    </li>
+                                    <li class="" real_pay="9.9" proid="2" luckBean="100000" paymoney="10">
+                                        <div class="showdiscount"><img src="images/wx_shop/99.png" /></div>10元
+                                    </li>
+                                    <li class="" real_pay="19.7" proid="3" luckBean="220000" paymoney="20">
+                                        <div class="showdiscount"><img src="images/wx_shop/985.png" /></div>20元
+                                    </li>
+                                    <li class="" real_pay="28.5" proid="4" luckBean="340000" paymoney="30">
+                                        <div class="showdiscount"><img src="images/wx_shop/98.png" /></div>30元
+                                    </li>
+                                    <li class="" real_pay="49" proid="5" luckBean="600000" paymoney="50">
+                                        <div class="showdiscount"><img src="images/wx_shop/98.png" /></div>50元
+                                    </li>
+                                    <li class="" real_pay="97" proid="6" luckBean="1250000" paymoney="100">
+                                        <div class="showdiscount"><img src="images/wx_shop/97.png" /></div>100元
+                                    </li>
+                                    <li class="" real_pay="290" proid="7" luckBean="3900000" paymoney="300">
+                                        <div class="showdiscount"><img src="images/wx_shop/965.png" /></div>300元
+                                    </li>
+                                    <li class="" real_pay="480" proid="8" luckBean="6750000" paymoney="500">
+                                        <div class="showdiscount"><img src="images/wx_shop/96.png" /></div>500元
+                                    </li>
+                                    <li class="" real_pay="950" proid="9" luckBean="13800000" paymoney="1000">
+                                        <div class="showdiscount"><img src="images/wx_shop/95.png" /></div>  1000元
+                                    </li>                  
+                                </ul>
+                            </div>
+                            <div class="luckbean">
+                                可获得：<label class="luckBeanNum">50000</label>幸运豆
+                                <label class="userpay" style="display:none;">500</label>
+                                <label class="proid" style="display:none;">1</label>
+                            </div>
+                        </div>
+
+                        <!--游戏道具支付-->
+                        <div class="paylistshow" >
+                            <div class="weui_cell">
+                                <ul class="cardmoneydiv">
+                                    <li class="click">
+                                        <div class="leftimg">
+                                            <img src="images/wx_shop/good.png" />
+                                        </div>
+                                        <div class="goodinfo">
+                                            <label>超值月卡</label>
+                                            <span>￥30元</span>
+                                        </div>
+                                    </li>
+                                    <li class="">
+                                        <div class="leftimg">
+                                            <img src="images/wx_shop/good.png" />
+                                        </div>
+                                        <div class="goodinfo">
+                                            <label>超值月卡</label>
+                                            <span>￥30元</span>
+                                        </div>
+                                    </li> 
+                                    <li class="">
+                                        <div class="leftimg">
+                                            <img src="images/wx_shop/good.png" />
+                                        </div>
+                                        <div class="goodinfo">
+                                            <label>超值月卡</label>
+                                            <span>￥30元</span>
+                                        </div>
+                                    </li> 
+                                    <li class="">
+                                        <div class="leftimg">
+                                            <img src="images/wx_shop/good.png" />
+                                        </div>
+                                        <div class="goodinfo">
+                                            <label>超值月卡</label>
+                                            <span>￥30元</span>
+                                        </div>
+                                    </li>                 
+                                </ul>
+                            </div>
+                            <div class="luckbean">
+                               <p>请你购买成功后，在游戏背包中使用月卡，即可获得超值好礼。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--选择支付方式end-->
+            
+                    <!--充值按钮 begin-->
+                    <div class="showPayBtns">
+                        <div class="weui_btn_area">
+                            <div class="weui_btn weui_btn_primary" id="userPayClick">
+                                微信支付
+                            </div>
+                        </div>
+                        <div class="weui_btn_area">
+                            <a href="javascript:void(0);" class="btnOtherPay btnPayYihangka"><img src="images/wx_shop/btnBankNormal.png" /></a>
+                            <a href="javascript:void(0);" class="btnOtherPay btnPayZFB"><img src="images/wx_shop/btnZFBNormal.png" /></a>
+                        </div>
+                    </div>
+                    <!--充值按钮 end-->
+
+                    <!--充值提示  begin-->
+                    <div class="showPayTips">
+                        <div class="weui_cells_title">  
+                            *充值完成后无需联系客服，系统会在5~10分钟后，自动充值到您的游戏账户中。
+                        </div>
+                        <div class="weui_cells_title">*如果没有到账，请您及时联系客服。</div>
+                        <div class="weui_cells_title">
+                            *微信公众号：<label style="color:#0BB20C;">jiejiqianpaobuyu</label>
+                        </div>
+                        <div class="weui_cells_title">*7*24小时客服电话：
+                            <a style="color:#fa4b4b;text-decoration:underline;" href="tel:4000371814">400 0371 814</a>
+                        </div>
+                    </div>
+                    <!--充值提示  end-->
+                </div>
+            </div> 
+        </div>
+        <!--充值完的界面 显示  begin-->
+        <div class="page ready_pay" style="display: none">
+            <div class="bd">
+                <div class="weui_cells weui_cells_form">
+                    <div class="weui_cell">
+                        <div class="weui_cell_hd">游戏ID&nbsp;&nbsp;&nbsp;</div>
+                        <div class="weui_cell_bd">
+                            <label class="userPayAccount cookie_val"></label>
+                        </div>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_hd">昵称&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <div class="weui_cell_bd">
+                            <label class="userPayNickName"></label>
+                        </div>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_hd">充值金额</div>
+                        <div class="weui_cell_bd">
+                            <label class="userPayMoney">5元</label>
+                        </div>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_hd">可获得&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <div class="weui_cell_bd">
+                            <label class="userPayLuckBean">50000幸运豆</label>
+                        </div>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_hd">应付金额</div>
+                        <div class="weui_cell_bd">
+                            <label class="userAmountPayable">5元</label>
+                        </div>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_hd">已绑手机</div>
+                        <div class="weui_cell_bd">
+                            <label class="userBindPhone"></label>
+                        </div>
+                    </div>
+                </div>
+                <div style="width:100%;float:left;margin:3% 0%;">
+                    <div class="weui_cells_title" style="color:#ff0000;">
+                        *请仔细确认充值信息，支付完成后不可退还
+                    </div>
+                </div>
+                <div class="weui_btn_area">
+                    <a href="javascript:void(0);" class="weui_btn weui_btn_primary" id="showDialog2">确认信息</a>
+                    <!--BEGIN dialog2-->
+                    <div class="weui_dialog_alert" id="dialog2" style="display: none;">
+                        <div class="weui_mask"></div>
+                        <div class="weui_dialog">
+                            <div class="weui_dialog_hd">
+                                <i class="weui_icon_cancel" style="position: absolute; right: 10px; top: 10px;"></i>
+                                <strong class="weui_dialog_title">确认付款信息</strong>
+                            </div>
+                            <div class="weui_dialog_bd">
+                                <div class="weui_cells weui_cells_form">
+                                    <div class="weui_cell">
+                                        <div class="weui_cell_hd">游戏ID&nbsp;&nbsp;&nbsp;</div>
+                                        <div class="weui_cell_bd">
+                                            <label class="userPayAccount"></label>
+                                        </div>
+                                    </div>
+                                    <div class="weui_cell">
+                                        <div class="weui_cell_hd">昵称&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                        <div class="weui_cell_bd">
+                                            <label class="userPayNickName"></label>
+                                        </div>
+                                    </div>
+                                    <div class="weui_cell">
+                                        <div class="weui_cell_hd">充值金额</div>
+                                        <div class="weui_cell_bd">
+                                            <label class="userPayMoney">5元</label>
+                                        </div>
+                                    </div>
+                                    <div class="weui_cell">
+                                        <div class="weui_cell_hd">可获得&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                        <div class="weui_cell_bd">
+                                            <label class="userPayLuckBean">50000幸运豆</label>
+                                        </div>
+                                    </div>
+                                    <div class="weui_cell">
+                                        <div class="weui_cell_hd">应付金额</div>
+                                        <div class="weui_cell_bd">
+                                            <label class="userAmountPayable">5元</label>
+                                        </div>
+                                    </div>
+                                    <div class="weui_cell">
+                                        <div class="weui_cell_hd">已绑手机</div>
+                                        <div class="weui_cell_bd">
+                                            <label class="userBindPhone"></label>
+                                        </div>
+                                    </div>
+                                    <div class="weui_cell">
+                                        <div class="weui_cells_title" style="color:#ff0000;">请认真核对充值金额、ID及昵称，若充错账号不予退还！</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weui_dialog_ft">
+                                <a href="javascript:;" class="weui_btn_dialog default" style="display: none;">取消支付</a>
+                                <a href="javascript:;" class="weui_btn_dialog primary" id="final_confirm_to_pay">确认支付</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END dialog2-->
+                    <form action="" method="POST" id="final_confirm_form" accept-charset="utf-8">
+                        <input type="hidden" class="p_uid" name="userid" value="" />
+                        <input type="hidden" class="p_sid" name="serverid" value="" />
+                        <input type="hidden" class="p_pid" name="goodid" value="" />
+                        <input type="hidden" class="p_nick_name" name="nick_name" value="" />
+                        <input type="hidden" class="p_bind_phone" name="bind_phone" value="" />
+                            <!-- <input class="weui_btn weui_btn_primary" type="submit" value="确认信息" /> -->
+                    </form>
+                </div>
+                <div class="weui_cells_title">  
+                     *充值完成后无需联系客服，系统会在5~10分钟后，自动充值到您的游戏账户中。
+                </div>
+                <div class="weui_cells_title">*如果没有到账，请您及时联系客服。</div>
+                <div class="weui_cells_title">*微信公众号：
+                    <label style="color:#0BB20C;">jiejiqianpaobuyu</label>
+                </div>
+                <div class="weui_cells_title">*7*24小时客服电话：
+                    <a style="color:#0BB20C;" href="tel:4000371814">4000371814</a>
+                </div>
+            </div>
+        </div>
+        <!--充值完的界面 显示  end-->
+    </div>
+    <script type="text/javascript">
+        var ua = navigator.userAgent.toLowerCase(); //页面打开方式
+        var bIsIpad=ua.match(/ipad/i)=="ipad";
+        var bIsIphoneOs=ua.match(/iphone os/i)=="iphone os";
+        var bIsAndroid=ua.match(/android/i)=="android";
+        var bIsWM=ua.match(/windows mobile/i)=="windows mobile";
+        //判断是否是苹果设备
+        function checkIsApple() {
+            var u = navigator.userAgent, app = navigator.appVersion;
+            var ios = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+            var iPad = u.indexOf('iPad') > -1;
+            var iPhone = u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1;
+            if (ios || iPad || iPhone) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        /*支付宝在微信中打开的提示*/
+        function open(){
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                $(".btnPayZFB").click(function(){
+                    if (checkIsApple()) {
+                        layer.open({
+                            content: "<div><img src=\'images/wx_shop/ios.png\' /></div>",
+                            style: 'width:100%; height:auto;border:none;background:none;position:absolute;top:0;right:0;'
+                        }); 
+                    }else{
+                       layer.open({
+                            content: "<div><img src=\'images/wx_shop/anzhuo.png\' /></div>",
+                            style: 'width:100%; height:auto;border:none;background:none;position:absolute;top:0;right:0;'
+                        });
+                    }
+                 });  
+            }
+        }
+
+        /*浏览器打开页面点击微信充值提示*/
+        function tipWeiXin(){
+            if(bIsIpad||bIsIphoneOs||bIsAndroid||bIsWM){
+                $("#userPayClick").click(function(){
+                    layer.open({
+                        content: "<p style=\"text-alifn:center;width:100%;\">微信支付请在微信中进行操作</p>",
+                        btn: ['OK']
+                    });
+                });
+            }
+        }
+
+
+        $(document).ready(function(){
+            tipWeiXin();
+            var tab_li = $(".choosePayFangshi ul li");
+            tab_li.hover(function () {
+                $(this).addClass("active").siblings().removeClass("active");
+                var index = tab_li.index(this);
+                $("div.payList  > div.paylistshow").eq(index).show().siblings().hide();
+            });
+           /* var isReload = 'not_reload';
+            if ( 'reload' == isReload ) {
+                $('.prepare_pay').css('display', 'none');
+                $('.ready_pay').css('display', 'block');
+            }
+    */
+            // 定义 gameid 错误类型,默认值为0, 即正常
+            var errorGameIdType = 0;
+            // 不同钱以及对应的幸运豆的变化
+            $(".moneydiv li").each(function(){
+                $(this).click(function(){
+                    $(this).addClass("on").siblings().removeClass("on");
+                  //  var showluckBeanNum=$(this).attr("luckBean");
+                  //  var showuserpay=$(this).attr("paymoney");
+                  //  var proid = $(this).attr("proid");
+                  //  $(".luckBeanNum").html(showluckBeanNum);
+                  //  $(".userpay").html(showuserpay);
+                  //  $(".proid").html(proid);
+                    // 确认支付
+                  //  var realPay = $(this).attr("real_pay");
+                  //  $('.userPayMoney').html(showuserpay + '元');
+                  //  $('.userPayLuckBean').html(showluckBeanNum + '幸运豆');
+                  //  $('.userAmountPayable').html(realPay + '元');
+                });
+            });
+            //月卡的切换效果
+            $(".cardmoneydiv li").each(function(){
+                $(this).click(function(){
+                    $(this).addClass("click").siblings().removeClass("click");
+                });
+            });
+            // 充值单击事件
+           $("#userPayClick").click(function(){
+                var usergameId = $("#gameid").val();
+                var proId = $(".proid").html();
+                var serverId = $("#serverid option:selected").val();
+                if ( 0 != errorGameIdType ) {
+                    if ( 1 == errorGameIdType ) {
+                        $(".errorgameid").html("游戏id必须为数字!");
+                    }
+                    if ( 2 == errorGameIdType ) {
+                        $(".errorgameid").html("请输入游戏ID");
+                    }
+                } else {
+                    $(".errorgameid").html("");
+                   /* $.ajax({
+                        type: "POST",
+                        url: "/bizmall/PayTest/CheckUser",
+                        data: "uid=" + usergameId + "&pid=" + proId +  "&sid=" + serverId,
+                        success: function( msg ) {
+                            var msgObj = eval("(" + msg + ")");
+                            if ( 0 == msgObj.code ) {
+                                $('.prepare_pay').css('display', 'none');
+                                $('.p_uid').attr('value', msgObj.result.uid);
+                                $('.p_sid').attr('value', msgObj.result.sid);
+                                $('.p_pid').attr('value', msgObj.result.pid);
+                                $('.p_nick_name').attr('value', msgObj.result.nick_name);
+                                $('.p_bind_phone').attr('value', msgObj.result.game_bind_phone);
+                                $('.userPayNickName').html(msgObj.result.nick_name);
+                                $('.userPayAccount').html(msgObj.result.uid_verbos);
+                                $('.userBindPhone').html(msgObj.result.game_bind_phone);
+                                $('.ready_pay').css('display', 'block');
+                            } else {
+                                $(".errorgameid").html(msgObj.result.msg);
+                            }
+                        }
+                    });*/
+                }
+            });
+
+            // 重新载入url
+           /* $('.pay_result_error_confirm').click(function() {
+            });
+    */
+            // gameid blur
+            $('#gameid').blur(function () {
+                 var userinputgameid=$("#gameid").val();
+                errorGameIdType = 0;
+                $(".errorgameid").html("");
+                var reg= /^[0-9]*$/;
+                if(userinputgameid=="" || userinputgameid==null){
+                    errorGameIdType=0;
+                    $(".errorgameid").html("请输入游戏ID");
+                }else if(!reg.test(userinputgameid)){
+                    errorGameIdType=2;
+                    $(".errorgameid").html("游戏id必须为数字");
+                }else{
+                    $(".errorgameid").html("")  
+                    errorGameIdType=1;
+                }
+            });
+
+            // final_confirm_to_pay
+            /*$('#final_confirm_to_pay').click(function(){
+                $("#final_confirm_form").submit();
+            });
+    */
+            // final_confirm_to_pay add cancel button
+           /* $('.weui_icon_cancel').click(function(){
+                $('.weui_dialog_ft').find('a:first').click();
+            });*/
+        });
+    </script>
+    </body>
+</html>

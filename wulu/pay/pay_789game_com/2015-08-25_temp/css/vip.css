@@ -1,0 +1,4 @@
+.vippayfanli1,.vippayfanli2 ,.vippayfanli3,.vippayfanli4,.vippayfanli5,.vippayfanli6{color:red;margin-left:20px;}
+#thisvipinfo{width:732px;height:259px;background:url(../images/tishi.png) no-repeat;margin-top:30px;margin-left:20px;float:left;}
+#closethis{position:absolute;left:91%;height:50px;width:50px;background:url(../images/close-1.png) no-repeat;top:38px;cursor:pointer;}
+#closethis:hover{background:url(../images/close-2.png) no-repeat;}

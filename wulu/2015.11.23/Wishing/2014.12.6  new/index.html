@@ -1,0 +1,453 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>许愿树-789棋牌游戏中心</title>
+<link type="text/css" href="css/index.css" rel="stylesheet" />
+<link type="text/css" href="css/idealog.css" rel="stylesheet" />
+</head>
+
+<body>
+<div id="lktopnav">
+	<div class="nav_zt">   
+		<div class="nav_left">   
+			<a href="http://www.789game.com" title="789游戏中心" target="_blank" class="nav_logo">
+			    <img src="images/logo-1.png" style="margin-top:5px;" width="77" height="21">
+			</a>    	
+			<div class="classic">  
+				<span class="nav_red">经典游戏：</span>   
+				<ul id="topnav_ul_classic">           
+					<li onmouseover="NavCtl.liOver(this)" onmouseout="NavCtl.liOut(this)"><img src="images/classic_1.gif" width="17" height="17">捕鱼达人           
+						<div class="classicBox">              
+							<h2>捕鱼达人</h2>                 
+							<p>原版捕鱼达人，经典街机游戏完美移植。</p>        
+							<a href="http://www.789game.com/down.aspx" title="官方安全下载"></a>   
+						</div>           
+					</li> 
+					<li onmouseover="NavCtl.liOver(this)" onmouseout="NavCtl.liOut(this)">
+					    <img src="images/classic_3.gif" width="17" height="17">斗地主  
+						<div class="classicBox" style="display: none;">         
+							<h2>斗地主</h2>              
+							<p>国内非常流行的一种扑克牌游戏，需3人参加</p>          
+							<a href="http://www.789game.com/down.aspx"  title="官方安全下载"></a>       
+						</div>       
+					</li>          
+				</ul>   
+			</div>    
+		</div>   
+		<div class="nav_right">  
+			<ul class="right_list"> 
+				<li style="display: block; cursor:pointer;" id="names">
+					<span  id="topnav_liBeforeLogin">
+					<img src="images/login.jpg" width="17" height="11">登录
+					</span>
+				</li>  
+				<li>
+					<img src="images/regist.jpg" width="17" height="11"><a id="topnav_regist" href="http://www.789game.com/register.html" target="_blank" title="注册" rel="nofollow">注册</a>
+				</li>    
+				<li>
+					<img src="images/download.jpg" width="16" height="11"><a href="http://www.789game.com/down.aspx"  title=" 下载游戏">下载游戏</a>
+				</li>   
+				<li>
+					<img src="images/home.jpg" width="16" height="11"><a href="http://www.789game.com" target="_blank" title="返回官网" >返回官网</a>
+				</li>  
+				<li>
+					<img src="images/rmb.jpg" width="16" height="10"><a href="http://pay.789game.com/" target="_blank" title="充值" rel="nofollow">充值</a>
+				</li>   
+			</ul>  
+		</div>
+	</div>
+</div>
+	<div class="zt">
+		<div class="userLogin" id="loginUserInput" style="display:none;">
+			<h2>用户登录</h2>
+			<div class="showUserInfo">
+				<ul>
+					<li>
+						<div class="loginText" id="accountName">
+							<span class="textName"></span>
+							<input id="txtSsoAccount" type="text" value="" class="tip" placeholder="请输入用户名">
+						</div>
+				    </li>
+					<li>
+						<div class="loginText" id="accountSec">
+							<span class="textPsd"></span>
+							<input id="txtSsoPassword" type="password" value="" class="tip" placeholder="请输入密码">
+						</div>
+				    </li>
+					<li>
+						<div class="loginText">
+							<div class="loginBtn" id="loginButtons"></div>
+							<div class="loginTips">
+							还没有789账号？<a href="http://www.789game.com/register.html" target="_blank">立即注册！</a>
+							</div>
+						</div>
+					</li>
+					<li><p id="showerrorMsg"></p></li>
+				</ul>
+			</div>
+		</div>
+		<div class="top1">
+			<div class="coldy">
+				<div class="showGameInfo">
+					<ul>
+						<li><span style="letter-spacing:12px;">账号:</span><label id="userLoginedId"></label></li>
+						<li><span>游戏时长:</span><label id="gameLoginedTime"></label><label>分钟</label></li>
+						<li><span>剩余次数:</span><label id="lastNo"></label><label>次</label></li>
+					</ul>
+				</div>
+			</div>
+			<div class="tree">
+			<div class="box">
+				<div class="first-box">
+					<div class="first-txt"></div>
+				</div>
+				<div class="seven-content" id="allWishes">
+                    <div class="wished">祝父母身体健康O(∩_∩)O</div>
+                    <div class="wished">好好享受生活~</div>
+                   <div class="wished">祝父母身体健康O(∩_∩)O</div>
+                    <div class="wished">我想买iPhone6 PlusO(∩_∩)O哈哈哈~</div>
+                    <div class="wished">开开心心过好每一天</div>
+                    <div class="wished">玩捕鱼真的兑换到789商城的礼品了</div>
+                    <div class="wished">愿：玩捕鱼能买套房子！</div>
+                    <div class="wished">祝爸爸妈妈身体健康O(∩_∩)O</div>
+                    <div class="wished">希望我的事业可以一帆风顺！</div>
+                    <div class="wished">祝福所有的人天天好心情</div>
+					
+                </div>
+				
+			</div>
+			</div>
+			<div class="description">
+				<div class="wishingClick"><img id="clickShopGoogs" src="images/btn_xy1.png" /></div>
+				<div class="regulation">
+					<p style="font-weight:bold;font-size:14px;">许愿池活动规则</p>
+					<p>1.点击“我要许愿”即可获得相关奖励；<span>首次填写</span>您希望礼品商城出现的礼品，即可再<span>获得10000奖券</span>。</p>
+					<p>2.同一账号每天按照玩家会员等级并累计的游戏时长可获得不同次数的许愿机会，每次许愿所获奖励也不同，具体如下：</p>
+					<p style="text-indent:10px;">a.按照游戏时长累计计算，每半个小时即可获得可获得1次许愿机会，同一账号3次/天；</p>
+					<ul>
+						<li><span style="color:#6f6f6f;">b.</span>次数\等级</li>
+						<li>普通</li>
+						<li>蓝钻</li>
+						<li>黄钻</li>
+						<li>红钻</li>
+						<li>VIP</li>
+						<li>第一次</li>
+						<li>1000奖券</li>
+						<li>2000奖券</li>
+						<li>3000奖券</li>
+						<li>4000奖券</li>
+						<li>5000奖券</li>
+						<li>第二次</li>
+						<li>1000奖券</li>
+						<li>3000奖券</li>
+						<li>4000奖券</li>
+						<li>5000奖券</li>
+						<li>6000奖券</li>
+						<li>第三次</li>
+						<li>1000奖券</li>
+						<li>4000奖券</li>
+						<li>5000奖券</li>
+						<li>6000奖券</li>
+						<li>7000奖券</li>
+					</ul>
+					<p>3.每天所获许愿次数和游戏时长在当天24点清零；当天游戏时长不足半小时则没有许愿机会</p>
+					<p>4.如玩家有多个会员等级，则每次发放的奖励按当前最高等级进行发放</p>
+					<p>5.玩家所获奖券可兑换幸运豆或在“礼品商城”进行实物兑换</p>
+					<p>6.本活动在2014年11月7日0点开始启动</p>
+					<p>7.最终解释权归789游戏中心所有</p>
+					<p>如有任何疑问，欢迎您随时拨打客服电话：400-0371-814 或联系24小时在线客服：<script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzkzODA2MTM1MF8xMDUzMDBfNDAwMDM3MTgxNF8"></script>。</p>
+				</div>
+			</div>
+		</div>
+		<div class="wishTips" id="myheart" style="display:none;">
+			<div class="myWish">
+				<span class="wishAllName"><em>*</em>礼品名称：</span>
+				<input type="text" id="goodsName" placeholder="请填写您想要的商品名称（实物、虚拟物品、特权等等）" />
+				<label id="goodsNameError"></label>
+			</div>
+			<div class="myWish">
+				<span class="wishAllName"><em>&nbsp;</em>心愿留言：</span>
+				<textarea id="leaveMessage" placeholder="心愿留言在70字以内(选填项)" ></textarea>
+				<label></label>
+			</div>
+			<div class="btns">
+				<a class="btnSub" id="uSure">提交</a>
+			</div>
+		</div>
+		<div class="wishTips" id="wishSuccess" style="display:none;">
+			<p style="margin-top:30px;">奖券已发送，请登录大厅查收</p>
+			<p><img src="images/jp.jpg" /></p>
+			<p><a id="ClickWishs">首填愿望礼品送大奖</a></p>
+		</div>
+		<div class="footer">
+			<div>
+				<p><script type="text/javascript" src="js/footer.js" ></script></p>
+				<p>健康游戏忠告：抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+			</div>
+		</div>
+	</div>
+<div class="index_bg01"></div>                       
+<div class="index_bg02"></div>
+<div class="index_bg03"></div>
+<div class="index_bg04"></div>
+<div class="index_bg05"></div>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/jquery.iDialog.js"></script>
+<script type="text/javascript" src="js/inputPlease.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.2.custom.js"></script>
+<script type="text/javascript" src="js/index2.js"></script>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a.js"></script>
+	<script type="text/javascript">
+    	DD_belatedPNG.fix('div, ul, img, li, input , a, .png_bg'); 
+		jQuery('input[placeholder]').placeholder();
+		jQuery('textarea[placeholder]').placeholder();
+		
+		
+		//登录的判断
+		function checkInput() {
+			if (document.getElementById("txtSsoAccount").value == "") {
+				$("#showerrorMsg").html("请输入您的用户名");
+				document.getElementById("txtSsoAccount").focus();
+				return false;
+			}
+			if (document.getElementById("txtSsoPassword").value == "") {
+				$("#showerrorMsg").html("请输入您的密码");
+				document.getElementById("txtSsoPassword").focus();
+				return false;
+			}
+			return true;
+		}
+		
+		//获取url参数
+        function GetRequest() {
+            var url = location.search; //获取url中"?"符后的字串
+            var theRequest = new Object();
+            if (url.indexOf("?") != -1) {
+                var str = url.substr(1);
+                strs = str.split("&");
+                for (var i = 0; i < strs.length; i++) {
+                    theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+                }
+            }
+            return theRequest;
+        }
+		
+		function getRandom()
+			{
+				var randomLeft = Math.floor(680*(Math.random()));
+				var randomLeft2 = Math.floor(680*(Math.random()));
+				return randomLeft2-randomLeft;
+			}
+		function userLoginedInfo(){
+				 $.ajax({
+					async:false,
+					url: 'http://api.789game.com/api/apiwish/queryBaseInfo.html',
+					type: "GET",
+					dataType: 'jsonp',
+					jsonp: 'jsoncallback',
+					data:{},
+					success: function (json) {
+					//  alert(json);
+						if(json!="0"){
+							$("#userLoginedId").html(json.accounts);
+							var times=json.playtime/60;
+							
+							$("#gameLoginedTime").html(parseInt(times));
+							$("#lastNo").html(json.change);
+						}else{
+						}
+					},
+					error: function(xhr){
+					alert("请求出错,请检查相关度网络状况");
+					}
+				});	
+		
+		}
+		
+		var  myWish;
+        $(document).ready(function(){
+			userLoginedInfo();
+		//加载许愿树上的信息
+			var viewDivs= $('#allWishes').children('div').not(".wished");
+			 $.ajax({
+					async:false,
+					url: 'http://api.789game.com/api/apiwish/getrecentlist.html',
+					type: "GET",
+					dataType: 'jsonp',
+					jsonp: 'jsoncallback',
+					data:{},
+					success: function (json) {
+						if(json!="-1"){
+							for(var o=0;o<json.length;o++){
+							
+								var str="";
+								str +="<div class='wished' style='transform:rotate("+getRandom()+"deg);left:"+getRandom()+"px;top:"+getRandom()+"px'>"+json[o].wish+"</div>";
+							
+								$("#allWishes").append(str);
+							}
+						}
+					},
+					error: function(xhr){
+					alert("请求出错,请检查相关度网络状况");
+					}
+				});	
+				
+				//页面加载的时候判断是否从大厅过来
+					
+			var Request = new Object();
+            Request = GetRequest();
+            var userID = Request['UserID'];
+			var  userPwd=Request['PWD'];
+			if(userID !="" && userPwd !=""){
+			    $.ajax({
+					async:false,
+					url: 'http://api.789game.com/api/apiwish/login2.html',
+					type: "GET",
+					dataType: 'jsonp',
+					jsonp: 'jsoncallback',
+					data:{'loginuser':userID,'loginpwd':userPwd},
+					success: function (json) {
+						if(json==0){
+							$("#names").html("<span style=\"color:#64B20F;\">"+json+"</span>");
+						}else{
+							
+						}
+					},
+					error: function(xhr){
+					alert("请求出错,请检查相关度网络状况");
+					}
+				});	
+			}
+				
+				
+				
+				//页面加载的时候判断时候已经登录
+			 $.ajax({
+					async:false,
+					url: 'http://api.789game.com/api/apiwish/islogin.html',
+					type: "GET",
+					dataType: 'jsonp',
+					jsonp: 'jsoncallback',
+					data:{},
+					success: function (json) {
+						if(json!="-1"){
+						    userLoginedInfo();
+							$("#names").html("<span style=\"color:#64B20F;\">"+json+"</span>");
+						}else{
+						}
+					},
+					error: function(xhr){
+					alert("请求出错,请检查相关度网络状况");
+					}
+				});	
+			//登录的时候进行验证前的触发
+			$("#txtSsoAccount").blur(function(){$("#showerrorMsg").html("");});
+			$("#txtSsoPassword").blur(function(){$("#showerrorMsg").html("");});
+			//点击登录按钮时弹出登录框
+			$("#topnav_liBeforeLogin").click(function(){
+				iDialog({
+					id:"login",
+					title:'用户登录',
+					padding: '0px 0px 0px 0px',
+					lock:true,
+					fixed:true,
+					width:380,
+					height:350,
+					
+					content:document.getElementById('loginUserInput')
+				});
+			});
+			//登录按钮的事件
+			$("#loginButtons").click(function(){
+					if(checkInput()){
+						$.ajax({
+							async:false,
+							url: 'http://api.789game.com/api/apiwish/login.html',
+							type: "GET",
+							dataType: 'jsonp',
+							jsonp: 'jsoncallback',
+							data:{'loginuser':$("#txtSsoAccount").val(),'loginpwd':$("#txtSsoPassword").val()},
+							success: function (json) {
+								if(json==0){
+									userLoginedInfo();
+									$("#names").html("<span style=\"color:#64B20F;\">"+$("#txtSsoAccount").val()+"</span>");
+									$.dialog.get['login'].hide();
+								}else{
+									alert(json);
+								}
+							},
+							error: function(xhr){
+							alert("请求出错,请检查相关度网络状况");
+							}
+						});	
+					}else{
+						if($("#txtSsoAccount").val() == ""){
+							$("#showerrorMsg").html("请输入您的用户名");
+						}else if($("#txtSsoPassword").val()==""){
+							$("#showerrorMsg").html("请输入您的密码");
+						}else if($("#txtSsoCode").val() == ""){
+								$("#showerrorMsg").html("请输入验证码");
+						}
+					}
+				});
+				//点击许愿按钮的hover和click事件
+				$(".wishingClick").hover(function(){
+					$(this).find("img").attr("src","images/btn_xy2.png");
+				},function(){
+					$(this).find("img").attr("src","images/btn_xy1.png");
+				});	
+				$(".wishingClick").click(function(){
+					var lastCishu=$("#lastNo").html();
+						$.ajax({
+							async:false,
+							url: 'http://api.789game.com/api/apiwish/insert_wish_first.html',
+							type: "GET",
+							dataType: 'jsonp',
+							jsonp: 'jsoncallback',
+							data:{},
+							success: function (json) {
+								if(json==0){
+									if(lastCishu > 0){
+										$("#lastNo").html(lastCishu-1);
+									}
+									iDialog({id:'a',
+										title:'',
+										padding: '0px 0px 0px 0px',
+										lock:true,
+										fixed:true,
+										width:600,
+										height:80,
+										content:document.getElementById('wishSuccess')
+									});
+								}else{
+									alert(json);
+								}
+							
+							},
+							error: function(xhr){
+							alert("请求出错,请检查相关度网络状况");
+							}
+						});	
+				});
+				
+				//许愿的提交按钮事件
+				$("#ClickWishs").click(function(){
+					$.dialog.get['a'].hide();
+						iDialog({
+							title:'我的心愿',
+							id:'b',
+							padding: '0px 0px 0px 0px',
+							lock:true,
+							fixed:true,
+							width:625,
+							height:300,
+							content:document.getElementById('myheart')
+						});
+					});
+			});
+		
+	</script>
+</body>
+</html>

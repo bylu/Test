@@ -1,0 +1,18 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" %>
+
+<script type="text/C#" runat="server">
+    protected override void OnInit(EventArgs e)
+    {
+        base.OnInit(e);
+        int i = 0;
+        System.Collections.Generic.SortedDictionary<string, string> sArray = new System.Collections.Generic.SortedDictionary<string, string>();
+        NameValueCollection coll;
+        coll = Request.QueryString;
+        String[] requestItem = coll.AllKeys;
+        for (i = 0; i < requestItem.Length; i++)
+        {
+            Response.Write(requestItem[i] + ":" + Request.QueryString[requestItem[i]]);
+            Response.Write("\n");
+        }
+    }
+</script>

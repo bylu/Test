@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>789游戏中心----手机游戏下载</title>
+<link rel="stylesheet" href="css/base.css" />
+</head>
+<body>
+ <div class="Main_Div" id="shows" style="display:none;">
+ <div class="Top_Div">
+ <div class="label">789游戏中心</div>
+ </div>
+  <div class="Top_Div" id="active" style="background-color:#EEEEEE;margin-top:-1px;font-family:'微软雅黑'">
+ <div class="label"><label id="types" style="color:#DD514C;">红包领取码：</label><label id="codes" style="font-weight:bold;color:#3BB4F2;"></label></div>
+ </div>
+ 
+ <div class="Content_Div">
+ <div class="p4">最火手机游戏推荐</div>
+ <ul>
+ <li>
+ <div class="p1"><img src="images/92.jpg"/></div>
+ <div class="p1 p2">
+ <label>789街机捕鱼- 安卓手机版</label>
+<div class="p3"><span>68741次下载    7.27M</span></div>
+<div class="p3"><span>789游戏中心倾力打造</span></div>
+ </div>
+ <div class="f1" ><input type="button" class="b1" id="btn1" value="点击下载" onclick="javascript:window.location.href='http://download.6513.com/phoneGame/108450BY.apk'"/></div>
+ <p style="width:90%;float:left;font-size:0.75em;color:#6c6c6c;margin-left:1.3em;margin-top:0.7em;">游戏简介：789捕鱼安卓手机版  2015年全新力作《街机千炮捕鱼-网络版》隆重上线！！街机千炮捕鱼支持全网多人联网，100%还原街机捕鱼效果，并增加更绚丽的特效表现。</p>
+ </li>
+
+ <li>
+ <div class="p1"><img src="images/92.jpg"/></div>
+ <div class="p1 p2">
+ <label>789街机捕鱼- 苹果手机版</label>
+<div class="p3"><span>43981次下载    7.34M</span></div>
+<div class="p3"><span>789游戏中心倾力打造</span></div>
+ </div>
+ <div class="f1" ><input type="button" class="b1" id="btn2" value="点击下载" onclick="javascript:window.location.href='itms-services://?action=download-manifest&url=https://dn-789game.qbox.me/108450BY.plist'"/></div>
+  <p style="width:90%;float:left;font-size:0.75em;color:#6c6c6c;margin-left:1.3em;margin-top:0.7em;">游戏简介：789捕鱼苹果手机版  2015年全新力作《街机千炮捕鱼-网络版》隆重上线！！街机千炮捕鱼支持全网多人联网，100%还原街机捕鱼效果，并增加更绚丽的特效表现。</p>
+
+ </li>
+ <li style="text-align:center;font:0.75em;">
+ </li>
+ </ul>
+  
+ </div>
+ </div>
+</body>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+var browser = {
+versions: function() {
+var u = navigator.userAgent, app = navigator.appVersion;
+return {//移动终端浏览器版本信息
+trident: u.indexOf('Trident') > -1, //IE内核
+presto: u.indexOf('Presto') > -1, //opera内核
+webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/), //是否为移动终端
+ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
+iPad: u.indexOf('iPad') > -1, //是否iPad
+webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+};
+}(),
+language: (navigator.browserLanguage || navigator.language).toLowerCase()
+}
+var ua = navigator.userAgent.toLowerCase();
+if(ua.match(/MicroMessenger/i)=="micromessenger") {
+	$("#shows").hide();
+	document.write("<img src='error.jpg' />");
+}else{
+$("#shows").show();
+}
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+var code=getQueryString("code");
+var type=getQueryString("type");
+	if(code!=null && type!=null && type!='' && code!=''){
+		if(type==1){
+			$("#types").html("邀请码：");
+		}else if(type==2){
+			$("#types").html("红包领取码：");
+		}
+		$("#codes").html(code);
+	}else{
+		$("#active").hide();
+	}
+});
+function getQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]); return null;
+    }
+</script>
+</html>

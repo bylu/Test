@@ -1,0 +1,5 @@
+﻿document.writeln("内江市投壶网络科技有限公司 内江市东兴区汗安大道 0832-98867890  蜀ICP备14005744号-1  <script type=\"text/javascript\">var cnzz_protocol = ((\"https:\" == document.location.protocol) ? \" https://\" : \" http://\");document.write(unescape(\"%3Cspan id=\'cnzz_stat_icon_1000497237\'%3E%3C/span%3E%3Cscript src=\'\" + cnzz_protocol + \"s4.cnzz.com/z_stat.php%3Fid%3D1000497237\' type=\'text/javascript\'%3E%3C/script%3E\"));</script>");
+document.writeln("<script type=\"text/javascript\">");
+document.writeln("var _bdhmProtocol = ((\"https:\" == document.location.protocol) ? \" https://\" : \" http://\");");
+document.writeln("document.write(unescape(\"%3Cscript src=\'\" + _bdhmProtocol + \"hm.baidu.com/h.js%3Ff2e22608ecb38baa6233bf866f28e987\' type=\'text/javascript\'%3E%3C/script%3E\"));");
+document.writeln("</script>");

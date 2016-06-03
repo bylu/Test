@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link rel=stylesheet type=text/css href="{dede:global.cfg_templets_skin/}/style/style.css">
+<link rel=stylesheet type=text/css href="{dede:global.cfg_templets_skin/}/style/p.css">
+</head>
+<body>
+	{dede:include filename="head.htm"/}
+	<div class="main">
+		<div id=p_con>
+			<div class=p_l>
+				<div class=location><IMG src="{dede:global.cfg_templets_skin/}/images/flag.png" width=16 height=16>{dede:field name='position'/} </div>
+				<ul class=list_ul>
+					{dede:list pagesize='20'}
+					<li><a href="[field:arcurl/]" >[field:title/]</a> <span>[field:pubdate function="GetDateTimeMK(@me)"/]</span></li>{/dede:list}
+				</ul>
+				<div class=page_pre_next>
+					{dede:pagelist listitem="index,end,pre,next,pageno" listsize="5"/}
+				</div>
+			</div>
+			<!--右侧下载  begin-->
+			{dede:include filename="left.htm"/}
+		</div>
+		<!--页面右侧部分  结束 -->
+	</div>
+
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</HTML>

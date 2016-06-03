@@ -1,0 +1,24 @@
+.client_dl {
+	DISPLAY: block; BACKGROUND: url(in_r.png) no-repeat 0px -536px; HEIGHT: 67px
+}
+.client_dl:hover {
+	BACKGROUND: url(in_r.png) no-repeat 0px -603px
+}
+.reg {
+	MARGIN-TOP: 10px; WIDTH: 110px; DISPLAY: block; BACKGROUND: url(in_r.png) no-repeat; FLOAT: right; HEIGHT: 43px
+}
+.demo {
+	MARGIN-TOP: 10px; WIDTH: 110px; DISPLAY: block; BACKGROUND: url(in_r.png) no-repeat; FLOAT: right; HEIGHT: 43px
+}
+.reg {
+	BACKGROUND-POSITION: -110px -428px; MARGIN-RIGHT: 19px
+}
+.reg:hover {
+	BACKGROUND-POSITION: -110px -471px
+}
+.demo {
+	BACKGROUND-POSITION: 0px -428px; MARGIN-RIGHT: 5px
+}
+.demo:hover {
+	BACKGROUND-POSITION: 0px -471px
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:field.title/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<LINK rel=stylesheet type=text/css href="{dede:global.cfg_templets_skin/}/style/style.css">
+<LINK rel=stylesheet type=text/css href="{dede:global.cfg_templets_skin/}/style/p.css">
+
+
+<BODY>
+<DIV class=top>
+<DIV class=c_960>
+<DIV class=top-nav><SPAN>Hi，欢迎来到789游戏中心！</SPAN></DIV>
+<DIV><!-- logo -->
+<DIV style="POSITION: relative" class=logo><A 
+href="http://www.789game.com"></A></DIV>
+<DIV class=nav>
+<UL>
+  <LI><a href="http://www.789game.com" target="_blank">网站首页</a></LI>
+  {dede:channel row='6' type='top' typeid='1,2,3,4,5,6' }
+<li><a href='[field:typelink/]' target="_blank" >[field:typename/]</a></li>
+{/dede:channel}</UL></DIV><!-- 导航栏结束 --></DIV></DIV></DIV>
+ <div style="BORDER: #cdcdcd 1px solid; margin-top:10px; width:960px; margin:5px auto">
+
+ <img src="{dede:global.cfg_templets_skin/}/images/960X424.jpg" width="960" height="424">
+
+ </div>
+<div class="main">
+<DIV id=p_con><!--页面左侧部分  开始 -->
+<DIV class=p_l>
+<DIV class=location><IMG src="{dede:global.cfg_templets_skin/}/images/flag.png" width=16 height=16> 
+当前位置:</strong>{dede:field name='position'/} </DIV>
+<DIV id=pnlContent>
+<H1 class=que-title>{dede:field.title/}</H1>
+<DIV class=que-content>
+{dede:field.body/}
+  </DIV>
+
+<DIV class=pre-nex>{dede:prenext get='pre'/}&nbsp;&nbsp;&nbsp;&nbsp;下一条：{dede:prenext get='next'/}</DIV></DIV>
+
+</DIV>
+
+<DIV class=p_r_xiazai><DIV class=r_ad>
+<DIV class=dl_client_v2>
+<A style="BACKGROUND-POSITION: 22px -536px" class=client_dl title=下载客户端 
+ rel=nofollow href="http://down.789game.net/download/789gameCenter.exe" ></A></DIV></DIV></div>
+<DIV class=p_r>
+<DL class=box_dl>
+  <DT>推荐文章</DT>
+{dede:artlist row='10' type="commend"}<DD><a href="[field:arcurl/]">[field:title/]</a> </DD>{/dede:artlist}
+</DL>
+<DL class=box_dl>
+  <DT>最热文章</DT>
+ {dede:arclist row=10 orderby=click}<DD><a href="[field:arcurl/]">[field:title/]</a> </DD>{/dede:arclist}</DL><DIV class=tags>
+<DL class=box_dl>
+  <DT>游戏介绍</DT>
+  <DIV class=tags>
+   <A href="http://www.789game.com/GameRulesShow.aspx?XID=203" target="_blnak">水浒传</A>
+  <A href="http://www.789game.com/GameRulesShow.aspx?XID=2040" target="_blank">新金蟾捕鱼</A>
+  <A href="http://www.789game.com/GameRulesShow.aspx?XID=6" target="_blank">789赢三张</A>
+  <A href="http://www.789game.com/GameRulesShow.aspx?XID=361" target="_blank">二人麻将</A>
+  <A href="http://www.789game.com/GameRulesShow.aspx?XID=102" target="_blank">二人斗牛</A>
+  <A href="http://www.789game.com/GameRulesShow.aspx?XID=27" target="_blank">四人斗牛</A>
+  <A href="http://www.789game.com/GameRulesShow.aspx?XID=200" target="_blank">斗地主</A>
+  <A href="http://www.789game.com/GameRulesShow.aspx?XID=2010" target="_blank">李逵劈鱼</A></DIV></DL></DIV>
+</DIV>
+</DIV><!--页面右侧部分  结束 --></DIV>
+
+</DIV>
+<DIV class=footer>
+
+抵制不良游戏&nbsp;&nbsp;拒绝盗版游戏&nbsp;&nbsp;注意自我保护&nbsp;&nbsp;谨防受骗上当&nbsp;&nbsp;适度游戏益脑&nbsp;&nbsp;沉迷游戏伤身&nbsp;&nbsp;合理安排时间&nbsp;&nbsp;享受健康生活 <BR>
+
+789游戏中心 豫ICP备12014032号-1 
+备案文号:文网游备字[2011]C-CBG002号<BR>客服QQ：4000371814 客服热线：4000371814  <script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fde6684532de22a1b45cd44b14141ff07' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</DIV>
+</BODY></HTML>

@@ -1,0 +1,719 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<meta name="renderer" content="webkit">
+<title>福运连连-789棋牌游戏中心</title>
+<link type="text/css" href="css/index.css" rel="stylesheet" />
+<link type="text/css" href="css/idealog.css" rel="stylesheet" />
+</head>
+
+<body>
+<div id="lktopnav">
+	<div class="nav_zt">   
+		<div class="nav_left">   
+			<a href="http://www.789game.com" title="789游戏中心" target="_blank" class="nav_logo">
+			    <img src="images/logo-1.png" style="margin-top:5px;" width="77" height="21">
+			</a>    	
+			<div class="classic">  
+				  
+			</div>    
+		</div>   
+		<div class="nav_right">  
+			<ul class="right_list"> 
+				<li style="display: block; cursor:pointer;">
+					<span  class="userloginout">
+					 安全退出
+					</span>
+				</li>  
+				<li>
+					<img src="images/regist.jpg" width="17" height="11"><a id="topnav_regist" href="http://www.789game.com/register.html" target="_blank" title="注册" rel="nofollow">注册</a>
+				</li>    
+				<li>
+					<img src="images/download.jpg" width="16" height="11"><a href="http://www.789game.com/down.aspx"  title=" 下载游戏">下载游戏</a>
+				</li>   
+				<li>
+					<img src="images/home.jpg" width="16" height="11"><a href="http://www.789game.com" target="_blank" title="返回官网" >返回官网</a>
+				</li>  
+				<li>
+					<img src="images/rmb.jpg" width="16" height="10"><a href="http://pay.789game.com/" target="_blank" title="充值" rel="nofollow">充值</a>
+				</li>   
+			</ul>  
+		</div>
+	</div>
+</div>
+	<div class="zt">
+		<div class="userLogin" id="loginUserInput" style="display:none;">
+			<h2>用户登录</h2>
+			<div class="showUserInfo">
+				<ul>
+					<li>
+						<div class="loginText" id="accountName">
+							<span class="textName"></span>
+							<input id="txtSsoAccount" type="text" value="" class="tip" placeholder="请输入用户名">
+						</div>
+				    </li>
+					<li>
+						<div class="loginText" id="accountSec">
+							<span class="textPsd"></span>
+							<input id="txtSsoPassword" type="password" value="" class="tip" placeholder="请输入密码">
+						</div>
+				    </li>
+					<li>
+						<div class="loginText">
+							<div class="loginBtn" id="loginButtons"></div>
+							<div class="loginTips">
+							还没有789账号？<a href="http://www.789game.com/register.html" target="_blank">立即注册！</a>
+							</div>
+						</div>
+					</li>
+					<li><p id="showerrorMsg"></p></li>
+				</ul>
+			</div>
+		</div>
+		<div class="paymoneynow" id="paymoneynow" style="display:none;">
+			<p style="color:#000;">抱歉,你的充值额不到100元,无法获取该项奖励,请充值后再来领取!</p>
+			<p style="text-align:center;"><img src="images/btn_ljcz.jpg" id="userChongzhi" /></p>
+		</div>
+		<div class="paymoneynow" id="qiandaosuccess" style="display:none;">
+			<p style="color:#000;">领取成功！您已经获取<label id="prizeCishu"></label>次免费抽奖!</p>
+			
+		</div>
+		<div class="top1">
+			<div class="showtimes" style="display:none;">
+				<p style="color:#ffb15f">活动时间：2015年2月12日-2月25日</p>
+			</div>
+			<div class="showuserinfoNologin">
+				<p><label id="nologined" style="color:#ffb15f">点击登录</label></p>
+			</div>
+		</div>
+	    <div class="top2">
+			<div class="content">
+				<div class="contenttitle">
+					<ul>
+						<li class="current"><img src="images/btn_click01.jpg" id="imganniu1" /></li>
+						<li><img src="images/btn_02.jpg" id="xingyunzhuanpanclick" /></li>
+						<li><img src="images/btn_03.jpg" /></li>
+						<li><img src="images/btn_04.jpg" /></li>
+					</ul>
+				</div>
+					<!--签到-->
+					<div class="contents" id="mycontent1" style="display:block;">
+						<div class="pull-left">
+							<p class="fuyunlianlian">福运连连</p>
+							<p><img src="images/t_mrqd.jpg" /></p>
+						</div>
+						<div class="pull-right">
+							<p>
+								<span>昵称：</span><label class="useraccount"></label>
+								<span>等级：</span><label class="level"></label>
+								<span>连续签到：</span><label id="signIndays"></label><span>天<span>
+							</p>
+							<p style="font-size:13px;line-height:22px;">活动时间：2015年2月12日 - 2015年2月25日</p>
+							<p style="font-size:13px; line-height:22px;">活动详情：活动期间内登陆大厅并游戏时长5分钟的玩家进行签到,根据自身会员等级可获得相对应的三倍签到奖励</p>
+							<p style="font-size:13px; line-height:22px;">活动奖励：</p>
+							<p>
+								<table class="qiandaotable">
+									<tr>
+										<td>连续签到</td>
+										<td>第1天</td>
+										<td>第2天</td>
+										<td>第3天</td>
+										<td>...</td>
+										<td>第7天</td>
+										<td>7天以上</td>
+									</tr>
+									<tr>
+										<td>普通会员</td>
+										<td>3000幸运豆</td>
+										<td>6000幸运豆</td>
+										<td>9000幸运豆</td>
+										<td>...</td>
+										<td>21000幸运豆</td>
+										<td>21000幸运豆</td>
+									</tr>	
+										
+									<tr>
+										<td>蓝钻会员</td>
+										<td>6000幸运豆</td>
+										<td>12000幸运豆</td>
+										<td>18000幸运豆</td>
+										<td>...</td>
+										<td>42000幸运豆</td>
+										<td>42000幸运豆</td>
+									</tr>
+									<tr>
+										<td>黄钻会员</td>
+										<td>9000幸运豆</td>
+										<td>18000幸运豆</td>
+										<td>27000幸运豆</td>
+										<td>... </td>
+										<td>63000幸运豆</td>
+										<td>63000幸运豆</td>
+									</tr>
+									<tr>
+										<td>红钻会员</td>
+										<td>15000幸运豆</td>
+										<td>30000幸运豆</td>
+										<td>45000幸运豆	</td>
+										<td>...</td>
+										<td>105000幸运豆</td>
+										<td>105000幸运豆</td>
+									</tr>
+
+									<tr>
+										<td>VIP会员</td>
+										<td>30000幸运豆	</td>
+										<td>60000幸运豆</td>
+										<td>90000幸运豆</td>
+										<td>...</td>
+										<td>210000幸运豆</td>
+										<td>210000幸运豆</td>
+									</tr>
+								</table>
+							</p>
+							<p style="font-size:13px;line-height:22px;">具体活动详情可在大厅签到页面进行查看</p>
+							<p style="text-align:center;margin-top:10px;cursor:pointer;"><img src="images/btn_wyqd.jpg" id="usersinged" /></p>
+						</div>
+					</div>
+					<!--幸运转盘-->
+				
+					<div class="contents" id="mycontent2" style="display:none;">
+						<div class="pull-left">
+							<p class="fuyunlianlian">福运连连</p>
+							<p><img src="images/t_yxzp.jpg" /></p>
+						</div>
+						<div class="pull-right">
+							<p>
+								<span>账号：</span><label class="useraccount"></label>
+								<span>当前充值：</span><label id="paymoney"></label>
+								<span>游戏时长：</span><label class="gametime"></label>
+								<span>获得：<span><label id="prizeNo"></label>次免费抽奖
+							</p>
+							<p>活动时间：2015年2月12日 - 2015年2月25日</p>
+							<p>活动规则：凡在活动时间内累计充值到100元的玩家，每日根据累计在线时长可领取三次活动奖励	</p>
+							<p>活动奖励：</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;在线时长半小时	1次免费抽奖<br/>			
+								   &nbsp;&nbsp;&nbsp;&nbsp;在线时长1小时     5次免费抽奖	 <br/>		
+								   &nbsp;&nbsp;&nbsp;&nbsp;在线时长2小时     10次免费抽奖 								
+							</p>
+							<p id="imgno1" style="text-align:center;margin-top:30px;cursor:pointer;"><img src="images/btn_ljlq.jpg"  id="userlignqurightnow"/></p>
+							<p id="imgno2" style="text-align:center;margin-top:30px;cursor:pointer;display:none;"><img src="images/btn_ljcj.jpg"  id="userchoujiangnow"/></p>
+						</div>
+					</div>
+					<!--许愿树-->
+					<div class="contents" style="display:none;">
+						<div class="pull-left">
+							<p class="fuyunlianlian">福运连连</p>
+							<p><img src="images/t_xys.jpg" /></p>
+						</div>
+						<div class="pull-right">
+							<p>
+								<span>昵称：</span><label class="useraccount"></label>
+								<span>等级：</span><label class="level"></label>
+								<span>游戏时长：</span><label class="gametime"></label>
+							</p>
+							<p>活动时间：2015年2月12日 - 2015年2月25日</p>
+							<p>活动详情：活动期间内登陆游戏进行许愿的玩家根据自身会员等级可获得三倍许愿奖励</p>
+							<p>活动奖励：</p>
+							<p>
+								<table class="wishtable">
+									<tr >
+										<td>次数\等级</td>
+										<td>普通</td>
+										<td>蓝钻</td>
+										<td>黄钻</td>
+										<td>红钻</td>
+										<td>VIP</td>
+									</tr>
+									<tr>
+										<td>第一次</td>
+										<td>3000奖券</td>
+										<td>6000奖券</td>
+										<td>9000奖券</td>
+										<td>12000奖券</td>
+										<td>15000奖券</td>
+									</tr>	
+										
+									<tr>
+										<td>第二次</td>
+										<td>3000奖券</td>
+										<td>9000奖券</td>
+										<td>12000奖券</td>
+										<td>15000奖券</td>
+										<td>18000奖券</td>
+									</tr>
+									<tr>
+										<td>第三次</td>
+										<td>3000奖券</td>
+										<td>12000奖券</td>
+										<td>15000奖券</td>
+										<td>18000奖券 </td>
+										<td>21000奖券</td>
+									</tr>
+									
+								</table>
+							</p>
+							<p style="text-align:center;margin-top:10px;cursor:pointer;"><a href="http://www.789game.com/Wishing" target="_blank"><img src="images/btn_qwxy.jpg" /></a></p>
+						</div>
+					</div>
+					<!--财富榜-->
+					<div class="contents" style="display:none;">
+						<div class="pull-left">
+							<p class="fuyunlianlian">福运连连</p>
+							<p><img src="images/t_cfb.jpg" /></p>
+						</div>
+						<div class="pull-right">
+							<p>
+								<span>昵称：</span><label class="useraccount"></label>
+								<span>财富值：</span><label id="caifuNo"></label><span>幸运豆</span>
+								<span>财富排名：</span><label id="moneysort"></label>
+							</p>
+							<p>活动时间：2015年2月12日 - 2015年2月25日</p>
+							<p>活动详情：根据玩家每日输赢累计得到的财富值进行排名，前十即可获得千万豪礼	</p>
+							<p>活动奖励：</p>
+							<p>第一名：1000万奖券   第二名：900万奖券     第三名：  800万奖券 <br/>
+							   第四名： 660万奖券   	第五名：520万奖券      第六名：  350万奖券  <br/>
+							   第七名： 200万奖券    第八名：100万奖券 	    第九名：      &nbsp;80万奖券   <br/>
+							   第十名：&nbsp;&nbsp;60万奖券						
+ 								
+							</p>
+							<p style="text-align:center;margin-top:30px;cursor:pointer;"><a href="http://www.789game.com/money" target="_blank"><img src="images/btn_ckpm.jpg" id="caifulistsshow" /></a></p>
+						</div>
+						<label id="userloginedtimes" style="display:none;"></label>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="index_bg01"></div>                       
+<div class="index_bg02"></div>
+<div class="index_bg03"></div>
+<div class="index_bg04"></div>
+<div class="index_bg05"></div>
+<div class="index_bg06"></div>
+<div class="index_bg07">
+	<div class="footer">
+		<div>
+			<p><script type="text/javascript" src="js/footer.js" ></script></p>
+			<p>健康游戏忠告：抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.iDialog.js"></script>
+<script type="text/javascript">
+	//获取当前时间
+		Date.prototype.pattern=function(fmt) {         
+			var o = {         
+			"M+" : this.getMonth()+1, //月份         
+			"d+" : this.getDate(), //日         
+			"h+" : this.getHours()%12 == 0 ? 12 : this.getHours()%12, //小时         
+			"H+" : this.getHours(), //小时         
+			"m+" : this.getMinutes(), //分         
+			"s+" : this.getSeconds(), //秒         
+			"q+" : Math.floor((this.getMonth()+3)/3), //季度         
+			"S" : this.getMilliseconds() //毫秒         
+			};         
+			var week = {         
+			"0" : "/u65e5",         
+			"1" : "/u4e00",         
+			"2" : "/u4e8c",         
+			"3" : "/u4e09",         
+			"4" : "/u56db",         
+			"5" : "/u4e94",         
+			"6" : "/u516d"        
+			};         
+			if(/(y+)/.test(fmt)){         
+				fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));         
+			}         
+			if(/(E+)/.test(fmt)){         
+				fmt=fmt.replace(RegExp.$1, ((RegExp.$1.length>1) ? (RegExp.$1.length>2 ? "/u661f/u671f" : "/u5468") : "")+week[this.getDay()+""]);         
+			}         
+			for(var k in o){         
+				if(new RegExp("("+ k +")").test(fmt)){         
+					fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));         
+				}         
+			}         
+			return fmt;         
+		}     
+		var date = new Date();      
+		var localTime=date.pattern("yyyy-MM-dd HH:mm:ss");
+	
+	//登录的判断
+		function checkInput() {
+			if (document.getElementById("txtSsoAccount").value == "") {
+				$("#showerrorMsg").html("请输入您的用户名");
+				document.getElementById("txtSsoAccount").focus();
+				return false;
+			}
+			if (document.getElementById("txtSsoPassword").value == "") {
+				$("#showerrorMsg").html("请输入您的密码");
+				document.getElementById("txtSsoPassword").focus();
+				return false;
+			}
+			return true;
+		}
+		//自定义方法,进行时间的显示效果,不足1小时显示分钟，>=1小时,显示**小时**分钟
+	   function changeTimeShow(changetime){
+		  var hour=parseInt(changetime/60);
+		  var minute=Math.round(parseFloat(changetime%60/60)*100)/100;
+		  if(changetime<60){
+			return minute+"小时";
+		  }else{
+			return hour+minute+"小时";
+		 }
+	 }
+	//用户等级
+	function  userLevels(level){
+	 if(level==0){
+	     return "普通会员";
+	  }else if(level==1){
+	     return "蓝钻会员";
+	  }else if(level==2){
+	     return "黄钻会员";
+	  }else if(level==3){
+	     return "红钻会员";
+	  }else if(level==4){
+	     return "VIP会员";
+	  }
+	}	
+
+	//获取url参数
+       function GetRequest() {
+            var url = location.search; //获取url中"?"符后的字串
+            var theRequest = new Object();
+            if (url.indexOf("?") != -1) {
+                var str = url.substr(1);
+                strs = str.split("&");
+                for (var i = 0; i < strs.length; i++) {
+                    theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+                }
+            }
+            return theRequest;
+        }
+	
+	
+	$(document).ready(function(){
+		   //页面加载的时候判断是否从大厅过来	
+			var Request = new Object();
+            Request = GetRequest();
+            var userID = Request['UserID'];
+			var userPwd=Request['PWD'];
+			var urlID=Request['id'];
+			
+			if(urlID=="2"){
+			 $("#imganniu1").attr("src","images/btn_01.jpg");
+			 $("#xingyunzhuanpanclick").attr("src","images/btn_click02.jpg");
+			 $("#mycontent1").css("display","none");
+			 $("#mycontent2").css("display","block");
+			}
+			
+			$.ajax({
+					async:false,
+						url: 'http://api.789game.com/index.php/Api/Newyearact/getLoginUserDetail.php',
+						type: "GET",
+						dataType: 'jsonp',
+						jsonp: 'jsoncallback',
+						data:{},
+						success: function (json) {
+						if(json!="0"){
+							   $(".useraccount").html(json.nickname);
+								$(".level").html(userLevels(json.level));
+								$("#signIndays").html(json.signcount);
+								$("#paymoney").html(json.paymoney);  //当前充值金额
+								$(".gametime").html(changeTimeShow(json.playtimecount)); //游戏时长
+								$("#prizeNo").html(json.freechargecount); //免费抽奖次数
+								$("#caifuNo").html(json.treasureinfo) //财富值
+								var moneysorts=json.treasureRank; //财富排名
+								if(moneysorts==0){
+									$("#moneysort").html("100名以外");
+								}else{
+									$("#moneysort").html(moneysorts);
+								}
+								$("#userloginedtimes").html(changeTimeShow(json.playtimecount));
+								$(".showtimes").css("display","block");
+								$(".showuserinfoNologin").css("display","none");
+							}else{
+									if('undefined' !=typeof(userID) && 'undefined'!=typeof(userPwd) && userID !='' && userPwd !=''){
+										$.ajax({
+											async:false,
+												url: 'http://api.789game.com/index.php/Api/Newyearact/loginGame.php',
+												type: "GET",
+												dataType: 'jsonp',
+												jsonp: 'jsoncallback',
+												data:{'logincert':userID,'loginpwd':userPwd},
+											    success: function (json) {
+												if(json=="1"){
+													alert("你填写的登陆账号或者密码不正确!请重新填写!")
+												}else if(json=="2"){
+										        }else if(json=="55"){
+										        	alert("亲，活动已结束！");
+										        }else{
+													$.ajax({
+														async:false,
+														url: 'http://api.789game.com/index.php/Api/Newyearact/getLoginUserDetail.php',
+														type: "GET",
+														dataType: 'jsonp',
+														jsonp: 'jsoncallback',
+														data:{},
+														success: function (json) {
+														if(json!="0"){
+															$(".useraccount").html(json.nickname);
+															$(".level").html(userLevels(json.level));
+															$("#signIndays").html(json.signcount);
+															$("#paymoney").html(json.paymoney);  //当前充值金额
+															$(".gametime").html(changeTimeShow(json.playtimecount)); //游戏时长
+															$("#prizeNo").html(json.freechargecount); //免费抽奖次数
+															$("#caifuNo").html(json.treasureinfo) //财富值
+															$("#userloginedtimes").html(changeTimeShow(json.playtimecount));
+															var moneysorts=json.treasureRank; //财富排名
+															if(moneysorts==0){
+																$("#moneysort").html("100名以外");
+															  }else{
+																$("#moneysort").html(moneysorts);
+															  }
+																$(".showtimes").css("display","block");
+																$(".showuserinfoNologin").css("display","none");
+													         }else{
+														      // alert(json);
+														     }
+														   },
+														  error: function(xhr){
+														}
+													});	
+										        }
+									       },
+									     error: function(xhr){
+									}
+								});	
+							}						
+						}
+					},
+				error: function(xhr){
+				alert("请求出错,请检查相关度网络状况");
+				}
+			});
+			
+		  //标题不同引起的切换效果
+	    $(".contenttitle").find("li").each(function(i){
+			$(this).bind("click",function(){
+				$(".contents").hide();
+				$(this).find('img').eq(0).attr("src","images/btn_click0" + (i + 1) + ".jpg");
+				$(".contents").eq(i).show();
+				for (var j = 0; j < 4; j++) {
+					if(j!=i){
+						$(this).parent().find("li").eq(j).find("img").eq(0).attr("src", "images/btn_0" + (j+ 1) + ".jpg");
+					}
+				}
+			});
+		});
+		//登录的时候进行验证前的触发
+			$("#txtSsoAccount").blur(function(){$("#showerrorMsg").html("");});
+			$("#txtSsoPassword").blur(function(){$("#showerrorMsg").html("");});
+			//点击登录按钮时弹出登录框
+			$("#nologined").click(function(){
+			if(localTime >'2015-02-11 23:59:59' && localTime <'2015-02-25 23:59:59' ){
+				iDialog({
+					id:"login",
+					title:'用户登录',
+					padding: '0px 0px 0px 0px',
+					lock:true,
+					fixed:true,
+					width:380,
+					height:350,
+					content:document.getElementById('loginUserInput')
+				});
+				}else{
+					 alert("活动还没开始");
+				}
+			});
+			$(document).keydown(function(e) {
+				var theEvent = window.event || e;
+				var code = theEvent.keyCode || theEvent.which;
+				if (code === 13) {
+					$("#loginButtons").click();
+					return false;
+				}
+			});
+			
+			//登录按钮的事件
+			$("#loginButtons").click(function(){
+					if(checkInput()){
+						$.ajax({
+							async:false,
+							url: 'http://api.789game.com/index.php/Api/Newyearact/loginWeb.php',
+							type: "GET",
+							dataType: 'jsonp',
+							jsonp: 'jsoncallback',
+							data:{'logincert':$("#txtSsoAccount").val(),'loginpwd':$("#txtSsoPassword").val()},
+							success: function (json) {
+								if(json==55){
+									$.dialog.get['login'].hide();
+							        alert("亲，活动已结束！");
+								}else{
+									if(json==0){
+										 $.ajax({
+											async:false,
+											url: 'http://api.789game.com/index.php/Api/Newyearact/getLoginUserDetail.php',
+											type: "GET",
+											dataType: 'jsonp',
+											jsonp: 'jsoncallback',
+											data:{},
+											success: function (json) {
+												if(json!="0"){
+													$(".useraccount").html(json.nickname);
+													$(".level").html(userLevels(json.level));
+													$("#signIndays").html(json.signcount);
+													$("#paymoney").html(json.paymoney);  //当前充值金额
+													$(".gametime").html(changeTimeShow(json.playtimecount)); //游戏时长
+													$("#prizeNo").html(json.freechargecount); //免费抽奖次数
+													$("#caifuNo").html(json.treasureinfo) //财富值
+													var moneysorts=json.treasureRank; //财富排名
+													if(moneysorts==0){
+														$("#moneysort").html("100名以外");
+													}else{
+														$("#moneysort").html(moneysorts);
+													}
+													$("#userloginedtimes").html(changeTimeShow(json.playtimecount));
+													$.dialog.get['login'].hide();
+													$(".showtimes").css("display","block");
+													 $(".showuserinfoNologin").css("display","none");
+												}else{
+												//alert(json);
+												}
+											},
+											error: function(xhr){
+											alert("请求出错,请检查相关度网络状况");
+											}
+										});
+										}else if(json==2){
+											alert("请认真填写登录信息！");
+										}else if(json==1){
+										alert("用户名不存在");
+									}
+								}
+							},
+							error: function(xhr){
+							alert("请求出错,请检查相关度网络状况");
+							}
+						});	
+					}else{
+						if($("#txtSsoAccount").val() == ""){
+							$("#showerrorMsg").html("请输入您的用户名");
+						}else if($("#txtSsoPassword").val()==""){
+							$("#showerrorMsg").html("请输入您的密码");
+						}else if($("#txtSsoCode").val() == ""){
+							$("#showerrorMsg").html("请输入验证码");
+						}
+					}
+				});
+		//签到事件
+		$("#usersinged").click(function(){
+		var cishu=parseInt($("#signIndays").html());
+			$.ajax({
+				async:false,
+				url: 'http://api.789game.com/index.php/Api/Newyearact/userSignAct.php',
+				type: "GET",
+				dataType: 'jsonp',
+				jsonp: 'jsoncallback',
+				data:{},
+				success: function (json) {
+					if(json==0){
+						$("#signIndays").html(cishu + 1);
+						alert("签到成功！")
+					}else if(json ==1){
+						alert("您已经签到过了！")
+					}else if (json ==2){
+					alert("签到失败！若有疑问请咨询在线客服.")
+					}
+				},
+				error: function(xhr){
+				alert("请求出错,请检查相关度网络状况");
+				}
+			});
+		});
+		//幸运转盘
+		$("#userlignqurightnow").click(function(){
+			$.ajax({
+				async:false,
+				url: 'http://api.789game.com/index.php/Api/Newyearact/getFreeChange.php',
+				type: "GET",
+				dataType: 'jsonp',
+				jsonp: 'jsoncallback',
+				data:{},
+				success: function (json) {
+					if(json==0){
+						var userlingjinagcishu =$("#prizeNo").html();
+					   $("#prizeCishu").html(userlingjinagcishu);
+						$("#imgno1").css("display","none");
+						$("#imgno2").css("display","block");
+						iDialog({
+							id:"lingjiangcishu",
+							title:'领取成功!',
+							padding: '0px 0px 0px 0px',
+							lock:true,
+							fixed:true,
+							width:380,
+							height:100,
+							content:document.getElementById('qiandaosuccess')
+						});
+						$("#prizeNo").html("0");   
+					
+						$("#userchoujiangnow").click(function(){
+							$.dialog.get['lingjiangcishu'].hide();
+							window.open("http://game.789game.com/roulette/Default.aspx","_blank");
+							
+						});
+					}else if(json==1){
+					 alert("抱歉,你领取的次数已到上线或者您的游戏时长不足以领取本次奖励,请前去抽奖或者游戏后在来领取！")
+					}else if(json==2){
+					 alert("抱歉,你的游戏时长不到30分钟,无法获取该项奖励,请游戏后再来领取");
+					}else if(json==3){
+					   iDialog({
+							id:"chongzhi",
+							title:'进行充值',
+							padding: '0px 0px 0px 0px',
+							lock:true,
+							fixed:true,
+							width:380,
+							height:150,
+							content:document.getElementById('paymoneynow')
+						});
+					}else{
+					}
+				},
+				error: function(xhr){
+				alert("请求出错,请检查相关度网络状况");
+				}
+			});
+		});
+		$("#userChongzhi").click(function(){
+			$.dialog.get['chongzhi'].hide();
+		    window.open("http://pay.789game.com","_blank");
+		});
+	    //安全退出
+	 $(".userloginout").click(function(){
+		$.ajax({
+			async:false,
+			url: 'http://api.789game.com/index.php/Api/Newyearact/loginOut.php',
+			type: "GET",
+			dataType: 'jsonp',
+			jsonp: 'jsoncallback',
+			data:{},
+			success: function (json) {
+				if(json==0){
+					alert("安全退出成功！")
+				    window.location.href="http://www.789game.com/newyear";
+				}
+			},
+			error: function(xhr){
+		  //alert("请求出错,请检查相关度网络状况");
+			}
+		});
+	 
+	 });
+	});
+</script>
+</body>
+</html>

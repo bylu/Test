@@ -1,0 +1,28 @@
+.familleftbar{
+width:100%;
+border:1px solid #75a4c7;
+float:left;
+margin-top:15px;
+padding-bottom:15px;
+}
+
+.familleftbar2 p{text-align:center;padding:15px 0px 0px 0px;font-size:14px;}
+.familleftbar2 p span{float:left;width:70px;display:inline;margin-left:10px;padding-left:10px;height:25px;line-height:25px;vertical-align:middle;}
+.familleftbar2 p label{float:left;display:inline;height:25px;line-height:25px;vertical-align:middle;}
+.familleftbar2  .downthis{float:left;padding-left:18%;margin-top:40px;}
+.familleftbar3 p{text-align:center;padding:15px 10px 0px 10px;font-size:14px;}
+.familleftbar3 span{width:100%;text-indent:25px;font-weight:bolder;float:left;text-align:left;}
+.familleftbar3 label a{float:left;width:100%;margin:10px 0px;text-align:left;cursor:pointer;}
+.familleftbar3 label a:hover{color:red;}
+.familytitle{width:100%;float:left;margin-top:10px;height:41px;background:url(../images/fwFAQ_anniu.png) no-repeat;}
+.familytitle ul li{padding:0px 20px;margin:0px 10px;float:left;display:inline-block;height:32px;line-height:32px;vertical-align:middle;font-size:16px;color:#626161;font-family:'微软雅黑';font-weight:bolder;cursor:pointer;} 
+.familytitle ul li.on{background-color:#15a6ff;padding:0px 15px;margin:0px 12px;color:#ffffff;}
+
+
+.leftimg{float:left;display:inline;}
+.rightinfo{float:left;display:inline;width:82%;}
+.rightinfo p{text-indent:20px;line-height:25px;color:#6e6e6e;font-size:12px;background:none;border-bottom:none;float:left;padding-left:0px;}
+.infoshow{width:100%;float:left;margin-top:15px;}
+.infoshow label{width:100%;float:left;color: #2e2e2e;font-size:12px;font-weight:bolder;margin:10px 0px 10px 0px;}
+.infoshow p{width:100%;text-indent:20px;line-height:25px;padding-left:0px;height:auto;color:#6e6e6e;font-size:12px;background:none;border-bottom:none;float:left;}
+.infoshow span{width:100%;padding-left:3%;float:left;color: #6e6e6e;font-size:12px;line-height:25px;}

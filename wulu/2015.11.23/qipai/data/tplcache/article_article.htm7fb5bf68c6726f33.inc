@@ -1,0 +1,40 @@
+<?php
+$z[0]=Array("global","",185,213);
+$z[0][4]['name']="cfg_soft_lang";
+$z[1]=Array("field","",226,245);
+$z[1][4]['name']="title";
+$z[2]=Array("field","",286,315);
+$z[2][4]['name']="keywords";
+$z[3]=Array("field","",355,413);
+$z[3][4]['name']="description";
+$z[3][4]['function']="html2text(@me)";
+$z[4]=Array("global","",460,492);
+$z[4][4]['name']="cfg_templets_skin";
+$z[5]=Array("global","",553,585);
+$z[5][4]['name']="cfg_templets_skin";
+$z[6]=Array("channel","\r\n<li><a href='[field:typelink/]' target=\"_blank\" >[field:typename/]</a></li>\r\n",924,1073);
+$z[6][4]['row']="6";
+$z[6][4]['type']="top";
+$z[6][4]['typeid']="1,2,3,4,5,6";
+$z[7]=Array("global","",1225,1257);
+$z[7][4]['name']="cfg_templets_skin";
+$z[8]=Array("global","",1425,1457);
+$z[8][4]['name']="cfg_templets_skin";
+$z[9]=Array("field","",1515,1544);
+$z[9][4]['name']="position";
+$z[10]=Array("field","",1594,1613);
+$z[10][4]['name']="title";
+$z[11]=Array("field","",1645,1663);
+$z[11][4]['name']="body";
+$z[12]=Array("prenext","",1696,1721);
+$z[12][4]['get']="pre";
+$z[13]=Array("prenext","",1753,1779);
+$z[13][4]['get']="next";
+$z[14]=Array("artlist","<DD><a href=\"[field:arcurl/]\">[field:title/]</a> </DD>",2104,2211);
+$z[14][4]['row']="10";
+$z[14][4]['type']="commend";
+$z[15]=Array("arclist","<DD><a href=\"[field:arcurl/]\">[field:title/]</a> </DD>",2261,2365);
+$z[15][4]['row']="10";
+$z[15][4]['orderby']="click";
+
+?>

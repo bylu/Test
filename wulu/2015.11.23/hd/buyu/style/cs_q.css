@@ -1,0 +1,6 @@
+
+#qq_icon {width:164px; height:242px;  position:fixed; right:-200px; top:150px; cursor:pointer;}
+#cs_online {width:164px; height:242px; position:fixed; top:150px; right:-220px; background:url(../images/qq_bg.png) no-repeat; display:none; filter:alpha(opacity:0); opacity:0;}
+.qq_context {width:164px; height:242px; margin-top:73px; list-style:none; padding:0px;} 
+.qq_context li {width:175px; height:25px; margin-left:5px; margin-top:20px; float:left;background: url(../images/qq_01.png) no-repeat;background-position-x: 48px;}
+.span_t {display:block; float:left; color:#333; line-height:25px; font-size:12px; font-family:'Arial';}

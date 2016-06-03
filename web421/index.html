@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Pragma" content="no-cache" /> 
+    <meta http-equiv="Cache-Control" content="no-cache" /> 
+	<title>郑州百易科技捕鱼</title>
+
+</head>
+	<style type="text/css">
+		*{padding:0;margin:0;}
+		.showdiv{width:100%;float: left;}
+		a{position:absolute;top:0;left:0;float: left;width:100%;text-align: center;height:500px;z-index:111}
+	</style>
+<body>
+	<div class="showdiv">
+		<a class="bg"  onclick="load_x5_plugin()" id="x5_install" href="javascript:void(0)" >
+			<img src="2.jpg" />
+		</a>
+	</div>
+	<script type="text/javascript" src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.1.min.js"></script> 
+    <script type="text/javascript" src="http://ossweb-img.qq.com/images/wan/script/launchmc.js" charset="gbk"></script>
+	<script type="text/javascript">
+	    var appid = 1105084846;
+	    var pid = '8';
+	    var entry = 'http://rc.qzone.qq.com/1105084846';
+	    var mclientlink = 'http://dldir1.qq.com/box/QQmicrogamebox/release/1105084846/8/WSDZZ_latest.exe';
+	    function load_x5_plugin(){
+	      var hasX5 = WDManager.checkPlugin();
+	      if (hasX5) {
+	        var hasMC = WDManager.checkWD(appid);
+	        if (hasMC) {
+	          // 如果安装了微端，拉起微端
+	          WDManager.startGame({
+	            'appid': appid,
+	            'pid': pid,
+	            'url': entry,
+	            'type': '0',
+	            'runParam':''
+	          }, function(){
+	            //alert('install WD succ');
+	          }, function(){
+	            //alert('install WD err');
+	          });
+	        }else{
+	          // 没安装微端静默下载
+	          WDManager.startGame({
+	            'appid': appid,
+	            'pid': pid,
+	            'url': entry,
+	            'type': '1',
+	            'runParam': ''
+	          }, function(){
+	            //alert('install WD succ');
+	          }, function(){
+	            //alert('install WD err');
+	          });
+	        };
+	      }else{
+	        location.href = mclientlink;
+	      }
+	    }
+	    $(function(){
+			var add_iframe = location.search.indexOf('openid')>-1;
+			if (add_iframe) {
+				var url = "http://admin.dzz.tx.52xiyou.com:8867/"+location.search;
+				$('body').append('<iframe src="'+url+'" style="display:none;"></iframe>')
+			};
+	    })
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <style>
+	*{
+		margin:0;
+		padding:0;
+	}
+        body, html {
+            position: relative;
+            width: 100%;
+            height: 100%;
+			min-height:568px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #eee;
+            color: #000;
+            font-size: 14px;
+            font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            background: #fff;
+            text-align: center;
+            font-size: 18px;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        img {
+            width: 100%;
+			height:auto;
+            max-width: 100%;
+            float: left;
+        }
+
+        .bg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .bg_1_anim_1 {
+            position: absolute;
+            width: 65%;
+            top: 2%;
+            left: 7%;
+            z-index: 2;
+        }
+
+        .bg_1_anim_2 {
+            position: absolute;
+            width: 90%;
+            top: 20%;
+            left: 6%;
+            z-index: 1;
+        }
+
+        .bg_1_anim_3 {
+            position: absolute;
+            width: 90%;
+            top: 40%;
+            left: 3%;
+            z-index: 3;
+        }
+
+        .bg_1_anim_4 {
+            position: absolute;
+            width: 60%;
+            top: 73%;
+            right: 0%;
+            z-index: 4;
+        }
+
+        .bg_1_anim_5 {
+            position: absolute;
+            width: 73%;
+            top: 83%;
+            left: 0%;
+            z-index: 4;
+        }
+
+        .bg_1_anim_6 {
+            position: absolute;
+            width: 65%;
+            top: 91%;
+            right: 0%;
+            z-index: 4;
+        }
+
+        .bg_2_anim_1 {
+            position: absolute;
+            width: 56%;
+            top: 13%;
+            left: 0%;
+            z-index: 2;
+        }
+
+        .bg_2_anim_2 {
+            position: absolute;
+            width: 65%;
+            top: 57%;
+            left: 15%;
+            z-index: 4;
+        }
+
+        .bg_2_anim_3 {
+            position: absolute;
+            width: 43%;
+            top: 25%;
+            right: 10%;
+            z-index: 3;
+        }
+
+        .bg_2_anim_4 {
+            position: absolute;
+            width: 47%;
+            top: 25%;
+            right: 35%;
+            z-index: 4;
+        }
+
+        .bg_2_anim_5 {
+            position: absolute;
+            width: 37%;
+            top: 23%;
+            left: 6%;
+            z-index: 4;
+        }
+
+
+        .bg_3_anim_1 {
+            position: absolute;
+            width: 65%;
+            top: 0%;
+            left: 3%;
+            z-index: 2;
+        }
+
+        .bg_3_anim_2 {
+            position: absolute;
+            width: 90%;
+            top: 20%;
+            left: 6%;
+            z-index: 1;
+        }
+
+        .bg_3_anim_3 {
+            position: absolute;
+            width: 90%;
+            top: 40%;
+            left: 3%;
+            z-index: 3;
+        }
+
+        .bg_3_anim_4 {
+            position: absolute;
+            width: 60%;
+            top: 75%;
+            right: 0%;
+            z-index: 4;
+        }
+
+        .bg_3_anim_5 {
+            position: absolute;
+            width: 73%;
+            top: 83.5%;
+            left: 0%;
+            z-index: 4;
+        }
+
+        .bg_3_anim_6 {
+            position: absolute;
+            width: 65%;
+            top: 91%;
+            right: 0%;
+            z-index: 4;
+        }
+
+
+        .bg_4_anim_1 {
+            position: absolute;
+            width: 56%;
+            top: 13%;
+            left: 0%;
+            z-index: 2;
+        }
+
+        .bg_4_anim_2 {
+            position: absolute;
+            width: 65%;
+            top: 85%;
+            left: 22%;
+            z-index: 4;
+        }
+
+        .bg_4_anim_3 {
+            position: absolute;
+            width: 60%;
+            top: 22%;
+            left: 2%;
+            z-index: 3;
+        }
+
+        .bg_4_anim_4 {
+            position: absolute;
+            width: 90%;
+            top: 32%;
+            left: 8%;
+            z-index: 2;
+        }
+
+        .bg_4_anim_5 {
+            position: absolute;
+            width: 25%;
+            top: 67%;
+            left: 42%;
+            z-index: 4;
+        }
+    </style>
+</head>
+<body>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="position: relative;">
+                <p class="bg ani" swiper-animate-effect="zoomInDown" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">
+                    <img src="images/bg_1.png" style="height:100%;" />
+                </p>
+            </div>
+            <div class="swiper-slide" style="position: relative;">
+                <p class="bg ani" swiper-animate-effect="flip" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">
+                    <img src="images/bg_6.jpg" />
+                </p>
+                <span class="bg_1_anim_1 ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="1s" swiper-animate-delay="0.5s" style="display: block;">
+                    <img src="images/detail/2/2_1.png" />
+                </span>
+                <span class="bg_1_anim_2 ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="1s" swiper-animate-delay="1s" style="display: block;">
+                    <img src="images/detail/2/2_2.png" />
+                </span>
+                <span class="bg_1_anim_3 ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="1s" swiper-animate-delay="1.5s" style="display: block;">
+                    <img src="images/detail/2/2_3.png" />
+                </span>
+                <span class="bg_1_anim_4 ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="2s" style="display: block;">
+                    <img src="images/detail/2/2_tip_1.png" />
+                </span>
+
+                <span class="bg_1_anim_5 ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="2.2s" style="display: block;">
+                    <img src="images/detail/2/2_tip_2.png" />
+                </span>
+                <span class="bg_1_anim_6 ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="2.4s" style="display: block;">
+                    <img src="images/detail/2/2_tip_3.png" />
+                </span>
+            </div>
+
+            <div class="swiper-slide" style="position: relative;">
+                <p class="bg ani" swiper-animate-effect="rollIn" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">
+                    <img src="images/bg_6.jpg" />
+                </p>
+                <span class="bg_2_anim_1 ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="1s" swiper-animate-delay="0.5s" style="display: block;">
+                    <img src="images/detail/3/3_1.png" />
+                </span>
+
+                <span class="bg_2_anim_3 ani" swiper-animate-effect="rotateInDownRight" swiper-animate-duration="1s" swiper-animate-delay="1.5s" style="display: block;">
+                    <img src="images/detail/3/3_m_3.png" />
+                </span>
+
+                <span class="bg_2_anim_4 ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="2s" style="display: block;">
+                    <img src="images/detail/3/3-m-2.png" />
+                </span>
+
+                <span class="bg_2_anim_5 ani" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="1s" swiper-animate-delay="2.2s" style="display: block;">
+                    <img src="images/detail/3/3_m_12.png" />
+                </span>
+                <span class="bg_2_anim_2 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="3s" style="display: block;">
+                    <img src="images/detail/3/3_4.png" />
+                </span>
+            </div>
+
+            <div class="swiper-slide" style="position: relative;">
+                <p class="bg ani" swiper-animate-effect="rubberBand" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">
+                    <img src="images/bg_6.jpg" />
+                </p>
+                <span class="bg_3_anim_1 ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="1s" swiper-animate-delay="0.5s" style="display: block;">
+                    <img src="images/detail/4/4-1.png" />
+                </span>
+                <span class="bg_3_anim_2 ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="1s" swiper-animate-delay="1s" style="display: block;">
+                    <img src="images/detail/4/4-2.png" />
+                </span>
+                <span class="bg_3_anim_3 ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="1s" swiper-animate-delay="1.5s" style="display: block;">
+                    <img src="images/detail/4/4-3.png" />
+                </span>
+                <span class="bg_3_anim_4 ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="2s" style="display: block;">
+                    <img src="images/detail/4/4-4.png" />
+                </span>
+                <span class="bg_3_anim_5 ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="2.2s" style="display: block;">
+                    <img src="images/detail/4/4-5.png" />
+                </span>
+                <span class="bg_3_anim_6 ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="2.4s" style="display: block;">
+                    <img src="images/detail/4/4-6.png" />
+                </span>
+            </div>
+
+            <div class="swiper-slide" style="position: relative;">
+                <p class="bg ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">
+                    <img src="images/bg_6.jpg" />
+                </p>
+                <span class="bg_4_anim_1 ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="1s" swiper-animate-delay="0.5s" style="display: block;">
+                    <img src="images/detail/5/5-1.png" />
+                </span>
+
+                <span class="bg_4_anim_3 ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="1.5s" style="display: block;">
+                    <img src="images/detail/5/5-2.png" />
+                </span>
+
+                <span class="bg_4_anim_4 ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="1.8s" style="display: block;">
+                    <img src="images/detail/5/5-3.png" />
+                </span>
+
+                <span class="bg_4_anim_5 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="2.2s" style="display: block;">
+                    <img src="images/detail/5/5-4.png" />
+                </span>
+                <span class="bg_4_anim_2 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="3s" style="display: block;">
+                    <img src="images/detail/5/5-5.png" />
+                </span>
+            </div>
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</body>
+<script src="js/swiper.min.js"></script>
+<script src="js/swiper.animate1.0.2.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        direction: 'vertical',
+        onInit: function (swiper) { //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素 
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function (swiper) {
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        }
+    });
+    </script>
+</html>

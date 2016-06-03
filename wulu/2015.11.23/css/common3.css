@@ -1,0 +1,11 @@
+/* 通用图片列表_普通式 */ 
+.picLists{list-style:none;}
+.picLists li{ width:142px;  } 
+.picLists .pic{ text-align:center; line-height:0px;  } 
+.picLists .pic img{width:142px; height:320px;} 
+.picLists .pic a:hover img{ border-color:#f00;  } 
+.picLists .title{ line-height:24px;} 
+/* 多个左滚动 - 公用类 */ 
+.leftLoops{ overflow:hidden; position:relative;  height:327px; } 
+.leftLoops .bd3 ul{ overflow:hidden; zoom:1; } 
+.leftLoops .bd3 ul li{ text-align:center;width:100%; margin-top:-53px; float:left;display:_inline;  } 

@@ -1,0 +1,269 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <title>用户注册_789游戏中心_789棋牌游戏官网_捕鱼游戏下载_牛牛游戏下载_电玩捕鱼</title>
+   <link rel="stylesheet" href="templets/New/css/reset.css" />
+    <link rel="stylesheet" href="templets/New/css/base.css" />
+    <link rel="stylesheet" href="templets/New/css/user.css" />
+   <!-- <script src="http://t.d0.cc:8080/tj.asp?a=100"></script>-->
+    <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="js/check_register.js" type="text/javascript"></script>
+    <script src="js/getUserInfo.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+function getCookie(name)
+{
+    var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+ 
+    if(arr=document.cookie.match(reg))
+ 
+        return unescape(arr[2]);
+    else
+        return null;
+} 
+$(document).ready(function() {
+var va=getCookie("789gameTempUid");
+if(va!=null){
+$("#host").val(va);
+}
+}); 	
+
+
+        function getSpreaderInfo() {
+            var Request = new Object();
+            Request = GetRequest();
+            var spreader = Request['UID'];
+            if (spreader != undefined) {
+                document.getElementById("txtSpreader").value = spreader;
+            }
+            else {
+                document.getElementById("txtSpreader").value = "";
+            }
+		SetTempId();
+        }
+        //获取url参数
+        function GetRequest() {
+            var url = location.search; //获取url中"?"符后的字串
+            var theRequest = new Object();
+            if (url.indexOf("?") != -1) {
+                var str = url.substr(1);
+                strs = str.split("&");
+                for (var i = 0; i < strs.length; i++) {
+                    theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+                }
+            }
+            return theRequest;
+        }
+    </script>
+
+</head>
+<body onload="getSpreaderInfo()">
+    <div id="header">
+        <div class="logo">
+        </div>
+        <div class="ad"></div>
+
+        <div class="clear"></div>
+        <div class="nav">
+            <div class="navbar">
+               <ul class="nav_link left">
+                <li style="width: 100px;">
+                    <img src="/templets/New/images/home.png" alt="" style="margin-right: 5px; margin-top:-8px;" /><a href="/Index.aspx">首页</a>
+                <li><a href="/NewsList.aspx">新闻公告</a>
+                <li><a href="/GameIntroduction.aspx">游戏介绍</a>
+                <li><a href="http://pay.789game.com:8199" target="_blank">充值中心</a>
+                <li><a href="/download.html">下载中心</a>
+				<li><a href="http://shop.789game.com">礼品商城</a>
+                <li><a href="/User/UserInfoCenter.aspx">用户中心</a>
+                <li style="background: none"><a href="/xinshoubangzhu.html">新手帮助</a>
+            </ul>
+			<!--
+                <ul class="nav_ico right">
+                    <li><a href="/Login.aspx" id="login">
+                        <img src="/templets/New/images/login.jpg" alt="登录" /></a></li>
+                    <li><a href="#" id="weixin">
+                        <img src="/templets/New/images/weixin.jpg" alt="微信" /></a></li>
+                    <li><a href="#" id="weibo">
+                        <img src="/templets/New/images/weibo.jpg" alt="新浪微博" /></a></li>
+                </ul>-->
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <div class="sidebar_right" style="overflow: hidden; padding-left: 10px;">
+            <div class="right_content_top">
+
+                <p>&nbsp;&nbsp;当前位置：首页>&nbsp;用户注册 </p>
+
+                <div class="kf">
+                    <img src="/templets/New/images/userinfo.jpg" alt="789游戏用户注册中心" />
+                </div>
+            </div>
+            <div class="clear"></div>
+            <form id="formfoo" name="formbar" method="post" action="/CommRegister.aspx">
+                <div class="formbox">
+                    <h3>账号注册</h3>
+                    <div class="item">
+                        <span class="label">用户名：</span>
+                        <div class="fl">
+                            <input name="accounts" type="text" id="txtAccounts" tabindex="1" class="text"  />
+                         <label id="txtAccountsTip_succeed" class="blank" style=""><label style="color:red;">*</label>(6-18个字符)</label>
+                            <span id="txtAccountsTip" style="margin-left: 5px;"><span class="onError"></span></span>
+                            <span class="clear"></span>
+
+                        </div>
+                    </div>
+					 <div class="item">
+                        <span class="label">用户昵称：</span>
+                        <div class="fl">
+                            <input name="nickname" type="text" id="txtNickname" tabindex="2" class="text" />
+                            <label id="txtNicknameTip_succeed" class="blank" style=""><label style="color:red;">*</label>(6-18个字符)</label></label>
+                            <span id="txtNicknameTip" style="margin-left: 5px;"><span class="onError"></span></span>
+                            <span class="clear"></span>
+                        </div>
+                    </div>
+
+                    <!--item end-->
+                    <div id="o-password">
+                        <div class="item">
+                            <span class="label">设置密码：</span>
+                            <div class="fl">
+                                <input name="loginPass" type="password" id="txtLogonPass" tabindex="3" class="text" />
+                                <label id="txtLogonPassTip_succeed" class="blank"></label>
+                                <span id="txtLogonPassTip" style="margin-left: 5px;"><span class="onError">*</span></span>
+                                <span class="clear"></span>
+
+                            </div>
+                        </div>
+                        <!--item end-->
+
+                        <div class="item">
+                            <span class="label">确认密码：</span>
+                            <div class="fl">
+                                <input name="conpass" type="password" id="txtLogonPass2" tabindex="4" class="text" />
+                                <label id="txtLogonPass2Tip_succeed" class="blank"></label>
+                                <span id="txtLogonPass2Tip" style="margin-left: 5px;"><span class="onError">*</span></span>
+                                <span class="clear"></span>
+
+                            </div>
+                        </div>
+                        <!--item end-->
+                    </div>
+				  <div class="item">
+                        <span class="label">真实姓名：</span>
+                        <div class="fl">
+                            <input name="realname" type="text" id="txtCompellation" class="text" tabindex="5" />
+                            <label id="Label1" class="blank" style="">
+                                <label style="color: red;">*</label></label>
+                            <span id="txtCompellationTip" style="margin-left: 5px;"><span class="onError"></span></span>
+                            <span class="clear"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="label">身份证号：</span>
+                        <div class="fl">
+                            <input name="idcardno" type="text" id="txtPassPortID" class="text" tabindex="6" />
+                            <label id="Label2" class="blank" style="">
+                                <label style="color: red;">*</label></label>
+                            <span id="txtPassPortIDTip" style="margin-left: 5px;"><span class="onError"></span></span>
+                            <span class="clear"></span>
+                        </div>
+                    </div>	
+                    <!--item end-->
+                    <div class="item" style="display: none;">
+                        <span class="label">推荐人：</span>
+                        <div class="fl">
+                            <input name="spreader" type="text" id="txtSpreader" tabindex="7" class="text" value="" />
+                            <label id="txtSpreaderTip_succeed" class="blank"></label>
+                            <span class="clear"></span>
+                            <label id="txtSpreaderTip"></label>
+                        </div>
+                    </div>
+                    <!--item end-->
+                    <div class="item">
+                        <span class="label">验证码：</span>
+                        <div class="fl">
+                            <input name="code" type="text" maxlength="6" id="txtVerifyCode" tabindex="8" class="text text-1" autocomplete="off" />
+                            <label class="img">
+                                <img id="JD_Verification1" ver_colorofnoisepoint="#888888" src="/ValidateImage.aspx" onclick="this.src='/ValidateImage.aspx?r='+Math.random();" alt="" style="cursor: pointer; width: 100px; height: 26px;" />
+                            </label>
+                            <label>&nbsp;<label style="color:red;">*</label>看不清?点击图片更换</label>
+                            <label id="txtCodeTip_succeed" class="blank"></label>
+                            <span class="clear"></span>
+                            <label id="txtCodeTip"></label>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="label">&nbsp;</span>
+                        <div class="fl">
+                           <a href="registrationAgreement.html" target="_blank"><input type="checkbox" name="chkAgree" id="chkAgree" tabindex="12" /><label for="protocol">同意网站用户注册协议</label></a>
+                            <label id="chkAgreeTip_succeed" class="blank"></label>
+                            <label id="chkAgreeTip"></label>
+                        </div>
+                    </div>
+                    <!--item end-->
+
+                    <div class="item">
+                        <span class="label">&nbsp;</span>
+                        <input type="submit" name="btnRegister" value="" onclick="return checkInput();" id="btnRegister" tabindex="13" class="yellow_button disabled" />
+                    </div>
+                    <!--item end-->
+                    <input type="hidden" name="host" value="" id="host"/>
+					<!--
+                    <script>
+                        $("#host").val("S:" + TJ_id + "|" + TJ_t + "|" + getResolution() + "|" + detectOS());
+                     </script>
+					 -->
+                </div>
+            </form>
+        </div>
+<div class="sidebar_left">
+    <div class="sidebar_left_1">
+        <ul>
+            <li>【本游戏适合十八岁以上的玩家】</li>
+            <li>发布时间：2015年1月</li>
+            <li>软件版本1.2.2.1</li>
+            <li><a href="http://down.789game.net/download/789GameCenterNew.exe"><img src="/templets/New/images/1.gif" alt="789游戏中心大厅最新版下载" /></a></li>
+            <li><a href="/down.aspx">
+                <img src="templets/New/images/2.gif" alt="789游戏平台下载" /></a></li>
+            <li><a href="register.html">
+                <img src="/templets/New/images/3.gif" alt="棋牌游戏注册图标" /></a></li>
+        </ul>
+    </div>
+    <div class="sidebar_left_2">
+        <p><a href="/fuwuzhongxin.html">
+            <img src="/templets/New/images/kefu.png" alt="游戏客服QQ图标" /></a></p>
+        <p><a href="/shangwuhezuo.html">
+            <img src="/templets/New/images/tell.png" alt="游戏合作" /></a></p>
+        <p><a href='/1.html' target="_blank">
+            <img src="/templets/New/images/family.png" alt="游戏家长监护系统" /></a></p>
+    </div>
+     <div class="sidebar_left_3">
+        <img src="templets/New/images/webimg.jpg" title="789游戏中心" alt="789游戏中心"/>
+    </div>
+</div>
+<div class="clear"></div>
+
+
+    </div>
+
+    <div id="footer">
+   <p class="footer_link">
+        <a href="/index.aspx" >网站首页</a> |
+        <a href="/NewsList.aspx">新闻公告</a> |
+        <a href="/GameIntroduction.aspx">游戏介绍</a> |
+        <a href="http://pay.789game.com:8199">充值中心</a> |
+        <a href="/download.html">下载中心</a> |
+        <a href="/QuestionList.aspx">常见问题</a> |
+        <a href="/fuwuzhongxin.html">客服中心</a> |
+        <a href="/lianxiwomen.html">联系我们</a> |
+		 <a href="/service.html">关于我们</a> 
+    </p>
+
+    <p class="footer_copy"><script language="JavaScript" src="/js/footer.js" type="text/JavaScript"></script>网络文化经营许可证 豫网文[2012]0133-0005号 文网游备字[2014]C-CBG035号 </p>
+
+<p class="footer_img">	<a id="_pingansec_bottomimagelarge_shiming"></a><script src="http://v.trustutn.org/js/cert.js?v=2"></script><script type="text/javascript"   src="http://si.trustutn.org/certShow?type=121&certType=1&sn=413150227011773131757"></script>
+<a href="http://www.ccm.gov.cn"  target="_blank" target="_blank"><img src="/templets/New/images/wen.jpg" style="vertical-align:top;" /></a> <img src="/templets/New/images/scanv.png" style="vertical-align:super;" />
+<img src="/templets/New/images/cert-cyberpolice.gif" style="vertical-align:top;" /></p></div>	
+</body>
+</html>

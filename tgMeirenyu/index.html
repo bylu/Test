@@ -1,0 +1,135 @@
+<html xmlns="http://www.w3.org/1999/xhtml" class="js cssanimations">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.1.0-beta1/css/amazeui.min.css">
+<title>美人鱼</title>
+</head>
+	<style type="text/css">
+	*{padding:0;margin:0;}
+    body{margin:0px;padding:0px;overflow:auto;position:relative;font-size:1.45em;font-family:Microsoft Yahei;}
+    img,obj {width:100%;}
+    .layout{width:100%;}
+    .downKeyRegional{position:absolute; width:58.3%;top:19.35%;left:24%;}
+	.inviteCodeRegional{ position:absolute;width:45%;top:23.35%;left:40%;padding:1% 0% 0% 0%;color:#fcfd73;vertical-align:middle;}
+    .imgRandShowRegional{position:absolute;top:87.5%;left:7%;width:86.5%;}
+ .am-slider-default .am-control-nav li a {width: 10px;height: 10px;background-color: rgba(255, 255, 255, 1);}
+ .am-slider-default .am-control-nav{bottom:-33px;}
+ .wenxinidealog{position:absolute;width:100%;z-index:9;top:0;background-color:rgba(0,0,0,0.8);height:100%;display:none;}
+    </style>
+<body>
+<div class="layout">
+    <img src="images/mry_bg_01.jpg">
+    <img src="images/mry_bg_02.jpg">
+    <img src="images/mry_bg_03.jpg">
+    <img src="images/mry_bg_04.jpg">
+    <img src="images/mry_bg_05.jpg">
+    <img src="images/mry_bg_06.jpg">
+    <span class="downKeyRegional"><img src="images/temp_jjjcby_3_btn.png" alt="" title=""></span>
+	<span class="inviteCodeRegional" style="font-size: 1.4525em;">20413084</span> 
+	<div class="imgRandShowRegional">
+        <div class="am-slider am-slider-default" data-am-flexslider="{playAfterPaused: 400}">
+	        <div class="am-viewport">
+	          	<ul class="am-slides">
+	          		<li class="clone" aria-hidden="true" style="display: block;">
+	          			<img src="images/mry_01.jpg"  draggable="false">
+	          		</li>
+					<li class="">
+						<img src="images/mry_02.jpg" draggable="false">
+					</li>
+					<li class="" >
+						<img src="images/mry_03.jpg" draggable="false">
+					</li>
+					<li class="">
+						<img src="images/mry_04.jpg" draggable="false">
+					</li>
+				</ul>
+			</div>
+			<ul class="am-direction-nav">
+				<li><a class="am-prev" href="#">Previous</a></li>
+				<li><a class="am-next" href="#">Next</a></li>
+			</ul>
+		</div>    
+    </div>	
+</div>
+<div class="wenxinidealog wenxinidealogios">
+	<img src="images/wenxinidealog.png" id="weixinclose">
+</div>
+<div class="wenxinidealog wenxinidealoganzhuo">
+	<img src="images/anzhuos.png" id="weixinclosean">
+</div>
+<script src="http://apps.bdimg.com/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://cdn.amazeui.org/amazeui/2.1.0-beta1/js/amazeui.min.js"></script>
+<script type="text/javascript">
+    window.onload = function () {
+        //var scriptid = document.getElementById("scriptid").innerHTML;
+        //document.getElementById(scriptid).style.display = "none";
+    }
+    $(document).ready(function(){
+        updateLineHeightByParam();
+			$("#weixinclose").click(function(){
+				$(".wenxinidealogios").css("display","none");
+			});
+			$("#weixinclosean").click(function(){
+				$(".wenxinidealoganzhuo").css("display","none");
+			});
+    });
+
+    window.onresize=function(){
+        updateLineHeightByParam();
+    }
+
+    function updateLineHeightByParam(){
+        var width=document.body.clientWidth;
+        var scale=width%50;
+        if(scale==0){
+            scale=width/50*0.34;
+        }else{
+            if(scale>=50){
+              scale=width/50*0.37;
+            }else{
+               scale=width/50*0.25; 
+            }
+        }
+        $(".inviteCodeRegional").css("font-size",scale/2+"em");   
+        $(".first").css("font-size",scale/3.2+"em");	
+        $(".desc span").css("font-size",scale/2.3+"em");	
+        $(".desc label").css("font-size",scale/3+"em");	
+    }
+
+    var ua = navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == "micromessenger") {
+		if (checkIsApple()) {
+			 $(".wenxinidealogios").css("display","block");  
+		}	
+		$(".downKeyRegional").click(function(){
+			if (checkIsApple()) {
+			 $(".wenxinidealogios").css("display","block");  
+				}else{
+				    $(".wenxinidealoganzhuo").css("display","block"); 
+				}
+		});          
+    }else{
+        $(".downKeyRegional").click(function(){
+           if (checkIsApple()) {
+                window.location.href = "https://itunes.apple.com/us/app/jie-ji-jin-chan-bu-yu-mian/id1022745046?l=zh&ls=1&mt=8";
+            }else{
+               window.location.href = "http://download.6513.com/phoneGame/FXBY-1624766-560203981b9d5.apk";
+            }         
+        });        
+    }
+    
+    function checkIsApple(){
+         var u = navigator.userAgent, app = navigator.appVersion;
+         var ios=!!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+         var iPad=u.indexOf('iPad') > -1;
+         var iPhone=u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1;
+         if(ios || iPad || iPhone){
+            return true;
+         }else{
+            return false;
+         }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+        <meta charset="gbk">
+        <meta name="robots" content="all">
+        <meta name="author" content="Tencent-CP">
+        <meta name="Copyright" content="Tencent">
+        <meta name="Description" content="" />
+        <meta name="Keywords" content="" />
+        <title>携程活动-789棋牌游戏中心 </title>
+		<link type="text/css" href="css/index.css" rel="stylesheet" />
+		<link type="text/css" href="css/idealog.css" rel="stylesheet" />
+		<link type="text/css" href="js/skin/layer.css" rel="stylesheet" />
+		<link type="text/css" href="css/common.css" rel="stylesheet" />
+
+</head>
+<body style="background-position: 50% 67px;">
+	<div id="lktopnav">
+	<div class="nav_zt">   
+		<div class="nav_left">   
+			<a href="http://www.789game.com" title="789游戏中心" target="_blank" class="nav_logo">
+			    <img src="images/logo-1.png" style="margin-top:5px;" width="77" height="21">
+			</a>    	
+			<div class="classic">  
+				<span class="nav_red">经典游戏：</span>   
+				<ul id="topnav_ul_classic">           
+					<li onmouseover="NavCtl.liOver(this)" onmouseout="NavCtl.liOut(this)"><img src="images/classic_1.gif" width="17" height="17">捕鱼达人           
+						<div class="classicBox">              
+							<h2>捕鱼达人</h2>                 
+							<p>原版捕鱼达人，经典街机游戏完美移植。</p>        
+							<a href="http://www.789game.com/down.aspx" title="官方安全下载"></a>   
+						</div>           
+					</li> 
+					<li onmouseover="NavCtl.liOver(this)" onmouseout="NavCtl.liOut(this)">
+					    <img src="images/classic_3.gif" width="17" height="17">斗地主  
+						<div class="classicBox" style="display: none;">         
+							<h2>斗地主</h2>              
+							<p>国内非常流行的一种扑克牌游戏，需3人参加</p>          
+							<a href="http://www.789game.com/down.aspx"  title="官方安全下载"></a>       
+						</div>       
+					</li>          
+				</ul>   
+			</div>    
+		</div>   
+		<div class="nav_right">  
+			<ul class="right_list"> 
+				<li style="display: block; cursor:pointer;" id="names">
+					<span  id="topnav_liBeforeLogin">
+						<img src="images/login.jpg" width="17" height="11">登录
+					</span>
+
+				</li>   
+				<li>
+					<img src="images/regist.jpg" width="17" height="11"><a id="topnav_regist" href="http://www.789game.com/register.html" target="_blank" title="注册" rel="nofollow">注册</a>
+				</li>    
+				<li>
+					<img src="images/download.jpg" width="16" height="11"><a href="http://www.789game.com/down.aspx"  title=" 下载游戏">下载游戏</a>
+				</li>   
+				<li>
+					<img src="images/home.jpg" width="16" height="11"><a href="http://www.789game.com" target="_blank" title="返回官网" >返回官网</a>
+				</li>        
+				<li>
+					<img src="images/rmb.jpg" width="16" height="10"><a href="http://pay.789game.com/" target="_blank" title="充值" rel="nofollow">充值</a>
+				</li>   
+			</ul>  
+		</div>
+	</div>
+</div>
+    <div class="userLogin" id="loginUserInput" style="display:none;">
+			<h2>用户登录</h2>
+			<div class="showUserInfo">
+				<ul>
+					<li>
+						<div class="loginText" id="accountName">
+							<span class="textName"></span>
+							<input id="txtSsoAccount" type="text" value="" class="tip" placeholder="请输入用户名">
+						</div>
+				    </li>
+					<li>
+						<div class="loginText" id="accountSec">
+							<span class="textPsd"></span>
+							<input id="txtSsoPassword" type="password" value="" class="tip" placeholder="请输入密码">
+						</div>
+				    </li>
+					<li>
+						<div class="loginText">
+							<div class="loginBtn" id="loginButtons"></div>
+							<div class="loginTips">
+							还没有789账号？<a href="http://www.789game.com/register.html" target="_blank">立即注册！</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p id="showerrorMsg"></p>
+					</li>
+				</ul>
+			</div>
+		</div>
+    <div class="wrap">
+    	<div class="bg-header1">
+    		<div class="header-1"></div>
+			<div class="header-2">
+				<div class="content">
+					<p class="num1"><label>活动时间：</label><span>即日起-2015年5月31日24点</span></p>
+					<p class="num2"><label>兑换方式：</label><span>使用<i style="font-style:normal;">奖券</i>兑换<i>携程旅游卡</i></span></p>
+					<p class="num3"><label>活动介绍：</label><span>活动期间，玩家在礼品商城中，可使用 <i>奖券</i> 兑换<i> 携程旅游卡</i>，兑换完成后，您可登陆<br/>携程网进行兑换 <a href="http://www.ctrip.com/" target="_blank">（前往携程网）</a><br/>
+					<i style="cursor:pointer;font-weight:normal;" id="showidealog">携程网礼品卡兑换流程>></i></span></p>
+					<div class="btn">
+						<input type="button" id="btnclick" />
+					</div>
+					<div id="showxeicheng" style="display:none;">
+						<a id="closethis"></a>
+					</div>
+				</div>
+			</div>
+   		 </div>
+		 <div class="bgfooter">
+			<div class="main1">
+				<p>789游戏中心 豫ICP备12014032号-1</p>
+				<p>健康游戏忠告：抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+			</div>
+		 </div>
+		 <script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzkzODA2MTM1MF8yMzU4NTVfNDAwMDM3MTgxNF8"></script>
+    </div>
+		<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.8.0/jquery.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/jquery.iDialog.js"></script>
+		<script type="text/javascript" src="js/layer.js"></script>
+		<script type="text/javascript">
+			function checkInput() {
+				if (document.getElementById("txtSsoAccount").value == "") {
+					$("#showerrorMsg").html("请输入您的用户名");
+					document.getElementById("txtSsoAccount").focus();
+					return false;
+				}
+				if (document.getElementById("txtSsoPassword").value == "") {
+					$("#showerrorMsg").html("请输入您的密码");
+					document.getElementById("txtSsoPassword").focus();
+					return false;
+				}
+				return true;
+			}
+			
+			//获取url参数
+        function GetRequest() {
+            var url = location.search; //获取url中"?"符后的字串
+            var theRequest = new Object();
+            if (url.indexOf("?") != -1) {
+                var str = url.substr(1);
+                strs = str.split("&");
+                for (var i = 0; i < strs.length; i++) {
+                    theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+                }
+            }
+            return theRequest;
+        }
+		
+			function userLoginedInfo(){
+				 $.ajax({
+					async:false,
+					url: 'http://api.789game.com/api/apiwish/queryBaseInfo.html',
+					type: "GET",
+					dataType: 'jsonp',
+					jsonp: 'jsoncallback',
+					data:{},
+					success: function (json) {
+						if(json!="0"){
+							$("#names").html("<span style=\"color:#64B20F;\">"+json.accounts+"</span>");
+						}else{
+						}
+					},
+					error: function(xhr){
+					alert("请求出错,请检查相关度网络状况");
+					}
+				});	
+		
+		}
+
+
+		$(document).ready(function(){
+			userLoginedInfo();
+			 //登录的时候进行验证前的触发
+			$("#txtSsoAccount").blur(function(){$("#showerrorMsg").html("");});
+			$("#txtSsoPassword").blur(function(){$("#showerrorMsg").html("");});
+			//点击登录按钮时弹出登录框
+			$("#topnav_liBeforeLogin").click(function(){
+				layer.open({
+				type: 1,
+				title: false,
+				closeBtn: true,
+				area: ['320px', '340px'],
+				skin: '#ffffff', //没有背景色
+				shadeClose: true,
+				content: $('#loginUserInput')
+			});
+			});
+			
+			$("#showidealog").click(function(){
+				iDialog({
+					id:"tanload",
+					title:false,
+					padding: '0px 0px 0px 0px',
+					lock:true,
+					fixed:true,
+					width:603,
+					height:749,
+					content:document.getElementById('showxeicheng'),
+					init:function(){
+						var that=this;
+						$("#closethis").click(function(){
+							that.hide();
+						});
+					}
+
+				});
+			});
+			
+			
+				//页面加载的时候判断时候已经登录
+			 $.ajax({
+					async:false,
+					url: 'http://api.789game.com/api/apiwish/islogin.html',
+					type: "GET",
+					dataType: 'jsonp',
+					jsonp: 'jsoncallback',
+					data:{},
+					success: function (json) {
+						if(json!="-1"){
+						    userLoginedInfo();
+							$("#names").html("<span style=\"color:#64B20F;\">"+json+"</span>");
+						}else{
+						}
+					},
+					error: function(xhr){
+					alert("请求出错,请检查相关度网络状况");
+					}
+				});
+			
+			//登录按钮的事件
+			$("#loginButtons").click(function(){
+					if(checkInput()){
+						$.ajax({
+							async:false,
+							url: 'http://api.789game.com/api/apiwish/login.html',
+							type: "GET",
+							dataType: 'jsonp',
+							jsonp: 'jsoncallback',
+							data:{'loginuser':$("#txtSsoAccount").val(),'loginpwd':$("#txtSsoPassword").val()},
+							success: function (json) {
+								if(json==0){
+									$("#names").html("<span style=\"color:#64B20F;\">"+$("#txtSsoAccount").val()+"</span>");
+									layer.closeAll();
+								}else{
+									alert(json);
+								}
+							},
+							error: function(xhr){
+							alert("请求出错,请检查相关度网络状况");
+							}
+						});	
+					}else{
+						if($("#txtSsoAccount").val() == ""){
+							$("#showerrorMsg").html("请输入您的用户名");
+						}else if($("#txtSsoPassword").val()==""){
+							$("#showerrorMsg").html("请输入您的密码");
+						}
+					}
+				});
+
+			//页面加载的时候判断是否从大厅过来
+					
+				var Request = new Object();
+				Request = GetRequest();
+				var userID = Request['UserID'];
+				var  userPwd=Request['PWD'];
+				if(userID !="" && userPwd !=""){
+					$.ajax({
+						async:false,
+						url: 'http://api.789game.com/api/apiwish/login2.html',
+						type: "GET",
+						dataType: 'jsonp',
+						jsonp: 'jsoncallback',
+						data:{'loginuser':userID,'loginpwd':userPwd},
+						success: function (json) {
+							if(json=="1"){
+								alert("你填写的登陆账号或者密码不正确!请重新填写!")
+							}else if(json=="2"){
+							 // alert("请全部填写!")
+							}else{
+								userLoginedInfo();
+								$("#names").html("<span style=\"color:#64B20F;\">"+json+"</span>");
+							}
+						},
+						error: function(xhr){
+						alert("请求出错,请检查相关度网络状况");
+						}
+					});	
+				}
+
+		  
+		  
+			$("#btnclick").click(function(){
+				window.open("http://shop.789game.com","_blank");
+			});
+		});
+		</script>
+</body>
+</html>

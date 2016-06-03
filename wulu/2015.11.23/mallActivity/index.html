@@ -1,0 +1,369 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>双11活动-789棋牌游戏中心</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link type="text/css" href="css/index.css" rel="stylesheet" />
+<link type="text/css" href="css/idealog.css" rel="stylesheet" />
+<link type="text/css" href="css/common.css" rel="stylesheet" />
+</head>
+<body>
+<div id="lktopnav">
+	<div class="nav_zt">   
+		<div class="nav_left">   
+			<a href="http://www.789game.com" title="789游戏中心" target="_blank" class="nav_logo">
+			    <img src="images/logo-1.png" style="margin-top:5px;" width="77" height="21">
+			</a>    	
+			<div class="classic">  
+				<span class="nav_red">经典游戏：</span>   
+				<ul id="topnav_ul_classic">           
+					<li onmouseover="NavCtl.liOver(this)" onmouseout="NavCtl.liOut(this)"><img src="images/classic_1.gif" width="17" height="17">捕鱼达人           
+						<div class="classicBox">              
+							<h2>捕鱼达人</h2>                 
+							<p>原版捕鱼达人，经典街机游戏完美移植。</p>        
+							<a href="http://www.789game.com/down.aspx" title="官方安全下载"></a>   
+						</div>           
+					</li> 
+					<li onmouseover="NavCtl.liOver(this)" onmouseout="NavCtl.liOut(this)">
+					    <img src="images/classic_3.gif" width="17" height="17">斗地主  
+						<div class="classicBox" style="display: none;">         
+							<h2>斗地主</h2>              
+							<p>国内非常流行的一种扑克牌游戏，需3人参加</p>          
+							<a href="http://www.789game.com/down.aspx"  title="官方安全下载"></a>       
+						</div>       
+					</li>          
+				</ul>   
+			</div>    
+		</div>   
+		<div class="nav_right">  
+			<ul class="right_list"> 
+				<li style="display: block; cursor:pointer;">
+					<img src="images/login.jpg" width="17" height="11"><a href="http://shop.789game.com" target="_blank">登录</a>
+				</li>   
+				<li>
+					<img src="images/regist.jpg" width="17" height="11"><a id="topnav_regist" href="http://www.789game.com/register.html" target="_blank" title="注册" rel="nofollow">注册</a>
+				</li>    
+				<li>
+					<img src="images/download.jpg" width="16" height="11"><a href="http://www.789game.com/down.aspx"  title=" 下载游戏">下载游戏</a>
+				</li>   
+				<li>
+					<img src="images/home.jpg" width="16" height="11"><a href="http://www.789game.com" target="_blank" title="返回官网" >返回官网</a>
+				</li>        
+				<li>
+					<img src="images/rmb.jpg" width="16" height="10"><a href="http://pay.789game.com/" target="_blank" title="充值" rel="nofollow">充值</a>
+				</li>   
+			</ul>  
+		</div>
+	</div>
+</div>
+<div id="codefans_net" style="">
+			<a href="http://shop.789game.com" target="_blank">
+				<img src="images/fly.gif" border="0">
+			</a>
+		</div>
+	<div class="zt" style="height:600px;">
+		<div class="userLogin" id="loginUserInput" style="display:none;">
+			<h2>用户登录</h2>
+			<div class="showUserInfo">
+				<ul>
+					<li>
+						<div class="loginText" id="accountName">
+							<span class="textName"></span>
+							<input id="txtSsoAccount" type="text" value="" class="tip" placeholder="请输入用户名">
+						</div>
+				    </li>
+					<li>
+						<div class="loginText" id="accountSec">
+							<span class="textPsd"></span>
+							<input id="txtSsoPassword" type="password" value="" class="tip" placeholder="请输入密码">
+						</div>
+				    </li>
+					<li>
+						<div class="loginText" id="accountCode">
+							<span class="textcode"></span>
+							<input id="txtSsoCode" type="text" value="" class="tip" placeholder="验证码" style="width:73px">
+						</div>
+					</li>
+					<li>
+						<div class="loginText">
+							<div class="loginBtn" id="loginButtons"></div>
+							<div class="loginTips">
+							还没有789账号？<a href="http://www.789game.com/register.html" target="_blank">立即注册！</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p id="showerrorMsg"></p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="top1">
+			<div class="left1">
+				<div class="tabDiv" id="showBg">
+					<a id="showUserInfoMsg1"></a><a id="showUserInfoMsg2"></a>
+				</div>
+				<ul id="today">
+					<li><label>第一名</label><span></span></li>
+					<li><label>第二名</label><span></span></li>
+					<li><label>第三名</label><span></span></li>
+					<li><label>第四名</label><span></span></li>
+					<li><label>第五名</label><span></span></li>
+					<li><label>第六名</label><span></span></li>
+					<li><label>第七名</label><span></span></li>
+					<li><label>第八名</label><span></span></li>
+					<li><label>第九名</label><span></span></li>
+					<li><label>第十名</label><span></span></li>
+				</ul>
+				<ul id="yesterday" style="display:none;">
+					<li><label>第一名</label><span></span></li>
+					<li><label>第二名</label><span></span></li>
+					<li><label>第三名</label><span></span></li>
+					<li><label>第四名</label><span></span></li>
+					<li><label>第五名</label><span></span></li>
+					<li><label>第六名</label><span></span></li>
+					<li><label>第七名</label><span></span></li>
+					<li><label>第八名</label><span></span></li>
+					<li><label>第九名</label><span></span></li>
+					<li><label>第十名</label><span></span></li>
+				</ul>
+			</div>
+			<div class="left2">
+				<div class="leftBar">
+					<ul>
+						<li><label>第一名：</label><span>1000万奖券</span></li>
+						<li><label>第二名：</label><span>500万奖券</span></li>
+						<li><label>第三名：</label><span>200万奖券</span></li>
+						<li><label>第四名：</label><span>100万奖券</span></li>
+						<li><label>第五名：</label><span>70万奖券</span></li>
+					</ul>
+				</div>
+				<div class="rightBar">
+					<ul>
+						<li><label>第六名：</label><span>50万奖券</span></li>
+						<li><label>第七名：</label><span>35万奖券</span></li>
+						<li><label>第八名：</label><span>20万奖券</span></li>
+						<li><label>第九名：</label><span>15万奖券</span></li>
+						<li><label>第十名：</label><span>10万奖券</span></li>
+					</ul>
+				</div>
+				<div class="prizeInfo">
+					<p>奖励发放详情：</p>
+					<p>活动奖励将于第二天上午10:00开始发放，所获奖券自动发放玩家账户中。</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="top2">
+			<div class="left3">
+				<p>活动时间：2014年11月7日0:00分 -- 2014年11月11日23:59分</p>
+				<p>规则详情：</p>
+				<p>1、活动每天从0点开始，23:59分结束；通过玩家一天的赢累计和输累计之和进行排名</p>
+			    <p>2、排名计算详情：取玩家一整天的所有赢取的分数和输掉的分数(取正值)进行累计相加，例如玩家小明在11月7日在二人斗牛一局输掉30万幸运豆，第二局赢取了40万幸运豆，然后又进入奖券专场赢取了40万幸运豆；那么小明一整天的输赢累计为110万幸运豆；在当天的排名中排在第三名，那么小明可获得200万奖券。</p>
+				<p>3、玩家每天所获相关奖励在第二天上午进行发放，可在游戏大厅左上角显示“奖券”处查看。</p>
+				<p>4、玩家所拥有的奖券可在礼品商城进行兑换，为回馈广大玩家，“礼品商城”特新上架一批新产品，包含部分特价品</p>
+				<p>5、玩家兑换实物礼品将在三天内进行发放，届时我们将会联系玩家确认相关资料，请保持电话通畅；</p>
+				<p>温馨提示：因双十一节日，具体物品到达时间视物流公司具体情况而定。</p>
+				<p>本活动最终解释权归789游戏中心所有；</p>
+				<p>如有任何疑问，欢迎您随时拨打客服电话：400-0371-814 或联系24小时在线客服：<script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzkzODA2MTM1MF8xMDUzMDBfNDAwMDM3MTgxNF8"></script></p>
+			</div>
+		</div>
+		<div class="footer">
+		<div class="h20"></div>
+		<div class="zt" style="top:845px;">
+			<p><script type="text/javascript" src="js/footer.js" ></script></p>
+			<p>健康游戏忠告：抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+		</div>
+	</div>
+	</div>
+	<!---->
+		<div id="ad_right" style="position:absolute;width:186px;height:276px;margin-top:400px;z-index:10001;background:url(images/tj_bg.jpg) no-repeat;">
+	
+			<a style="float:right;margin-left:-20px;width:17px;height:17px;background:url(images/close1.png) no-repeat;z-index:8888;" href="javascript:void(0);" onclick="document.getElementById('ad_right').style.display='none'"></a>
+			<div class="leftLoop leftLoop1" >
+				<div  class="bd bd1">
+					<ul class="picList">
+						<li>
+							<a href="http://shop.789game.com/shop/shopdetail/index.html?shopid=91" target="_blank" style="width:100%;float:left;text-align:center;margin-top:50px;">
+									<img src="images/rj.png" width="131" height="130" alt="立即兑换" title="立即兑换" /></a>
+									<span style="width:100%;float:left;text-align:center;color:#ffff9b;height:25px;margin-top:10px;display:inline;">
+									<a href="http://shop.789game.com/shop/shopdetail/index.html?shopid=91" target="_blank" style="color:#ffff9b;">多功能立体声耳麦</a>
+									</span>
+									<span style="width:100%;text-align:center;float:left;color:#ffff9b;height:25px;text-decoration:line-through;">原价：133万</span>
+									<span style="width:100%;text-align:center;color:white;float:left;height:25px;">现价：93万</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://shop.789game.com/shop/shopdetail/index.html?shopid=103" target="_blank" style="width:100%;float:left;text-align:center;margin-top:50px;">
+									<img src="images/bxm.png" width="131" height="130" alt="立即兑换" title="立即兑换" /></a>
+									<span style="width:100%;float:left;text-align:center;color:#ffff9b;height:25px;margin-top:10px;display:inline;">
+									<a href="http://shop.789game.com/shop/shopdetail/index.html?shopid=103" target="_blank" style="color:#ffff9b;" >妙洁增厚保鲜袋</a>
+									</span>
+									<span style="width:100%;text-align:center;float:left;color:#ffff9b;height:25px;text-decoration:line-through;">原价：71万</span>
+									<span style="width:100%;text-align:center;color:white;float:left;height:25px;">现价：50万</span>
+							</a>
+					    </li>
+						<li>
+							<a href="http://shop.789game.com/shop/shopdetail/index.html?shopid=104" target="_blank" style="width:100%;float:left;text-align:center;margin-top:50px;">
+									<img src="images/hx.png" width="131" height="130" alt="立即兑换" title="立即兑换" /></a>
+									<span style="width:100%;float:left;text-align:center;color:#ffff9b;height:25px;margin-top:10px;display:inline;">
+									<a href="http://shop.789game.com/shop/shopdetail/index.html?shopid=104" target="_blank" style="color:#ffff9b;">秋冬纯羊毛护膝</a>
+									</span>
+									<span style="width:100%;text-align:center;float:left;color:#ffff9b;height:25px;text-decoration:line-through;">原价：97万</span>
+									<span style="width:100%;text-align:center;color:white;float:left;height:25px;">现价：68万</span>
+							</a>
+					    </li>
+						<li>
+							<a href="http://shop.789game.com/shop/shopdetail/index.html?shopid=105" target="_blank" style="width:100%;float:left;text-align:center;margin-top:50px;">
+									<img src="images/nsb.png" width="131" height="130" alt="立即兑换" title="立即兑换" /></a>
+									<span style="width:100%;float:left;text-align:center;color:#ffff9b;height:25px;margin-top:10px;display:inline;">
+									<a href="http://shop.789game.com/shop/shopdetail/index.html?shopid=105" target="_blank" style="color:#ffff9b;" >
+									米尼居家充电暖手袋
+									</a>
+									</span>
+									<span style="width:100%;text-align:center;float:left;color:#ffff9b;height:25px;text-decoration:line-through;">原价：133万</span>
+									<span style="width:100%;text-align:center;color:white;float:left;height:25px;">现价：93万</span>
+							</a>
+					    </li>
+						<li>
+							<a href="http://shop.789game.com/shop/shopdetail/index.html?shopid=109" target="_blank" style="width:100%;float:left;text-align:center;margin-top:50px;">
+									<img src="images/jy.png" width="131" height="130" alt="立即兑换" title="立即兑换" /></a>
+									<span style="width:100%;float:left;text-align:center;color:#ffff9b;height:25px;margin-top:10px;display:inline;">
+									<a href="http://shop.789game.com/shop/shopdetail/index.html?shopid=109" target="_blank" style="color:#ffff9b;">九阳榨汁机</a>
+									</span>
+									<span style="width:100%;text-align:center;float:left;color:#ffff9b;height:25px;text-decoration:line-through;">原价：195万</span>
+									<span style="width:100%;text-align:center;color:white;float:left;height:25px;">现价：136万</span>
+							</a>
+					    </li>
+						<li>
+							<a href="http://shop.789game.com/shop/shopdetail/index.html?shopid=112" target="_blank" style="width:100%;float:left;text-align:center;margin-top:50px;">
+									<img src="images/hk.png" width="131" height="130" alt="立即兑换" title="立即兑换" /></a>
+									<span style="width:100%;float:left;text-align:center;color:#ffff9b;height:25px;margin-top:10px;display:inline;">
+									<a href="http://shop.789game.com/shop/shopdetail/index.html?shopid=112" target="_blank" style="color:#ffff9b;">汉客双肩包</a>
+									</span>
+									<span style="width:100%;text-align:center;float:left;color:#ffff9b;height:25px;text-decoration:line-through;">原价：319万</span>
+									<span style="width:100%;text-align:center;color:white;float:left;height:25px;">现价：223万</span>
+							</a>
+					    </li>
+					</ul>
+			</div>
+		</div>
+	</div>
+<div class="index_bg01"></div>                       
+<div class="index_bg02"></div>
+<div class="index_bg03"></div>
+<div class="index_bg04"></div>
+<div class="index_bg05"></div>
+<div class="index_bg06"></div>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/jquery.iDialog.js"></script>
+	<script type="text/javascript" src="js/jquery.SuperSlide.js"></script>
+	<script type="text/javascript">
+        $(document).ready(function(){
+	        $("#txtSsoAccount").blur(function(){$("#showerrorMsg").html("");});
+			$("#txtSsoPassword").blur(function(){$("#showerrorMsg").html("");});
+			$("#txtSsoCode").blur(function(){$("#showerrorMsg").html("");});
+		$("#showUserInfoMsg1").click(function(){
+			$("#today").css("display","block");
+			$("#yesterday").css("display","none");
+			$("#showBg").removeClass("selected");
+		});
+		$("#showUserInfoMsg2").click(function(){
+			$("#today").css("display","none");
+			$("#yesterday").css("display","block");
+			$("#showBg").addClass("selected");
+			
+		});
+		});
+	</script>
+	<script type="text/javascript">
+		function changeScore(score){
+		return Math.floor(score/10000)+"万";
+		}
+	function changeNum(num){
+		var msg='';
+		switch(num){
+			case 0:
+			msg='第一名';
+			break;
+			case 1:
+			msg='第二名';
+			break;
+			case 2:
+			msg='第三名';
+			break;
+			case 3:
+			msg='第四名';
+			break;
+			case 4:
+			msg='第五名';
+			break;
+			case 5:
+			msg='第六名';
+			break;
+			case 6:
+			msg='第七名';
+			break;
+			case 7:
+			msg='第八名';
+			break;
+			case 8:
+			msg='第九名';
+			break;			
+			case 9:
+			msg='第十名';
+			break;			
+		}
+	return msg;
+	}
+	$(document).ready(function(){
+		var showTodayMsg='';
+		var showYesterdayMsg='';		
+			$.ajax({
+			   async:false,
+			   url: 'http://api.789game.com/api/apilotteryinfo/getTodayDatalist',
+			   type: "GET",
+			   dataType: 'jsonp',
+			   jsonp: 'jsoncallback',
+			   data:{},
+			   success: function (json) {
+			   if(json!=null && json!='' && json.length>0){
+				for(var i=0;i<json.length;i++){
+				showTodayMsg+="<li><label>"+changeNum(i)+"</label><span>"+json[i]['nickname']+"</span><span style=\"width:100px;\">"+changeScore(json[i]['score'])+"</span></li>"
+					}
+				}
+				$("#today").html(showTodayMsg);
+			   },
+			   error: function(xhr){
+              
+			   }
+			});	
+			
+			$.ajax({
+			   async:false,
+			   url: 'http://api.789game.com/api/apilotteryinfo/getYesterdayDatalist',
+			   type: "GET",
+			   dataType: 'jsonp',
+			   jsonp: 'jsoncallback',
+			   data:{},
+			   success: function (json) {
+			   if(json!=null && json!='' && json.length>0){
+				for(var i=0;i<json.length;i++){
+				showYesterdayMsg+="<li><label>"+changeNum(i)+"</label><span>"+json[i]['nickname']+"</span><span style=\"width:100px;\">"+changeScore(json[i]['score'])+"</span></li>"
+					}
+				}
+				$("#yesterday").html(showYesterdayMsg);
+			   },
+			   error: function(xhr){
+              
+			   }
+			});				
+	});
+				</script>
+	<script type="text/javascript">
+        jQuery(".leftLoop1").slide({ mainCell: ".bd1 ul", effect: "leftLoop", vis: 1, scroll: 1, autoPlay: true });
+    </script>
+</body>
+</html>

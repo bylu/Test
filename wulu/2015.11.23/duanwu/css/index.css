@@ -1,0 +1,182 @@
+@charset "utf-8";
+/* CSS Document */
+*{padding:0;margin:0;}
+body{min-width:1000px;background-color:#f5f5f5; font-family:Microsoft YaHei;}
+img{border:none;}
+.fl{float:left;}
+.clear{clear:both; height:0px; overflow:hidden;}
+.h10{height: 10px;overflow: hidden;}
+.h16{height: 16px;overflow: hidden;}
+.h20{height: 20px;overflow: hidden;}
+.h24{height: 24px;overflow: hidden;}
+.h39{height: 39px;overflow: hidden;}
+ #lktopnav a{font-size: 12px;}
+ #lktopnav{
+font-size: 12px;
+font-family:Microsoft YaHei;
+height: 34px; 
+border-bottom: 1px solid #d7d7d7;
+ min-width: 980px;
+ background: #f5f5f5;
+ z-index: 89;
+ text-align: left;
+ color:#666;
+ }
+
+ #lktopnav .nav_zt{
+ width: 980px;height: 34px;margin: 0 auto;color: #666;line-height: 34px;
+ }
+ #lktopnav .nav_zt .nav_left{
+ float: left;height: 34px;
+ }
+ #lktopnav .nav_zt .left_p{
+ display:block;width:200px;float:left;
+ }
+ #lktopnav .nav_zt .nav_logo{
+ display:block;float:left;width:94px;height:32px;overflow:hidden ;
+ }
+ #lktopnav .nav_zt .nav_logo img{
+ border: none;
+ }
+ #lktopnav .nav_zt .nav_right{ float: right;height: 34px;}
+ #lktopnav .nav_zt .nav_right a{text-decoration: none;}
+ #lktopnav .nav_zt .right_list{float: left;width: auto;list-style-type: none;}
+ #lktopnav .nav_zt .right_list .hello{width:125px;height:34px;float:left;text-align:right; overflow:hidden;text-overflow:ellipsis;white-space:nowrap; }
+ #lktopnav .nav_zt .right_list a{float: left;color: #666;padding: 0 2px;display: block;}
+ #lktopnav .nav_zt .right_list img{float: left;margin-top: 11px;}
+ #lktopnav .nav_zt .right_list li{float: left;line-height: 34px;padding: 0 5px;background: url(../images/line.jpg) no-repeat right 11px;}
+ #lktopnav .nav_zt .right_list li a:hover{color: #ff0000;}
+ #lktopnav .nav_zt .line{float: left;height: 34px;width: 15px;background: url(../images/line.jpg) no-repeat center center;}
+ #lktopnav .nav_zt .web_game, .nav_zt .client{list-style-type: none;padding:0 0 20px 16px;}
+ #lktopnav .nav_zt .web_game li, .nav_zt .client li{display: block;line-height: 20px;}
+ #lktopnav .nav_zt .web_game li a, .nav_zt .client li a{margin-right: 10px;}
+ #lktopnav .nav_zt .client{width: 170px; padding-left:16px;}
+ #lktopnav .nav_zt .client li{height: 20px;width: 85px;float: left;}
+ #lktopnav .nav_zt .client li a{color: #666;}
+ #lktopnav .nav_zt .client_a{color: #1681ee;}
+ #lktopnav .nav_zt .nav_left .classic{height:34px;float:left; }
+ #lktopnav .nav_zt .nav_left .classic span.nav_red{color:#666;font-size:12px; line-height:34px;float:left; }
+ #lktopnav .nav_zt .nav_left .classic ul{float:left;height:34px;}
+ #lktopnav .nav_zt .nav_left .classic ul li
+ {
+ float:left;
+ color:#666666;
+ cursor:pointer;
+ padding-left:22px;
+ padding-right:5px;
+ position:relative;
+ list-style-type:none;
+ z-index:99;
+ }
+ #lktopnav .nav_zt .nav_left .classic div.classicBox{
+ width:258px;
+ height:112px;
+ background:url(../images/classicLi_bg.gif) no-repeat;
+ position:absolute;z-index:99;top:25px;left:-60px;display:none;
+ }
+ #lktopnav .nav_zt .nav_left .classic div.classicBox h2{font-family:Microsoft YaHei;font-size:14px;color:#064B93;padding:15px 0 0 15px;line-height:16px;}
+ #lktopnav .nav_zt .nav_left .classic div.classicBox p{font-family:宋体;font-size:12px;color:#4F4F4F;text-align:center;margin-top:18px;line-height:0px;}
+ #lktopnav .nav_zt .nav_left .classic div.classicBox a{display:block;width:130px;height:38px;float:right;margin-right:10px !important;margin-right:5px;}
+ #lktopnav .nav_zt .nav_left .classic ul li img{position:absolute;top:50%;margin-top:-10px;margin-left:-22px;}
+
+ #codefans_net{
+ position: absolute;left: 50%;top: 37px;width: 1000px;margin-left: -654px;
+ }
+ input,button,select,textarea{outline:none;}
+ /*内容部分*/
+   .wrap,.bg-header1,.bg-header2{min-width:1064px;margin:0 auto;overflow:hidden;}
+   .header-1, .header-2, .header-3 , .main1 {
+  width: 1064px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+   .bg-header1{background:url(../images/bg.jpg) no-repeat 50% 0;}
+   .header-1{background: url(../images/bg_01.jpg) no-repeat 0;height: 289px;}
+   .header-1 p{color:#fff;margin:133px 0px 0px 8px;font-size:14px;}
+   .header-2{background: url(../images/bg_02.jpg) no-repeat 0;height: 623px;}
+	#box{position:relative;width:1064px;height:550px;margin: 0px auto ;}
+	#box ul{position:relative;width:1064px;height:550px;}
+	#box li{position:absolute;list-style:none;width:0;height:0;top:146px;left:377px;z-index:0;cursor:pointer;overflow:hidden;border-radius:3px;}
+	#box li img{width:100%;height:100%;vertical-align:top;}
+	#box .prev, #box .next{position:absolute;top:50%;width:39px;height:80px;margin-top:-40px;overflow:hidden;text-indent:-999px;cursor:pointer;}
+	#box .prev{left:-60px;}
+	#box .next{right:-60px;background-position:-39px 0;}
+   .allbtns{width:100%;float:left;}
+   .allbtns .btn{width:263px;height:76px;float:left;margin:0px 45px;cursor:pointer;}
+   .allbtns .btn01{background:url(../images/btn-ky1-01.png) no-repeat;}
+   .allbtns .btn01:hover{background:url(../images/btn-ky1-02.png) no-repeat;}
+   .allbtns .btn02{background:url(../images/btn-ky10-01.png) no-repeat;}
+   .allbtns .btn02:hover{background:url(../images/btn-ky10-02.png) no-repeat;}
+   .allbtns .btn03{background:url(../images/btn-ky100-01.png) no-repeat;}
+   .allbtns .btn03:hover{background:url(../images/btn-ky100-02.png) no-repeat;}
+   .header-3{background: url(../images/bg_03.jpg) no-repeat 0;height: 238px;}
+   .content{width:100%;float:left;margin-top:70px;}
+    .desc{width:100%;float:left;margin-top:95px;}
+    .desc p{width:80%;height:26px;line-height:26px;float:left;margin-left:130px;color:#734023;display:inline;}
+   
+   .bgfooter{width:100%;height:70px;background-color:#847264;color:#f5ede2;padding-top:15px;}
+   .main1 p{padding-top:5px;text-align:center;font-size:13px;font-weight:normal;}
+   
+   #showxeicheng{width:603px;height:749px;background:url(../images/bg.png) no-repeat;}
+   #closethis{position:absolute;width:50px;height:50px;left:90%; top:10px;background:url(../images/closenormal.png) no-repeat;}
+   #closethis:hover{background:url(../images/closehover.png) no-repeat;}
+   /*login*/
+    .userLogin{width:300px;margin:0px auto;height:290px;}
+    .userLogin h2{width:100%;height:25px;text-align:center;padding-top:10px;}
+	.showUserInfo{width:100%;float:left;margin-top:20px;}
+	.showUserInfo ul{list-style:none;}
+	.showUserInfo ul li{width:240px;margin:0px auto;height:60px;}
+	.loginText {width: 100%;height: 35px;margin-left: 3px;}
+	#accountName {background: url(../images/login-01.jpg) no-repeat;width: 232px;height: 35px;}
+	.textName, .textPsd, .textcode {display: block;width: 38px;height: 32px;float: left;display: inline;}
+	.loginText input {margin-top: 1px;width: 192px;height: 33px;border: none;line-height: 30px;text-indent: 10px;font-size: 12px;color: #9c9c9c;float: left;display: inline;border: 0px;}
+	#accountSec {background:url(../images/login-02.jpg) no-repeat;width: 232px;height: 35px;}
+	#accountCode {background: url(../images/login-03.jpg) no-repeat;width: 115px;height: 35px;float: left;}
+	.loginBtn{width:114px;height:39px;float:left;display:inline;background:url(../images/btn-login01.jpg) no-repeat;cursor:pointer;}
+	.loginTips{width: 100px;float: left;margin-left: 10px;line-height: 20px;font-size: 12px;}
+	.loginTips a{color:red;text-decoration:none;cursor:pointer;}
+	#showerrorMsg{width:100%;text-align:center;color:red;margin-top:10px;}
+	/* 本例子css */
+	.txtMarquee-top{ width:206px; overflow:hidden; position:relative;   }
+	.txtMarquee-top .bd{ padding:70px 15px 15px 15px;  }
+	.txtMarquee-top .infoList{list-style:none;height:285px;}
+	.txtMarquee-top .infoList li{width:100%;margin-bottom:20px;float:left;display:inline;}
+	.txtMarquee-top .infoList li span{color:#724121;font-size:14px;padding-left:10px;width:100%;line-height:25px;height:25px;float:left;}
+	.txtMarquee-top .userclick{width:100%;text-align:center;float:left;margin-top:10px;}
+    .txtMarquee-top .userclick img{cursor:pointer;}
+/*获奖记录*/
+.prizeinfo{width:518px;height:345px;background:url(../images/tip_bg.jpg) no-repeat;}
+.prizeinfo .prizecontent{width:100%;float:left;margin-top:20px;}
+.prizeinfo .prizecontent div{padding:10px 15px 0px 45px;height:270px;width:450px;overflow:auto;}
+.prizeinfo .prizecontent div ul{list-style:none;}
+.prizeinfo .prizecontent div ul li , .prizeinfo .prizecontent div ul li p{width:100%;float:left;text-align:left;display:inline;color:#724121;line-height:31px;height:40px;vertical-align:middle;}
+.prizeinfo .prizecontent div ul li p span{height:40px;line-height:31px;float:left;display:inline;}
+.prizeinfo .prizecontent div ul li .jiangli{margin:0px 20px;}
+.prizeinfo .prizecontent div ul li .prizeNum{margin:0px 13px 0px 0px;width:45px;}
+.prizeinfo .prizecontent div ul li .prizegoods{width:48px;}
+.prizeinfo .prizecontent div ul li .userbtnpay{margin-left:10px;cursor:pointer;}
+
+/*兑换记录*/
+.prizeinfotel{width:518px;height:345px;background:url(../images/tip_bg.jpg) no-repeat;}
+.prizeinfotel p{width:100%;float:left;margin-top:20px;text-align:center;font-weight:bolder;font-size:25px;}
+
+.prizeinfotel .userinputinfo{width:100%;float:left;margin-top:20px;}
+.prizeinfotel .userinputinfo .userinput{margin:15px 30px 15px  45px;height:40px;}
+.prizeinfotel .userinputinfo .userinput span{height:35px;line-height:35px;vertical-align:middle;float:left;display:inline;}
+.prizeinfotel .userinputinfo .userinput input{height:35px;line-height:35px;vertical-align:middle;font-size:14px;float:left;display:inline;}
+.prizeinfotel .userinputinfo .userinput .errormsg{height:35px;line-height:35px;vertical-align:middle;color:rgb(255,0,0);float:left;display:inline}
+.prizeinfotel .userinputinfo p{width:100%;text-align:Center;float:left;}
+.prizeinfotel .userinputinfo p .usersureclick{width:141px;height:46px;cursor:pointer;background:url(../images/btn-tip.jpg) no-repeat;border:none;color:#fffbc1;font-size:25px;}
+
+/*显示的提示信息*/
+.tipsshow{margin:20px 30px;line-height:25px;}
+.tipsshow label{margin-left:50px;color:red;float:left;display:inline;}
+/*继续游戏*/
+.gonoplay{width:518px;height:454px;background:url(../images/tip_bg1.jpg) no-repeat;}
+.gonoplay .userhaveprizeinfo{margin:0px 10px;height:260px;overflow:auto;padding-top:10px;float:left;width:97%;overflow-x:hidden;}
+.gonoplay .userhaveprizeinfo p{width:96%;float:left;display:inline;font-size:16px;}
+.gonoplay .userhaveprizeinfo p span{float:left;margin-left:140px;color:#724121;}
+.gonoplay  .userinfonow{margin-top:10px;width:100%;float:left;}
+.gonoplay  .userinfonow p{color:red;width:220px;margin:0px auto;font-size:16px;}
+.gonoplay  .gotoplay{width:100%;float:left;margin-top:10px;}
+.gonoplay  .gotoplay a{width:141px;height:46px;cursor:pointer;margin-left:190px;background:url(../images/btn-tip.jpg) no-repeat;line-height:46px;border:none;color:#fffbc1;float:left;text-align:center;font-size:25px;}

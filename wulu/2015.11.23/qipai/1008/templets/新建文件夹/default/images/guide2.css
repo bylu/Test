@@ -1,0 +1,15 @@
+﻿/* CSS Document */
+@charset "utf-8";
+/* CSS Document */
+body,html{font-size:12px; font-family:"宋体"; margin:auto 0px; padding:0px; line-height:25px; color:#5d5d5d;}
+div{margin:0px auto;padding:0px; border:none;}
+a{ color:#5d5d5d;text-decoration:none;cursor:pointer; border:none;}
+ul,li,p{border:none; margin:0px; padding:0px; list-style-type:none;}
+img,span{border:none;}
+
+.m_right{
+	float:left;
+	width:278px;
+	height:auto;
+	overflow:hidden;
+}

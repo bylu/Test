@@ -1,0 +1,31 @@
+﻿*{
+padding:0px;
+margin:0px;
+}
+
+/* lunbobg */
+#lunbobg{width:960px;height:424px;overflow:hidden;position:relative;
+}
+#lunbobg ul{height:424px;position:absolute;list-style:none;}
+#lunbobg ul li{float:left;width:960px;height:424px;overflow:hidden;position:relative;}
+#lunbobg ul li div{position:absolute;overflow:hidden;}
+#lunbobg .btnBg{position:absolute;width:228px;height:20px;left:0;bottom:0; }
+#lunbobg .btn{position:absolute;width:216px;height:10px;padding:5px 10px;right:0;bottom:0;text-align:right;}
+#lunbobg .btn span{
+display:inline-block;
+_display:inline;
+_zoom:1;
+width:12px;
+height:12px;
+_font-size:0;
+margin-left:5px;
+cursor:pointer;
+background:#fff;
+-moz-border-radius:40px; 
+-webkit-border-radius:40px; 
+border-radius: 40px;
+}
+#focus .btn span.on{}
+#focus .preNext{width:20px;height:48px;position:absolute;top:50px;cursor:pointer;display:none; }
+#focus .pre{left:0;display:none;}
+#focus .next{right:0;background-position:right top;display:none; }

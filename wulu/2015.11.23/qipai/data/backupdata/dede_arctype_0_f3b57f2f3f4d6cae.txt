@@ -1,0 +1,1 @@
+INSERT INTO `dede_arctype` VALUES('1','0','0','50','∆Â≈∆”Œœ∑∆ΩÃ®','{cmspath}/qpplat','1','index.html','1','1','-1','0','0','{style}/index_article.htm','{style}/list_article.htm','{style}/article_article.htm','{typedir}/{aid}.html','{typedir}/list_{tid}_{page}.html','default','','','','0','{cmspath}/qpplat','','0','0','','','');

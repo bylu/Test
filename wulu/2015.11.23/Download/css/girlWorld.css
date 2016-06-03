@@ -1,0 +1,7 @@
+*{margin:0;padding:0;list-style-type:none;}
+.fixediv{position:fixed;top:140px;z-index:9999;width:125px;height:323px;background:#ddd;}
+.fixediv img{float:left;}
+.fixediv a.close{display:block;height:30px;font-size:14px;padding:0 10px;color:#5e5e5e;text-decoration:none;text-align:center;}
+.leftadv{left:10px;}
+.rightadv{right:10px;}
+.showclose{position:absolute;z-index:8888;width:50px;height:20px;left:90px;padding-top:5px;}

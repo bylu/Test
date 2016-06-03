@@ -1,0 +1,789 @@
+<!-- <!DOCTYPE html> -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- 引入所有样式 -->
+<link rel="stylesheet" href="resource/css/bootstrap.min.css">
+<!-- 此模板基础样式 -->
+<link rel="stylesheet" href="resource/css/AdminLTE.min.css">
+<!-- 所有皮肤样式 -->
+<link rel="stylesheet" href="resource/css/skins/skin-blue-light.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="resource/css/font-awesome.min.css">
+<!-- Ionicons -->
+<link rel="stylesheet" href="resource/css/ionicons.min.css">
+<!-- jQuery 2.1.4 -->
+<script src="resource/js/lib/jQuery-2.1.4.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="resource/js/lib/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="resource/js/lib/app.min.js"></script>
+<!-- 自定义工具类 -->
+<script src="resource/js/util.js"></script>
+<title></title>
+</head>
+<body class="skin-blue-light sidebar-mini">
+    <div class="wrapper">
+
+        <!-- 头部 -->
+        <!-- Main Header -->
+        <header class="main-header">
+
+            <!-- Logo -->
+            <a href="homepage" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>test</b></span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>test-6513</b></span>
+            </a>
+
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+
+                        <!-- Messages: style can be found in dropdown.less-->
+                        <li class="dropdown messages-menu">
+                            <!-- Menu toggle button -->
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-envelope-o"></i>
+                                <span class="label label-success">4</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">You have 4 messages</li>
+                                <li>
+                                    <!-- inner menu: contains the messages -->
+                                    <ul class="menu">
+                                        <li><!-- start message -->
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <!-- User Image -->
+                                                    <img src="resource/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                                </div>
+                                                <!-- Message title and timestamp -->
+                                                <h4>
+                                                    Support Team
+                                                    <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                                </h4>
+                                                <!-- The message -->
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li><!-- end message -->
+                                    </ul><!-- /.menu -->
+                                </li>
+                                <li class="footer"><a href="#">See All Messages</a></li>
+                            </ul>
+                        </li><!-- /.messages-menu -->
+                        <!-- Notifications Menu -->
+                        <li class="dropdown notifications-menu">
+                            <!-- Menu toggle button -->
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-bell-o"></i>
+                                <span class="label label-warning">10</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">You have 10 notifications</li>
+                                <li>
+                                    <!-- Inner Menu: contains the notifications -->
+                                    <ul class="menu">
+                                        <li><!-- start notification -->
+                                            <a href="#">
+                                                <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                            </a>
+                                        </li><!-- end notification -->
+                                    </ul>
+                                </li>
+                                <li class="footer"><a href="#">View all</a></li>
+                            </ul>
+                        </li>
+                        <!-- Tasks Menu -->
+                        <li class="dropdown tasks-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-flag-o"></i>
+                                <span class="label label-danger">9</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">You have 9 tasks</li>
+                                <li>
+                                    <!-- Inner menu: contains the tasks -->
+                                    <ul class="menu">
+                                        <li><!-- Task item -->
+                                            <a href="#">
+                                                <!-- Task title and progress text -->
+                                                <h3>
+                                                    Design some buttons
+                                                    <small class="pull-right">20%</small>
+                                                </h3>
+                                                <!-- The progress bar -->
+                                                <div class="progress xs">
+                                                    <!-- Change the css width attribute to simulate progress -->
+                                                    <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="sr-only">20% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li><!-- end task item -->
+                                    </ul>
+                                </li>
+                                <li class="footer">
+                                    <a href="#">View all tasks</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <!-- The user image in the navbar-->
+                                <img src="resource/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                                <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                                <span class="hidden-xs">root</span>
+                            </a>
+                        </li>
+                        <!-- Control Sidebar Toggle Button -->
+                        <li>
+                            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- 左侧菜单 -->
+        <aside class="main-sidebar">
+
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img src="resource/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                    </div>
+                    <div class="pull-left info">
+                        <p>root</p>
+                        <!-- Status -->
+                        <a><i class="fa fa-circle text-success"></i> Online</a>
+                    </div>
+                </div>
+
+                <!-- search form (Optional) -->
+                <form action="#" method="get" class="sidebar-form">
+                    <div class="input-group">
+                        <input type="text" name="q" class="form-control" placeholder="Search...">
+                  <span class="input-group-btn">
+                    <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
+                  </span>
+                    </div>
+                </form>
+                <!-- /.search form -->
+
+                <!-- Sidebar Menu -->
+                <ul class="sidebar-menu">
+                                <li class="topNav">
+                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                    <a href="homepage">
+                                        <i class="fa fa-link"></i>
+                                        <span>返回首页</span>
+                                    </a>
+                                </li>
+                                    <li class="treeview" id="2">
+                                        <a href="#">
+                                            <i class="fa fa-link"></i>
+                                            <span>游戏用户</span>
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </a>
+                                        <ul class="treeview-menu">
+                                            
+                                                <li id="7">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("onlineUser","2","7")' style="font-size:13px;">在线玩家</a>
+                                                </li>
+                                            
+                                                <li id="8">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("accountManage","2","8")' style="font-size:13px;">用户管理</a>
+                                                </li>
+                                            
+                                                <li id="9">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("userInfoBase","2","9")' style="font-size:13px;">用户基本信息</a>
+                                                </li>
+                                            
+                                                <li id="10">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("registUserAccountInfo","2","10")' style="font-size:13px;">注册用户信息</a>
+                                                </li>
+                                            
+                                                <li id="53">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("retentionRate","2","53")' style="font-size:13px;">用户留存率</a>
+                                                </li>
+                                            
+                                                <li id="58">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("marketingPromotion","2","58")' style="font-size:13px;">用户营销活动</a>
+                                                </li>
+                                            
+                                                <li id="59">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("marketingPromotionUserInfo","2","59")' style="font-size:13px;">营销活动关联用户</a>
+                                                </li>
+                                            
+                                                <li id="60">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("shopRushConfig","2","60")' style="font-size:13px;">限时抢购管理</a>
+                                                </li>
+                                            
+                                                <li id="81">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("accountsIcon","2","81")' style="font-size:13px;">头像审核</a>
+                                                </li>
+                                            
+                                                <li id="88">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("blackList","2","88")' style="font-size:13px;">黑名单管理</a>
+                                                </li>
+                                            
+                                                <li id="104">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("userMail","2","104")' style="font-size:13px;">玩家邮件查询</a>
+                                                </li>
+                                            
+                                                <li id="106">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("userItem","2","106")' style="font-size:13px;">用户道具信息</a>
+                                                </li>
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="treeview" id="3">
+                                        <a href="#">
+                                            <i class="fa fa-link"></i>
+                                            <span>充值管理</span>
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </a>
+                                        <ul class="treeview-menu">
+                                            
+                                                <li id="11">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("rechargeRecord","3","11")' style="font-size:13px;">充值记录</a>
+                                                </li>
+                                            
+                                                <li id="12">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("orderRecord","3","12")' style="font-size:13px;">订单管理</a>
+                                                </li>
+                                            
+                                                <li id="13">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("recordInsureInfo","3","13")' style="font-size:13px;">银行记录</a>
+                                                </li>
+                                            
+                                                <li id="52">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("recordapplepayretry","3","52")' style="font-size:13px;">苹果充值日志</a>
+                                                </li>
+                                            
+                                                <li id="69">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("rechargePlatform","3","69")' style="font-size:13px;">充值平台管理</a>
+                                                </li>
+                                            
+                                                <li id="73">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("shopgoodsconfig","3","73")' style="font-size:13px;">游戏商城物品</a>
+                                                </li>
+                                            
+                                                <li id="74">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("rechargeDoubleConfig","3","74")' style="font-size:13px;">渠道首冲</a>
+                                                </li>
+                                            
+                                                <li id="75">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("firstRewardActConfig","3","75")' style="font-size:13px;">话费宝箱</a>
+                                                </li>
+                                            
+                                                <li id="101">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("limitPay","3","101")' style="font-size:13px;">每日充值上限</a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </li>
+                                    <li class="treeview" id="41">
+                                        <a href="#">
+                                            <i class="fa fa-link"></i>
+                                            <span>游戏维护</span>
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </a>
+                                        <ul class="treeview-menu">
+                                            
+                                                <li id="42">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("gameInfo","41","42")' style="font-size:13px;">游戏管理</a>
+                                                </li>
+                                            
+                                                <li id="43">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("serverRoomInfo","41","43")' style="font-size:13px;">房间管理</a>
+                                                </li>
+                                            
+                                                <li id="44">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("serverRoomInfoManage","41","44")' style="font-size:13px;">房间配置</a>
+                                                </li>
+                                            
+                                                <li id="80">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("matchManage","41","80")' style="font-size:13px;">比赛管理</a>
+                                                </li>
+                                            
+                                                <li id="54">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("serversConfig","41","54")' style="font-size:13px;">服务器管理</a>
+                                                </li>
+                                            
+                                                <li id="51">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("systemMessage","41","51")' style="font-size:13px;">系统消息</a>
+                                                </li>
+                                            
+                                                <li id="72">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("systemStatusInfo","41","72")' style="font-size:13px;">系统状态配置</a>
+                                                </li>
+                                            
+                                                <li id="40">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("systemAnnouncement","41","40")' style="font-size:13px;">手机游戏公告</a>
+                                                </li>
+                                            
+                                                <li id="65">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("channelManager","41","65")' style="font-size:13px;">渠道游戏版本管理</a>
+                                                </li>
+                                            
+                                                <li id="82">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("activiesConfig","41","82")' style="font-size:13px;">活动系统配置</a>
+                                                </li>
+                                            
+                                                <li id="96">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("activitiesShow","41","96")' style="font-size:13px;">活动菜单管理</a>
+                                                </li>
+                                            
+                                                <li id="86">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("channelUpdate","41","86")' style="font-size:13px;">渠道升级管理</a>
+                                                </li>
+                                            
+                                                <li id="87">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("systemStatusInfoYW","41","87")' style="font-size:13px;">系统状态管理（运维）</a>
+                                                </li>
+                                            
+                                                <li id="90">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("playerGameRecord1","41","90")' style="font-size:13px;">玩家游戏分析</a>
+                                                </li>
+                                            
+                                                <li id="92">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("mailManage","41","92")' style="font-size:13px;">系统邮件管理</a>
+                                                </li>
+                                            
+                                                <li id="94">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("dirtyWords","41","94")' style="font-size:13px;">敏感词管理</a>
+                                                </li>
+                                            
+                                                <li id="95">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("cheatPlayer","41","95")' style="font-size:13px;">疑似外挂用户</a>
+                                                </li>
+                                            
+                                                <li id="97">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("itemBase","41","97")' style="font-size:13px;">道具管理</a>
+                                                </li>
+                                            
+                                                <li id="102">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("itemCompose","41","102")' style="font-size:13px;">道具合成</a>
+                                                </li>
+                                            
+                                                <li id="105">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("itemDropStock","41","105")' style="font-size:13px;">物品掉落库存</a>
+                                                </li>
+                                            
+                                                <li id="107">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("itemMap","41","107")' style="font-size:13px;">道具关系管理</a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="treeview" id="4">
+                                        <a href="#">
+                                            <i class="fa fa-link"></i>
+                                            <span>日志记录</span>
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </a>
+                                        <ul class="treeview-menu">
+                                            
+                                                <li id="14">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("userInoutRecord","4","14")' style="font-size:13px;">进出记录</a>
+                                                </li>
+                                            
+                                                <li id="56">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("recordUserInout","4","56")' style="font-size:13px;">新进出记录</a>
+                                                </li>
+                                            
+                                                <li id="16">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("userOperateRecord","4","16")' style="font-size:13px;">用户操作记录</a>
+                                                </li>
+                                            
+                                                <li id="17">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("signInLog","4","17")' style="font-size:13px;">签到记录</a>
+                                                </li>
+                                            
+                                                <li id="18">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("recordUserBindInfo","4","18")' style="font-size:13px;">验证码记录</a>
+                                                </li>
+                                            
+                                                <li id="19">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("confineMachine","4","19")' style="font-size:13px;">封Mac记录</a>
+                                                </li>
+                                            
+                                                <li id="20">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("confineAddress","4","20")' style="font-size:13px;">封IP记录</a>
+                                                </li>
+                                            
+                                                <li id="21">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("exchange","4","21")' style="font-size:13px;">兑换奖品记录</a>
+                                                </li>
+                                            
+                                                <li id="57">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("shopGoodsRecord","4","57")' style="font-size:13px;">新兑换奖品记录</a>
+                                                </li>
+                                            
+                                                <li id="77">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("userFeedbackInfo","4","77")' style="font-size:13px;">用户反馈记录</a>
+                                                </li>
+                                            
+                                                <li id="78">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("accountsBindInfo","4","78")' style="font-size:13px;">用户绑定记录</a>
+                                                </li>
+                                            
+                                                <li id="79">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("festivalPrize","4","79")' style="font-size:13px;">礼包领取记录</a>
+                                                </li>
+                                            
+                                                <li id="84">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("thumbupLog","4","84")' style="font-size:13px;">点赞记录</a>
+                                                </li>
+                                            
+                                                <li id="99">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("gameData","4","99")' style="font-size:13px;">游戏活动日志</a>
+                                                </li>
+                                            
+                                                <li id="93">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("matchRecords","4","93")' style="font-size:13px;">比赛记录</a>
+                                                </li>
+                                            
+                                                <li id="98">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("matchInfo","4","98")' style="font-size:13px;">比赛信息</a>
+                                                </li>
+                                            
+                                                <li id="109">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("fudai","4","109")' style="font-size:13px;">福袋查询</a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="treeview" id="5">
+                                        <a href="#">
+                                            <i class="fa fa-link"></i>
+                                            <span>财富信息</span>
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </a>
+                                        <ul class="treeview-menu">
+                                            
+                                                <li id="22">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("userRichList","5","22")' style="font-size:13px;">用户财富排行榜</a>
+                                                </li>
+                                            
+                                                <li id="23">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("userLotteryCount","5","23")' style="font-size:13px;">用户道具统计</a>
+                                                </li>
+                                            
+                                                <li id="76">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("userLotteryRecord","5","76")' style="font-size:13px;">道具记录</a>
+                                                </li>
+                                            
+                                                <li id="46">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("userInviteScore","5","46")' style="font-size:13px;">用户分享得分</a>
+                                                </li>
+                                            
+                                                <li id="47">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("recordUserLoginReward","5","47")' style="font-size:13px;">登录领奖记录</a>
+                                                </li>
+                                            
+                                                <li id="49">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("redpacketsInfo","5","49")' style="font-size:13px;">红包记录</a>
+                                                </li>
+                                            
+                                                <li id="50">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("recordTakeGold","5","50")' style="font-size:13px;">救济金记录</a>
+                                                </li>
+                                            
+                                                <li id="83">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("rankingListReward","5","83")' style="font-size:13px;">排行榜奖励</a>
+                                                </li>
+                                            
+                                                <li id="110">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("scoreRecords","5","110")' style="font-size:13px;">每日游戏币记录</a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </li>
+                                    <li class="treeview" id="6">
+                                        <a href="#">
+                                            <i class="fa fa-link"></i>
+                                            <span>统计报表</span>
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </a>
+                                        <ul class="treeview-menu">
+                                            
+                                                <li id="25">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("recordRoomScore","6","25")' style="font-size:13px;">房间收益统计</a>
+                                                </li>
+                                            
+                                                <li id="26">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("recordAllScore","6","26")' style="font-size:13px;">每日财富统计</a>
+                                                </li>
+                                            
+                                                <li id="27">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("recordUserRoomScore","6","27")' style="font-size:13px;">用户输赢统计</a>
+                                                </li>
+                                            
+                                                <li id="28">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("spreaderAchievement1","6","28")' style="font-size:13px;">推广员业绩统计</a>
+                                                </li>
+                                            
+                                                <li id="29">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("spreaderAchievement","6","29")' style="font-size:13px;">推广业绩每日报表</a>
+                                                </li>
+                                            
+                                                <li id="55">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("promotionManage","6","55")' style="font-size:13px;">推广活动效果</a>
+                                                </li>
+                                            
+                                                <li id="63">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("recordAllMySql","6","63")' style="font-size:13px;">游戏币发行与流通监控</a>
+                                                </li>
+                                            
+                                                <li id="64">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("detailSummaryDate","6","64")' style="font-size:13px;">充值统计</a>
+                                                </li>
+                                            
+                                                <li id="68">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("shareDetailInfo","6","68")' style="font-size:13px;">推广收益统计</a>
+                                                </li>
+                                            
+                                                <li id="103">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("playDuration","6","103")' style="font-size:13px;">房间在线时长</a>
+                                                </li>
+                                            
+                                                <li id="108">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("publishScoreDay","6","108")' style="font-size:13px;">每日发行统计</a>
+                                                </li>
+                                            
+                                                <li id="111">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("spreaderAchievementTest","6","111")' style="font-size:13px;">推广员业绩统计2</a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </li>
+                                    <li class="treeview" id="30">
+                                        <a href="#">
+                                            <i class="fa fa-link"></i>
+                                            <span>系统管理</span>
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </a>
+                                        <ul class="treeview-menu">
+                                            
+                                                <li id="31">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("adminInfo","30","31")' style="font-size:13px;">用户管理</a>
+                                                </li>
+                                            
+                                                <li id="32">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("rolesInfo","30","32")' style="font-size:13px;">角色管理</a>
+                                                </li>
+                                            
+                                                <li id="66">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("spreaderAdminInfo","30","66")' style="font-size:13px;">渠道分配管理</a>
+                                                </li>
+                                            
+                                                <li id="67">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("module","30","67")' style="font-size:13px;">模块管理</a>
+                                                </li>
+                                            
+                                                <li id="70">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("userOperationLog","30","70")' style="font-size:13px;">用户操作日志</a>
+                                                </li>
+                                            
+                                                <li id="71">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("spreaderManage","30","71")' style="font-size:13px;">渠道管理</a>
+                                                </li>
+                                            
+                                                <li id="100">
+                                                    <!-- 兼容老后台程序,数据库中必须带.jsp后缀;新后台无需带后缀,所以在此替换掉 -->
+                                                    <a href='javascript:show("viewRebateUsers","30","100")' style="font-size:13px;">未折扣用户管理</a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </li>
+                </ul><!-- /.sidebar-menu -->
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- 主内容 -->
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 339px;">
+
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h4>
+                    
+                        
+                            首页
+                        
+                        
+                    
+                </h4>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </section>
+
+            <!-- Main content -->
+            <section class="content">
+
+                <!-- Your Page Content Here -->
+
+            </section><!-- /.content -->
+        </div><!-- /.content-wrapper -->
+
+        <!-- 底部 -->
+        <footer class="main-footer">
+            <!-- To the right -->
+            <div class="pull-right hidden-xs">
+                Anything you want
+            </div>
+            <!-- Default to the left -->
+            <strong>Copyright © 2015 <a href="#">Company</a>.</strong> All rights reserved.
+        </footer>
+
+        <!-- 右侧菜单 -->
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-light">
+            <!-- Create the tabs -->
+            <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+                <li><a>玩家速查</a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <!-- Stats tab content -->
+                <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div><!-- /.tab-pane -->
+                <!-- Settings tab content -->
+                <div class="tab-pane" id="control-sidebar-settings-tab">
+                    <form method="post">
+                        <h3 class="control-sidebar-heading">General Settings</h3>
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Report panel usage
+                                <input type="checkbox" class="pull-right" checked="">
+                            </label>
+                            <p>
+                                Some information about this general settings option
+                            </p>
+                        </div><!-- /.form-group -->
+                    </form>
+                </div><!-- /.tab-pane -->
+            </div>
+        </aside><!-- /.control-sidebar -->
+        <!-- Add the sidebar's background. This div must be placed
+        immediately after the control sidebar -->
+        <div class="control-sidebar-bg" style="position: fixed; height: auto;"></div>
+
+    </div>
+
+</body>
+</html>
