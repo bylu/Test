@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
+	<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+<style type="text/css">
+	input{outline: none;}
+	input:-webkit-autofill{
+		background-color: hsl(65, 100%, 87%);   
+		background-image: none;   
+  		color: #000000; 
+	}
+</style>
+	
+	<div id="app1" ng-app="app1" ng-controller="customersCtrl">
+		<table>
+			<tr ng-repeat="x in names">
+				<td>{{x.name}}</td>
+				<td>{{x.Country}}</td>
+			</tr>
+		</table>
+	</div>
+	<div id="app2" ng-app="app2" ng-controller="customers1Ctrl">
+		<table>
+			<tr ng-repeat="x in names">
+				<td ng-if="$odd" style="background-color:#f1f1f1;">{{ x.Name }}</td>
+				<td ng-if="$even">{{ <x.Name></x> }}</td>
+				<td ng-if="$odd" style="background-color:#f1f1f1;">{{ x.Country }}</td>
+				<td ng-if="$even">{{ x.Country }}</td>
+			</tr>
+		</table>
+	</div>
+	<p>ng-disabled 指令直接绑定数据到html的disabled属性</p>
+	<div id="app3" ng-app="app3" ng-init="myswitch=true;hour=13" >
+		<p>
+			<button ng-disabled="myswitch">点我</button>
+		</p>
+		<p>
+			<input type="checkbox" ng-model="myswitch" />按钮
+		</p>
+		<p>{{myswitch}}</p>
+		<h2>ng-show指令隐藏显示一个html元素</h2>
+		<p ng-show="true">我是可见的</p>
+		<p ng-show="false">我是不可见的</p>
+		<p ng-show="hour>10">过了13点我是可见的了</p>
+		<h2>ng-hide指令</h2>
+		<p ng-hide="true">ng-hiden=true我是不可见的</p>
+		<p ng-hide="false">ng-hide=false我是不可见的</p>
+	</div>
+	<div id="app4" ng-app="app4" ng-controller="myangularclick">
+	<p>angular click事件</p>
+		<button ng-click="count = count +1">点喔唷！</button>
+		<p>{{count}}</p>
+	</div>
+	
+	<div id="app5" ng-app="app5" ng-controller="personinfos">
+		<h2>angular调用方法名的使用</h2>
+		<button ng-click="toggle()">显示/隐藏</button>
+		<p ng-hide="myVal">
+			名：<input type="text" ng-model="firstName" /><br/>
+			姓名：<input type="text" ng-model="lastname"/><br/>
+			<br/>
+			full name:{{ firstName + "" + lastname}}
+		</p>
+	</div>
+	
+	<div id="app6" ng-app="app6" runoob-directive></div>
+	
+	<div id="app7" ng-app="app7" ng-controller="formCtrl">
+		<h2>表单的实例</h2>
+		<p>novalidata属性是在html5中新增的，禁用了使用浏览器默认验证</p>
+		<form novalidata>
+			firstname<br/>
+			<input type="text" ng-model="user.firstname"/><br/>
+			lastname<br/>
+			<input type="text" ng-model="user.lastname"><br/><br/>
+			<button ng-click="reset()">reset</button>
+		</form>
+		<p>form={{user}}</p>
+		<p>master={{master}}</p>
+
+	</div>
+	<form id="app8" ng-app="app8" ng-controller="validateCtrl" name="myForm" novalidate>
+		<p>angular输入验证</p>
+		<p>用户名<br/>
+			<input type="text" name="user" ng-model="user" required autocomplete="off">
+			<span style="color:red;" ng-show="myForm.user.$dirty && myForm.user.$invalid">
+				<span ng-show="myForm.user.$error.required">用户名是必须的</span>
+			</span>
+		</p>
+		<p>邮箱<br/>
+			 <input type="email" name="email" ng-model="email" required>
+			 <span style="color:red;" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+			 	<span ng-show="myForm.email.$error.required">邮箱是必须的</span>
+			 	<span ng-show="myForm.email.$error.email">非法的邮箱</span>
+			 </span>
+		</p>
+		<p>
+			<input type="submit" ng-disabled="myForm.user.$dirty && myForm.user.$invalid || myForm.email.$dirty && myForm.email.$invalid">
+		</p>
+	</form>
+	<div id="app9" ng-app="app9" ng-controller="angularjsApi">
+		<p>angular js 全局api</p>
+		<p>正常：{{x1}}</p>
+		<p>小写：{{x2}}</p>
+		<p>大写：{{x3}}</p>
+		<p>是否是字符串：{{x4}}</p>
+		<p>是否是数字{{x5}}</p>
+	</div>
+
+	<div id="app10" ng-app="app10" ng-controller="angularformsubmit">
+		<div class="container">
+			<h3>user</h3>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>edit</th>
+						<th>first name</th>
+						<th>last name</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="user in users">
+						<td>
+							<button class="btn" ng-click="editUser(user.id)">
+								<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit
+							</button>
+						</td>
+						<td>{{ user.fName }}</td>
+						<td>{{ user.lName }}</td>
+					</tr>
+				</tbody>
+				<hr>
+				<button class="btn btn-success" ng-click="editUser('new')">
+					<span class="glyphicon glyphicon-user"></span>Creat New User
+				</button>
+				<hr/>
+				<h3 ng-show='edit'>creat new user:</h3>
+				<h3 ng-hide="edit"> edit user:</h3>
+				<div class="row">
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label class="col-sm-2 control-label">firstName:</label>
+							<div class="col-sm-10">		
+								<input type="text" ng-model="fName" ng-disabled="!edit" placeholder="First Name" />
+							</div>
+						</div>
+						<br/>
+						<div class="form-group">
+							<div class="from-group">
+								<label class="col-sm-2 control-label">LaseName:</label>
+								<div class="col-sm-10">
+									<input type="text" ng-model="lName" ng-disabled="!edit" placeholder="Last name"/>
+								</div>
+							</div>
+						</div>
+						<br/>
+						<div class="form-group">
+							<div class="form-group">
+								<label class="col-sm-2 control-label">Password:</label>
+								<div class="col-sm-10">
+									<input type="password" ng-model="pass1" placeholder="password" />
+								</div>
+							</div>
+						</div>
+						<br/>
+						<div class="form-group">
+							<div class="form-group">
+								<label class="col-sm-2 control-label">repeatPwd:</label>
+								<div class="col-sm-10">
+									<input type="password" ng-model="pass2" placeholder="repeat password" />
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<hr>
+				
+				<button class="btn btn-success" ng-disabled="error || incomplete">
+					<span class="glyphicon glyphicon-save"></span>save change
+				</button>
+
+			</table>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var app1=angular.module("app1",[]);
+		var app2=angular.module("app2",[]);
+		var app3=angular.module("app3",[]);
+		var app4=angular.module("app4",[]);
+		var app5=angular.module("app5",[]);
+		var app6=angular.module("app6",[]);
+		var app7=angular.module("app7",[]);
+		var app8=angular.module("app8",[]);
+		var app9=angular.module("app9",[]);
+		var app10=angular.module("app10",[]);
+
+	   	app1.controller("customersCtrl",function($scope,$http){
+	   		$http.get("").success(function(response){
+	   			$scope.names=response.records;
+	   		});
+	    });			
+	    app2.controller("customers1Ctrl",function($scope,$http){
+	    	$http.get("").success(function(response){
+	    		$scope.names=response.records;
+	    	});
+	    });
+	    app4.controller("myangularclick",function($scope){
+	    	$scope.count=0;
+	    });
+	    app5.controller("personinfos",function($scope){
+	    	$scope.firstName="john";
+	    	$scope.lastname="Doe";
+	    	$scope.myVal=false;
+	    	$scope.toggle=function(){
+	    		$scope.myVal=!$scope.myVal;
+	    	}
+	    });
+	    app6.directive("runoobDirective",function(){
+	    	return{
+	    		template:'在指令构造器中创建这个方法的使用'
+	    	}
+	    });
+	    app7.controller("formCtrl",function($scope){
+	    	$scope.master={firstname:"john",lastname:"doe"};
+	    	$scope.reset=function(){
+	    		$scope.user=angular.copy($scope.master);//进行复制一次 将master的值复制给user
+	    	};
+	    	$scope.reset();
+	    });
+
+	    app8.controller("validateCtrl",function($scope){
+			$scope.user='wululu';
+			$scope.email="2643107334@qq.com";
+	    });
+	    app9.controller("angularjsApi",function($scope){
+	    	$scope.x1="John";
+	    	$scope.x2=angular.lowercase($scope.x1);
+  			$scope.x3=angular.uppercase($scope.x1);
+  			$scope.x4=angular.isString($scope.x1);
+  			$scope.x5=angular.isNumber($scope.x1);
+	    });
+
+	    app10.controller("angularformsubmit",function($scope){
+	    	$scope.fName='';
+	    	$scope.lName='';
+	    	$scope.pass1='';
+	    	$scope.pass2='';
+	    	$scope.users=[
+	    		{id:1,fName:'Hege',lName:'Pege'},
+	    		{id:2,fName:'weblu',lName:'web'},
+	    		{id:3,fName:'webli',lName:'lI'},
+	    		{id:4,fName:'webzhang',lName:'Mirst'},
+	    		{id:5,fName:'webyang',lName:'Yang'},
+	    		{id:6,fName:'webbaiyi',lName:'game789'}
+	    	];
+
+	    	$scope.edit=true;
+	    	$scope.error=false;
+	    	$scope.incomplete=false;
+
+	    	$scope.editUser=function(id){
+	    		if(id == 'new'){
+	    			$scope.edit=true;
+	    			$scope.incomplete=true;
+	    			$scope.fName='';
+	    			$scope.lastName='';  
+	    		}else{
+	    			$scope.edit=false;
+	    			$scope.fName=$scope.users[id-1].fName;
+	    			$scope.lName=$scope.users[id-1].lName;
+	    		}
+	    	};
+	    	
+	    	$scope.$watch('pass1',function(){ $scope.test(); });	
+	    	$scope.$watch('pass2',function(){ $scope.test(); });
+	    	$scope.$watch('fName',function(){ $scope.test(); });
+	    	$scope.$watch('lName',function(){ $scope.test(); });
+
+	    	$scope.test=function(){
+	    		if($scope.pass1 !== $scope.pass2){
+	    			$scope.error=true;
+	    		}else{
+	    			$scope.error=false;
+	    		}
+	    		$scope.incomplete=false;
+	    		if($scope.edit && (!$scope.fName.length || !$scope.lName.length || !$scope.pass.length || !$scope.pass2.length )){
+	    			$scope.incomplete=true;
+	    		}
+	    	}
+
+	    });
+		angular.bootstrap(document.getElementById("app2"), ['app2']);  //手动启动
+		angular.bootstrap(document.getElementById("app3"), ['app3']);  //手动启动
+		angular.bootstrap(document.getElementById("app4"),['app4']);
+		angular.bootstrap(document.getElementById("app5"),['app5']);
+		angular.bootstrap(document.getElementById("app6"),['app6']);
+		angular.bootstrap(document.getElementById("app7"),['app7']);
+		angular.bootstrap(document.getElementById("app8"),['app8']);
+		angular.bootstrap(document.getElementById("app9"),['app9']);
+		angular.bootstrap(document.getElementById("app10"),['app10']);
+	</script>
+</body>
+</html>

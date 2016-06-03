@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="myApp"  ng-controller="myCtrl" ng-init="person={firstname:'lala',lastname:'beal'}">
+	<p>名字：<input type="text" ng-model="name" /></p>
+	<div> you input value is:hello <label style="color:red;">{{name}}</label></div>
+	<p> 这次的姓名：<span ng-bind="person.firstname"></span></p>
+
+	<p>这个表达式的值是： {{ 5 + 5}}</p>
+     名：<input type="text" ng-model="firstName" style="color:#000;font-weight:bold;" /> <br/>
+     姓：<input type="text" ng-model="lastName"  style="color:red;font-weight:bold;" />
+
+     <br/>
+     <br/>
+     <p>姓is {{person.lastname}}</p>
+     <ul>
+     	<li ng-repeat="x in names">{{x}}</li>
+     </ul>
+     <p>双向绑定</p>
+     名字：<input ng-model="youinoutvalue" />
+     <h1>你输入的名字：<label style="color:red;">{{youinoutvalue}}</label></h1>
+
+</div>
+
+	<form id="app1" ng-app="app1" name="myform">
+	    emial:
+		<input type="email" name="myaddress" ng-model="text" />
+		<span ng-show="myform.myaddress.$error.email" style="color:red;">这个邮箱输入的不合法</span>
+		<br/>
+		<br/>
+		input you name：
+		<input name="myname" ng-model="mytext" required />
+	</form>
+	<div id="app2" ng-app="app2" ng-controller="myctrl">
+		<h1>{{carname}}</h1>
+	</div>
+	<p>根作用域使用 $rootscope作用域</p>
+	<Div id="app3" ng-app="app3" ng-controller="mynames">
+		<h1>{{lastnames}}家族成员</h1>
+		<ul>
+			<li ng-repeat="x in names">{{x}} {{lastnames}}</li>
+		</ul>
+	</Div>
+   <p>函数的合并</p>
+	<div id="app4" ng-app="app4" ng-controller="personinfo">
+		名<input type="text" ng-model="firstname" /><br/>
+		姓<input type="text" ng-model="lastname" /><br/>
+		姓名:{{fullname()}}
+	</div>
+
+	<p>angularjs表达式</p>
+	<div id="app5" ng-app="app5" ng-controller="Filtername">
+		<p>姓名为 {{lastNames | uppercase}}</p>
+	</div>
+    <p>currency过滤器</p>
+    <div id="app6" ng-app="app6" ng-controller="money">
+    	<p>总价={{ (quantity *price) |currency }}</p>
+    	<p><input type="text" ng-model="test" /></p>
+		<ul>
+			<li ng-repeat="x in names | filter:test | orderBy:'country'">
+				{{ (x.name | uppercase) + ',' + x.country}}
+			</li>
+		</ul>	
+    </div>
+    <div id="app7" ng-app="app7" ng-controller="datahttp">
+    	<p>使用服务进行页面的跳转</p>
+    	<p>欢迎信息</p>
+    	<h2>{{mywelcome}}</h2>
+    </div>
+    <div id="app8" ng-app="app8" ng-controller="datahttp1">
+    	<p>$timeout服务</p>
+    	<p>两秒后显示信息</p>
+    	<h1>{{myHeader}}</h1>
+    </div>
+	<p>服务进行的计算</p>
+	<div id="app9" ng-app="app9" ng-controller="datahttp2">
+		<p>255的16进制是：</p>
+		<h1>{{hex}}</h1>
+	</div>
+  	<p>获取json进行解析</p>
+	<!-- <div id="app10" ng-app="app10" ng-controller="jsondata">
+		<ul>
+			<li ng-repeat="x in names">
+				{{x.Name + ' . ' + x.City}}
+			</li>
+		</ul>
+	</div> -->
+	<p> 使用ng-options创建选择框</p>
+	<div id="app11" ng-app="app11" ng-controller="optionsSelect">
+		<select ng-model="selectname" ng-options="x for x in names"></select>
+	</div>
+	or
+	<div id="app12" ng-app="app12" ng-controller="userselect">
+		<select>
+			<option ng-repeat="x in names">{{x}}</option>
+		</select>
+	</div>
+	or
+	<div id="app13" ng-app="app13" ng-controller="siteoption">
+		<select ng-model="selectsite">
+			<option ng-repeat="x in sites" value="{{x.site}}">{{x.site}}</option>
+		</select>
+		<h3>你选择的是：{{selectsite}}</h3>
+		<p>选择网站</p>
+		<select ng-model="selectsite" ng-options="x.site for x in sites"></select>
+		<h1>你选择的是：{{selectsite.site}}</h1>
+		<p>网址是：{{selectsite.url}}</p>
+	</div>
+<script type="text/javascript">
+	var app= angular.module('myApp',[]);
+	var app1=angular.module("app1",[]);
+	var app2=angular.module("app2",[]);
+	var app3=angular.module("app3",[]);
+	var app4=angular.module("app4",[]);
+	var app5=angular.module("app5",[]);
+	var app6=angular.module("app6",[]);
+	var app7=angular.module("app7",[]);
+	var app8=angular.module("app8",[]);
+	var app9=angular.module("app9",[]);
+	var app10=angular.module("app10",[]);
+	var app11=angular.module("app11",[]);
+	var app12=angular.module("app12",[]);
+	var app13=angular.module("app13",[]);
+	app.controller('myCtrl',function($scope){
+		$scope.firstName="john";
+		$scope.lastName="Doe";
+		$scope.names=["Emil","Tobias","Linud"];
+	});
+
+	app2.controller('myctrl',function($scope){
+			$scope.carname="BMO";
+	});
+
+	app3.controller('mynames',function($scope,$rootScope){
+		$scope.names=["aa","cc","bb","dd"];
+		$rootScope.lastnames="lalalala";
+	});
+
+	app4.controller("personinfo",function($scope){
+		$scope.firstname="john";
+		$scope.lastname="Foe";
+		$scope.fullname=function(){
+			return $scope.firstname+ "" +$scope.lastname;
+		}
+	});
+
+	app5.controller("Filtername",function($scope){
+		$scope.lastNames="aaaaa";
+	});
+
+	app6.controller("money",function($scope ,$location){
+		$scope.quantity=12;
+		$scope.price=3;
+	    $scope.names = [
+	        {name:'Jani',country:'Norway'},
+	        {name:'Hege',country:'Sweden'},
+	        {name:'Kai',country:'Denmark'}
+	    ];
+	    myUrl=$location.absUrl();   // $location 服务，他可以返回当前页面的URL地址
+	});
+
+	app7.controller("datahttp",function($scope,$http){
+		$http.get("welcome.htm").then(function(response){
+			$scope.mywelcome=response.data;
+		});
+	});
+    
+    app8.controller("datahttp1",function($scope,$timeout){
+    	$scope.myHeader="Hello world";
+    	$timeout(function() {
+    		$scope.myHeader="飘雪了";
+    	}, 2000);
+    });
+    /*进行转译*/
+    app9.service('hexafy',function(){
+    	this.myFunc=function(x){
+    		return x.toString(16);
+    	}
+    });
+    app9.controller("datahttp2",function($scope,hexafy){
+    	$scope.hex=hexafy.myFunc(255);
+    });
+
+ /*   app10.controller("jsondata",function($scope,$http){
+    	$http.get('http://localhost/work/angelarWeb/json.php').success(function(response){
+    		$scope.names = response.records;
+    	});
+    });*/
+
+    app11.controller("optionsSelect",function($scope){
+    	$scope.names=["Google","Runoob","Taobao"];
+    });
+    app12.controller("userselect",function($scope){
+    	$scope.names=["Google","Runoob","Taobao"];
+    });
+    app13.controller("siteoption",function($scope){
+    	$scope.sites=[
+    		{site: "Google",url:"http://www.google.com"},
+    		{site: "Runboo",url:"http://www.runboo.com"},
+    		{site: "Taobao",url:"http://www.taobao.com"},
+    	];
+    });
+	angular.bootstrap(document.getElementById("app1"), ['app1']);  //手动启动
+	angular.bootstrap(document.getElementById("app2"), ['app2']);  //手动启动
+	angular.bootstrap(document.getElementById("app3"), ['app3']);  //手动启动
+	angular.bootstrap(document.getElementById("app4"), ['app4']);  //手动启动
+	angular.bootstrap(document.getElementById("app5"), ['app5']);  //手动启动
+	angular.bootstrap(document.getElementById("app6"), ['app6']);  //手动启动
+	angular.bootstrap(document.getElementById("app7"), ['app7']);
+	angular.bootstrap(document.getElementById("app8"), ['app8']);
+	angular.bootstrap(document.getElementById("app9"), ['app9']);
+	// angular.bootstrap(document.getElementById("app10"),['app10']);
+	angular.bootstrap(document.getElementById("app11"),['app11']);
+	angular.bootstrap(document.getElementById("app12"),['app12']);
+	angular.bootstrap(document.getElementById("app13"),['app13']);
+</script>
+
+</body>
+</html>
