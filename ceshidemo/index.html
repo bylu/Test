@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ceshidemo</title>
+</head>
+<style type="text/css">
+	*{padding:0;margin:0;}
+	.layout{width:10%;text-align: center;}
+	.useradd{width:100px;height:20px; transition:transform 0.3s;}
+	.useradd:hover{
+		will-change:transform;
+		transform:scale(1.5);
+	}
+	.ceshicontent{width:50%;margin:0px auto; height:500px;border:1px solid red;border-radius: 5px;}
+    /*登录的样式渲染*/
+    .loginform{font-family: "Microsoft YaHei", Tahoma,Verdana,Arial,宋体;margin:0 45px;}
+    .error{}
+    .user-login-form{}
+    .form-item{margin:!em 0;}
+</style>
+<body>
+	<!-- <div class="layout">
+		<input type="button" class="useradd" value="添加" />
+	         <div class="ceshicontent">
+	         	<div class="loginform">
+	         		<div class="error"></div>
+	         		<form id="user-login-form" class="user-login-form" method="post" accept-charset="utf-8" action=" ">
+	         			<div id="edit-name-wrapper" class="form-item">
+	         				<input type="text" id="edit-name" class="form-text" value="用户名或电子邮件" />
+	         			</div>
+	         			<div id="edit-name-wrapper" class="form-item">
+	         				<input type="password" id="edit-pwd" class="form-text" value="用户密码" />
+	         			</div>
+	         		</form>
+	         	</div>
+	         </div>
+	</div> -->
+	<div id="list"></div>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript">
+		function test(){
+			var x=2,y=4;
+			console.log(eval("x + y"));
+			//一下使用eval()转换会出现异常，因为x is underfined
+			var geval=eval;
+			console.log(geval.toString());
+		}
+		$(function(){
+			/*时间格式的转化*/
+			var date= new Date().toLocaleString('zh-Hans-CN-u-nu-hanidec');
+   			console.log("当前时间："+date);
+			/*
+			undefined的使用
+			 */
+			/*var x;
+			if(x === underfined){
+				this is a 
+			}*/
+			var underfined="foo";
+			console.log(" ceshi undefined is name " +underfined,typeof underfined);
+
+
+			var log1=eval(new String("2+2"));
+			var log2=eval("2+2");
+			var expression =new String("2 + 2");
+			var log3=eval(expression.toString());
+
+			var obj={a:20,b:30};
+			//var propname=getPropName();
+			//eval("var rsult=obj." + propname);
+			console.log(log1);
+			console.log(log2);
+			console.log(log3);
+			test();
+			setTimeout(function(){
+				/*window.open("http://www.baidu.com","_blank");*/
+			},1000);
+			/*elt.addEventListener("click",function(){
+
+			},false);*/
+			var x=5;
+			var str="if(x == 5){ console.log('z is 42');z=42;}else z=0; ";
+			console.log("z is " , eval(str));
+
+			/*last expresstion is evaluated*/
+			var str="if (a) {1+1; }else{1+2;}";
+			var a=true;
+			var b=eval(str);
+			console.log(" a is true b is:" +b);
+
+			a=false;
+			b=eval(str);
+			console.log("a is false b is:" +b);
+
+			/*
+			eval() as a string defining funciton requires
+			"("and")" as prefix and suffix 字首和后缀
+			 */
+			var fctstr1="function a(){}";
+			var fctstr2="(function a(){})";
+			var fct1=eval(fctstr1);
+			var fct2=eval(fctstr2);
+			console.log(fct1);
+			console.log(fct2);	
+			/*
+			isFinite()函数用于检查其参数是否是无穷大
+
+			 */
+            /*
+            所有的JavaScript语句
+            */
+            /*for(variable in [object | array]){
+            	statements
+            }*/
+            /*
+            let 语句声明一个变量，该变量的范围限于声明它的块中，
+            可以在声明变量时为变量赋值，也可以在稍后的脚本中给变量赋值。
+
+            使用let 声明变量，在声明前无法使用，否则导致错误
+            如果在末位置初始化变量。系统将给其赋值为undefined
+             */
+          /*  let array=['fred','tom','bob'];
+            for(let i of array){
+            	console.log("Output   "+i)
+            }
+            var m= new Map();
+            m.set(1,"black");
+            m.set(2,"red");
+            for(var n of m){
+            	console.log("Output  "+n);
+            }
+           
+ 			var list=document.getElementById("list");
+ 			for(var i=0;i<5;i++){
+ 				var item=document.createElement("li");
+ 				item.appendChild(document.createTextNode("Item"+i));
+
+ 				let j=i;
+ 				item.onclick=function(ev){
+ 					console.log("item"+j+"is clicked");
+ 				};
+ 				list.appendChild(item);
+ 			}*/
+ 			/*array*/
+ 			var fruits=['Apple','Banna'];
+ 			document.write(fruits);
+ 			document.write("<br/>");
+ 			var first=fruits[0];
+ 			fruits.forEach(function(item,index,array){
+ 				console.log(item,index);
+ 			});
+ 			var newLength=fruits.push("Orange");  //插入数组位置的最后，然后返回的是新数组的长度
+ 			document.write( "new item length is :"+ eval(newLength));
+ 			document.write("<br/>");
+ 			document.write(fruits); //返回插入最后一个数组的新数组
+ 			document.write("<br/>");
+
+ 			var pos=fruits.indexOf("Banna");
+ 			document.write("在数组中查找"+pos);
+ 			document.write("<br/>");
+ 			document.write(fruits);
+ 			document.write("<br/>");
+
+ 			var removeItem=fruits.splice(pos,1);
+ 			document.write("移除制定位置的元素"+removeItem);
+ 			document.write("<br/>");
+ 			document.write(fruits);
+ 			document.write("<br/>");
+ 			document.write("*******");
+ 			document.write("<br/>");
+
+ 			var copeItem=fruits.slice(1,2); //制定位置返回数组的值
+ 			document.write("&&******");
+ 			document.write("返回数组的指定的值"+copeItem);
+ 			document.write("<br/>");
+ 			document.write("&&******")
+ 			document.write("<br/>");
+
+ 			var newlength1=fruits.pop("orange");
+ 			document.write("new item is :"+newlength1);//移除掉的最后一个元素
+ 			document.write("<br/>");
+ 			document.write(fruits); // 移除掉最后一个元素的新数组
+			document.write("<br/>");
+
+			var newlength2=fruits.shift(); //移除掉数组的第一个元素
+			document.write("new item is :"+newlength2);
+			document.write("<br/>");
+			document.write(fruits);
+			document.write("<br/>");
+
+			var newlength3=fruits.unshift("pear");
+			document.write("new item length is :"+newlength3);//在第一个位置添加数组的元素
+			document.write("<br/>");
+			document.write(fruits); //返回新的数组
+			document.write("<br/>");
+
+			var promise={
+				'var' :'text',
+				'array':[1,2,3,4]
+			}
+			document.write("<!---*****---!>")
+			document.write("输出的内容是"+promise['array']);
+			document.write("<br/>");
+
+			var thisFrtuit=[];
+			thisFrtuit.push('banna','apple','peach');
+
+			thisFrtuit[5]="mango";
+
+			console.log("thisFrtuit array");
+			console.log(thisFrtuit[5]);
+			console.log(thisFrtuit.length);
+			console.log(thisFrtuit);
+
+
+
+			console.log("array.@@iterator");
+			var arr=['w','y','k','o','p'];
+			for(let letter of arr){
+				document.write(letter+"<br/>");
+			}
+
+			var eArr=arr[Symbol.iterator]();
+			document.write("第二次输出的是：<br/>");
+			document.write(eArr.next().value+"<br/>");
+			document.write(eArr.next().value+"<br/>");
+			document.write(eArr.next().value+"<br/>");
+			document.write(eArr.next().value+"<br/>");
+			document.write(eArr.next().value+"<br/>");
+
+			console.log("concat  把数组之间进行连接处理");
+			var alpha=['a','b','c'],
+				numeric=[1,2,3];
+
+			var alphaNumberic=alpha.concat(numeric);
+			console.log(alphaNumberic);
+
+			var num1=[1,2,3],
+				num2=[4,5,6],
+				num3=[7,8,9];
+			var nums=num1.concat(num2,num3);
+			console.log(nums);
+
+			var secnum=alpha.concat(1,[2,3]);
+			console.log(secnum);
+
+
+			document.write("arr.copyWithin(target,start[,end=this.length])<br/>");
+			var bb=[1,2,3,4,5];
+			document.write(bb+"<br/>");
+		    var aa=[1,2,3,4,5].copyWithin(0,1);
+		    var cc=bb.copyWithin(0,2);
+		    var dd=bb.copyWithin(0,3);
+		 	document.write(aa+"<br/>");
+		 	document.write(cc+"<br/>");
+		 	document.write(dd+"<br/>");
+
+		 	/*争论的目标，开始和结束强迫数和截断为整数的值。
+
+		 	如果开始是负的，它被视为长度开始，长度是数组的长度。
+		 	如果结束是负面的，它被视为长度结束。
+
+		 	这是故意copywithin功能一般，它不需要，这个值是一个数组对象，此外，copywithin是一个可变的方法，它将改变这个对象本身，并返回它，不只是回归它的一个副本*/
+		
+		 	/*var obj={length: 5, 3: 1};
+		 	console.log(obj[0]);
+		 	console.log(obj[1]);
+		 	console.log(obj[2]);
+		 	console.log(obj[3]);*/
+
+		 	//{0:1,3:1,legth:5}
+		 	//
+		 	/*[].copyWithin.call({length: 5, 3: 1}, 0, 3);
+
+		 	document.write("arr.entries() 返回的结果是以key/value的形式<br/>");
+		 	var arr=['a','b','c'];
+		 	var eArr=arr.entries();
+		 	document.write(eArr.next().value +"<br/>");
+		 	document.write(eArr.next().value +"<br/>");
+		 	document.write(eArr.next().value +"<br/>");
+
+		 	document.write("arr.every(callback[,thisArg])的使用");
+		 	function isBigEnough(element,index,array){
+		 		return element >=10;
+		 	}
+		 	var firresult=	[12,5,8,130,44].every(isBigEnough);
+			var firresult2=[12,54,18,130,44].every(isBigEnough);
+			console.log(firresult);
+			console.log(firresult2);
+
+			document.write("arr.fill(value,start =0[,end = this.length])<br/>")*/
+
+			/*var a=[1,2,3].fill(4);		
+			var b=[1,2,3].fill(4,1);		
+ 			var c=[1,2,3].fill(4,1,2);
+ 			var d=[1,2,3].fill(4,1,1);
+			document.write(a+"<br/>");
+			document.write(b+"<br/>");
+			document.write(c+"<br/>");
+			document.write(d+"<br/>");
+
+			var filterresult=	[12,5,8,130,44].filter(isBigEnough);
+			document.write(filterresult+"<br/>");
+
+			var arrsort=[
+				{id:15},
+				{id:-1},
+				{id:0},
+				{id:3},
+				{id:12.2},
+				{},
+				{id:null},
+				{id:NaN},
+				{id:'underfined'}
+			];
+
+			var invalidEntries=0;
+			function filterById(obj){
+				if('id' in obj && typeof(obj.id) === 'number' &&  !isNaN(obj.id)){
+						return true;
+				}else{
+					invalidEntries++;
+					return false;
+				}
+			}
+
+			var arrByID=arrsort.filter(filterById);
+			console.log('filtered Array\n',arrByID);
+
+			document.write("array.forEach()操作<br/>");
+*/
+			function logArrayElement(element,index,array){
+				document.write('a['+index+']=' + element +"<br/>");
+			}
+
+			[2,5, ,9].forEach(logArrayElement);
+
+			/*array form*/
+			console.log("使用from 是一个一个的分离出来");
+			var m = new Map([[1, 2], [2, 4], [4, 8]]);
+			Array.from(m); 
+			/*console.log("array.form函数"+Array.from(m)+"<br/>");
+			console.log("array.isarray(obj)"+ Array.isArray([]));
+			console.log("array.isarray(obj)"+ Array.isArray([1]));
+			console.log("array.isarray(obj)"+ Array.isArray(new Array()));
+			console.log("array.isarray(obj)"+ Array.isArray());
+			console.log("array.isarray(obj)"+ Array.isArray({}));*/
+			//lastIndexOf  查找数组从最后查 是否有这个元素的位置  返回的结果是数组元素的位置
+			var arr=[2,5,9,2];
+			console.log(arr.lastIndexOf(2));
+			var number=[1,4,9];
+			var roots=number.map(Math.sqrt);//Math.sqrt是对数进行根号处理
+			console.log(roots);
+			console.log(number);
+
+			console.log("arrayof01:"+ Array.of(1));
+			console.log("arrayof02:"+ Array.of(1,2,3));
+			console.log("arrayof03:"+ Array.of(undefined));
+
+
+			document.write("toLocaleString()方法的使用：是把一系列的元素用逗号链接起来");
+			var num=1337;
+			var date= new Date();
+			var myArr=[number,date,'foo'];
+			document.write(myArr.toLocaleString());
+
+
+			var flag= new Boolean(true);
+			var myVal=flag.toString();
+			console.log(myVal);
+
+			var x=new Boolean();
+			var myval=x.valueOf();
+			console.log(myval);
+
+			//class declaration
+			class Polygon{
+				constructor(height,width){
+					this.height=height;
+					this.width=width;
+				}
+
+				get area(){
+					return this.calcArea();
+				}
+
+				calcArea(){
+					return this.height * this.width;
+				}
+			}
+
+			const square= new Polygon(10,90);
+
+			console.log(square.area);
+
+
+
+			class Point {
+			    constructor(x, y) {
+			        this.x = x;
+			        this.y = y;
+			    }
+
+			    static distance(a, b) {
+			        const dx = a.x - b.x;
+			        const dy = a.y - b.y;
+
+			        return Math.sqrt(dx*dx + dy*dy);
+			    }
+			}
+
+			const p1 = new Point(5, 5);
+			const p2 = new Point(10, 10);
+			/**************/
+			console.log(p1);
+			console.log(p2);
+			console.log(Point.distance(p1, p2));
+
+			class animal{
+				constructor(name){
+					this.name=name;
+				}
+				speak(){
+					console.log(this.name +'makes a noise');
+				}
+			}
+
+			class Dog extends animal{
+				speak(){
+					console.log(this.name + 'barks.');
+				}
+			}
+             
+            const thisaa=new Dog("lala");
+            console.log(thisaa);
+
+            var today=new Date();
+            document.write("<br/>");
+            document.write("当前时间是"+today+"<br/>");
+
+            var year=today.getFullYear();
+            var month=today.getMonth();
+            var day=today.getDay();
+            var date=today.getDate();
+            var hour=today.getHours();
+            var minutes=today.getMinutes();
+            var millisecond=today.getMilliseconds();
+
+            document.write("年"+year+"<br/>");
+            document.write("月"+month+"<br/>");
+            document.write("日"+date+"<br/>");
+            document.write("星期"+day +"<br/>");
+            document.write("小时"+hour +"<br/>");
+            document.write("分"+minutes +"<br/>");
+            document.write("秒"+millisecond+"<br/>");
+           	
+           /*	var e=new Error('could not parse input');
+           	throw e;*/
+
+           	var number=123456.789;
+
+           	document.write(new Intl.NumberFormat().format(number));
+		});
+		
+
+	</script>
+</body>
+</html>
