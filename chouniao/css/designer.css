@@ -1,0 +1,87 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{margin:0px;padding:0px;}
+body{font-size:14px;font-family:"Microsoft YaHei";}
+li{list-style:none;font-size:12px;}
+img{ border:0px;}
+a{text-decoration:none;color:#333;}
+
+
+#header{width:100%;height:40px;background:#eeeeee;}
+#headtop{width:1200px;height:40px;margin:0 auto;background:#eeeeee;} 
+  .headtopleft{width:145px;height:40px;float:left;}
+  .headtopright{width:400px;height:40px;float:right;}
+  .headtopright ul{width:400px; height:40px;line-height:40px;}
+  .headtopright li{width:80px;height:40px;float:right;list-style:none;margin-left:10px;color:#444444;}
+  
+  /*******************头顶结束*********************/
+  
+#xinnian{width:1200px;height:60px;margin:0 auto;clear:both;}
+  
+#head{width:1200px;height:120px;margin:0 auto;clear:both;}
+  .logo{width:305px;height:120px;float:left;}
+  .logoright{width:500px; height:120px; float:right;}
+    .sousuo{width:332px;height:43px;margin-top:40px;float:right;}
+    .sousuo input[name=keyboard]{width:280px;height:43px;float:left;border:1px #ff7608 solid;color:#999;}
+    .sousuo input[name=submit]{width:49px;height:45px;float:right;}
+    .sousuobottom{width:330px;height:20px;float:right;}
+    .sousuobottom ul{width:320px;height:20px;}
+    .sousuobottom li{width:60px;height:30px;float:left;line-height:30px;list-style:none;color:#999999;}
+  /********************头部结束***********************/
+  
+  /***********导航栏开始*************/
+#nav{width:1200px;height:50px;margin:0 auto;clear:both;background:#eee;}
+     .navli{width:100px; height:50px;margin-left:8px;line-height:50px;text-align:center;float:left;list-style:none;font-size:14px;}
+     .navli a{color:#222222; display:block;}
+     .navli a:hover{background:#ff7608;color:#fff;}
+     .noli{ width:100px; height:auto; display:none; position:relative; z-index:1000;}
+       .subli{ width:100px; height:30px; line-height:30px; text-align:center; background:#eee;}
+       .subli a{ color:#000000; display:block;}
+       .subli a:hover{ color:#fff; background-color:#ff7608;}
+	/***********导航栏结束*************/
+	/***********banner开始***********/
+#banner{width:1200px; height:340px; margin:0 auto; clear:both; position:relative; margin-top:15px;}
+	.ban{width:1200px; height:340px; }
+	.banleft{width:250px; height:340px; position:absolute; background:rgba(55,60,73,0.4); top:0px; left:0px;}
+		.ban1 p{width:230px; height:30px; border-bottom:1px #ff7608 solid;  color:#fff; margin-top:25px; font-size:16px; margin-left:8px; padding-left:5px;}
+		.ban1 ul{width:230px; height:30px; line-height:20px;  margin-top:5px; }
+		.ban1 li{width:60px;  float:left;  color:#fff;  font-size:14px; margin-left:10px; padding-left:5px;}
+		
+		.ban2 p{width:230px; height:30px; border-bottom:1px #ff7608 solid;  color:#fff; margin-top:10px; font-size:16px; margin-left:10px; padding-left:5px;}
+		.ban2 ul{width:230px; height:30px; line-height:20px;  margin-top:5px; }
+		.ban2 li{width:42px;  float:left;  color:#fff;  font-size:14px; margin-left:10px; padding-left:5px;}
+		
+		.ban3 p{width:230px; height:30px; border-bottom:1px #ff7608 solid;  color:#fff; margin-top:10px; font-size:16px; margin-left:10px; padding-left:5px;}
+		.ban3 ul{width:230px; height:30px; line-height:20px;  margin-top:5px; }
+		.ban3 li{width:42px;  float:left;  color:#fff;  font-size:14px; margin-left:10px; padding-left:5px;}
+		
+		.ban4 p{width:230px; height:30px; border-bottom:1px #ff7608 solid;  color:#fff; margin-top:10px; font-size:16px; margin-left:10px; padding-left:5px;}
+		.ban4 ul{width:230px; height:30px; line-height:20px;  margin-top:5px; }
+		.ban4 li{width:100px;  float:left;  color:#fff;  font-size:14px; margin-left:10px; padding-left:5px;}
+
+#coin{ background:#f1f1f1; clear:both; width:100%; }
+#slideTxtBox{width:1200px; margin:0 auto;  }
+	.hd{width:1200px; height:50px; background:#555555; margin-top:20px; line-height:50px;  }		
+	.coinli{width:160px; height:50px; float:left;  font-size:18px;  text-align:center; }
+	.coinli a{ display:block;color:#fff;}
+	.coinli a:hover{color:#ff7608; background:#434343;}
+	.bd{width:1200px; height:auto; overflow:hidden;}
+	.item{width:1200px; height:auto;}	
+	.item li{width:281px; height:300px; background:#fff; border:1px #cecece solid; float:left; margin-top:15px; margin-right:15px; padding-left:5px;}
+	#itemlast{ background:#fff; float:right; margin-right:0px;}
+	
+	.item dd{font-size:16px; font-family:"Microsoft YaHei"; width:283px; text-align:center;}
+	.coinbottom{width:1198px; height:50px; margin-top:15px;  border:1px #d0d0d0 solid;  clear:both; background:#fff;}
+	.coinbottom p{width:1200px; height:50px; text-align:center; line-height:50px; color:#666666; font-size:16px;font-family:"Microsoft YaHei";}
+	
+#footer{width:100%;height:200px;background:#454a50; clear:both;}
+  #flash{width:1200px;height:200px;margin:0 auto;}
+     .flashtop{width:600px;height:200px;line-height:200px;margin-top:20px;float:left;}
+     .flashtop tr{width:600px;height:30px;line-height:30px;color:#fff;font-size:12px;}
+     .flashtop td{width:600px;height:30px;line-height:30px;color:#fff;}
+  
+     .flashbottom{width:100px;height:100px;float:right;margin-top:30px;}
+	     .flashbottom dl{width:100px;height:100px;float:right;margin-right:30px;}
+         .flashbottom dl dt{width:100px;height:100px;}
+         .flashbottom dl dd{width:100px;height:10px;text-align:center;color:#fff;}	

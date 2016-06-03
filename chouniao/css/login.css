@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0px;padding:0px;}
+body{font-size:14px;font-family:"Microsoft YaHei";}
+li{list-style:none;font-size:14px;}
+img{ border:0px;}
+a{text-decoration:none;color:#333;}
+
+
+
+#heading{width:1200px; height:100%; margin:0 auto;  }
+
+#header{width:1200px; height:140px; margin:0 auto; border-bottom:1px #cccccc solid;margin-top:20px;}
+	.logo img{width:382px; height:130px; float:left;}
+	.logo p{ margin-top:110px; float:right; font-size:16px;color:#999999;}
+	
+#coin{width:1200px;margin:0 auto;margin-top:70px;height:400px;}
+	.coinleft{width:548px; height:391px;   float:left; margin-left:40px;}
+	.coinright{width:400px; height:391px; float:right;border:1px #dcdcdc solid; margin-right:40px;}
+	
+	.slideTxtBox{ width:400px;  text-align:left;  }
+	.slideTxtBox .hd{width:400px; height:60px; line-height:60px; background:#fff;  border-bottom:1px solid #548201;  position:relative;  }
+	.slideTxtBox .hd ul{width:400px;  float:left; position:absolute; top:-1px; height:32px; }
+	.slideTxtBox .hd ul li{width:200px; text-align:center; float:left;  cursor:pointer; font-size:18px;color:#7c7c7c;}
+	.slideTxtBox .hd ul li.on{ height:61px; background:#548201; color:#fff; }
+	
+	.slideTxtBox .bd ul{ width:340px; height:180px; zoom:1; margin-top:30px;margin-left:30px;}
+	.slideTxtBox .bd li{width:340px;height:50px; font-size:16px;  }
+	.slideTxtBox .bd input{font-family:"Microsoft YaHei";}
+	.slideTxtBox .bd input[name="word"]{width:340px;height:50px;font-size:16px;margin-top:30px;color:#919191;}
+	.slideTxtBox .bd input[name="password"]{width:340px;height:50px;font-size:16px;color:#919191;}
+	.slideTxtBox .bd input[name="gen"]{margin-top:60px;color:#bbbbbb;}
+	.slideTxtBox .bd input.genli{margin-left:50px;color:#bbbbbb;}
+	.slideTxtBox .bd li .date{ float:right; color:#999;  }
+	.slideTxtBox .bd input[name="denglu"]{width:340px;height:50px;line-height:50px;background:#548201;margin:0 auto;font-size:16px;color:#fff;margin-top:80px;border:0;}
+	.slideTxtBox .bd input[name="zhuce"]{width:340px;height:50px;line-height:50px;background:#548201;margin:0 auto;margin-top:50px;font-size:16px;color:#fff;border:0;}
+	
+#footer{width:1200px;height:50px;margin:0 auto;margin-top:200px;}
+	#footer p{width:1200px;  text-align:center;color:#888888;}
