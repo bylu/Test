@@ -1,0 +1,483 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="description" Content="本站，免费提供ping检测，get检测，DNS劫持检测和网站打分等服务，努力打造最干净的网站检测平台">
+		<meta Name="keywords" Content="网站质量，网站检测，网站测试，网站测评，网站评分，网站卫士，网站宝，360测速">
+		<meta name="renderer" content="webkit">
+		<link rel="stylesheet" type="text/css" href="Public/css/pandora/task.css?v=2.0.0">
+        <link rel="stylesheet" type="text/css" href="Public/css/bootstrap/carousel-style.css">
+    	<script type="text/javascript" src="Public/js/jquery/1.8.2/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="Public/js/bootstrap/bootstrap.min.js"></script>
+    	
+    	<script type="text/javascript">
+	    </script>
+	    
+        <title>本站 -- 测试你的网站速度</title>
+		<style>
+      	.item{
+      		margin:0 auto;
+      		width:1000px;
+			height:400px;
+			padding:0;
+      	}
+		.container{
+			font-family: helvetica,Arial,"微软雅黑";
+			color:#79c02c;
+			width:850px;
+	  		margin:auto;
+			vertical-align:middle;
+	  	}
+		.container img{
+			-moz-border-radius: 15px;
+			-webkit-border-radius: 15px;
+			border-radius: 15px;
+		}
+		#rank_container{
+			margin-top:50px;
+			line-height:25px;
+			font-size:16px;
+		}
+		#rank_container li{
+			height:25px;
+			line-height:25px;
+			vertical-align:middle;
+			background-color:#f9faf4;
+			margin:3px;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			border-radius: 5px;
+		}
+		#rank_container li div{
+			line-height:24px;
+		}
+		.container .rank{
+			width:40px;
+			text-align:center;
+			float:left;
+			border:1px dotted #cccccc;
+			font-size:18px;
+			font-family:"Arial,微软雅黑";
+			font-weight:bold;
+			color:#999999;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			border-radius: 5px;
+		}
+		.container .rank[:eq(2)]{
+			background-color:red;
+		}
+		.container .rank_item{
+			float:left;
+			padding-left:10px;
+		}
+		#rank_by_count{
+			width:350px;
+			margin-left:55px;
+			float:left;
+		}
+		
+		#rank_by_count .rank_item{
+			width:210px;
+		}
+		#rank_by_time{
+			width:350px;
+			margin-right:35px;
+			float:right;
+		}
+		#rank_by_time .rank_item{
+			width:210px;
+		}
+		.container .rank_count{
+			width:70px;
+			float:left;
+			text-align:right;
+		}
+		#myCarousel{
+			margin-bottom:0;
+		}
+		
+		#change_log{
+			width:520px;
+			font-size:15px;
+			color:#690;
+			margin-left:50px;
+			text-align:left;
+		}
+		#change_log li{
+			height:34px;
+			line-height:34px;
+		}
+		#change_log .change_item span{
+			margin-left:8px;
+			margin-right:13px;
+			font-weight:bold;
+		}
+		</style>
+    </head>
+    <body style="font-family: 微软雅黑;">
+        <div class="body-con">
+            <div class="head_con">
+                            
+	    	<script type="text/javascript">
+	    		//搜索标签切换动作
+				function switchtype(obj){
+					obj.blur();		//去掉IE下选择时出现虚框
+					var obj_id = obj.attr("id")
+					switch(obj_id){
+						case 'get':{
+							$("#extend_area").hide();
+							//$("#extend_area").html("");
+							//修改提交的类型
+							$("#form_type").val(obj_id);
+							//标签切换效果
+							$(".date_list li").removeClass("current");
+							obj.parent().addClass("current");
+							break;
+						}
+						case 'ping':{
+							$("#extend_area").hide();
+							$("#form_type").val(obj_id);
+							//标签切换效果
+							$(".date_list li").removeClass("current");
+							obj.parent().addClass("current");
+							break;						
+						}
+						case 'harys':{
+							$("#extend_area").hide();
+							$("#form_type").val(obj_id);
+							//标签切换效果
+							$(".date_list li").removeClass("current");
+							obj.parent().addClass("current");
+							break;						
+						}
+						case 'trace':{
+							$("#extend_area").hide();
+							//$("#extend_area").html("");
+							//alert('该功能正在奋力中，敬请期待！');
+							break;
+						}
+						case 'dns':{
+							$("#extend_area").html($("#template_dns").html());
+							$("#extend_area").show();
+							//修改提交的类型
+							$("#form_type").val(obj_id);
+							//标签切换效果
+							$(".date_list li").removeClass("current");
+							obj.parent().addClass("current");
+							break;
+						}	
+						default:{
+							$("#extend_area").hide();
+							//$("#extend_area").html("");
+							//alert('该功能正在奋力中，敬请期待！');
+						}
+					}
+				}
+				var action_lock = false;//防止连续点击提交，true为锁定
+				$(document).ready(function(){
+					$(".extend_area a").live("click",function(){
+						$("#extend_area").hide('fast');
+					});
+					$("#domain").click(function(){
+						if($("#dns").parent().attr('class') == 'current')
+						{	
+							$("#extend_area").html($("#template_dns").html());
+							$("#extend_area").show('fast');
+						}
+					});
+					//表单提交时验证
+					$("#query_form").submit(function(){
+						//正则验证
+						var preg		= /^[A-Za-z0-9\-\_]+\.[A-Za-z0-9]+[\/=\?%\-&_~`@[\]\’:+!]*([^<>\"])*$/;
+						var temp_domian	= $("#domain").val().replace(/(^\s*)|(\s*$)/g, "").replace("http://", "").replace("https://", "").replace("ftp://", "");
+						var is_match	= preg.test(temp_domian);
+						if(is_match){ //匹配
+							//验证dns检测时是否输入了ip列表
+							if($("#form_type").val()=="dns" && ($("#user_ip_list").val()=="" || $("#user_ip_list").val()=="undefined")){
+								if (confirm("您还没有输入源IP列表，这会导致检测结果均为异常，仍然进行检测？")) {
+									return true;
+								}
+								else {
+									$("#extend_area #user_ip_list").focus();
+									return false;
+								}
+							}
+							else{
+								return true;
+							}
+							return true;
+						}
+						else{
+							if(!action_lock){
+								action_lock=true;
+								$("#domain").css("border-color","red");
+								$("#error_place").text("<--格式错误");
+								$("#error_place").fadeOut(300).fadeIn(400);
+								setTimeout(function(){
+									action_lock=false;
+								},600);
+							}
+							else{
+								//do nothing
+							}
+							return false;
+						}
+					});
+					//输入的内容符合规则时，取消警告
+					$("#domain").keyup(function(){
+						var preg = /^[A-Za-z0-9]+\.[A-Za-z0-9]+[\/=\?%\-&_~`@[\]\’:+!]*([^<>\"])*$/;
+						var is_match = preg.test($("#domain").val());
+						if(is_match){ //匹配
+							$("#domain").css("border-color","#999999");
+							$("#error_place").text("");
+						}
+					});
+					
+					$("#domain").focus();
+				});
+	    	</script>
+            <script type="text/javascript">
+            //CNZZ统计
+            var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+            document.write(unescape("%3Cspan id='cnzz_stat_icon_1000494650' style='display:none;'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1000494650%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            <!-- google analytics -->
+			<script type="text/javascript">
+			  var _gaq = _gaq || [];
+			  _gaq.push(['_setAccount', 'UA-42464047-1']);
+			  _gaq.push(['_trackPageview']);
+			
+			  (function() {
+			    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			  })();
+			</script>
+            
+            <div style="width:170px;float:left;margin-left:260px;_margin-left:110px;text-align:center;">
+                <a href=""><img src="Public/img/pandora/logo3.png" alt="本站"></a>
+            </div>
+            <div style="width:630px;float:left; margin-top:0px;">
+                <div style="height:28px;">
+                    <ul class="date_list" style="width:360px;">
+                        <!--li >
+                            <a href="javascript:void(0);" onclick="switchtype($(this))" id="dig"><Dig></a>
+                        </li>
+                        <li >
+                            <a href="javascript:void(0);" onclick="switchtype($(this))" id="trace"><Trace></a>
+                        </li-->
+                        <li >
+                            <a href="javascript:void(0);" onclick="switchtype($(this))" id="dns">DNS检测</a>
+                        </li>
+						<li >
+                            <a href="javascript:void(0);" onclick="switchtype($(this))" id="ping">PING检测</a>
+                        </li>
+						<li >
+                            <a href="javascript:void(0);" onclick="switchtype($(this))" id="harys">网站评分</a>
+                        </li>
+                        <li  class="current">
+                            <a href="javascript:void(0);" onclick="switchtype($(this))" id="get">网站测速</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <form id="query_form" action="task" method="POST" style="z-index:9999;position:relative;">
+                        <input type='hidden' id="form_type" name='type' value='get'>
+                        <div class="type" id="type" style="padding:0;">
+							<div id="input_area" >
+                            	<input id="domain" name="domain" class="input" type="text" value='' style="width:376px; font-weight:normal; font-size:13px;margin-top:0px;" placeholder="请输入需检测的网站">
+                          		<input type="submit" value="测一下" class="btn" style="margin-bottom:0;font-weight:bold;">
+						    </div>
+                        </div>
+						<div id="error_place" onselectstart="return false;"></div>
+						<div class="extend_area" id="extend_area">
+							<!--放扩展模板的地方-->
+						</div>
+                    <input type="hidden" name="__token__" value="6666cd76f96956469e7be39d750cc7d9_9a27e3d4c7e585b5a0e11953a4a24201" /></form>
+                </div>
+            </div>
+            
+			<div id="templates" style="display:none;">
+				<div id="template_dns" >
+					<div>
+						<span style="font-weight: bold;font-family: 微软雅黑;color:#447BC4;line-height:29px;padding-left:5px;">请在下方输入正确的源IP地址列表（以换行间隔）：</span>
+						<a id="close_dns" class="close" style="" data-old-display="none">&nbsp;×&nbsp;</a>
+					</div>
+					<div>							
+						<textarea type="text" name='user_ip_list' id='user_ip_list'></textarea>
+					</div>
+				</div>
+				<div id="template_ping">
+					
+				</div>
+			</div>
+            </div>
+            <div style="float:left;width:1000px;margin:15px 0 0 100px;text-align:center;position:relative;">
+				<div id="myCarousel" class="carousel slide">
+					<!-- Carousel items -->
+					<div class="carousel-inner">
+						<div class="item active">
+							<div id="introduction_container" class="container" align="center" style="margin-top:50px;">
+								<div id="change_log_container" class="container">
+									<ul id="change_log">
+										<li style="color:7ebd3a;padding:3px 0;font-size:18px;">
+											<div class="change_item"><h2 style="text-align:center;">本站的故事，开始于 2015年11月</h2></div>
+										</li>
+										<li>
+											<div class="change_item"><span>11-05</span>本站平台悄悄的上线了！这时的本站只有孤单的Get检测</div>
+										</li>
+										<li>
+											<div class="change_item"><span>11-23</span>Ping检测的到来，使Get不再孤单</div>
+										</li>
+										<li>
+											<div class="change_item"><span>11-25</span>DNS劫持检测也加入了本站平台。DNS是否正常，从此一目了然</div>
+										</li>
+										<li>
+											<div class="change_item"><span>12-12</span>新的小伙伴网站测评来了。想寻找网站的优化方案？快去试试吧</div>
+										</li>
+								
+										<li>
+											<div class="change_item"><span>11-19</span>网站测评加入了瀑布流图，能精确地描述每一个页面元素的加载情况</div>
+										</li>
+										<li>
+											<div class="change_item"><span>12-05</span>首页上，加入了本站的更新日志和检测排行，是不是变漂亮了？</div>
+										</li>
+										<li>
+											<div class="change_item"><span>11-29</span>新增12个探测点，10余条线路，已覆盖全国20余个省份</div>
+										</li>
+										<li>
+											<div class="change_item"><span>12-09</span>优化了本站的显示，新增了包括香港在内的十几个探测点</div>
+										</li>
+										<li>
+											<div class="change_item"><span>12-19</span>改版了GET检测和PING检测中的地图，点一下，就能按省份进行统计</div>
+										</li>
+									</ul>
+								</div>
+							</div> 
+						</div>
+						<div class="item">
+							<div id="rank_container" class="container">
+								<ul id="rank_by_count">
+									<li style="border:1px solid #cccccc;color:#7ebd3a;padding:3px 0;font-size:18px;">
+										<div class="rank_title"><h2 style="text-align:center;">一周检测最多</h2></div>
+									</li>
+								</ul>
+								<ul id="rank_by_time">
+									<li style="border:1px solid #cccccc;color:#7ebd3a;padding:3px 0;font-size:18px;">
+										<div class="rank_title"><h2 style="text-align:center;">最近检测</h2></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- Carousel nav -->
+					<a class="carousel-control left" href="#myCarousel" data-slide="prev" style="background: #444444;">&lsaquo;</a>
+					<a class="carousel-control right" href="#myCarousel" data-slide="next" style="background: #444444;">&rsaquo;</a>
+				</div>
+            </div>
+                         
+             <style type="text/css">
+			#foot {
+				position:relative;
+				float:left;
+				line-height:40px;
+				text-align:center;
+				width:1200px;
+				border-top: 1px dashed #aaa;
+				color: #333;
+				padding-top: 5px;
+				padding-bottom: 10px;
+				line-height: 22px;
+				margin: 30px auto 0;
+				margin-top:20px;
+			}
+			#add_favorite{
+				background-color:#79C0E8;
+				color:#ffffff;
+				padding:0 3px;
+				font-size:12px;
+				-moz-border-radius: 6px;
+				-webkit-border-radius: 6px;
+				border-radius: 6px;
+			}
+            </style>
+            
+            <div id="foot">
+				<span>Copyright © 2016 , Inc. All rights reserved. 豫ICP备15028496号-1</span>
+			</div>
+			<script>
+			//加入收藏夹
+			function AddFavorite(sURL, sTitle){
+				sURL = encodeURI(sURL); 
+				if (document.all) 
+				{ 
+					try {
+			            window.external.AddFavorite(sURL, sTitle);
+			        } catch (e) {
+			            window.external.addToFavoritesBar(sURL, sTitle, 'slice');
+			        } 
+				} 
+				else if (window.sidebar) 
+				{ 
+					window.sidebar.addPanel(sTitle, sURL, ""); 
+					
+				} 
+				else{
+					alert("您的浏览器不支持自动加入收藏夹，请按Ctrl+D手动添加");
+				}
+			}
+			</script>	 
+        </div>
+		
+    </body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.carousel').carousel({
+				//10s切换
+				interval: 10000 
+			})
+			//得到每条排行的节点html
+			function get_rank_node(rank,title,domian_show,item){
+				var color = "#aaaaaa";
+				if(1 == rank){
+					color = "#e35b72";
+				}
+				else if(2 == rank){
+					color = "#5d9fc8";
+				}
+				else if(3 == rank){
+					color = "#690";
+				}
+				else{
+					color = "#aaaaaa";
+				}
+				var node='<li>'
+						+'<div class="rank" style="color:'+color+';">'+rank+'</div>'
+						+'<div class="rank_item"><span style="" title="'+title+'">'+domian_show+'</span></div>'
+						+'<div class="rank_count">'+item+'</div>'
+					+'</li>';
+					
+				return node;
+			}
+			//显示排行
+	/* 	$.post("Index/get_rank", {}, function(data, st) {
+				try{
+					var data = eval('('+data+')');
+					var top_count = 1;
+					var lately_count = 1;
+					for(var key in data["top_rank"]){
+						temp_node = get_rank_node(top_count++,key,data["top_rank"][key]["show"],data["top_rank"][key]["value"]+"次");
+						$("#rank_by_count").append(temp_node);
+					}
+					for(var key in data["lately_rank"]){
+						temp_node = get_rank_node(lately_count++,key,data["lately_rank"][key]["show"],data["lately_rank"][key]["value"]);
+						$("#rank_by_time").append(temp_node);
+					}
+				}catch(e){
+					
+				}
+			}); */
+		});	
+	</script>
+</html>
