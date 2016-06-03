@@ -1,0 +1,139 @@
+body,div,em,i,p,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,table,th,td,input,button,label,select{padding:0;margin:0;outline:0 none;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+body{font:12px/1.5 "Microsoft YaHei",sans-serif;background:#f2f2f2;}
+a{outline:0 none;cursor:pointer;text-decoration:none;}
+a:hover{text-decoration:none;}
+ul,ol{list-style:none;}
+img{border:0 none;}
+em,i{font-style:normal;font-weight:normal;}
+h1,h2,h3,h4{font-weight:normal;}
+.wf100{width:100%;float:left;}
+.fr{float:right;}
+.fl{float:left;}
+.container{}
+.topbar,.header,.content{
+	width:1180px;
+	margin:0px auto;
+}
+.companylogo{}
+.usersign{
+	height:42px;
+}
+.usersign a{height:42px;line-height:42px;vertical-align: middle; font-size:13px;color:#000000;font-family:'宋体'}
+
+.header{
+	height:88px;
+	color:#0062c4;
+	opacity: .7;
+	border-bottom:5px solid #3ea4f0;
+}
+.logo{
+	width:200px;
+	height:50px;
+	background-color: red;
+	position: absolute;
+	z-index:1;
+	left:50%;
+	top:50px;
+	margin-left:-100px;
+}
+.nav{
+	width:100%;
+	position: relative;
+	height: 50px;
+	background-color: pink;
+}
+.nav ul{padding:0px 50px;}
+.nav ul li{float: left;display: inline-block;margin-left:105px;}
+.nav ul li a{width:100px;height:50px;line-height: 50px;vertical-align: middle;font-size: 18px;}
+.nav ul li:nth-of-type(3){margin-left:250px;}
+.nav ul li ul{
+	width:200px;
+	position: absolute;
+	display: none;
+	top:44px;
+	padding:1px 0 0 0;
+	background-color:yellow;
+}
+.nav ul li ul li{
+	position: relative;
+	width:200px;
+	display: block;
+	text-align: center;
+	margin-left:0;
+}
+
+.nav ul li ul li:nth-of-type(3){margin-left:0px;}
+
+.banner{
+}
+.banner ul li{
+	width:100%;
+	height:463px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-image: url('../images/banner-3.jpg');
+}
+.banner ul li .introdownload{
+	width:340px;
+	float:right;
+	padding:310px 0 0 0px;
+	position: relative;
+	background-color: red;
+}
+.introdownload p{width:100%;float:left;margin-bottom:15px;}
+.androiddownurl{
+	width:200px;
+	height: 35px;
+	background:url(../images/) no-repeat;
+}
+.iosdownurl{
+	width:200px;
+	height:35px;
+	background: url(../images/) no-repeat;
+}
+.pcdownurl{
+	width:400px;
+	height:35px;
+	background: url(../images/) no-repeat;
+}
+
+
+
+
+.rightbar{width:310px;}
+
+.leftbar{width:650px;}
+.gamedatatitle{
+	height:35px;
+	line-height: 35px;
+	vertical-align: middle;
+	border:1px solid #000;
+}
+.gamedatatitle span{font-size: 16px;padding-left: 10px;}
+.more{padding-right:10px;}
+.gameintrocontent{border:1px solid #000;border-top:none;}
+
+.accordionWrapper{
+	width:100%;
+	margin:0 auto;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.accordionWrapper img{vertical-align:top; border:0; margin:0; padding:0}
+.accordionWrapper div{display:inline; float:left; margin:auto;}
+.info1,.info2,.info3,.info4{
+	display: block;
+	width:84px;
+	height:330px;
+}
+.info1{background:Red;}
+.info2{background: yellow;}
+.info3{background: pink;}
+.info4{background: #000000;}
+
+.accordionWrapper div.title{cursor:pointer;color:#fff;}
+.accordionWrapper div.content{display:none;width:300px;}
+.accordionWrapper .set{margin:0 1px}
+.accordionWrapper .title span{text-align:center;width:30px;margin:0 auto;font-size:22px;font-weight:bold;color:#fff;display:block;padding-top:20px;text-shadow: 0 0 5px #000;}
+.content h3{width:360px;margin:0 auto;font-weight:bold;font-size:16px;color:#c1ecfe;border-bottom:1px solid #3f8cae;padding-bottom:4px;}

@@ -1,0 +1,67 @@
+<!document>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>uikit Flex</title>
+	<link rel="stylesheet" href="css/uikit.min.css" />
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="js/uikit.min.js"></script>
+</head>
+<body>
+	<p>flex的初级使用</p>
+	<div class="uk-flex">
+		<div class="uk-width-1-4 uk-panel uk-panel-box">box</div>
+		<div class="uk-width-1-4 uk-panel uk-panel-box uk-margin-left">second box</div>
+		<div class="uk-width-1-4 uk-panel uk-panel-box uk-margin-left">third  box show</div>
+	</div>
+	
+	<p>flex修饰 uk-flex-middle垂直居中flex条目 uk-flex-space-between条目均匀分布第一行在容器的顶部  最后一行在容器额底部</p>
+	<div class="uk-flex uk-flex-middle uk-flex-space-between">
+		<div class="uk-width-1-4 uk-panel uk-panel-box">box</div>
+		<div class="uk-width-1-4 uk-panel uk-panel-box uk-margin-top">second box</div>
+		<div class="uk-width-1-4 uk-panel uk-panel-box uk-margin-top">third box</div>
+	</div>
+	<p>flex修饰  uk-flex-wrap-space-around  条目的行均匀分布 每一行都有一样的空间</p>
+	<div class="uk-flex uk-flex-wrap-space-around">
+		<div class="uk-width-1-4 uk-panel uk-panel-box uk-margin-bottom">box</div>
+		<div class="uk-width-1-4 uk-panel uk-margin-left uk-panel-box uk-margin-bottom">second box</div>
+		<div class="uk-width-1-4 uk-panel uk-margin-left uk-panel-box uk-margin-bottom">third box</div>
+	</div>
+	
+    <p>flex 修饰 reverse</p>
+	<div class="uk-flex uk-flex-middle uk-flex-column-reverse">
+		<div class="uk-width-1-4 uk-panel uk-panel-box">box show1</div>
+		<div class="uk-width-1-4 uk-panel uk-panel-box uk-margin-top">box show2</div>
+		<div class="uk-width-1-4 uk-panel uk-panel-box uk-margin-top">box show3</div>
+	</div>
+	<br/>
+	<p>条目排序 uk-flex-order-first</p>
+	<div class="uk-flex uk-flex-middle">
+		<div class="uk-flex-order-first">first?</div>
+		<div class="uk-flex-order-last uk-margin-left">this is last</div>
+		<div class="uk-flex-box uk-margin-left">middle01</div>
+		<p>备注：
+			uk-flex-order-first-small  作用于480px以上的设备
+			uk-flex-order-first-medium 作用于768px以上的设备
+			uk-flex-order-first-large  作用于960px以上的设备
+			uk-flex-order-first-xlarge 作用于1220px以上的设备
+			相反的还有   uk-flex-order-last-***
+		</p>
+	</div>
+	条目的规模
+	<p>
+	 .uk-flex-item-none    由内容决定其尺寸
+	 
+	 .uk-flex-item-auto    按条目的内容分配空间
+	 
+	 .uk-flex-item-1   空间分配完全基于flex
+	</p>
+	
+	
+	覆盖 ：添加类样式uk-cover
+	
+	
+	
+	
+</body>
+</html>

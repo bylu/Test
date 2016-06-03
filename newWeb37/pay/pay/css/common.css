@@ -1,0 +1,493 @@
+*{padding:0;margin:0;}
+body{font:12px/1.5 "Microsoft YaHei",sans-serif;background:#f2f2f2;overflow-x:hidden; }
+a{outline:0 none;cursor:pointer;text-decoration:none;}
+a, button, input{outline: none}
+a:hover{text-decoration:none;}
+ul,ol{list-style:none;}
+img{border:0 none;vertical-align: middle;}
+em,i{font-style:normal;font-weight:normal;}
+h1,h2,h3,h4{font-weight:normal;}
+.wf100{width:100%;float:left;}
+.fr{float:right;}
+.fl{float:left;}
+.mb10{margin-bottom:10px;}
+.mb20{margin-bottom:20px;}
+.mb30{margin-bottom: 30px;}
+.topbarbg{
+	height:45px;
+	background: url(../images/top-bg-tiao.jpg) repeat-x;
+}
+.companylogo{
+	height:45px;
+	line-height: 45px;
+	vertical-align: middle;
+}
+
+.topbar,.paycontent{
+	width:1170px;
+	margin:0px auto;
+	position: relative;
+}
+
+.footer{
+	height:65px;
+	border-top:5px solid #3ea4f0;
+	background-color: #013765
+}
+.footer p{
+	width: 100%;
+	float:left;
+	text-align: center;
+	font-size: 13px;
+	color:#6b7ba2;
+	height:65px;
+	line-height: 65px;
+	vertical-align: middle;
+}
+
+/*充值*/
+.showpaybanner{
+	height:80px;
+	background: url(../images/top01.jpg) no-repeat;
+}
+.pay{padding:20px 0;border:1px solid #d8d8d8;}
+.pay02{margin-bottom:80px;}
+.payMain {
+	padding-left: 42px;
+	font-family: Microsoft YaHei;
+}
+ul {
+	list-style-type: none;
+}
+.payMain li {
+	clear: both;
+	margin-bottom: 15px;
+	position: relative;
+}
+.clearfix {
+zoom: 1;
+}
+.payMain label.name {
+	display: block;
+	width: 114px;
+	height: 34px;
+	line-height: 34px;
+	float: left;
+	text-align: right;
+	font-size: 16px;
+	color: #333333;
+	font-weight: bold;
+}
+.payMain input.input {
+	float: left;
+	width: 242px;
+	border: 1px solid #bbbbbb;
+	padding: 8px 0 !important;
+	background: #fff;
+	text-indent: 5px;
+	font-size: 16px;
+	color: #333333;
+}
+
+.payMain input.code {
+	float: left;
+	width: 118px;
+	border: 1px solid #E5E5E5;
+	padding: 8px 0;
+	background: #fff;
+	text-indent: 5px;
+	font-size: 16px;
+	color: #6A6A6A;
+	margin-right: 10px;
+}
+.payMain p {
+    font-size: 13px;
+    height: 34px;
+    line-height: 34px;
+    color: #999;
+    position: absolute;
+    top: 0px;
+    left: 365px;
+}
+.payMain i.true {
+display: block;
+width: 20px;
+height:34px;
+float: left;
+margin-right: 10px;
+background: url(../images/right.png) no-repeat center 8px;
+}
+.payMain i.error {
+display: block;
+width: 20px;
+height:34px;
+float: left;
+margin-right: 10px;
+background: url(../images/_.png) no-repeat center 8px;
+}
+
+.payMain i.warn {
+display: block;
+width: 20px;
+height: 100%;
+height:34px;
+float: left;
+margin-right: 10px;
+background: url(../images/!.png) no-repeat center 8px;
+
+}
+
+.clearfix:after {
+content: "";
+display: block;
+clear: both;
+}
+
+a:link, a:visited, a:hover, a:active {
+text-decoration: none;
+}
+
+
+
+.paychoose{
+	background: #fff;
+    /*
+	border-left:1px solid #d8d8d8 ;
+	border-right:1px solid #d8d8d8 ;
+    */
+}
+.paychoose ul li{float:left;cursor: pointer;display: inline-block;}
+.showpaymoneydiv{
+	position: relative;
+	width:100%;
+	float:left;
+	background: #fff;
+	display: none;
+    /*
+	border-left:1px solid #d8d8d8 ;
+	border-right:1px solid #d8d8d8 ;
+	border-bottom:1px solid #d8d8d8 ;
+    */
+}
+
+.banksort {
+    margin-left: 28px;
+    float: left;
+    position: relative;
+    padding-top: 20px;
+    width: 1100px;
+    padding-bottom: 30px;
+}
+.banksort li{
+	list-style: none;
+	position: relative;
+	float: left;
+	display: inline-block;
+	width:156px;
+	height:76px;
+	line-height: 74px;
+	vertical-align: middle;
+	text-align: center;
+	margin:11px 11px 11px 11px;
+	cursor: pointer;
+	border:2px solid #dadada;
+}
+.banksort li:hover{border: 2px solid #00b900}
+.banksort li.this{
+	width:160px;
+	height:80px;
+	line-height:78px;
+	background: red url(../images/6-01.jpg) no-repeat;
+	border:none;
+}
+.banksort li.this:hover{
+	border:none;
+}
+
+.banksort li img{
+    width:144px;
+    height:38px;
+}
+/*钱的金额量*/
+.border{
+    border-bottom:1px dashed #dadada;
+}
+
+.paymoneysort{
+	width:auto;
+	margin-left: 45px;
+	float: left;
+	padding-top:20px;
+}
+.discount{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:34px;
+	height:16px;
+	line-height:16px;
+	background: #ff3300;
+	color:#ffff00;
+	font-size: 12px;
+	font-family: serif;
+}
+.paymoneysort li{
+	position: relative;
+	float:left;
+	display: inline-block;
+	width:96px;
+	height:46px;
+	line-height: 46px;
+	vertical-align: middle;
+	text-align: center;
+	margin:5px 9px;
+	cursor: pointer;
+	font-size: 16px;
+	border: 2px solid #dadada;
+}
+.paymoneysort li.greenbg{
+	width:100px;
+	height:50px;
+	line-height: 50px;
+	border:none;
+	background: url(../images/5-01.jpg) no-repeat;
+}
+.paymoneysort li:hover{
+	border: 2px solid #00b900;
+}
+.paymoneysort li.greenbg:hover{
+	border:none;
+}
+
+.paymoneygiveluckben{
+	float:left;
+	padding-top:20px;
+	margin-left:45px;
+	font-size: 16px;
+	color:#0052cc;
+}
+
+
+.send {
+	width: 550px;
+	font-size: 14px;
+	color: #999;
+	margin:0px auto;
+}
+.send p{
+	width:100%;
+	float: left;
+	color:#000;
+	text-align: center;
+}
+.send .btnSubmit {
+	display: block;
+	width: 160px;
+	height: 50px;
+	line-height: 50px;
+	background: #ff8033;
+	border-radius: 5px;
+	font-size: 18px;
+	clear: both;
+	color: #fff;
+	text-align: center;
+	border: none;
+	cursor: pointer;
+	margin:0px auto;
+} 
+.tips{
+	float:left;
+	padding-top:20px;
+	margin-left:45px;
+}
+.tips p,.tips span{
+	width:100%;
+	float:left;
+	line-height: 26px;
+	text-align: left;
+	font-size: 13px;
+}
+.tips p{color:#ff0000;}
+.tips span{color:#333333;}
+
+.showzfewm{
+	width:230px;
+	height:260px;
+	margin:50px auto;
+}
+.showzfbewm{
+	background: url(../images/zfbsaoyisao.jpg) no-repeat;
+}
+.showwxewm{
+	background: url(../images/weixinsaoyisao.jpg) no-repeat;
+}
+.showzfewm p{
+	width:100%;
+	float: left;
+	text-align: center;
+	margin-top:25px;
+}
+.showzfewm p img{
+	width:145px;
+	height:145px;
+}
+
+/**
+ * @description 支付中心 css
+ * 
+ * @author ZhangHaoLei <debmzhang@163.com>
+ * @create 2016-03-26 17:43
+ */
+.pay02 {
+    background: #fff;
+    border-left: 1px solid #d8d8d8;
+    border-right: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+.alipay_view_frame {
+    width: 100%;
+    height: 600px;
+    text-align: center;
+}
+
+
+/*支付后的页面样式*/
+.paytipcontent{
+	background: #fff;
+	border:1px solid #ccc;
+	min-height: 600px;
+	height:auto;
+}
+.paystate{
+	margin-top:20px;
+}
+.paystate ul{
+	width:708px;
+	margin:0px auto;
+}
+.paystate ul li{
+	list-style: none;
+	float: left;
+	display: inline-block;
+	width:236px;
+}
+.payorder p{
+	text-align: center;
+	font-weight: bold;
+	font-size: 16px;
+	margin-bottom:20px;
+}
+.payorder ul{
+	width:400px;
+	margin:0px auto;
+}
+.payorder ul li{
+	width:100%;
+	float: left;
+	margin:5px 0px;
+	font-size:16px;
+}
+.payorder ul li span{
+	width:40%;
+	float: left;
+	display: inline-block;
+	text-align: right;
+}
+.payorder ul li label{
+	width:58%;
+	float: left;
+	display: inline-block;
+	margin-left:2%;
+}
+.btnpay{
+	margin-top:30px;
+	width: 160px;
+    height: 50px;
+    line-height: 50px;
+    background: #ff8033;
+    border-radius: 5px;
+    font-size: 18px;
+    clear: both;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+/*支付弹框*/
+.makesurepaydiv,.payresultdiv{
+	width:90%;
+	margin:0% 5%;
+	float:left;
+	display: none;
+}
+.makesurepaydiv h2,.payresultdiv h2{
+	width:100%;
+	float: left;
+	margin:20px 0px 10px 0px;
+	font-size:18px;
+	font-weight: bold;
+	text-align: center
+}
+.makesurepaydiv p{
+	width:100%;
+	float: left;
+	text-align: left;
+	line-height: 28px;
+	font-size: 16px;
+}
+.btncompletepayment{
+	margin:10px 20px 0px 30px;
+	float: left;
+	display: inline;
+	width:150px;
+	height:40px;
+	line-height: 40px;
+	vertical-align: middle;
+	text-align: center;
+	border:none;
+	border-radius: 5px;
+	background: #ff8033;
+	font-size:16px;
+	color:#fff;
+	cursor: pointer;
+}
+.paymentException{
+	margin-top:10px;
+	float: left;
+	display: inline;
+	width:150px;
+	height:40px;
+	line-height: 40px;
+	vertical-align: middle;
+	text-align: center;
+	border:none;
+	border-radius: 5px;
+	background: #5dade2;
+	font-size:16px;
+	color:#fff;
+	cursor: pointer;
+}
+.payresultdiv p{
+	width:100%;
+	float: left;
+	text-align: center;
+	line-height: 28px;
+	font-size: 16px;
+}
+.payresultdiv p label{
+	color:green;
+}
+.btnpayagin{
+	display: inline;
+	width:150px;
+	height:40px;
+	line-height: 40px;
+	vertical-align: middle;
+	text-align: center;
+	border:none;
+	border-radius: 5px;
+	background: #ff8033;
+	font-size:16px;
+	color:#fff;
+	cursor: pointer;
+	margin:10px auto;
+}

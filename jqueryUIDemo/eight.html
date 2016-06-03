@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jqueryui特效</title>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+</head>
+<style type="text/css">
+	.wf100{width:100%;float:left;}
+	.toggle{width:100px;height:100px;background:pink;margin:10px;float:left;text-align: center;color:#fff;}
+	#elem{color:#006;background-color:#aaa;font-size: :25px;padding:1em;text-align: center;}
+	#toggle5,#toggle9{border:1px solid #000;}
+	.big-blue{width:200px;height:200px;background-color: #00f;}
+	#toggle16{display: none;}
+	.big{width:200px;height:200px;}
+	.blue{background-color: #00f}
+
+	.green{width:100px;height:90px;background: green;border:1px solid black;position: relative;}
+	.red{margin-top:10px;width:50px;height:30px;background: red;border:1px solid black; position: relative;}
+	.ui-effects-transfer{border:1px dotted black;}
+</style>
+<body>
+	<div class="wf100">
+		<div id="toggle00" class="toggle">.addclass（）演示</div>
+		<div id="toggle" class="toggle">在这个区域的其他地方点击（百叶窗效果）</div>
+		<div id="toggle1" class="toggle">点击任何地方进行切换(反弹效果)</div>
+		<div id="toggle2" class="toggle">点击任何地方进行切换（剪辑特效的显示）</div>
+		<div id="toggle4" class="toggle">降落dropeffect演示 </div>
+		<div id="toggle5" class="toggle">点击任何地方应用特效</div>
+		<div id="toggle6" class="toggle">点击任何地方显示爆炸特效</div>
+		<div id="toggle7" class="toggle">淡入淡出的特效演示</div>
+		<div id="toggle8" class="toggle">折叠效果的演示</div>
+		<div id="toggle10" class="toggle">点击突出特效亮光</div>
+		<div id="toggle11" class="toggle">膨胀特效</div>
+		<div id="toggle12" class="toggle">跳动特效</div>
+		<div id="toggle13" class="toggle big-blue">.removeClass()演示</div>
+		<div id="toggle14" class="toggle">缩放的效果scale</div>
+		<div id="toggle15" class="toggle">震动的效果</div>
+		<div id="toggle17" class="toggle">尺寸特效（size effect）的演示</div>
+		<div id="toggle18" class="toggle">滑动特效slide effect的演示</div>
+		<div id="toggle19" class="toggle big">.switch()演示的效果</div>
+
+	</div>
+	<div class="wf100">
+		<div id="elem" class="toggle">颜色动画</div><br/>
+		<button id="toggle3">点击我改变颜色</button>
+	</div>
+
+	<div class="wf100">
+		<button id="btnhide">隐藏</button><br/>
+		<div id="toggle9" class="toggle"></div>
+	</div>
+
+	<div class="wf100">
+		<button id="btnshow">显示</button><br/>
+		<div id="toggle16" class="toggle"></div>
+	</div>
+
+	<div class="wf100">
+		<button id="btnswitch">切换div</button><br/>
+		<div id="toggle20" class="toggle"></div>
+	</div>
+
+	<div class="wf100">
+		<button id="btntoggleAddClass">.toggleClass()的使用</button><br/>
+		<div id="toggle21" class="toggle"></div>
+	</div>
+
+	<div class="wf100" id="toggle22">
+		<div class="green"></div>
+		<div class="red"></div>
+	</div>
+	<script type="text/javascript">
+	$(function(){
+		$("#toggle00").click(function(){
+			$(this).addClass("big-blue",1000,"easeOutBounce");
+		});
+		$("#toggle13").click(function(){
+			$(this).removeClass("big-blue",1000,"easeInBack");
+		});
+		$("#btnshow").click(function(){
+			$("#toggle16").show("fold",1000);
+		});
+
+		$("#toggle19").click(function(){
+			$(this).switchClass("big","blue",1000,"easeInOutQuad");
+		});
+
+		$("#btnswitch").click(function(){
+			$("#toggle20").toggle("fold",1000);
+		});
+
+		$("#btntoggleAddClass").click(function(){
+			$("#toggle21").toggleClass("big-blue",1000,"easeOutSine");
+		});
+		$(document).click(function(){
+			$("#toggle").toggle("blind");
+			$("#toggle1").toggle("bounce",{times:3},"slow");
+			$("#toggle2").toggle("clip");
+			$("#toggle4").toggle("drop");
+			$("#toggle5").toggle("bounce","slow");
+			$("#toggle6").toggle("explode");
+			$("#toggle7").toggle("fade");
+			$("#toggle8").toggle("fold");
+			$("#toggle10").toggle("highlight");
+			$("#toggle11").toggle("puff");
+			$("#toggle12").toggle("pulsate");
+			$("#toggle14").toggle({ effect:"scale",direction:"horizontal" });
+			$("#toggle15").toggle("shake");
+			$("#toggle17").effect("size",{ to:{width:200,height:60}},1000);
+			$("#toggle18").toggle("slide");
+		});
+
+		$("#toggle3").click(function(){
+			$("#elem").animate({
+				color:"green",
+				backgroundColor:"rgba(20,20,20)"
+			});
+		});
+
+		$("#btnhide").click(function(){
+			$("#toggle9").hide("drop",{direction:"down"},"slow");
+		});
+
+		$("#toggle22 div").click(function(){
+			var i=1-$("#toggle22 div").index(this);
+			$(this).effect("transfer",{to:$("#toggle22 div").eq(i)},1000);
+		});
+	});
+	</script>
+</body>
+</html>

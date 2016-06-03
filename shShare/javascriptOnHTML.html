@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.1.0-beta1/css/amazeui.min.css" /> 
+	<link rel="image_src" type="image/jpeg" href="images/s-1.jpg">
+	<style type="text/css">
+		*{padding:0;margin:0;}
+		body{margin:0px;padding:0px;overflow:auto;position:relative;font-size:1.45em;font-family: '宋体';}
+		img,obj {width:100%;}
+		.layout{width:100%; }
+		.inviteCodeRegional{ position:absolute;width:45%;top:50%;line-height: 2.5em;left:37%;color: #000;text-align:center;font-family: '黑体';font-weight: bold;}
+		.imgRandShowRegional{position:absolute;bottom:3%;left:14.8%;width:72%;top:71.9%;}
+		.bg_4_tip{position:fixed;width:66.3%;left:32%;top:2%;z-index:999;}
+	</style>
+</head>
+<body>
+   <div class="layout">
+    <img src="images/bg.jpg" />
+    <span class="downKeyRegional"></span>
+    <!--<span class="inviteCodeRegional">jiejishuihuzhuan</span>-->
+	<input type="text" class="inviteCodeRegional" style="border:none;" name="userinput" id="userinput" />
+    <!--<div class="imgRandShowRegional">
+        <div class="am-slider am-slider-default" data-am-flexslider="{playAfterPaused: 400}">
+			<ul class="am-slides">
+				<li>
+					<img src="images/1.jpg" style="width: 100%;" /></li>
+				<li>
+					<img src="images/2.jpg" style="width: 100%;" /></li>
+				<li>                 
+					<img src="images/3.jpg" style="width: 100%;" /></li>
+				<li>                
+					<img src="images/4.jpg" style="width: 100%;" /></li>
+				<li>                
+					<img src="images/5.jpg" style="width: 100%;" /></li>
+				<li>                 
+					<img src="images/6.jpg" style="width: 100%;" /></li>
+				<li>                 
+					<img src="images/7.jpg" style="width: 100%;" /></li>
+			</ul>
+        </div> -->  
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdn.amazeui.org/amazeui/2.1.0-beta1/js/amazeui.min.js"></script> 
+
+<script type="text/javascript">
+   $(document).ready(function(){	//初始化是调用
+        updateLineHeightByParam();
+		$("#userinput").change(function(){
+			var userinputval=$(this).val();
+			console.log(userinputval);
+		});
+    });
+	window.load=function(){ //页面加载完成的时候调用这个
+		updateLineHeightByParam();
+	}
+    window.onresize=function(){ //页面加载初始化尺寸的时候调用onresize
+        updateLineHeightByParam();
+    }
+    function updateLineHeightByParam(){//function:根据宽度大小来更改背景图片
+        //基本配置
+        var standard_width = 720;
+        var standard_height = 1530;
+        var win_width = $(document).width();
+        var win_height = $(document).height();
+        var screen_width = $(window).width();
+        var screen_height = $(window).height();
+		 //推广码控制
+        var scale_spreadcode_fontsize = (win_width / standard_width) * 170;
+        var absolute_spreadcode_left = win_width * 0.355;
+        var absolute_spredcode_top = win_height * 0.55;
+        var absolute_spredcode_width = win_width * 0.483;
+        var absolute_spredcode_height = win_height * 0.02;
+		 //推广码动态改变
+        $(".inviteCodeRegional").css("top", absolute_spredcode_top + "px");
+        $(".inviteCodeRegional").css("left", absolute_spreadcode_left + "px");
+        $(".inviteCodeRegional").css("fontSize", scale_spreadcode_fontsize + "%");
+        $(".inviteCodeRegional").css("width", absolute_spredcode_width + "px");
+        $(".inviteCodeRegional").css("height", absolute_spredcode_height + "px");    
+    }
+	//
+	
+</script>
+</html>

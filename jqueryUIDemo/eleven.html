@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>插件部分</title>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+</head>
+<style>
+	.wf100{width:100%;float:left;margin:10px 0;}
+	p{width:100%;float:left;}
+</style>
+<body>
+	<h3>折叠效果的实现</h3>
+	<div id="accordion" class="wf100">
+		<h3>部分1</h3>
+		<div>
+			<p>Mauris maruris ante.blandit et,ultrices a,sfjdkfjd,shfjsdkf </p>
+		</div>
+		<h3>部分2</h3>
+		<div>
+			<p>Mauris maruris ante.blandit et,ultrices a,sfjdkfjd,shfjsdkf </p>
+		</div>
+		<h3>部分3</h3>
+		<div>
+			<p>Mauris maruris ante.blandit et,ultrices a,sfjdkfjd,shfjsdkf </p>
+		</div>
+	</div>
+	<div class="wf100">
+		<p>自动完成插件的演示  autocomplete widget演示</p>
+		<label for="autocomplete">选择一个编程语言：</label>
+		<input id="autocomplete">
+	</div>
+	<div class="wf100">
+		<p>自动完成语言的搜索功能</p>
+		<label for="autocomplete2"></label>
+		<input type="text" id="autocomplete2">
+	</div>
+	
+	<div class="wf100">
+		<form>
+			<legend>button 事件（最喜欢的jquery 项目）</legend>
+			<div id="radio" class="wf100">
+				<input type="radio" id="sizzle" name="progect"/>
+				<label for="sizzle">sizzle</label>
+				<input type="radio" id="qunit" name="progect" checked="checked" />
+				<label for="qunit">qunit</label>
+				<input type="radio" id="color" name="progect">
+				<label for="color">color</label>
+			</div>
+		</form>
+	</div>
+
+	<div class="wf100">
+		<button id="btn01">按钮标签</button>
+	</div>
+	<div class="wf100">
+		<div id="datepicker">日历控件</div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			/*$(document).on("keydown",function(event){
+				switch(event.keycode){
+					case $ui.keycode.LEFT:
+						console.log("left");
+						break;
+					case $ui.keycode.RIGHT:
+						console.log("right");
+						break;
+					case $ui.keycode.UP:
+						console.log("up");
+						break;
+					case $ui.keycode.DOWN:
+						console.log("down");
+						break;
+				}
+			});*/
+			//options 配置选项参数 element 实例在其上创建的DOM元素
+			var Highlighter=function(options,element){
+				this.options=options;
+				this.element=$(element);
+				this._set(800);
+			};
+			Highlighter.prototype={
+				toggle:function(){
+					this._set(this.element.css("font-weight") === 400?800:400);
+				},
+				_set:function(value){
+					this.element.css("font-weight",value);
+				}
+			}
+			$("#accordion").accordion();
+			$("#autocomplete").autocomplete({
+				source:["c++","java","php","coldfusion","javasript","asp","ruby"]
+			});
+
+			/*$("#autocomplete2").autocomplete({
+				source:function(request,response){
+					var  matcher=new RegExp("^"+$.ui.autocomplete.escapeRegex(request.term),"i");
+					response($grep(tags,function(item){
+						return matcher.test(item);
+					}));
+				}
+			});*/
+
+			$("#radio").buttonset({
+				icons:{primary:"ui-icon-gear",secondary:"ui-icon-triangle-1-s"},
+				label:"custom label",
+				text:false
+			});
+
+			$("#btn01").button();
+
+			$("#datepicker").datepicker();
+
+			
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<style type="tetx/css"> 
+		h1{padding:.2em;margin:0;}
+		#products{float:left;width:500px;margin-right:2em;}
+		#cart{width:200px;float:left;margin-top:1em;}
+		#cart ol{margin:0;padding:1em 0 1em 3em;}
+	</style>
+</head>
+<body>
+	<div id="products">
+		<h1 class="ui-widget-header">产品</h1>
+		<div id="catalog">
+			<h2><a href="#">T-Shirts</a></h2>
+			<div>
+				<ul>
+					<li>Lolcat Shirt</li>
+					<li>Cheezeburger Shirt</li>
+					<li>Buckit Shirt</li>
+				</ul>
+			</div>
+			<h2><a href="#">Bags</a></h2>
+			<div>
+				<ul>
+					<li>Zebra Striped</li>
+					<li>lily leather</li>
+					<li>alligator Leather</li>
+				</ul>
+			</div>
+			<h2><a href="#">Gadgets</a></h2>
+			<div>
+				<ul>
+					<li>iphone</li>
+					<li>ipad</li>
+					<li>ipod</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="cart">
+		<h1 class="ui-widget-header">购物车</h1>
+		<div class="ui-widget-content">
+			<ol>
+				<li class="placeholder">添加产品到这里</li>
+			</ol>
+		</div>
+	</div>
+	<script type="text/javascript">
+	$(function(){
+		$("#catalog").accordion();
+		$("#catalog li").draggable({
+			appendTo:"body",
+			helper:"clone"
+		});
+		$("#cart ol").droppable({
+			activeClass:"ui-state-default",
+			hoverClass:"ui-state-hover",
+			accept:":not(.ui-sortable-helper)",
+			drop:function(event,ui){
+				$(this).find(".placeholder").remove();
+				$("<li></li>").text(ui.draggable.text()).appendTo(this);
+			}
+		}).sortable({
+			items:"li:not(.placeholder)",
+			sort:function(){
+				//获取由droppable与sorttable交互而加入的条目
+				//使用connectWithSortable 可以解决这个问题，但不允许您自定义active、hoverClass选项
+				$(this).removeClass("ui-state-default");
+			}
+		});
+	});
+	</script>
+</body>
+</html>

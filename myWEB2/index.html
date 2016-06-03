@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>特效</title>
+</head>
+<style type="text/css">
+	*{padding:0;margin:0;}
+	body { font-family: "Helvetica Neue", Helvetica, 'microsoft yahei', STHeiTi, sans-serif; color:#fff; background:#1f2e3d; }
+	body,html{height: 100%;overflow: hidden;}
+	ul,li{list-style: none;}
+	.container{position:absolute;top:0;left:0;right:0;bottom:0;}
+	.content{width:100%;height:200%;position: absolute;left:0;top:0;}/*height:200%*/
+	.scene{height:50%;position:relative;overflow: hidden;}
+	#scene1{background-color: #1ec868;}
+	.scene-in{height:100%;position: relative;max-width: 1224px;min-width: 1024px;margin:0 auto;}
+	ul,li{list-style: none;}
+	.scene-ctrl{position: fixed;top:50%;right:20px;margin-top:-140px;}
+	.scene-ctrl a{display: block;width:20px;margin:10px 0; background:url('./new-year-2015/bg-scene-ctrl.png') no-repeat center;color:transparent;
+}
+.scene-ctrl .cur{
+	background-image: url('./new-year-2015/bg-scene-ctrl-cur.png')
+}
+
+</style>
+<body>
+	<div class="container" id="container">
+		<div class="content">
+			<!--第一部分-->
+			<div id="scene1" class="scene">
+				<div class="scene-in">
+					<p class="scene-title">please hover me</p>
+
+				</div>
+			</div>
+			<!--第二部分-->
+			<div id="scene2" class="scene" style="background-color:pink;">
+				<div class="scene-in"></div>
+			</div>
+			<!--第三部分-->
+            <div id="scene3" class="scene">
+            	<div class="scene-in"></div>
+            </div>
+            <div id="scene4" class="scene">
+            	<div class="scene-in"></div>
+			</div>
+		</div>
+		<ul id="sceneCtrl" class="scene-ctrl">
+		  	<li><a href="javascript:void(0);" data-index="0">1</a></li>
+		  	<li><a href="javascript:void(0);" data-index="1">2</a></li>
+		  	<li><a href="javascript:void(0);" data-index="2">3</a></li>
+		  	<li><a href="javascript:void(0);" data-index="3">4</a></li>
+		</ul>
+	</div>
+	<script src="http://combo.b.qq.com/common/js/jquery-1.7.1.min.js"></script>
+	<script src="js/iscroll.js"></script>
+	<script type="text/javascript">
+		if (window.addEventListener) {
+			var newYearScroll = new IScroll("#container", {
+				mouseWheel: true,
+				momentum: false,
+				snap: true
+			})
+		} else {
+			// IE7-IE8
+			var newYearScroll = {
+				content: $("#container .content > div"),
+				currentPage: {
+					pageY: 0
+				},
+				next: function() {
+					this.currentPage.pageY++;
+					var index = this.currentPage.pageY;
+					if (index > 9) {
+						index = 9;
+						return this;
+					}
+					this.content.animate({
+						top: -100 * index + "%"
+					}, this.scrollEnd);
+				},
+				prev: function() {
+					this.currentPage.pageY--;
+					var index = this.currentPage.pageY;
+					if (index < 0) {
+						index = 0;
+						return this;
+					}
+					this.content.animate({
+						top: -100 * index + "%"
+					}, this.scrollEnd)
+				},
+				goToPage: function(x, y) {
+					this.currentPage.pageY = y;
+					this.content.animate({
+						top: -100 * y + "%"
+					}, this.scrollEnd);
+				},
+				on: function(name, fn) {
+					this[name] = fn;
+				}
+			}
+		}
+		/**$(".scene-down").on("click", function() {
+			newYearScroll.next()
+		});*/
+		$("#sceneCtrl a").on("click", function() {
+			newYearScroll.goToPage(0, $(this).attr("data-index") * 1)
+		});
+		newYearScroll.on("scrollEnd", function() {
+			var pageY = newYearScroll.currentPage.pageY;
+			$("#sceneCtrl .cur").removeClass("cur");
+			$("#sceneCtrl a[data-index=" + pageY + "]").addClass("cur");
+			$(".scene").eq(pageY).addClass("active");
+		});
+   /**
+		$(document).bind("keyup", function(event) {
+			var code = event.keyCode;
+			if (code == 38) {
+				newYearScroll.prev()
+			} else if (code == 40) {
+				newYearScroll.next()
+			}
+		});
+*/
+		newYearScroll.goToPage(0, 0);
+	</script>
+</body>
+</html>

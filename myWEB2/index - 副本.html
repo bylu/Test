@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>css动画特效</title>
+	<link rel="stylesheet" href="index.css" />
+</head>
+<body>
+	<div class="container" id="container">
+		<div class="content">
+			<!--第一部分-->
+			<div id="scene1" class="scene">
+				<div class="scene-in">
+					<div class="scene-images">
+						<img src="new-year-2005/scene2-bg.png"  class="scene-bg" />
+						<img src="new-year-2005/scene2-boy.png" class="scene-boy" />
+						<img src="new-year-2005/scene2-cloud1.png" class="scene-cloud1" />
+						<img src="new-year-2005/scene2-cloud2.png" class="scene-cloud2" />
+						<div class="animate scene2-cloud3">
+							<img src="new-year-2005/scene2-cloud3.png" /><i class="animate scene2-2"></i>
+						</div>
+						<img class="scene2-egg1" src="new-year-2005/scene2-egg1.png" />
+						<div class="animate scene2-egg2"><img src="new-year-2005/scene2-egg2.png" /></div>
+						<img src="new-year-2005/scene2-line.png" class="scene2-line" />
+						<img src="new-year-2005/scene2-stone.png" class="scene2-store" />
+					</div>
+
+					<div class="scene-text">
+						<div class="scene-contenttext">
+							<h2 class="scene-title">新年来临了</h2>
+							<p class="scene-desc">
+									Happy new year ! <!--hope 2016 everyday have a good heart! illness all leave out me .-->
+							</p>
+						</div>
+					</div>
+					<a id="scene2-down" class="scene-down" title="下一屏">下一屏</a>
+				</div>
+			</div>
+			<!--第二部分-->
+			<div id="scene2" class="scene">
+				<div class="scene-in">
+					<div class="scene-vertical">
+						<img src="new-year-2005/scene8-1.png" class="scene-title scene2-1" />
+						<p class="scene-desc">这些并肩奋斗的人们，可能是每天比和家人相处时间更长<br/>的人<br/>你的成就，是否也有他们的帮助各努力？</p>
+						<ul class="scene-person scene2-3">
+							<li>
+								<img src="new-year-2005/pic-1.png" />
+								<span>sirW</span>
+							</li>
+							<li>
+								<img src="new-year-2005/pic-2.png" />
+								<span>lala</span>
+							</li>
+							<li>
+								<img src="new-year-2005/pic-3.png" />
+								<span>sirL</span>
+							</li>
+						</ul>
+						<div class="scene-space">
+							<div class="animate scene8-19"><img src="new-year-2005/scene8-19.png" /></div>
+							<div class="animate scene8-20"><img src="new-year-2005/scene8-20.png" /></div>
+							<div class="animate scene8-18"><img src="new-year-2005/scene8-18.png" /></div>
+							<div class="animate scene8-6"><img src="new-year-2005/scene8-6.png" /></div>
+							<div class="animate scene8-12"><img src="new-year-2005/scene8-12.png" /></div>
+							<div class="animate scene8-13"><img src="new-year-2005/scene8-13.png" /></div>
+							<div class="animate scene8-14"><img src="new-year-2005/scene8-14.png" /></div>
+							<div class="animate scene8-15"><img src="new-year-2005/scene8-15.png" /></div>
+							<div class="animate scene8-16"><img src="new-year-2005/scene8-16.png" /></div>
+							<div class="animate scene8-17"><img src="new-year-2005/scene8-17.png" /></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--第三部分-->
+            <div id="scene3" class="scene">
+            	<div class="scene-in">
+          			<p>  fbdfldhjlsfdkljk</p>
+          		</div>
+            </div>
+            <div id="scene4" class="scene">
+            	<div class="scene-in">
+            		<p>this is page4 section</p>
+            	</div>
+            </div>
+		</div>
+	</div>
+	<ul id="sceneCtrl" class="scene-ctrl">
+	  	<li><a href="javascript:void(0);" data-index="0">1</a></li>
+	  	<li><a href="javascript:void(0);" data-index="1">2</a></li>
+	  	<li><a href="javascript:void(0);" data-index="2">3</a></li>
+	  	<li><a href="javascript:void(0);" data-index="3">4</a></li>
+	</ul>
+	<script src="http://combo.b.qq.com/common/js/jquery-1.7.1.min.js"></script>
+	<script src="js/iscroll.js"></script>
+	<script type="text/javascript">
+		if (window.addEventListener) {
+			var newYearScroll = new IScroll("#container", {
+				mouseWheel: true,
+				momentum: false,
+				snap: true
+			})
+		} else {
+			// IE7-IE8
+			var newYearScroll = {
+				content: $("#container > div"),
+				currentPage: {
+					pageY: 0
+				},
+				next: function() {
+					this.currentPage.pageY++;
+					var index = this.currentPage.pageY;
+					if (index > 9) {
+						index = 9;
+						return this;
+					}
+					this.content.animate({
+						top: -100 * index + "%"
+					}, this.scrollEnd);
+				},
+				prev: function() {
+					this.currentPage.pageY--;
+					var index = this.currentPage.pageY;
+					if (index < 0) {
+						index = 0;
+						return this;
+					}
+					this.content.animate({
+						top: -100 * index + "%"
+					}, this.scrollEnd)
+				},
+				goToPage: function(x, y) {
+					this.currentPage.pageY = y;
+					this.content.animate({
+						top: -100 * y + "%"
+					}, this.scrollEnd);
+				},
+				on: function(name, fn) {
+					this[name] = fn;
+				}
+			}
+		}
+		$(".scene-down").on("click", function() {
+			newYearScroll.next()
+		});
+		$("#sceneCtrl a").on("click", function() {
+			 var thisnum=$(this).attr("data-index");
+			 alert(thisnum);
+			newYearScroll.goToPage(0, $(this).attr("data-index") * 1)
+		});
+		newYearScroll.on("scrollEnd", function() {
+			var pageY = newYearScroll.currentPage.pageY;
+			$("#sceneCtrl .cur").removeClass("cur");
+			$("#sceneCtrl a[data-index=" + pageY + "]").addClass("cur");
+			$(".scene").eq(pageY).addClass("active");
+		});
+
+		$(document).bind("keyup", function(event) {
+			var code = event.keyCode;
+			if (code == 38) {
+				newYearScroll.prev()
+			} else if (code == 40) {
+				newYearScroll.next()
+			}
+		});
+
+		newYearScroll.goToPage(0, 0);
+	</script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标交互的效果显示</title>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+</head>
+<style>
+	*{padding:0;margin:0;}
+	.wf100{width:100%;float:left;}
+	ul,li{list-style: none;}
+	/* li{width:10%;background-color: yellow;}
+	li:nth-child(2n){background-color:pink; */
+	#selectable .ui-selecting {
+   	 	background: #ccc;
+	 }
+  	#selectable .ui-selected {
+   		 background: #999;
+  	}
+  	.next,#usero1{width:200px;height:200px;border:1px solid #000;}
+  	.position,.showdiv{width:200px;height:200px;background-color: #ccc;float:left;margin:10px;}
+	input,a,p{border:1px solid #000;}
+</style>
+<body>	
+	<div class="wf100">
+		<ul id="selectable">
+			<li>item1</li>
+			<li>item2</li>
+			<li>item3</li>
+			<li>item4</li>
+		</ul>
+	</div>		
+	
+	<div class="wf100">
+		<div class="next">	
+			<p>拖拉着可以排序</p>
+			<ul id="sortable">
+				<li>ceshi01</li>
+				<li>ceshi02</li>
+				<li>ceshi03</li>
+				<li>ceshi04</li>
+				<li>ceshi05</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="wf100">
+		<div id="usero1">
+			<ul id="no1" class="handle">
+				<li>demo1</li>
+				<li>demo2</li>
+				<li>demo3</li>
+				<li>demo4</li>
+				<li>demo5</li>
+				<li>demo6</li>
+			</ul>
+		</div>
+		<div id="usero2">
+			<ul id="no2">
+				<li class="position" id="position1">center center</li>
+				<li class="position" id="position2">left top</li>
+				<li class="position" id="position3">right center right bottom </li>
+				<li class="position" id="position4">left+3 bottom-3</li>
+				<li class="position" id="position5"></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wf100">
+		<div class="showdiv" id="one"></div>
+		<div class="showdiv" id="two"></div>
+		<div class="showdiv" id="three"></div>
+	</div>
+    
+	<div class="wf100">
+		<input vale="文本输入" /><br/>
+		<a>不带href的锚</a><br/>
+
+		<a href="#">带有href的锚</a><br/>
+		<p>不带tabindex的段落</p><br/>
+
+		<p tabindex="1">带有tabindex的段落</p>
+	</div>
+	<div class="wf100">
+		<div><input value="没有 tabindex" /></div><br/>
+		<div><input tabindex="5" value="正的 tabindex"></div>
+		
+		<div><input tabindex="-1" value="负的 tabindex"/></div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			//var distance= $("#selectable").selectable("li","distance");
+			//$("#selectable").selectable("li","distance",30);
+			//$("#selectable").mouse({distance:10});
+			//$("#selectable").mouse("_mouseCapture");
+			/*选择的事件*/
+		    $("#selectable").selectable();
+		   // $("#sortable").sortable();//进行排序的操作
+		   <!--追加的位置以及移动的方向-->
+		    $("#sortable").sortable({
+		    	appendTo:document.body,
+		    	axis:"x",
+		    	connectWith:"#usero1"
+		     });
+		    $("#no1").sortable({
+		    	appendTo:document.body,
+		    	axis:"y",
+		    	connectWith:"#sortable",
+		    	cursor:"move",
+		    	cursorAt:{left:5},
+		    	delay:150,
+		    	grid:[20,10],
+		    	//handle:".handle",
+		    	opacity:0.5,
+		    	revert:true,
+		    	scrollSensitivity:10,
+		    	helper:"clone",
+		    	scroll:false,
+		    	scrollSpeed:40
+		    });
+
+		    $("#position1").position({
+		    	my:"center",
+		    	at:"center",
+		    	of:"#no2"
+		    });
+		    $("#position2").position({
+		    	my:"left top",
+		    	at:"left top",
+		    	of:"#no2"
+		    });
+
+		    $("#position3").position({
+		    	my:"right center",
+		    	at:"right bottom",
+		    	of:"#no2"
+		    });
+
+		    $("#position4").position({
+		    	my:"left+3 bototm-3",
+		    	of:event,
+		    	collision:"fit"
+		    });
+		    $("#one").data("color","blue");
+		    $("#two").data("color","green");
+		    $("#three").data("color","red");
+			$(":data(color)").each(function(){
+				var element=$(this);
+				element.css("background-color",element.data("color"));
+			});
+
+			$(":focusable").css("border-color","red");
+			$(":tabbable").css("border-color","pink");
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jqueryUi选择---默认功能</title>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+</head>
+<style>
+	*{padding:0;margin:0;}
+	.wf100{width:100%;float: left;}
+	ol,li{list-style: none;}
+	#feedback { font-size: 1.4em; }
+   	#selectable1 .ui-selecting{background-color: #efca40;}
+    #selectable1 .ui-seleted{background-color: #f39814;color:#fff;}
+    #selectable1{width:60%;}
+    #selectable1 li{width:100%;margin:3px;padding:0.4em;font-size: 1.4em;height:18px;float:left;} 
+   
+ 	#selectable .ui-selecting { background: #FECA40; }
+    #selectable .ui-selected { background: #F39814; color: white; }
+    #selectable { list-style-type: none; margin: 0; padding: 0; width: 450px; }
+    #selectable li { margin: 3px; padding: 1px; float: left; width: 100px; height: 80px; font-size: 4em; text-align: center; }
+
+   #selectable2 .ui-selecting { background: #FECA40; }
+   #selectable2 .ui-selected { background: #F39814; color: white; }
+   #selectable2 { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+   #selectable2 li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
+     
+	
+	#sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+    #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+    #sortable li span { position: absolute; margin-left: -1.3em; }
+	
+	#sortable2,#sortable3{list-style: none;margin:0;padding:0 0 2.5em;float:left;margin-right:10px;}
+	#sortable2 li,#sortable3 li{margin:0 5px 5px 5px;padding:5px;font-size: 1.2em;width:120px;}
+
+
+	/*折叠面板的样式*/
+	 .column {
+    width: 170px;
+    float: left;
+    padding-bottom: 100px;
+  }
+  .portlet {
+    margin: 0 1em 1em 0;
+    padding: 0.3em;
+  }
+  .portlet-header {
+    padding: 0.2em 0.3em;
+    margin-bottom: 0.5em;
+    position: relative;
+  }
+  .portlet-toggle {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -8px;
+  }
+  .portlet-content {
+    padding: 0.4em;
+  }
+  .portlet-placeholder {
+    border: 1px dotted black;
+    margin: 0 1em 1em 0;
+    height: 50px;
+  }
+</style>
+<body>
+	<div class="wf100"> 
+		 <ol id="selectable1">
+			<li class="ui-widget-content">item1</li>
+			<li class="ui-widget-content">item2</li>
+			<li class="ui-widget-content">item3</li>
+			<li class="ui-widget-content">item4</li>
+			<li class="ui-widget-content">item5</li>
+			<li class="ui-widget-content">item6</li>
+		</ol> 
+		<ol id="selectable">
+			<li class="ui-state-default">1</li>
+			<li class="ui-state-default">2</li>
+			<li class="ui-state-default">3</li>
+			<li class="ui-state-default">4</li>
+			<li class="ui-state-default">5</li>
+			<li class="ui-state-default">6</li>
+			<li class="ui-state-default">7</li>
+			<li class="ui-state-default">8</li>
+			<li class="ui-state-default">9</li>
+			<li class="ui-state-default">10</li>
+			<li class="ui-state-default">11</li>
+			<li class="ui-state-default">12</li>
+		</ol>
+	</div> 
+	<div class="wf100">
+		<p id="feedback">
+			<span>您已经选择：</span><span id="select-result">无</span>
+		</p>
+		<ol id="selectable2">
+			<li class="ui-widget-content">item1</li>
+			<li class="ui-widget-content">item2</li>
+			<li class="ui-widget-content">item3</li>
+			<li class="ui-widget-content">item4</li>
+			<li class="ui-widget-content">item5</li>
+			<li class="ui-widget-content">item6</li>
+		</ol>
+	</div>
+	<div class="wf100">
+		<ul id="sortable"> 
+			<li class="yi-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>item1</li>
+			<li class="yi-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>item2</li>
+			<li class="yi-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>item3</li>
+			<li class="yi-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>item4</li>
+			<li class="yi-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>item5</li>
+			<li class="yi-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>item6</li>			
+		</ul>
+	</div>
+	<div class="wf100">
+		<ul id="sortable2" class="connectedSortable">
+			<li class="ui-state-default">left01</li>
+			<li class="ui-state-default">left02</li>
+			<li class="ui-state-default">left03</li>
+			<li class="ui-state-default">left04</li>
+			<li class="ui-state-default">left05</li>
+			<li class="ui-state-default">left06</li>
+		</ul>
+		<ul id="sortable3" class="connectedSortable">
+			<li class="ui-state-highlight">right01</li>
+			<li class="ui-state-highlight">right02</li>
+			<li class="ui-state-highlight">right03</li>
+			<li class="ui-state-highlight">right04</li>
+			<li class="ui-state-highlight">right05</li>
+			<li class="ui-state-highlight">right06</li>
+		</ul>
+	</div>
+	<div class="wf100" style="display:none;">
+		<ul id="sortable01" class="droptrue">
+			<li class="ui-state-default">可被放置到</li>
+			<li class="ui-state-default">一个空列表中</li>
+			<li class="ui-state-default">item3</li>
+			<li class="ui-state-default">item4</li>
+			<li class="ui-state-default">item5</li>
+		</ul>
+		<ul id="sortable02" class="droptrue">
+			<li class="ui-state-hightlight">不可被放置到</li>
+			<li class="ui-state-hightlight">一个空列表</li>
+			<li class="ui-state-hightlight">item3</li>
+			<li class="ui-state-hightlight">item4</li>
+			<li class="ui-state-hightlight">item5</li>
+		</ul>
+		<ul id="sortable03" class="droptrue"></ul>
+	</div>
+
+	<div class="wf100">
+		<div class="column">
+			<div class="portlet">
+				<div class="portlet-header">订阅</div>
+				<div class="portlet-content">Lorem ipsum dolor sit amet,consectetuer adipiscing elit</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$(function(){
+			$("#selectable1").selectable();
+			$("#selectable").selectable();
+			$("#selectable2").selectable({
+				stop:function(){
+					var result=$("#select-result").empty();
+					$(".ui-selected",this).each(function(){//循环事件
+						var index=$(this).index();
+						result.append("#" +(index+1));
+						console.log(index);
+					});
+				}
+			});
+			$("#sortable").sortable();
+			$("#sortable").disableSelection();
+			$("#sortable2,#sortable3").sortable({
+				connectWith:".connectedSortable"
+			}).disableSelection();
+
+			/*折叠的效果点击*/
+			$(".column").sortable({
+				connectWith:".column",
+				handle:".portlet-header",
+				cancel:".portlet-toggle",
+				placeholder:"portlet-placeholder ui-corner-all"
+			});
+
+			$(".portlet").addClass("ui-widget ui-widget-content ui-helper-clearfix ui-corner-all").find(".portlet-header").addClass("ui-widget-header ui-corner-all").prepend("<span class='ui-icon ui-icon-minusthick portlet-toggle'></span>");
+
+			$(".portlet-toggle").click(function(){
+				var icon=$(this);
+				icon.toggleClass("ui-icon-minusthick ui-icon-plusthick");
+				icon.closest(".portlet").find(".portlet-content").toggle();
+			});
+		});
+	</script>
+</body>
+</html>

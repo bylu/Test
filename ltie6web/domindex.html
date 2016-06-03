@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="content">
+		<p style="color:red;">this is a content begin</p>
+		<p>文本测试一</p>
+		<p>文本测试二</p>
+	</div>
+	<script src="http://apps.bdimg.com/libs/jquery/1.8.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		
+		 window.onload=function(){
+		 	var userGetElemnet=document.getElementById("content");
+			var newNode=document.createElement("h2");
+			newNode.innerHTML="THIS IS A H2 USER INPUT";
+
+			//var userinputNew='<h2>this is a h2</h2>';
+			 //userinputNew.appendChild('userGetElemnet');
+			userGetElemnet.appendChild(newNode);//在父节点的里面添加一个子节点
+			userGetElemnet.removeChild(userGetElemnet.childNodes[0]);//在指定的区域内删掉节点
+		 	var txt= userGetElemnet.childNodes[0].innerHTML;
+		 	document.write(txt);
+		 	document.write("<br/>");
+		 	document.write(userGetElemnet.firstChild.nodeValue);
+		 	document.write("<br/>");
+
+   
+
+			var tagnames=userGetElemnet.getElementsByTagName("p");
+			document.write(tagnames[0].innerHTML);
+
+			document.write("<br/>");
+
+			document.write(tagnames[0].innerHTML="New text");
+			document.write("<br/>");
+			document.write(tagnames[0].getAttribute());
+			/*
+			repalceChild()
+			insertBefore()
+			createAttribute()
+
+			createElement()
+
+			createTextNode();
+			getAttribute();
+			setAttribute();
+
+			 */
+		 }
+	</script>
+</body>
+</html>
+
+<!-- tw_htc
+
+  ""=> array (
+                "android" => "http://download.6513.com/phoneGame/FXBY-1624766-560203981b9d5.apk ",
+                "script" => "",
+                "scriptid" => "",
+            ), -->

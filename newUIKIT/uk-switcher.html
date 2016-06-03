@@ -1,0 +1,274 @@
+<!document>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<title>uikit Flex</title>
+		<link rel="stylesheet" href="css/uikit.min.css" />
+		<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.8.0/jquery.min.js"></script>
+		<script src="js/uikit.min.js"></script>
+	</head>
+	<style type="text/css">
+		.logo{width:autolfloat:left;}
+		ul,li{list-style:none;}
+		.blockborder{height:150px;border:1px solid #ccc;}
+		.leftbar{margin:0px 10px;}
+		.leftbar li{cursor:pointer;border-bottom:1px solid #fff;padding:8px 0px;}
+		.leftbar li:first-child{border-radius:8px 8px 0px 0px;}
+		.leftbar li:last-child{border-radius: 0px 0px 8px 8px;}
+		.bggray{background-color:#e1e1e1;}
+		.toptit li{float:left;display:inline;padding:5px 15px;}
+		.uk-switcher{width:100%;float:left;}
+		p{width:100%;float:left;}
+	</style>
+	<body>
+		<div class="uk-grid uk-width-1-1">
+			<header  class="uk-container-center uk-width-2-3" >
+				<a class="uk-float-left"><img src="images/logo.png" /></a>
+				<nav class="uk-navbar uk-flex-margin uk-float-left uk-margin-large-top">
+					<div class="uk-navbar-flip">
+						<ul class="uk-navbar-nav">
+							<li class="uk-active uk-navbar-nav-subtitle"><a>Home</a></li>
+							<li class="uk-parent uk-margin-left uk-padding-left "><a>Newinfo</a></li>
+							<li class="uk-parent uk-margin-left uk-padding-left"><a>QuestionInfo</a></li>
+							<li class="uk-parent uk-margin-left uk-padding-left"><a>UserCenter</a></li>
+							<li class="uk-parent uk-margin-left uk-padding-left"><a>HelpCenter</a></li>
+						</ul>
+					</div>
+				</nav>
+			</header>
+			<div class="uk-container-center uk-width-2-3 uk-margin-large-top uk-padding-large-top" >
+				<section class="uk-width-1-3 uk-float-left">
+					<ul class="leftbar">
+						<li class="uk-padding-small uk-text-center bggray">用户信息</li>
+						<li class="uk-padding-small uk-text-center bggray">财富信息</li>
+						<li class="uk-padding-small uk-text-center bggray">充值管理</li>
+						<li class="uk-padding-small uk-text-center bggray">游戏维护</li>
+						<li class="uk-padding-small uk-text-center bggray">日志记录</li>
+						<li class="uk-padding-small uk-text-center bggray">充值管理</li>
+					</ul>
+				</section>
+				<section class="uk-width-2-3 uk-float-left">
+					<p>切换器的使用</p>
+					<div class="uk-width-1-1">
+						<ul data-uk-switcher="{connect:'#myid1'}" class="toptit">
+							<li><a href="">item1</a></li>
+							<li><a href="">item2</a></li>
+							<li><a href="">item3</a></li>
+						</ul>
+						<ul id="myid1" class="uk-switcher">
+							<li>first item1</li>
+							<li>2 item1</li>
+							<li>3 item3</li>
+						</ul>
+					</div>
+					<p>在内容中切换条目</p>
+					<div class="uk-width-1-1">
+						<ul data-uk-switcher="{connect:'#myid2'}" class="toptit">
+							<li><a href="">showitem1</a></li>
+							<li><a href="">showitem2</a></li>
+							<li><a href="">showitem3</a></li>
+						</ul>
+						<ul id="myid2" class="uk-switcher">
+							<li><a href="" data-uk-switcher-item="2">contentof1</a></li>
+							<li><a href="" data-uk-switcher-item="0">contentof2</a></li>
+							<li><a href="" data-uk-switcher-item="1">contentof3</a></li>
+						</ul>
+					</div>
+					
+					<p>切换相邻的条目(上一个和下一个)</p>
+					<div class="uk-width-1-1">
+						<ul data-uk-switcher="{connect:'#myid3'}" class="toptit">
+							<li class="uk-active"><a>tit1</a></li>
+							<li><a>tit2</a></li>
+							<li><a>tit3</a></li>
+						</ul>
+						<ul id="myid3" class="uk-switcher">
+							<li class="uk-active"><a href="#" data-uk-switcher-item="next">1 content</a><li>
+							<li><a href="#"> 2 content</a></li>
+							<li><a href="#" data-uk-switcher-item="previous">6 content</a></li>
+						</ul>
+					</div>
+					
+					<p>关联多个项目</p>
+					<div class="uk-width-1-1 uk-grid" >
+						<div class="uk-width-medium-1-4">
+							<ul data-uk-switcher="{connect:'#myidone,#myidtwo'}" class="uk-nav uk-nav-side">
+								<li class="uk-active" aria-expanded="true"><a href="">item1</a></li>
+								<li><a href="">item2</a></li>
+								<li><a href="">item3</a></li>
+							</ul>
+						</div>
+						<div class="uk-width-medium-3-4">
+						
+							<div class="uk-grid uk-grid-width-medium-1-2" data-uk-margin>
+								<ul class="uk-switcher" id="myidone">
+									<li><a>container 1</a></li>
+									<li><a>hello from container 1</a></li>
+									<li><a>hello from conntainer 2</a></li>
+								</ul>
+							</div>
+							
+							<div class="uk-grid uk-grid-width-medium-1-2" data-uk-margin>
+								<ul class="uk-switcher" id="myidtwo">
+									<li><a>contianer 2</a></li>
+									<li><a>hello from container2-1</a></li>
+									<li><a>hellow from container2-2 </a></li>
+								</ul>
+							</div>
+						
+						</div>
+					</div>
+					<p>切换器的动画效果</p>
+					<p>切换器组建允许你为他们添加格式的切换动画，你所需要的就是添加animation 参数</p>
+					
+					<div class="uk-width-1-1 uk-grid">
+						<div class="uk-grid uk-grid-width-medium-1-4 uk-margin" data-uk-grid-margin>
+							<div class="uk-width-1-1">
+								<h5 class="uk-h4">user-fade</h5>
+								<ul class="uk-subnav uk-subnav-pill" data-uk-switcher="{connect:'#switcher-content-a-fade',animation:'fade'}">
+									<li class="uk-active"><a>item</a></li>
+									<li><a>item</a></li>
+									<li><a>item</a></li>
+								</ul>
+								<ul id="switcher-content-a-fade" class="uk-switcher uk-margin">
+									<li aria-hidden="false" class="uk-active" style="animation-duration:200ms;-webkit-animation-duration:200ms;">userHavefirst</li>
+									<li aria-hidden="false" style="animation-duration:200ms;-webkit-animation-duration:200ms;">userHavatwo</li>
+									<li aria-hidden="false" style="animation-duration:200ms;-webkit-animation-duration:200ms;">userHavaThree</li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="uk-grid uk-grid-width-medium-1-4 uk-margin" data-uk-grid-margin>
+							<div class="uk-width-1-1">
+								<h5 class="uk-h4">user-scale</h5>
+								<ul class="uk-subnav uk-subnav-pill" data-uk-switcher="{connect:'#connext2',animation:'scale'}">
+									<li class="uk-active"><a>item2</a></li>
+									<li><a>item2</a></li>
+									<li><a>item2</a></li>
+								</ul>
+								<ul id="connext2" class="uk-switcher uk-margin">
+									<li aria-hidden="true" class="uk-active" style="animation-duration:200ms;-webkit-animation-duration:200ms;">twoitemcontent1</li>
+									<li aria-hidden="false" style="animation-duration:200ms;-webkit-animation-duration:200ms;">twoitemcontent2</li>
+									<li aria-hidden="false" style="animation-duration:200ms;-webkit-animation-duration:200ms;">twoitemcontent3</li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="uk-grid uk-grid-width-medium-1-4 uk-margin" data-uk-grid-margin>
+							<div class="uk-width-1-1">
+								<h4 class="uk-h4">user-slide-top</h4>
+								<ul class="uk-subnav uk-subnav-pill" data-uk-switcher="{connect:'#connect3',animation:'slide-top'}">
+									<li class="uk-active"><a>item3</a></li>
+									<li><a>item3</a></li>
+									<li><a>item3</a></li>
+								</ul>
+								<ul id="connect3" class="uk-switcher uk-margin">
+									<li aria-hidden="true" class="uk-active" style="animation-duration:200ms;-webkit-animation-duration:200ms;">threecontent3</li>
+									<li aria-hidden="true" style="animation-duration:200ms;-webkit-animation-duration:200ms;">threecontent3</li>
+									<li aria-hidden="true" style="animation-duration:200ms;-webkit-animation-duration:200ms;">threecontent3</li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="uk-grid uk-grid-width-medium-1-4 uk-margin" data-uk-grid-margin>
+							<div class="uk-width-1-1">
+								<h4 class="uk-h4">user-slide-bottom</h4>
+								<ul class="uk-subnav uk-subnav-pill" data-uk-switcher="{connect:'#connect4',animation:'slide-bottom'}">
+									<li class="uk-active"><a>item4</a></li>
+									<li><a>item4</a></li>
+									<li><a>item4</a></li>
+								</ul>
+								<ul id="connect4" class="uk-switcher uk-margin">
+									<li aria-hidden="true" class="uk-active" style="animation-duration:200ms;-webkit-animation-duration:200ms;">threecontent4</li>
+									<li aria-hidden="true" style="animation-duration:200ms;-webkit-animation-duration:200ms;">threecontent4</li>
+									<li aria-hidden="true" style="animation-duration:200ms;-webkit-animation-duration:200ms;">threecontent4</li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="uk-grid uk-grid-width-medium-1-4 uk-margin" data-uk-grid-margin>
+							<div class="uk-width-1-1">
+								<h4 class="uk-h4">user-slide-left</h4>
+								<ul class="uk-subnav uk-subnav-pill" data-uk-switcher="{connect:'#connect5',animation:'slide-left'}">
+									<li class="uk-active"><a>item5</a></li>
+									<li><a>item5</a></li>
+									<li><a>item5</a></li>
+								</ul>
+								<ul id="connect5" class="uk-switcher uk-margin">
+									<li aria-hidden="true" class="uk-active" style="animation-duration:200ms;-webkit-animation-duration:200ms;">threecontent5</li>
+									<li aria-hidden="true" style="animation-duration:200ms;-webkit-animation-duration:200ms;">threecontent5</li>
+									<li aria-hidden="true" style="animation-duration:200ms;-webkit-animation-duration:200ms;">threecontent5</li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="uk-grid uk-grid-width-medium-1-4 uk-margin" data-uk-grid-margin>
+							<div class="uk-width-1-1">
+								<h4 class="uk-h4">user-slide-right</h4>
+								<ul class="uk-subnav uk-subnav-pill" data-uk-switcher="{connect:'#connect6',animation:'slide-right'}">
+									<li class="uk-active"><a>item6</a></li>
+									<li><a>item6</a></li>
+									<li><a>item6</a></li>
+								</ul>
+								<ul id="connect6" class="uk-switcher uk-margin">
+									<li aria-hidden="true" class="uk-active" style="animation-duration:200ms;-webkit-animation-duration:200ms;">threecontent6</li>
+									<li aria-hidden="true" style="animation-duration:200ms;-webkit-animation-duration:200ms;">threecontent6</li>
+									<li aria-hidden="true" style="animation-duration:200ms;-webkit-animation-duration:200ms;">threecontent6</li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="uk-grid uk-grid-width-medium-1-4 uk-margin" data-uk-grid-margin>
+							<div class="uk-width-1-1">
+								<h4 class="uk-h4">user-slide-horizontal</h4>
+								<ul class="uk-subnav uk-subnav-pill" data-uk-switcher="{connect:'#connect7',animation:'slide-horizontal'}">
+									<li class="uk-active"><a>item7</a></li>
+									<li><a>item7</a></li>
+									<li><a>item7</a></li>
+								</ul>
+								<ul id="connect7" class="uk-switcher uk-margin">
+									<li aria-hidden="true" class="uk-active" style="animation-duration:200ms;-webkit-animation-duration:200ms;">threecontent7</li>
+									<li aria-hidden="true" style="animation-duration:200ms;-webkit-animation-duration:200ms;">threecontent7</li>
+									<li aria-hidden="true" style="animation-duration:200ms;-webkit-animation-duration:200ms;">threecontent7</li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="uk-grid uk-grid-width-medium-1-4 uk-margin" data-uk-grid-margin>
+							<div class="uk-width-1-1">
+								<h4 class="uk-h4">user-slide-vertical</h4>
+								<ul class="uk-subnav uk-subnav-pill" data-uk-switcher="{connect:'#connect8',animation:'slide-vertical'}">
+									<li class="uk-active"><a>item8</a></li>
+									<li><a>item8</a></li>
+									<li><a>item8</a></li>
+								</ul>
+								<ul id="connect8" class="uk-switcher uk-margin">
+									<li aria-hidden="true" class="uk-active" style="animation-duration:200ms;-webkit-animation-duration:200ms;">threecontent8</li>
+									<li aria-hidden="true" style="animation-duration:200ms;-webkit-animation-duration:200ms;">threecontent8</li>
+									<li aria-hidden="true" style="animation-duration:200ms;-webkit-animation-duration:200ms;">threecontent8</li>
+								</ul>
+							</div>
+						</div>
+						<p>自定义动画</p>
+						<div class="uk-grid uk-grid-width-medium-1-4 uk-margin" data-uk-grid-margin>
+							<div class="uk-width-1-1">
+								<h4 class="uk-h4">user-slide-vertical</h4>
+								<ul class="uk-subnav uk-subnav-pill" data-uk-switcher="{connect:'#connect9',animation:'uk-animation-fade,uk-animation-left'}">
+									<li class="uk-active"><a>item8</a></li>
+									<li><a>item8</a></li>
+									<li><a>item8</a></li>
+								</ul>
+								<ul id="connect9" class="uk-switcher uk-margin">
+									<li aria-hidden="true" class="uk-active" style="animation-duration:200ms;-webkit-animation-duration:200ms;">threecontent8</li>
+									<li aria-hidden="false" style="animation-duration:200ms;-webkit-animation-duration:200ms;">threecontent8</li>
+									<li aria-hidden="false" style="animation-duration:200ms;-webkit-animation-duration:200ms;">threecontent8</li>
+								</ul>
+							</div>
+						</div>
+						
+					</div>
+				</section>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="True" name="HandheldFriendly" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <meta name="renderer" content="webkit">
+    <meta name="MobileOptimized" content="320">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta http-equiv="pragma" content="no-cache"/>  
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>  
+    <meta name="viewport" content="width=375">
+	<mata name="viewport" content="width=414">
+    <title>街机千炮捕鱼</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="layer.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<div class="layout">
+		<img src="images/bg.jpg" />
+		<div class="banner">
+			<img src="images/top.png" />
+			<div class="redPacketCodeinfos">
+				<p class="redPacketCode">
+					<span class="number">31223632</span>
+					<span class="desc">(内含1万鱼币)</span>
+				</p>
+				<div class="usedownloadfirst"><img src="images/btn-ljxz.png"  class="usedowngame" /></div>
+			</div>
+		</div>
+		<!--大转盘部分-->
+		<div class="luckdiv">
+			<div id="dowebok">
+				<div class="plate">
+					<div id="plateBtn" class="plateBtncss" href="javascript:"></div>
+				</div>
+			</div>
+		</div>
+	    <div class="userhavePrize">
+	    	<div id="result">
+				<div class="showresult">
+					<p id="resultTxt" class="resultTxt">100元话费</p>
+					<p  class="resultbtnshare" style="display:none;"><img src="images/btn-fx.png" id="resultbtnshare"/></p>
+					<p class="resultbtnshareresult btnshare" style="display:block;">礼包码：6sda645s</p>
+				</div>
+			</div>
+	    </div>
+	    <div class="videopart">
+	    	<video  controls preload="none" poster="images/movie.jpg" >
+				<source src="http://download.6513.com/mv/mv.mp4" type='video/mp4' />
+			</video>
+	    </div>
+	    
+        <div class="userdowmfooter">
+        	<img src="images/btn02.png" class="usedowngame" />
+        </div>
+	</div>
+	<script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.rotate.min.js"></script>
+    <script src="js/layer.m.js"></script>
+	<script type="text/javascript">
+		window.onresize=function(){
+			updatePage();
+		}
+		//样式动态加载变化
+		function updatePage(){
+			var normal_width = 640;
+		    var normal_fontSize = 25;
+	        var getWidth = $(window).width();
+	        var scale = getWidth / normal_width;
+	        $(document.body).css("fontSize", normal_fontSize * scale + "px");
+            $(".number").css("font-size",normal_fontSize * scale * 1.2 +"px");
+            $(".desc").css("font-size",normal_fontSize * scale * 0.85 +"px");
+            $(".resultTxt").css("font-size",normal_fontSize * scale * 1.2 +"px");
+            $(".resultbtnshareresult").css("font-size",normal_fontSize *scale *1.2 +"px");
+		}
+	 	//判断是否是苹果设备
+	    function checkIsApple(){
+	        var u = navigator.userAgent, app = navigator.appVersion;
+	        var ios=!!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+	        var iPad=u.indexOf('iPad') > -1;
+	        var iPhone=u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1;
+	        if(ios || iPad || iPhone){
+	            return true;
+	        }else{
+	            return false;
+	        }
+	    }
+
+	    //不是在微信里面打开的 
+		function noSharePenyouQuan(){
+			layer.open({
+				type: 1,
+				content: "<div style='width:90%;padding:1% 5% 5% 5%;background-color:#ee382b; border-radius:5px;font-weight:500;font-family:Microsoft Yahei'><p style='width:100%;float:left;'><img src='images/close.png' class='btnclose1'  style='width:40px;height:40px;float:right;' /></p><p style='width:100%;text-align:center;font-size:20px;color:#fff;padding:1% 0%;margin-bottom:3%;float:left;'>分享该页面至朋友圈</p><p style='width:100%;text-align:center;font-size:20px;color:#fff;padding:1% 0%;'>并在朋友圈打开该链接</p><p style='width:100%;text-align:center;font-size:20px;color:#fff;padding:1% 0%;'>才可参与抽奖</p><p style='width:100%;text-align:center;margin-top:3%;'><input type='button' style='width:50%;padding:2% 0%;text-align:Center;background:#ffe66f;color:#c70000;font-size:20px;border:none;border-radius:5px;font-family:Microsoft Yahei' value='立即分享' class='btnshare'/></p></div>",
+				style: 'width:95%; height:auto;border:none;background:none;margin:0px auto;',
+				shadeClose:false,
+				success: function (olayer) {
+				  var cla = 'getElementsByClassName';
+				  olayer[cla]('btnclose1')[0].onclick = function () {
+					layer.closeAll();
+				  }
+				}
+			});
+			$(document).on("click",".btnshare",function(){
+	        	layer.open({
+					type: 1,
+					content: "<div style='width:100%;height:100%;'><img src=\"images/123tip.png\"  style='width:100%' class='noWeixinTip' /></div>",
+					style: 'width:100%; height:auto;border:none;background-color:rgba(0,0,0,0.8);margin:0px auto;height:100%',
+					shadeClose:false
+				});
+	        });
+			$(document).on("click",".noWeixinTip",function(){
+				layer.closeAll();
+			});
+		}
+
+
+	    //在微信里面打开的
+		function sharePenyouQuan(){
+			//layer.open({
+				// 	type: 1,
+				// 	content: "<div style='width:100%;height:100%;'><img src=\"images/123tip.png\"  style='width:100%' class='WeixinTip' /></div>",
+				// 	style: 'width:100%; height:auto;border:none;background-color:rgba(0,0,0,0.8);margin:0px auto;height:100%',
+				// 	shadeClose:false
+				// });
+			//$(document).on("click",".WeixinTip",function(){
+				//layer.closeAll();
+				//分享成功显示
+				//$(".resultbtnshare").css("display","none");
+				//$(".resultbtnshareresult").css("display","block");
+				//$resultTxt.html("10幸运豆");
+				//显示礼包码和奖品
+			    layer.open({
+					type: 1,
+					content: "<div style='width:90%;padding:1% 5% 5% 5%;background-color:#ee382b; border-radius:5px;font-weight:500;font-family:Microsoft Yahei'><p style='width:100%;float:left;'><img src='images/close.png' class='btnclose3'  style='width:40px;height:40px;float:right;' /></p><p style='width:100%;text-align:center;font-size:20px;color:#fff;padding:1% 0%;margin-bottom:3%;float:left;'>您真的太幸运了！</p><p style='width:100%;text-align:center;font-size:20px;color:#fff;padding:1% 0%;'>抽中<label style='font-size:25px;color:#ffe66f;padding:0% 4%;'>10幸运豆</label></p><p style='width:100%;margin:3% 0%;padding:3% 0%;text-align:center;background:#fff;color:#ca0002;font-size:25px;'>礼包码：6sda645s</p><p style='width:100%;text-align:center;color:#fff;font-size:14px;'>游戏内选择“银行” - “兑换码” 即可领取</p><p style='width:100%;text-align:center;margin-top:3%;'><input type='button' style='width:50%;padding:2% 0%;text-align:Center;background:#ffe66f;color:#c70000;font-size:20px;border:none;border-radius:5px;font-family:Microsoft Yahei' value='立即下载' class='gamedown'/></p></div>",
+					style: 'width:95%; height:auto;border:none;background:none;margin:0px auto;',
+					shadeClose:false,
+					success: function (olayer) {
+					  var cla = 'getElementsByClassName';
+					  olayer[cla]('btnclose3')[0].onclick = function () {
+						layer.closeAll();
+					  }
+					}
+				});
+			//});
+		}
+	//页面处理业务逻辑部分
+	$(function(){
+		updatePage();
+		var $plateBtn = $('#plateBtn');
+		var $result = $('#result');
+		var $resultTxt = $('#resultTxt');
+		var $resultbtnshare=$('#resultbtnshare');
+		var count = 0; //抽奖次数
+	    var isRotate=false;//转动的状态
+		
+		var timeOut =function(){ //超时函数
+			$plateBtn.rotate({
+				angle:0,  //起始角度
+				duration:10000, 
+				animateTo:2160,//旋转角度6圈
+			    easing: $.easing.easeOutSine, //动画扩展 这里是设置请求超时后返回的角度，所以应该还是回到最原始的位置，2160是因为我要让它转6圈，就是360*6得来的
+				callback:function(){
+					alert("网络超时");
+				}
+			});
+		};
+
+		var rotateFunc = function(awards,angle,text,extraData){   //转盘旋转   awards:奖项，angle:奖项对应的角度
+			$plateBtn.stopRotate(); //停止旋转动画
+			$plateBtn.rotate({
+				angle: 0,
+				duration: 5000,
+				animateTo: angle + 1440,  //angle是图片上各奖项对应的角度，1440是让指针固定旋转4圈 360*4
+				callback: function(){
+					layer.open({
+						type: 1,
+						content: "<div style='width:90%;padding:1% 5% 5% 5%;background-color:#ee382b; border-radius:5px;font-weight:500;font-family:Microsoft Yahei'><p style='width:100%;float:left;'><img src='images/close.png' class='btnclose4'  style='width:40px;height:40px;float:right;' /></p><p style='width:100%;text-align:center;font-size:20px;color:#fff;padding:1% 0%;margin-bottom:2%;float:left;'>您真的太幸运了！</p><p style='width:100%;text-align:center;font-size:20px;color:#fff;padding:1% 0%;'>抽中<label style='font-size:25px;color:#ffe66f;padding:0% 4%;'>"+text+"</label></p><p style='width:100%;text-align:center;margin-top:2%;'><img src='images/btn-fx.png' style='width:50%;' class='sharegiftcode'/></p></div>",
+						style: 'width:95%; height:auto;border:none;background:none;margin:0px auto;',
+						shadeClose:false,
+						success: function (olayer) {
+						  var cla = 'getElementsByClassName';
+						  olayer[cla]('btnclose4')[0].onclick = function () {
+							layer.closeAll();
+						  }
+						}
+					});
+					$resultTxt.html(text);
+					//$(".resultbtnshare").css("display","block");
+					isRotate = !isRotate;  
+					//弹框中分享获得礼包码事件
+					$(".sharegiftcode").click(function(){
+						$(this).parent().parent().css("display","none");
+						sharePenyouQuan();
+					});
+				}
+			});
+		};
+	    //转盘转完后显示奖品位置的分享获得礼包码的事件
+		$("#resultbtnshare").click(function(){
+			sharePenyouQuan();
+		});
+		  /*
+			这里的time跟data是要从后台获取的，但这里只是静态页面，所以我就利用了random随机数来尽量模拟抽奖的过程了。
+			time参数表示从后台请求是否成功，0是请求超时，1是请求成功(成功后再判断返回的值是什么样);
+			data就是请求返回的数据，1，2，3表示一二三等奖，0是不中奖，根据返回的数据，再去设置指针旋转的角度。
+			因为这个图片上的角度无法用公式计算出来，所以只能这样子计算出来后定死。*/
+
+		//抽奖按钮事件
+		$plateBtn.click(function(){
+			//是在微信打开
+			//if (ua.match(/MicroMessenger/i) == "micromessenger") {
+				if(isRotate) return;
+				if(count<1){
+					isRotate = !isRotate;  //
+					$(this).removeClass("plateBtncss");
+					$(this).addClass("plateBtncss2");
+					/*
+					var time=[0,1];
+					time = time[Math.floor(Math.random()*time.length)];
+					if(time == 0){  //网络超时
+						timeOut();
+					}
+				    */
+					//if(time == 1){
+						var routeData={
+						"fun_100159":function(extraData){
+							rotateFunc(2,65,'1元话费卡',extraData);
+						},
+						"fun_100161":function(){
+							rotateFunc(7,292,'5元话费卡');
+						}
+					}
+					var data = [0, 1, 2, 3, 4, 5, 6, 7];  
+					data = data[Math.floor(Math.random()*data.length)];
+					switch(data){
+						case 1: 
+							rotateFunc(1,157,'水晶礼包');
+							break;
+						case 2: 
+							rotateFunc(2,65,'1元话费卡');
+							break;
+						case 3: 
+							rotateFunc(3,335,'水晶*10');
+							break;
+						case 4: 
+							rotateFunc(4,247,'10元话费');
+							break;
+						case 5: 
+							rotateFunc(5,114,'50元话费卡');
+							break;
+						case 6: 
+							rotateFunc(6,24,'100元话费卡');
+							break;
+						case 7: 
+							rotateFunc(7,292,'5元话费卡');
+							break;
+						default:
+							rotateFunc(0,203,'300元京东卡');
+					}
+					
+				//}
+				}else{
+					layer.open({
+						type: 1,
+						content: "<div style='width:90%;padding:1% 5% 5% 5%;background-color:#ee382b; border-radius:5px;font-weight:500;font-family:Microsoft Yahei'><p style='width:100%;float:left;margin-bottom:3%;'><img src='images/close.png' class='btnclose5'  style='width:40px;height:40px;float:right;' /></p><p style='width:100%;text-align:center;color:#ffe66f;padding:1% 0%;margin-bottom:2%;'>您已经抽取过了！请下次再来</p></div>",
+						style: 'width:95%; height:auto;border:none;background:none;margin:0px auto;',
+						success: function (olayer) {
+						  var cla = 'getElementsByClassName';
+						  olayer[cla]('btnclose5')[0].onclick = function () {
+							layer.closeAll();
+						  }
+						}
+					});
+					return;
+				}
+			//}else{  //不是在微信中打开的弹出提示
+				//noSharePenyouQuan();
+		//	}
+		});
+		
+
+
+		//下载按钮的事件
+		var ua = navigator.userAgent.toLowerCase();
+		/*if (ua.match(/MicroMessenger/i) == "micromessenger") {
+			//微信里面下载事件提示
+	        $(".usedowngame").bind('click', function(){
+				if (checkIsApple()) {
+					layer.open({
+						type: 1,
+						content: "<div style='width:100%;height:100%;'><img src=\"images/appleqq.png\"  style='width:100%' class='wenxinidealogios' /></div>",
+						style: 'width:100%; height:auto;border:none;background-color:rgba(0,0,0,0.8);margin:0px auto;height:100%',
+						shadeClose:false
+					});
+				}else{
+					layer.open({
+						type: 1,
+						content: "<div style='width:100%;height:100%;'><img src=\"images/anzhuos.png\"  style='width:100%' class='wenxinidealoganzhuo' /></div>",
+						style: 'width:100%; height:auto;border:none;background-color:rgba(0,0,0,0.8);margin:0px auto;height:100%',
+						shadeClose:false
+					});
+				}
+	        }); 
+
+	 		//弹框中的下载按钮事件
+	 		$(document).on("click",".gamedown",function(){
+	        	if (checkIsApple()) {
+					layer.open({
+						type: 1,
+						content: "<div style='width:100%;height:100%;'><img src=\"images/appleqq.png\"  style='width:100%' class='wenxinidealogios' /></div>",
+						style: 'width:100%; height:auto;border:none;background-color:rgba(0,0,0,0.8);margin:0px auto;height:100%',
+						shadeClose:false
+					});
+				}else{
+					layer.open({
+						type: 1,
+						content: "<div style='width:100%;height:100%;'><img src=\"images/anzhuos.png\"  style='width:100%' class='wenxinidealoganzhuo' /></div>",
+						style: 'width:100%; height:auto;border:none;background-color:rgba(0,0,0,0.8);margin:0px auto;height:100%',
+						shadeClose:false
+					}); 
+				}
+	        });//提示下载的关闭按钮事件
+			
+			$(document).on("click",".wenxinidealogios",function(){
+	        	layer.closeAll();
+	        });
+	        $(document).on("click",".wenxinidealoganzhuo",function(){
+	        	layer.closeAll();
+	        });
+	    }else{
+	        $(".usedowngame").bind('click', function(){
+	           if (checkIsApple()) {
+	                window.location.href = "https://itunes.apple.com/ru/app/jie-ji-jin-chan-bu-yu-mian/id1022745046?l=en&mt=8";
+	            }else{
+	               window.location.href = "http://download.6513.com/phoneGame/590145BY.apk";
+	            }          
+	        });   
+			$(document).on("click",".gamedown",function(){
+			   if (checkIsApple()) {
+					window.location.href = "https://itunes.apple.com/ru/app/jie-ji-jin-chan-bu-yu-mian/id1022745046?l=en&mt=8";
+				}else{
+					window.location.href = "http://download.6513.com/phoneGame/590145BY.apk";
+				}          
+			});  	  		
+	    }*/
+	});
+	</script>
+</body>
+</html>

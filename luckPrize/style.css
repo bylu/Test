@@ -1,0 +1,30 @@
+ *{padding:0;margin:0;}
+body{margin:0px;padding:0px;overflow:auto;position:relative;font-family: '微软雅黑';background-color:#fdf8e2;font-size: 15px;}
+img{width:100%;border:none;vertical-align:middle;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+input{outline: none;}
+.layout{width:100%; }
+.banner{position:fixed;width:100%;top:0%;z-index:99;}
+.redPacketCodeinfos{position: absolute;width:55%;bottom:5%;right:3%;}
+.redPacketCode{width:46%;float:left;}
+.redPacketCode span{width:100%;text-align: center;color:#fff701;float:left;}
+.number{font-size:1.5rem;}
+.desc{font-size: 1rem;}
+.usedownloadfirst{float:left;width:50%;margin:2% 0% 0% 2%;}
+.luckdiv{width:100%;position:absolute;top:20%;height:30%;}
+#dowebok{position:relative;width:80%;height:80%;margin:0px auto;background:url('images/cj-bg.gif') no-repeat;background-size: 100% 100%;}
+.plate{position:relative;float:left;width:90%;height:90%;top:5%;left:5%;background:url('images/cjjc-bg.png') no-repeat;background-size: 100% 100%;z-index:11;}
+.plateBtncss{position: absolute; left: 50%; top: 50%;
+ width: 48%; height: 48%; margin-left:-24%;margin-top:-24%;background: url('images/000.png') no-repeat;background-size: 100% 100%;
+  overflow: hidden;z-index:22;text-indent: -9999;-webkit-tap-highlight-color:rgba(0,0,0,0);animation:all 0.5s ease-out;}
+ .plateBtncss2{position: absolute; left: 50%; top: 50%;
+ width: 48%; height: 48%; margin-left:-24%;margin-top:-24%;background: url('images/111.png') no-repeat;background-size: 100% 100%;  overflow: hidden;z-index:22;text-indent: -9999;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+ .userhavePrize{width:100%;position:absolute;top:44%;height:30%;}
+ #result{position:relative;width:88%;height:35%;margin:0px auto;background:url('images/hdjp.png') no-repeat;background-size: 100% 100%;}
+.showresult{width:55%;float: right;position: relative;margin-top:14%;}
+ .resultTxt{color:#fbe400;font-size: 1.5rem;top:32%;text-align: center;font-weight: 800;width:100%;float:left;padding:0% 0% 5% 0%}
+ .resultbtnshare{width:90%;margin-right:5%;float: left;display: none;}
+ .resultbtnshareresult{width:90%;float:left;border-radius:5px;margin-right:5%;padding:3% 0% 3% 5%;background: #ffde00;color:#691202;font-size: 1rem;display: none;}
+ .videopart{width:88%;margin:0% 6%;position:absolute;top:60.5%;}
+ .videopart  video{width:100%;}
+ .userdowmfooter{width:88%;margin:0% 6%;position:absolute;bottom:5%;}
+ .wenxinidealog{position:absolute;width:100%;z-index:99999999;top:0;background-color:rgba(0,0,0,0.8);height:100%;display:block;}

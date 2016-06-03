@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/common.css">
+	<script type="text/javascript" src=" "></script>
+</head>
+<body>
+	<div class="wf100">
+		<div class="topbar">
+			<a class="companylogo fl" style="width:200px;height:50px;background:red;" ><img src="" alt=""  /></a>
+			<div class="usersign fr"> 
+				<a>登录</a>
+				<a>注册</a>
+			</div>
+		</div>
+	</div>
+	<div class="wf100">
+		<div class="header">
+			<a class="logo"></a>
+			<div class="nav">
+				<ul>
+					<li>
+						<a>网站首页</a>
+						<ul>
+							<li><a>sub menu 1</a></li>
+							<li><a>sub menu 2</a></li>
+							<li><a>sub menu 3</a></li>
+							<li><a>sub menu 4</a></li>
+						</ul>	
+					</li>
+					<li><a>新闻中心</a></li>
+					<li><a>游戏资料</a></li>
+					<li>
+						<a>自助中心</a>
+						<ul>
+							<li><a>sub menu 1</a></li>
+							<li><a>sub menu 2</a></li>
+							<li><a>sub menu 3</a></li>
+							<li><a>sub menu 4</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="banner wf100">
+			<ul>
+				<li>
+					<div class="introdownload">
+						<p>
+							<a class="androiddownurl fl"></a>
+							<a class="iosdownurl fr"></a>
+						</p>
+						<p>
+							<a class="pcdownurl"></a>
+						</p>
+					</div>
+				</li>
+				<!-- <li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li> -->
+			</ul>
+		</div>
+	</div>
+	<div class="wf100">
+		<div class="content">
+			<div class="gamedownload fl">
+				<a class="downgameurl"></a>
+				<a class="paymoney"></a>
+				<a class=""></a>
+			</div>
+		</div>
+	</div>
+	<div class="wf100">
+		<div class="content">
+			<div class="rightbar fr"></div>
+			<div class="leftbar fl">
+				<div class="gamedatatitle wf100">
+					<span>游戏资料</span>
+					<a class="more fr">更多></a>
+				</div>
+				<div class="gameintrocontent wf100">
+					<div id="accordionGiftLelo" class="accordionWrapper">
+						<div class="set">
+							<div class="title" id="accordionGiftLelo_msTitle_0">
+								<a  class="info1 info1-hover">title1</a>
+							</div>
+							<div class="content" >
+								content1
+							</div>
+						</div>
+
+						<div class="set">
+							<div class="title" id="accordionGiftLelo_msTitle_0">
+								<a  class="info2 info2-hover">title2</a>
+							</div>
+							<div class="content">
+								content2
+							</div>
+						</div>
+
+						<div class="set">
+							<div class="title" id="accordionGiftLelo_msTitle_0">
+								<a  class="info3 info3-hover">title3</a>
+							</div>
+							<div class="content">
+								content3
+							</div>
+						</div>
+
+						<div class="set">
+							<div class="title" id="accordionGiftLelo_msTitle_0">
+								<a  class="info4 info4-hover">title4</a>
+							</div>
+							<div class="content">
+								content4
+							</div>
+						</div>
+						
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.msAccordion.js"></script>
+	<script type="text/javascript">
+		$(".nav li").hover(function(){
+			var itemwidth = $(this).width(); /* Getting the LI width */
+			//$(this).prepend("<div class='hover'></div>"); /* Inserting a blank div into within li above the <a> tag*/
+			//$(this).find("div").fadeIn('10000').css({ 'width' : itemwidth}); /* Using the itemwidth for the div to display properly*/
+			$(this).find("ul").fadeIn('1000').slideDown('10000').css("display", "block");
+			
+		},function(){
+		//	$(this).find("div").slideUp('1000').fadeOut('1000');/* sliding up and fading out the hover div */
+			//$(this).find("div").remove();/* removing the <div> code from html at every mouseout event*/
+			$(this).find("ul").fadeOut('1000'); /* fading out the sub menu */
+			
+		});
+
+
+		//点开折叠的效果
+		$("#accordionGiftLelo").msAccordion();
+	</script>
+</body>
+</html>

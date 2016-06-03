@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+
+
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+</head>
+<style type="text/css">
+	p{width: 100%;float:left;text-align: center;}
+	.button{float:left;margin-right:10px;width:200px;height:80px;background: red;text-align: center;line-height: 80px;vertical-align:middle;}
+	.wf100{width:100%;float:left;}
+	.m20{margin:20px 0;}
+}
+</style>
+<body>
+	<input type="text" name="date" id="date" />
+	<p>滚动的按钮显示滑动按钮块</p>
+	<div  id="mySliderDiv"></div>
+	<p>进度条的显示</p>
+	<div id="elem"></div>
+	<p>使用参数option的控制来实现进度条的变化</p>
+	<div id="otherelem"> </div><br/><br/>
+	<p>圆角半径</p>
+	<div style="width:100%;float:left;margin:20px 0px;">
+		<div class="button ui-corner-tl">按钮左上button01</div>
+		<div class="button ui-corner-tr">按钮右上button02</div>
+		<div class="button ui-corner-bl">按钮左下button03</div>
+		<div class="button ui-corner-br">按钮右下button04</div>
+		<div class="button ui-corner-top">按钮</div>
+	</div>
+	<div style="width:100%;float:left;margin:20px 0px;">
+		<div class="button ui-corner-bottom">按钮</div>
+		<div class="button ui-corner-right">按钮</div>
+		<div class="button ui-corner-left">安钮</div>
+		<div class="button ui-corner-all">按钮</div>
+	</div>
+	<div style="width:100%;float:left;margin:20px 0;">
+		<p>布局助手</p>
+		<div class="wf100 ui-helper-hidden">
+			对元素使用display:none;this is hidden
+		</div>
+		<div class="wf100 ui-helper-hidden-accessible">
+			对元素应用访问隐藏（通过页面饿绝对定位）
+		</div> 
+		<div class="wf100 ui-widget">
+			对小部件应用字体和字体尺寸，同时对Windows浏览器的继承问题
+		</div>
+		<div class="wf100 m20 ui-widget-header">
+			对标题容器的class，对元素及其元素的文本，衔接，图标应用标题容器样式
+		</div>
+		<div class="wf100 m20 ui-widget-content">
+			对内容容器的class,对元素及其元素的内容分样式
+		</div>
+		<p>交互状态</p>
+		<div class="wf100 m20">
+			<button class="button ui-state-default">图标应用clickable default</button>
+		</div>
+		<div class="wf100 m20">
+			<button class="button ui-state-hover">图标应用clickable hover</button>
+		</div>
+		<div class="wf100 m20">
+			<button class="button ui-state-focus">图标应用clickable focus </button>
+		</div>
+		<div class="wf100 m20">
+			<button class="button ui-state-active">图标应用clickable active</button>
+		</div>
+		<p>交互提示cues</p>
+		<div class="wf100 m20 ui-state-highlight">
+			对元素以及元素的内容进行亮光处理
+		</div>
+		<div class="wf100 m20 ui-state-error">
+			错误提示的样式添加
+		</div>
+		<div class="wf100 m20 ui-state-error-text">
+			对只有无背景的错误文本颜色应用
+		</div>
+		<div class="wf100 m20 ui-state-disabled">
+			禁用UI元素应用一个暗淡不透明度
+		</div>
+		<div class="wf100 m20 ui-priority-primary">
+			 对第一个优先权的按钮应用的class 使用粗体文本
+		</div>
+		<div class="wf100 m20 ui-priority-secondary">
+			对第二个优先权的按钮应用的class 应用粗体文本，对元素应用轻微的透明度
+		</div>
+	</div>
+	<div class="wf100 m20">
+		<p>jquery ui api 部件库</p>
+		<div id="dialog1">
+			this is the first dialog content
+		</div>
+	</div>
+	 <div class="wf100 m20">
+		<!--<input type="text" name="usernameinput" class="selector" id="usernameinput" placeholder="you can input you want to input name" />-->
+		<button id="opener">打开对话框</button>
+		<div id="dialog2" title="你想清空回收站吗？">
+			<p><span class="ui-icon ui-icon-alert" style="float:left;margin:0 7px 20px 0"></span>
+				这些将要删除，并且无法恢复，您确定吗？
+			</p>
+			<button type="button" class="ui-button">
+				<span class="ui-button-text">delete all times</span>
+			</button>
+		</div>
+	</div> 
+	<script type="text/javascript">
+	$(function(){
+		$("#date").datepicker();
+		$("#mySliderDiv").slider({
+			orientation:'vertical',
+			min:0,
+			max:150,
+			value:50
+		});
+		$("#elem").progressbar({ value:40 }).addClass('almost-done');
+		var aa=$("#elem").is(":data('ui-progressbar')");
+		console.log(aa);
+
+		$("#otherelem").progressbar({
+			value:60,
+			disabled:true
+		}).addClass('almost-done');
+
+		var options={modal:true,show:"show"};
+		$("#dialog1").dialog(options);
+		/*使用autoOpen  控制打开页面的时候是否显示
+		$("#dialog1").dialog(options,{autoOpen:false});*/
+
+		//添加动画效果的弹出窗体样式  ,并且按钮的事件是调用的是按钮的text值作为按钮的事件的开启
+		$("#dialog2").dialog({
+			autoOpen:false,
+			height:140,
+			modal:true,
+			show:{
+				effect:"blind",
+				duration:1000
+			},
+			hide:{
+				effect:"explode",
+				duration:1000
+			},
+			buttons:{
+				"delete all times":function(){
+					$(this).dialog("close");
+				}
+			}
+		});
+		$("#opener").click(function(){
+			 $("#dialog2").dialog("open");
+		});
+
+
+	});
+	</script>
+</body>
+</html>

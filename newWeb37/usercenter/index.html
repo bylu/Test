@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+	<div class="wf100 topbarbg">
+		<div class="topbar">
+			<a class="companylogo fl" ><img src="images/baiyilogo.png" alt="百易科技"  /></a>
+			<div class="usersign fr"> 
+				<a></a>
+			</div>
+		</div>
+	</div>
+	<div class="usermiddlecontent mb20">
+		<!--顶部-->
+		<div class="navlocationbg"></div>
+		<div class="bannerseation">
+			<div class="navlocation wf100">
+				<div class="header">
+					<a class="logo"><img src="images/logo.png"  alt="百易科技"/></a>
+					<div class="nav fl">
+						<ul>
+							<li><a href="/" target="_self">网站首页</a></li>
+							<li><a href="/xinwen" target="_self">新闻中心</a></li>
+							<li style="background-image:url();"><a href="/youxiziliao" target="_self">游戏资料</a></li>
+							<li style="margin-left:200px"><a>充值中心</a></li>
+							<li class="actives"><a href="/usercenter" target="_self">个人中心</a></li>
+							<li style="background-image:url();"><a>客服中心</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--中间部分-->
+		<div class="usercentercontents">
+			<div class="userinfoshow wf100">
+				<div class="showface">
+					<img src="images/tx01.png" alt="修改头像" title="修改头像" class="faceimg" />
+					<div class="facehover"></div>
+				</div>
+				<div class="showusernames">
+					<span>下午好,<label>ma_yue7704</label></span><br/>
+					<span>游戏ID:855585632</span>
+				</div>
+				<div class="usertreasureinfo">
+					<ul class="treasure treasurename">
+						<li>我的钱包</li>
+						<li>银行存款</li>
+						<li>我的水晶</li>
+					</ul>
+					<ul class="treasure treasurevalue">
+						<li>100,0000,0000豆</li>
+						<li>100,0000,0000豆</li>
+						<li>262个</li>
+					<ul>
+				</div>
+				<div class="useroperacontent">
+					<button class="btnpay">立即充值</button>
+				</div>
+			</div>
+			<div class="usercentercontainer wf100">
+				<div class="usercenterleftbar fl">
+					<ul>
+						<li>
+							<a href="index.html" target="_self">
+								<img src="images/centerleft/c1.jpg" />
+							</a>
+						</li>
+						<li>
+							<a href="rechargeRecode.html" target="_self">
+								<img src="images/centerleft/z2.jpg" />
+							</a>
+						</li>
+						<li>
+							<a href="question.html" target="_self">
+								<img src="images/centerleft/z3.jpg" />
+							</a>
+						</li>
+						<li>
+							<a href="fangchenmi.html" target="_self">
+								<img src="images/centerleft/z4.jpg" />
+							</a>
+						</li>
+						<li>
+							<a href="editPwd.html" target="_self">
+								<img src="images/centerleft/z5.jpg" />
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="usercenterrightbar fl">
+					<div class="usercenterinfoshow">
+						<div class="usercentersortnametitle wf100">
+							<p>基本资料</p>
+						</div>
+						<div class="usercentersortcontent wf100">
+							<div class="showinfos">
+								<ul>
+									<li>
+										<span>姓名：</span>
+										<label>sssss</label>
+									</li>
+									<li>
+										<span>性别：</span>
+										<label>女</label>
+									</li>
+									<li>
+										<span>身份证号：</span>
+										<label>42255*************</label>
+									</li>
+									<li>
+										<span>出生日期：</span>
+										<label>未填</label>
+									</li>
+									<li>
+										<span>所在地区：</span>
+										<label>河南省郑州市</label>
+									</li>
+									<li>
+										<span>QQ号：</span>
+										<label>9875451313</label>
+									</li>
+								</ul>
+								<div class="userOperationbtn wf100">
+									<input type="button" value="编辑" id="btnEdit" />
+								</div>
+							</div>
+							<div class="editinfos" style="display:none;width:100%;">
+								<form class="cmxform" id="commentForm" method="get" action="">
+								  <fieldset>
+								    <p>
+								      <label for="name">*姓名:</label>
+								      <input id="name" name="name" minlength="2" type="text" required>
+								    </p>
+								    <p>
+								      <label for="sex">*性别:</label>
+								     	<span class="required" required>
+								           <label><input type="radio" name="sex" checked="checked">男</label>
+								           <label><input type="radio" name="sex">女</label>
+								      </span>
+								    </p>
+								    <p>
+								      <label for="idcardno">*身份证号:</label>
+								      <input id="idcardno" type="text" name="idcardno">
+								    </p>
+								    <div class="selectclass">
+								      <label>*出生日期:</label>
+								      <div class="selecterror" for="year1">
+								      	<select id="year1" name="year1"></select>
+								      </div>
+								      <div class="selecterror" for="month1">
+									  	<select id="month1" name="month1"></select>
+									  </div>
+									  <div class="selecterror" for="day1">
+									  	<select id="day1" name="day1"></select>
+									  </div>
+									  <div class="showerror"></div>
+								    </div>
+								    <div class="selectclass">
+								      	<label>*所在地区:</label>
+								      	<div class="selecterror" for="s_province">
+							      			<select id="s_province" name="s_province"></select>
+							      		</div>
+							      		<div class="selecterror" for="s_city">
+							      			<select id="s_city" name="s_city" ></select>
+							      		</div>
+							      		<div class="selecterror" for="s_county"> 
+								   			<select id="s_county" name="s_county"></select>
+								   		</div>
+								   		<div class="showerror"></div>
+								    </div>
+								    <p>
+								      <label for="qqno">*QQ号:</label>
+								      <input id="qqno" name="qqno" type="text" required>
+								    </p>
+								    <p>
+								    	<span class="actions">注意：</span>
+								    	<span class="actions">1、此账号的身份证信息只能填写一次，是判断账号归属的重要依据<br/>
+								    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;以上证件信息将作为您的防沉迷信息，我们将保证您填写的信息不会外泄。</span>
+								    	<span class="actions">2、账号的生日资料只能填写一次，是判断您生日</span>
+
+								    </p>
+								    <p>
+								      <input class="btn submit" type="submit" value="保存" />
+								      <input class="btn cancle" type="button" value="取消" />
+								    </p>
+								  </fieldset>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!--footer-->
+	<div class="footer wf100">
+		<p>公司地址：河南省郑州市农业路中州大道交汇处苏荷中心28楼2841-2847室.豫ICP备12014032号-8</p>
+	</div>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/YMDClass.js"></script>
+	<script type="text/javascript" src="js/area.js"></script>
+	<script type="text/javascript">_init_area();</script>
+	<script type="text/javascript">
+		//地区
+		var Gid  = document.getElementById ;
+		var showArea = function(){
+			Gid('show').innerHTML = "<h3>省" + Gid('s_province').value + " - 市" + 	
+			Gid('s_city').value + " - 县/区" + 
+			Gid('s_county').value + "</h3>"
+		}
+		  //身份证号码的验证规则
+		    function isIdCardNos(num) {
+		        var len = num.length, re;
+		        if (len == 15)
+		            re = new RegExp(/^(\d{6})()?(\d{2})(\d{2})(\d{2})(\d{2})(\w)$/);
+		        else if (len == 18)
+		            re = new RegExp(/^(\d{6})()?(\d{4})(\d{2})(\d{2})(\d{3})(\w)$/);
+		        else {
+		            return false;
+		        }
+		        var a = num.match(re);
+		        if (a != null) {
+		            if (len == 15) {
+		                var D = new Date("19" + a[3] + "/" + a[4] + "/" + a[5]);
+		                var B = D.getYear() == a[3] && (D.getMonth() + 1) == a[4] && D.getDate() == a[5];
+		            }
+		            else {
+		                var D = new Date(a[3] + "/" + a[4] + "/" + a[5]);
+		                var B = D.getFullYear() == a[3] && (D.getMonth() + 1) == a[4] && D.getDate() == a[5];
+		            }
+		            if (!B) {
+		                return false;
+		            }
+		        }
+		        if (!re.test(num)) {
+		            return false;
+		        }
+		        return true;
+		    }
+		//自定义验证的方法
+		function checkuserInputRule(){
+			jQuery.validator.addMethod("namevalus", function(value, element) {   
+			    var namerules = /^[\u0391-\uFFE5]+$/;
+			    if(namerules.test(value)){
+			    	return true;
+			    }
+			    return false;
+			}, "请输入您的名字至少两位汉字");
+
+			jQuery.validator.addMethod("idcardnovalues", function(value, element) {   
+			    return this.optional(element) || isIdCardNos(value);
+			}, "请输入正确的身份证号码");
+			
+			jQuery.validator.addMethod("qqrules", function(value, element) {   
+			    var reg1 = RegExp(/^[1-9][0-9]{4,15}$/);
+			    if(reg1.test(value)){
+			    	return true;
+			    }
+			    return false;
+			}, "您输入的QQ格式错误");
+			jQuery.validator.addMethod("yearvalid", function(value, element) {   
+			    var yearname ="0";
+			    if(value== yearname){
+			    	return false;
+			    }else{
+			    	return true;
+			    }
+			}, "请选择年份");
+
+			jQuery.validator.addMethod("monthvalid", function(value, element) {   
+			    var monthname ="0";
+			    if(value== monthname){
+			    	return false;
+			    }else{
+			    	return true;
+			    }
+			}, "请选择月份");
+
+			jQuery.validator.addMethod("dayvalid", function(value, element) {   
+			    var dayname ="0";
+			    if(value== dayname){
+			    	return false;
+			    }else{
+			    	return true;
+			    }
+			}, "请选择日期");
+
+
+			jQuery.validator.addMethod("noequal", function(value, element) {   
+			    var proname ="省份";
+			    if(value== proname){
+			    	return false;
+			    }else{
+			    	return true;
+			    }
+			}, "请选择省份");
+
+			jQuery.validator.addMethod("s_citynoequal", function(value, element) {   
+			    var proname ="地级市";
+			    if(value== proname){
+			    	return false;
+			    }else{
+			    	return true;
+			    }
+			}, "请选择地级市");
+
+			jQuery.validator.addMethod("s_countynoequal", function(value, element) {   
+			    var proname ="市、县级市";
+			    if(value== proname){
+			    	return false;
+			    }else{
+			    	return true;
+			    }
+			}, "请选择市、县级市");
+		}
+		$(document).ready(function(){
+			checkuserInputRule();
+		//编辑资料
+		$("#btnEdit").click(function(){
+			$(".showinfos").css("display","none");
+			$(".editinfos").css("display","block");
+		});
+		//时间选择
+	     new YMDselect('year1','month1','day1');
+		//验证
+		$("#commentForm").validate({
+			submitHandler: function (form) {
+                jQuery(form).ajaxSubmit();
+            },
+			rules:{
+				name:{
+					required:true,
+					namevalus:true,
+					minlength: 2
+				},
+				idcardno:{
+					required:true,
+					idcardnovalues:true
+				},
+				qqno:{
+					required:true,
+					minlength:5,
+					qqrules:true
+				},
+				s_province:{
+					required:true,
+					noequal:true
+				},
+				s_city:{
+					required:true,
+					s_citynoequal:true
+				},
+				s_county:{
+					required:true,
+					s_countynoequal:true
+				},
+				year1:{
+					required:true,
+					yearvalid:true
+				},
+				month1:{
+					required:true,
+					monthvalid:true
+				},
+				day1:{
+					required:true,
+					dayvalid:true
+				}
+			},
+			messages:{
+				name:{
+					required:"*请输入2位以上的汉字",
+					minlength:"*请输入2位以上的汉字"
+				},
+				idcardno:"*请输入有效身份证号",
+				qqno:{
+					required:"*请输入正确的QQ",
+					minlength:"*QQ长度不能小于5位"
+				},
+				s_province:{
+					required:"请选择省名"
+				},
+				s_city:{
+					required:"请选择地级市"
+				},
+				s_county:{
+					required:"请选择市、县级市"
+				},
+				year1:{
+					required:"请选择年份"
+				},
+				month1:{
+					required:"请选择月份"
+				},
+				day1:{
+					required:"请选择日期"
+				}
+			},
+			errorPlacement: function(error, element) { //指定错误信息位置 
+				if (element.is(':radio') || element.is(':checkbox')) { //如果是radio或checkbox 
+				var eid = element.attr('name'); //获取元素的name属性 
+				error.appendTo(element.parent().parent()); //将错误信息添加当前元素的父结点后面 
+				}else if(element.is('select')){
+					console.log(error);
+					//$(".showerror").append(error);
+					//element.parent().nextAll(".showerror").append(error);
+					var errDiv=element.parent().nextAll(".showerror");
+					if(errDiv.children(":visible").length === 0){
+						errDiv.append(error);
+					}
+				
+				}else { 
+					error.insertAfter(element); 
+				}
+			} 
+		});
+		
+
+		//头像悬浮事件
+        $(".showface").hover(function(){
+        	$(".facehover").css("display","block");
+        },function(){
+        	$(".facehover").css("display","none");
+        });
+        $(".facehover").click(function(){
+        	window.open("editFace.html","_self");
+        });
+		
+		$(".cancle").click(function(){
+			window.open("index.html","_self");
+		});
+	});
+
+	</script>
+
+</body>
+</html>

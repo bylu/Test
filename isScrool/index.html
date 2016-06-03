@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	*{padding:0;margin:0;}
+	.wrapper{width:100%;height:100%;position:absolute;background: #ccc;overflow: hidden;left:0;top:0;bottom:0;}
+	.wrapper ul {list-style: none;width:100%;height:100%;text-align:center;position: absolute;top:0;left: 0;bottom:0;}
+	.wrapper ul li{display: block;width:100%;height:100%;background: pink;vertical-align: middle;}
+</style>
+<body>
+	<div class="header"></div>
+	<div class="wrapper" id="wrapper">
+		<ul>
+			<li>demo1</li>
+			<li>demo2</li>
+			<li>demo3</li>
+		</ul>
+	</div>
+	<div class="footer"></div>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="iscroll.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		if(window.addEventListener){
+			var myScroll=new IScroll("#wrapper",{
+				hScrollbar:false,
+				vScroll:true,
+				mousewheel:true,
+				momentum:false,
+				snap:true
+			});
+		}
+	});
+	</script>
+</body>
+</html>

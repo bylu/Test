@@ -1,0 +1,521 @@
+*{padding:0;margin:0;}
+body,div,em,i,p,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,table,th,td,input,button,label,select{
+	padding:0;
+	margin:0;
+	outline:0 none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+body{font:12px/1.5 "Microsoft YaHei",sans-serif;background:#f6e59d;overflow-x: hidden;}
+a{outline:0 none;cursor:pointer;text-decoration:none;}
+/* a,button,input{ outline:none;} */
+a:hover{text-decoration:none;}
+ul,ol{list-style:none;}
+img{border:0 none;vertical-align: middle;}
+em,i{font-style:normal;font-weight:normal;}
+h1,h2,h3,h4{font-weight:normal;}
+.wf100{width:100%;float:left;}
+.fr{float:right;}
+.fl{float:left;}
+.mb10{margin-bottom:10px;}
+.mb20{margin-bottom:20px;}
+.mb30{margin-bottom: 30px;}
+.topbarbg{
+	height:45px;
+	background: url(../images/top-bg-tiao.jpg) repeat-x;
+}
+.companylogo{
+	height:45px;
+	line-height: 45px;
+	vertical-align: middle;
+}
+.usersign{}
+.usersign a{
+	height:45px;
+	line-height:45px;
+	vertical-align: middle;
+	font-size:13px;
+	color:#000000;
+	font-family:'宋体'
+}
+.middlecontent{
+	width:100%;float: left;position: relative;
+	background: url(../images/topimages.jpg) no-repeat center top;
+}
+
+.topbar,.bannerseation,.header,.banner,.contents,.paycontent,.usercentercontents{
+	width:1170px;
+	margin:0px auto;
+	position: relative;
+}
+
+.bannerseation{
+	/* height:544px;
+	background: url(../images/bg-02.jpg) no-repeat center top; */
+}
+.navlocationbg{
+	width:100%;
+	position: absolute;
+	z-index:1;
+	top:0;
+	height:88px;
+	background:url(../images/bg-toptiao.png) repeat-y;
+	border-bottom:5px solid #3ea4f0;
+}
+.navlocation{position: absolute;z-index:2;}
+.logo{
+	width:178px;
+	height:50px;
+	position: absolute;
+	z-index:1;
+	left:50%;
+	top:0px;
+	margin-left:-89px;
+}
+.nav{
+	width:100%;
+	padding:0% 4%;
+	position: relative;
+}
+.nav ul{list-style: none;}
+
+.nav ul li{
+	width:140px;
+	float: left;
+	height:83px;
+	display: inline-block;
+	position: relative;
+	color:#ffffff;
+	text-align:center;
+	background-image: url(../images/dh-tiao.jpg);
+	background-repeat:no-repeat;
+	background-position:right;
+}
+.actives{background-color: #298fe3;}
+
+
+.nav ul li a{
+	float:left;
+	width:100%;
+	height:100%;
+	font-size: 20px;
+	color:#ffffff;
+	line-height: 83px;
+	vertical-align: middle;
+}
+.nav ul li a:hover{
+	color: #ffff00;
+}
+
+
+.contents{
+	/* height:886px;
+	background: url(../images/bg-03.jpg) no-repeat center top;  */
+	margin-top:540px;
+}
+
+.footer{
+	position: relative;
+	height:70px;
+	border-top:5px solid #3ea4f0;
+	background-color: #013765;
+	margin-top:20px;
+}
+.footer p{
+	width: 100%;
+	float:left;
+	text-align: center;
+	font-size: 13px;
+	color:#6b7ba2;
+	height:65px;
+	line-height: 65px;
+	vertical-align: middle;
+}
+
+/*用户中心*/
+.usermiddlecontent{
+	width: 100%;
+    float: left;
+    position: relative;
+    background: url(../images/bg-grzx.jpg) no-repeat center top;
+}
+.usercentercontents{
+	margin-top:10%;
+}
+.userinfoshow{border-top:2px solid #2596ff;padding:20px 0px;background: #fff}
+.showface{
+	float:left;
+	display: inline-block;
+	margin:0 10px;
+	background: url(../images/txbg.png) no-repeat;
+}
+.showface img{
+	line-height: 100px;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 15px;
+	color:#fff;
+	border:none;
+	cursor: pointer
+}
+.facehover{
+	width:84px;
+	height: 84px;
+	position:absolute;
+	top:22px;
+	left:9;
+	cursor:pointer ;
+	background: url(../images/tx-xg.png) no-repeat;
+	display: none;
+	z-index:22;
+}
+.showusernames{
+	float: left;
+	display: inline-block;
+	width:15%;
+}
+.showusernames span{
+	width:100%;
+	float:left;
+	padding:10px 0px;
+	line-height: 20px;
+	font-size: 16px;
+}
+.usertreasureinfo{
+	float: left;
+	display: inline-block;
+	margin:15px 20px;
+	margin-left:80px;
+}
+.treasurename,.treasurevalue{width:100%;float: left;}
+.treasure li{
+	position: relative;
+	float:left;
+	display: inline-block;
+	width: 27%;
+	margin:0% 3%;
+	padding-bottom: 5px;
+	font-size: 16px;
+}
+.treasurename li{
+	border-bottom:1px solid #ccc;
+}
+.treasurevalue li{
+	font-weight: bold;
+}
+.useroperacontent{
+	float: left;
+	display: inline-block;
+	margin-top:15px;
+	width: 12%;
+}
+.useroperacontent .btnpay{
+	position: relative;
+	float: left;
+	width:160px;
+	padding:10% 25%;
+	background: #ff8033;
+	color:#ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	border-radius: 3px;
+	border:none;
+	cursor: pointer;
+}
+.usercentercontainer{
+	background: #fff;
+	margin-top:8px;
+}
+.usercenterleftbar{
+	width:231px;
+	border-right: 1px solid #ccc;
+	min-height: 1000px;
+	height:auto;
+}
+.usercenterleftbar li{
+	width:230px;
+	height:61px;
+	cursor:pointer ;
+}
+.usercenterleftbar li img{
+	width:100%;
+	height:100%;
+}
+.usercenterrightbar{
+	width:80%;
+}
+.usercenterinfoshow{
+	margin:0px auto;
+	width:85%;
+}
+.usercentersortnametitle{
+	margin-top: 20px;
+	border-bottom:2px solid #2596ff;
+}
+.usercentersortnametitle p{
+	color:#2596ff;
+	font-size: 16px;
+	padding-bottom: 10px
+}
+
+.showinfos li{
+	width:100%;
+	float: left;
+	line-height: 25px;
+	margin:15px 0;
+	font-size: 16px;
+	color:#333333;
+}
+.showinfos li span{
+	width:15%;
+	float: left;
+	display: inline-block;
+	text-align: right;
+}
+.showinfos li label{
+	width:80%;
+	float: left;
+	display: inline-block;
+	text-align: left;
+	margin-left:5%;
+}
+.userOperationbtn{
+	text-align: center;
+}
+.userOperationbtn input{
+	width: 160px;
+	height: 50px;
+	line-height: 50px;
+	background: #ff8033;
+	border-radius: 5px;
+	font-size: 18px;
+	clear: both;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+
+fieldset{border:none;}
+.editinfos{}
+.editinfos p,.selectclass{
+	width:100%;
+	float: left;
+	line-height: 25px;
+	margin:15px 0;
+	font-size: 16px;
+}
+.editinfos p label,.selectclass label{
+	width:15%;
+	float: left;
+	display: inline-block;
+	text-align: right;
+	height:30px;
+	line-height: 30px;
+	vertical-align: middle;
+}
+.editinfos p label.error{color:red;float: left;display: inline-block;width:30%;}
+.showerror {width:30%;float: left;} 
+.showerror label{}
+.showerror label.error{color:red;float: left;display: inline-block;width:100%;font-size: 16px;}
+.editinfos p input[type="text"]{
+	width:40%;
+	float: left;
+	display: inline-block;
+	text-align: left;
+	margin-left:5%;
+	height:30px;
+	line-height: 30px;
+	vertical-align: middle;
+	text-indent: 20px;
+	font-size:16px;
+}
+.selecterror{
+	width:10%;
+	float: left;
+	display: inline-block;
+	margin-left:5%;
+}
+select{
+	width: 100%;
+	height:30px;
+	line-height: 30px;
+	vertical-align:middle;
+	font-size: 16px;
+}
+.actions{
+	width:100%;
+	float: left;
+}
+.btn{
+	width: 160px;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 5px;
+	font-size: 18px;
+	clear: both;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+.submit{
+	margin-left:150px;
+	background: #ff8033;
+}
+.cancle{
+	margin-left:50px;
+	background: #2596ff;
+}
+/*订单详情*/
+.payorder{
+	width:90%;
+	margin:3% 5%;
+}
+.w40{width:40%;}
+.w30{width:30%;}
+.w20{width:20%;}
+.w10{width:10%;}
+.payorder tr{
+	width:100%;
+	float: left;
+}
+.payorder th{
+	float: left;
+	color:#2596ff;
+	display: inline-block;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+.payorder td{
+	float: left;
+	display: inline-block;
+	font-size:14px;
+	margin:10px 0px;
+	text-align: center;
+	padding-bottom:10px;
+	border-bottom: 1px solid #ccc;
+}
+.success{color:green;}
+.nopay,.fail{color:red;}
+
+.fangchenmidiv{width:90%;margin:3% 5% 5% 5%;}
+.fangchenmititle{
+	text-align: center;
+	color:#2596ff;
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+.fangchenmicontent{
+	line-height: 25px;
+	text-indent: 30px;
+	font-size: 15px;
+}
+.fangchenmicontent p{
+	width:100%;
+	float: left;
+	line-height: 25px;
+}
+.fangchenmicontent span{
+	width:98%;
+	float: left;
+	margin-left:2%;
+	line-height: 25px;
+}
+.fangchenmiform{
+
+}
+.actiontip{text-align: center;color:red;font-size:14px;}
+.fangchenmiform p{
+	width:100%;
+	float:left;
+	color:#2596ff;
+	font-size: 16px;
+	padding-bottom: 10px
+}
+
+.fangchenmiform p label{
+	width: 30%;
+	float: left;
+	display: inline-block;
+	text-align: right;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	color:red;
+}
+.fangchenmiform p label.error{width:25%;color:red;}
+.fangchenmiform p input[type="text"]{
+	width: 35%;
+	float: left;
+	display: inline-block;
+	text-align: left;
+	margin-left: 5%;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	text-indent: 20px;
+	font-size: 16px;
+}
+.fangchenmiform p.agree input[type="checkbox"]{
+	width: 7%;
+	float: left;
+	display: inline-block;
+	margin-left: 35%;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	text-indent: 20px;
+	font-size: 16px;
+}
+.fangchenmiform p.agree label{
+	width: 30%;
+	float: left;
+	display: inline-block;
+	text-align: left;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	color:#000;
+}
+.fangchenmiform p.agree label.error{width:23%;color:red;text-align: right}
+.btnsubmit{
+	width: 160px;
+	height: 50px;
+	line-height: 50px;
+	background: #ff8033;
+	border-radius: 5px;
+	font-size: 18px;
+	clear: both;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+/*修改密码*/
+.findpwddiv{
+	font-size: 16px;
+}
+.findpwddiv p span{
+	width:100%;
+	float: left;
+}
+.findpwddiv p span.fontcolor{color:#2596ff}
+/*系统头像*/
+.systemfaceimgdiv ul li{
+	list-style: none;
+	float: left;
+	display: inline-block;
+	margin:0px 23px 20px 10px;
+	width:99px;
+	height:99px;
+	background: red;
+}
+.btnsubmitfaceimgdiv{text-align: center;}
+.btnsubmitfaceimg{
+	width: 100px;
+    height: 42px;
+    line-height: 42px;
+    background: #ff8033;
+    border-radius: 5px;
+    font-size: 18px;
+    clear: both;
+    color: #fff;
+    border: none;
+    cursor: pointer
+}

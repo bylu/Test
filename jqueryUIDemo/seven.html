@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery 缩放以及其他的功能</title>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+</head>
+<style>
+	.wf100{width:100%;float:left;}
+	#container{width:300px;height: 300px;}
+	#resizable,#resizablescale,#resizableModel,#resizable1,#resizable2,#resizable3,#resizable4,#resizable5{width:150px;height:150px;padding:0.5em;float:left;}
+	#resizable h3{text-align: center;margin:0;}
+	.ui-resizable-helper{border:2px solid #00F;}
+	#resizable4{height:90px;}
+	#resizable6{background-position: top left;}
+	#resizable6,#also,#resizable7{width:150px;height:200px;padding:0.5em;}
+	#resizable6 h3,#also h3{text-align: center;margin:0;}
+	#also{margin-top:1em;}
+	.ui-resizable-ghost { border: 1px dotted gray; }
+</style>
+<body>
+	<div id="resizable" class="ui-widget-content">
+		<h3 class="ui-widget-header">缩放(Resizable)</h3>
+	</div>
+
+	<div id="resizablescale" class="ui-widget-content">
+		<p>缩放的动画效果</p>
+		<h3 class="ui-widget-header">动画缩放的效果</h3>
+	</div>
+	<div id="container">
+		<p>限制缩放区域</p>
+		<h3 class="ui-widget-header">限制</h3>
+		<div id="resizableModel" class="ui-state-active">
+			<h3 class="ui-widget-header">缩放</h3>
+		</div>
+	</div>
+	
+	<div  class="ui-widget-content">
+		<p>缩放延迟效果</p>
+		<div id="resizable1" class="ui-widget-content">
+			<h3>时间延迟</h3>
+		</div>
+		<div id="resizable2" class="ui-widget-content">
+			<h3>距离延迟效果</h3>
+		</div>
+	</div>
+	
+	<div class="wf100">
+		<div id="resizable3" class="ui-widget-content">
+			<h3 class="ui-widget-header">助手</h3>
+		</div>
+		<div id="resizable4" class="ui-widget-content">
+			<h3 class="ui-widget-header">保持纵横比</h3>
+		</div>
+		
+		<div id="resizable5" class="ui-widget-content">
+			<h3 class="ui-widget-header">网格</h3>
+		</div>
+	</div>
+
+
+	<div class="wf100">
+		<p>同步缩放</p>
+		<div id="resizable6" class="ui-widget-content">
+			<h3 class="ui-state-active">缩放</h3>
+		</div>
+		<div id="also" class="ui-widget-content">
+			<h3 class="ui-widget-header">同步缩放</h3>
+		</div>
+		<div id="resizable7" class="ui-widget-content">
+			<h3 class="ui-state-header">Ghost</h3>
+		</div>
+	</div>
+	
+	
+
+
+	<script type="text/javascript">
+	$(function(){
+		$("#resizable").resizable();
+		$("#resizablescale").resizable({
+			animate:true
+		});
+
+		$("#resizableModel").resizable({
+			containment:"#container"
+		});
+
+		$("#resizable1").resizable({
+			delay:1000
+		});
+		$("#resizable2").resizable({
+			distance:40
+		});
+
+		$("#resizable3").resizable({
+			helper:'ui-resizable-helper',
+			maxHeight:250,
+			maxWidth:350,
+			minHeight:150,
+			minWidth:200
+		});
+
+		$("#resizable4").resizable({
+			aspectRation:16/9
+		});
+
+		$("#resizable5").resizable({ grid:50 });
+
+
+		$("#resizable6").resizable({ alsoResize:"#also"});
+		$("#also").resizable();
+
+		$("#resizable7").resizable({ ghost:true });
+	});
+	</script>
+</body>
+</html>

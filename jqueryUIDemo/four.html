@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+</head>
+<style>
+	.wf100{width:100%;float:left;}
+	.m20{margin:20px 0;}
+	#draggable,#draggable01,#draggable02{width:100px;height:100px;padding:0.5em;float:left;margin:10px 10px 10px 0 ;}
+	#droppable,#droppable01,#droppable1,#droppable2{width:150px;height:150px;padding:0.5em;float:left;margin:10px;}
+</style>
+<body>
+	<div id="draggable" class="ui-widget-content">
+		<p>请把我拽到目标处</p>
+	</div>
+	<div id="droppable" class="ui-widget-content">
+		<p>请放置在这里</p>
+	</div>
+	
+	<div id="droppable1" class="ui-widget-header">
+		<p>外部droppable</p>
+		<div id="droppable-inner" class="ui-widget-header">
+			<p>内部droppable(不带有greedy)</p>
+		</div>
+	</div>
+
+	<div id="droppable2" class="ui-widget-header">
+		<p>外部droppable</p>
+		<div id="droppable2-inner" class="ui-widget-header">
+			<p>内部droppable(带有greedy)</p>
+		</div>
+	</div>
+	<p>还原位置draggable的位置</p>
+	<div id="draggable01" class="ui-widget-content">
+		<p>当被放置在目标上时还原</p>
+	</div>
+	<div id="draggable02" class="ui-widget-content">
+		当未被放置在目标上时还原
+	</div>
+	
+	<div id="droppable01" class="ui-widget-header">
+		<p>请放置在这里</p>
+	</div>
+
+	<script type="text/javascript">
+		$(function(){
+			$("#draggable").draggable();
+			
+			$("#droppable").droppable({
+				drop:function(event,ui){
+					$(this).addClass("ui-state-highlight").find("p").html("dropped")
+				}
+			});
+
+			$("#droppable1,#droppable-inner").droppable({
+				activeClass:"ui-state-hover",
+				hoverClass:"ui-state-active",
+				drop:function(event,ui){
+					$(this).addClass("ui-state-highlight").find(">p").html("dropped");
+					return false;
+				}
+			});
+
+			$("#droppable2,#droppable2-inner").droppable({
+				greedy:true,
+				activeClass:"ui-state-hover",
+				hoverClass:"ui-state-active",
+				drop:function(event,ui){
+					$(this).addClass("ui-state-highlight").find(">p").html("Dropped");
+				}
+			});
+
+			/*还原*/
+			$("#draggable01").draggable({revert:"valid"});
+			$("#draggable02").draggable({revert:"invalid" });
+			$("#droppable01").droppable({
+				activeClass:"ui-state-default",
+				hoverClass:"ui-state-hover",
+				drop:function(event,ui){
+					$(this).addClass("ui-state-highlight").find("p").html("已放置");;
+				}
+			});
+
+
+
+		});	
+	</script>
+</body>
+</html>
