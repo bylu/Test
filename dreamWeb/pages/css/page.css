@@ -1,0 +1,186 @@
+@charset "utf-8";
+/* CSS Document */
+img{border:none;}
+a{text-decoration:none;}
+em,var{font-style:normal}
+.fix{clear:both; overflow:hidden; height:0; font-size:0;line-height:0; margin:0; padding:0; border:0; width:100%; display:block}
+input,textarea,button{border:0 none;background:#fff}
+a:hover{text-decoration:none}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{padding:0;margin:0;}
+table{border-collapse:collapse}
+ul,li{list-style:none}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal}
+ol,ul{padding:0;list-style-type:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%}
+abbr,acronym{border:0}
+.Blue{color:#00f4eb;}
+.Yellow{color:#fccf05;}
+.red{color:#b30000;}
+.Nomargin{margin-right:0px !important;}
+.Left{float:left;}
+.Right{float:right;}
+
+body{background:#fff; font-family:"微软雅黑";}
+#Contet{width:100%; overflow:hidden; position:relative;}
+#nav_bg{width:100%; height:88px; background:#f4f4f4;}
+#nav{width:1063px; height:88px; margin:0 auto;position:relative;}
+.logo_top{width:293px; height:88px; float:left;}
+.menu{width:660px; height:88px; overflow:hidden;position:absolute; top:0px; left:400px; z-index:10;}
+.menu li{float:left; list-style:outside;  padding:30px 15px;}
+.menu li a{color:#666; font-size:18px; margin-right:15px;}
+.menu li a:hover{color:#017ac7; text-decoration:none;}
+
+.Page_title_bg{width:100%; height:97px; background:#0082d4;}
+.Page_title{width:875px; height:97px; margin:0 auto; padding-top:15px;}
+.Page_title h1{width:100%; font-size:30px; color:#fff; float:left; text-align:left;}
+.Page_title h2{font-size:16px; font-weight:bold; font-family:Verdana, Geneva, sans-serif; color:#a1c5ea; line-height:14px; float:left; margin-top:8px;}
+
+/*产品中心*/
+.Product{width:875px; overflow:hidden; margin:35px auto; padding-top:50px; position:relative; min-height:650px;}
+.tab_conbox2{ overflow:hidden; width:100%;}
+.artlist{width:875px; overflow:hidden; margin-top:55px;}
+.Prc_icon{width:124px; height:124px; float:left;}
+.Prc_txt{width:725px; height:130px; float:left; position:relative; padding-left:25px;}
+.Prc_txt h1{width:100%; font-size:22px; color:#1c1c1c; text-align:left;}
+.Prc_txt h1 span{font:bold 12px "宋体"; color:#666; margin-left:20px; display:inline;}
+.Prc_txt p{width:100%; margin-top:3px; font-size:12px; font-family:"宋体"; color:#666; line-height:20px;}
+.Prc_txt a{width:224px; height:46px; display:block; background-image:url(../images/ui.png); background-repeat:no-repeat; position:absolute; margin-right:15px; top:82px; text-indent:-999em; overflow:hidden;}
+.Prc_link01{background-position:-108px -161px; left:26px;}
+.Prc_link02{background-position:-354px -161px; left:276px;}
+.Prc_link03{background-position:-604px -161px; left:529px;}
+
+.tabs{width:500px; height:56px; position:absolute; top:15px; left:0px; z-index:11;}
+.tabs ul{height:26px; float:left;}
+.tabs li{float:left; display:inline; width:131px; height:56px; margin-right:15px;}
+.tabs li a{width:131px; height:56px; display:block; text-decoration:none;}
+.tabone,.tabtwo,.tabthr,.tabfor{display: block; outline: none; cursor:pointer; text-align:center; background-image:url(../images/ui.png); background-repeat:no-repeat; font: bold 16px "微软雅黑"; line-height:50px;}
+.tabs li .tabone{background-position:-399px -75px; color:#fff;}
+.tabs li .tabtwo{background-position:-399px -75px; color:#fff;}
+.tabs .thistab .tabone{background-position:-254px -75px; color:#fff;}
+.tabs .thistab .tabtwo{background-position:-254px -75px; color:#fff;}
+
+/*诚聘英才*/
+.Engage{width:920px; overflow:hidden; margin:35px auto; padding-top:35px; position:relative;}
+.artlist_or{width:660px; overflow:hidden; float:right; min-height:650px;}
+.Eng_list{width:650px; height:70px; margin-bottom:20px; border:1px solid #cfcfcf; display:block;}
+.Eng_list h1{width:100%; height:35px; line-height:35px; background:#f5f5f5; font-size:18px; color:#565555; text-indent:30px;}
+.Eng_list h2{width:100%; height:35px; line-height:35px; font-size:14px; color:#565555; text-indent:30px;}
+.Eng_list h2 span{margin-right:40px;}
+.Eng_list h2 em{color:#888;}
+.tabs_or{width:244px; height:210px; float:left;}
+.tabs_or ul{height:210px; float:left;}
+.tabs_or li{float:left; display:inline; width:120px; height:68px; border:1px solid #dddddd; float:left;}
+.tabs_or li a{width:120px; height:62px; display:block; text-decoration:none; text-align:center; float:left; cursor:pointer; padding-top:6px; font-size:20px;}
+.tabs_or li a em{font-size:14px;}
+.tabs_or li .tab01,.tabs_or li .tab02,.tabs_or li .tab03,.tabs_or li .tab04,.tabs_or li .tab05,.tabs_or li .tab06{background:none; color:#666;}
+.tabs_or .thistab .tab01,.tabs_or .thistab .tab02,.tabs_or .thistab .tab03,.tabs_or .thistab .tab04,.tabs_or .thistab .tab05,.tabs_or .thistab .tab06{background:#36b1ff; color:#fff;}
+
+.Engage_ct{width:670px; float:left; border:1px solid #dddddd; padding-bottom:35px; min-height:550px;}
+.Engage_ct h1{width:100%; height:35px; line-height:35px; background:#f5f5f5; font-size:18px; color:#565555; text-indent:30px;}
+.Engage_ct h2{width:100%; height:35px; line-height:35px; font-size:14px; color:#565555; text-indent:30px; margin-bottom:20px;}
+.Engage_ct h2 span{margin-right:40px;}
+.Engage_ct p{font-size:14px; color:#565555; padding-left:30px; text-align:left; line-height:30px; margin-bottom:15px;}
+.Engage_ct h3{font-size:20px; color:#000; text-indent:30px;}
+.ct{font-size:14px; color:#565555; padding-left:30px; text-align:left; line-height:30px; margin-bottom:15px;}
+.guanzhu{width:160px; height:500px; float:right; position:relative;}
+.erweima{width:160px; height:140px; position:absolute; top:0px; right:0px;}
+.erweima_txt{width:160px; height:55px; position:absolute; top:135px; right:0px; overflow:hidden; margin-top:10px;}
+.erweima_txt h1{color:#888; font-size:14px; margin-top:5px; line-height:18px;}
+.sina,.qq,.qzone{width:40px; height:40px; position:absolute; background:url(../images/ui.png) no-repeat; top:210px; text-indent:-999em; overflow:hidden;}
+.sina{background-position:-105px -26px; right:122px;}
+.qq{background-position:-151px -26px; right:67px;}
+.qzone{background-position:-196px -26px; right:13px;}
+.sina:hover{background-position:-105px -78px;}
+.qq:hover{background-position:-151px -78px;}
+.qzone:hover{background-position:-196px -78px;}
+
+/*关于我们*/
+.about{width:800px; min-height:650px; margin:35px auto 0 auto; padding:35px 0; position:relative;}
+.about_Ct{width:800px; margin-top:70px; position:relative;}
+.about_Ct_img{width:800px; margin-bottom:25px;}
+.about_Ct p{font-size:14px; color:#666; line-height:22px; margin-bottom:15px; text-indent:20px; width:733px;}
+.shangwu{width:585px; float:left; position:relative;}
+.shangwu_txt{width:545px; padding:20px; background:#e5e5e5; -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; margin-bottom:30px;}
+.shangwu_txt p{font-size:16px; line-height:30px; color:#555; text-indent:0px; margin-bottom:0px; width:100%;}
+.shangwu_guanzhu{width:160px; height:500px; float:right; position:absolute; top:176px; left:415px;}
+.MRG_Bot{margin-bottom:60px !important;}
+.People_2{width:800px; height:800px; position:absolute; top:-330px; right:-700px;}
+
+/*新闻中心*/
+.New_list,.New_Ct{width:800px; margin:35px auto; padding-top:15px; position:relative; min-height:650px;}
+.New_list_txt{width:545px; height:100px; float:left;}
+.New_list_txt h1{font-size:24px; color:#000; text-align:left;}
+.New_list_txt h1 a{color:#000;}
+.New_list_txt h1 a:hover{color:#09F;}
+.New_list_txt p{color:#999; font:14px "宋体"; text-align:left; margin-top:5px; line-height:24px;}
+.New_list_txt p a{color:#999;}
+.New_list_txt p a:hover{text-decoration:underline;}
+.New_list dl{width:545px; padding:15px 0; border-top:1px dashed #ccc; margin-top:15px; float:left;}
+.New_list dl dd{background:url(../images/list_Sty.png) 0px 10px no-repeat; width:530px; height:25px; margin-top:10px; font:14px "宋体"; text-align:right; text-indent:2em;}
+.New_list dl dd span{float:left; text-align:left; width:400px; height:25px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.New_list dl dd span a{color:#666; margin-left:5px; text-decoration:none; line-height:25px;}
+.New_list dl dd span a:hover{color:#09F;}
+.People_1{width:800px; height:800px; position:absolute; top:-175px; right:-415px;}
+.NEXT{width:530px; height:30px; margin:25px 0; float:left;}
+.NEXT ul{float:right;}
+.NEXT ul li{font:12px "宋体"; padding:5px 10px; background:#e7e7e7; margin-left:10px; float:left; cursor:pointer; color:#666;}
+.hot{background:#7ecef7 !important; color:#fff;}
+
+.New_Ct_title{width:100%; text-align:center; border-bottom:1px dashed #e7e7e7; margin-bottom:25px; padding-bottom:25px;}
+.New_Ct_title h1{font-size:22px; color:#000; margin-bottom:10px;}
+.New_Ct_title h3{font-size:12px; font-family:"宋体"; color:#a57d7d;}
+.New_Ct_txt{width:600px; float:left; text-align:left;}
+.New_Ct_txt p{font-size:14px; font-family:"宋体"; color:#a57d7d; line-height:30px; margin-bottom:15px;}
+.New_Ct_txt img{margin-bottom:15px;}
+
+
+/*foot*/
+.foot_bg{width:100%; height:150px; margin-top:30px; border-top:1px solid #ccc; overflow:hidden;}
+.foot{width:880px; height:105px; margin:0 auto;}
+.logo_bottom{width:235px; height:105px; float:left;}
+.foot_txt{padding-top:40px; float:left;}
+.foot_txt p{background:#f3f3f3; color:#666; font:12px "宋体"; padding:2px 5px;} 
+.foot_txt p a{color:#666}
+.foot_txt p a:hover{color:#09F;}
+.foot_txt p span{margin-left:20px;}
+
+.paging {
+    width: 90%;
+    display: block;
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+    position: relative;
+}
+.paging span:first-child, .paging span:last-child {
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px;
+    background: #d9d9d9;
+}
+.paging span {
+    display: inline-block;
+    margin-left: 5px;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    background: #d9d9d9;
+    font-size: 12px;
+    cursor: pointer;
+}
+.pageBtn {
+    width: 48px;
+}
+.pageBtnNum {
+    width: 26px;
+}
+.paging .selectBtnNum {
+	background-color : #33B2F3;
+	color: white;
+	border: none;
+}

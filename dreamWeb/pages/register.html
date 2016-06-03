@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="utf-8">
+<meta name="keywords" content=" ">
+<meta name="Description" content="">
+<link rel="stylesheet" href="css/page.css"/>
+</head>
+<body>
+<style type="text/css">
+        .reg-form {
+            width: 660px;
+            height: 600px;
+            margin: 0 auto;
+            background-color: #f8fdff;
+            border: 1px solid #eeeeee;
+        }
+
+        .item {
+            line-height: 65px;
+            width: 100%;
+            float: left;
+        }
+
+        .name {
+            width: 120px;
+            text-align: right;
+            float: left;
+        }
+
+        .input {
+            padding-left: 15px;
+            margin-right: 15px;
+            float: left;
+        }
+
+        .input input[type='text'], .input input[type='password'] {
+            width: 250px;
+            height: 25px;
+            margin-right: 10px;
+            line-height: 28px;
+			border:1px solid #eeeeee;
+        }
+
+        .submit {
+            padding:15px;
+			background:#36b1ff;
+			color:#fff;
+			curosor:pointer;
+        }
+
+        label.error {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+<div id="Contet">
+  <!--导航 开始-->
+  <div id="nav_bg">
+    <div id="nav">
+     <div class="logo_top"><img src="images/logo_top.jpg" width="293" height="88"></div>
+     <ul class="menu">
+        <li><a href="/dreamgamesV4/index.htm">首页</a></li>
+        <li><a href="/dreamgamesV4/about.htm">关于我们</a></li>
+        <li><a href="/dreamgamesV4/product.htm">产品中心</a></li>
+        <li><a href="/dreamgamesV4/newsList.htm">新闻资讯</a></li>
+        <li><a href="/dreamgamesV4/jobList.htm">诚聘英才</a></li>
+        <li><a href="http://bbs.xxwan.com" target="_blank">论坛</a></li>
+     </ul>
+    </div>
+  </div>
+  <!--导航 结束-->
+
+  <!--关于我们 开始-->
+  <div class="Page_title_bg">
+    <div class="Page_title"><h1>注册信息</h1><h2>REGISTER USER</h2></div>
+  </div>
+  <div class="about" style="margin:0px auto 0 auto">
+    <div id="tabbox2">
+      <div class="fix"></div>
+          <div class="about_Ct" style="margin-top:0px;">
+			<form name="" method="post" id="register" action="">
+				<div class="reg-form">
+					<div class="item">
+						<label class="name">账号</label>
+						<div class="input">
+							<input type="text" name="accounts" id="accounts"/>
+						</div>
+						<label class="tips"></label>
+					</div>
+					<div class="item">
+						<label class="name">密码</label>
+						<div class="input">
+							<input type="password" name="pwd" id="pwd"/>
+						</div>
+						<label class="tips"></label>
+					</div>
+					<div class="item">
+						<label class="name">确认密码</label>
+						<div class="input">
+							<input type="password" name="rePwd" id="rePwd"/>
+						</div>
+						<label class="tips"></label>
+					</div>
+					<div class="item">
+						<label class="name">真实姓名</label>
+						<div class="input">
+							<input type="text" name="realName" id="realName"/>
+						</div>
+						<label class="tips"></label>
+					</div>
+					<div class="item">
+						<label class="name">身份证号</label>
+						<div class="input">
+							<input type="text" name="idCard" id="idCard"/>
+						</div>
+					</div>
+					<div class="item">
+						<label class="name">手机号码</label>
+						<div class="input">
+							<input type="text" name="phoneNo" id="phoneNo"/>
+						</div>
+						<label class="tips"></label>
+					</div>
+					<div class="item">
+						<label class="name">&nbsp;</label>
+						<div class="input">
+							<input type="radio" checked="checked" />
+							我同意注册条款
+						</div>
+						<label class="tips"></label>
+					</div>
+					<div class="item" style="text-align: center;">
+						<input type="submit" value="立即注册" id="reg" class="submit"/>
+					</div>
+				</div>
+			</form>
+          </div>
+     
+    </div>
+  </div>
+  <!--关于我们 结束-->
+
+  <!--foot 开始-->
+  <div class="foot">
+    <div class="logo_bottom"><img src="images/logo_bottom.jpg" width="235" height="105"></div>
+    <div class="foot_txt">
+      <p>
+        <a href="">关于我们</a> |
+         <a href="">商务合作</a>
+         <span>广州市叉叉信息科技有限公司 粤ICP备13010791号-3 ? 叉叉信息公司版权所有</span>
+      </p>
+    </div>
+  </div>
+  <!--foot 结束-->
+</div>
+<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        initVerifyRules();
+        //注册操作
+        $("#register").validate({
+            submitHandler: function (form) {
+               // jQuery(form).ajaxSubmit();
+				alert("注册成功");
+				window.location.href="/";
+            },
+            rules: {
+                accounts: {
+                    required: true,
+                    chrnum: true,
+                },
+                pwd: "required",
+                rePwd: {
+                    required: true,
+                    equalTo: "#pwd",
+                },
+                realName: {
+                    required: true,
+                    chcharacter: true,
+                },
+                idCard: {
+                    required: true,
+                    isIdCardNo: true,
+                },
+                phoneNo: {
+                    required: true,
+                    isMobile: true,
+                },
+            },
+            messages: {
+                accounts: {
+                    required: "请输入注册账号",
+                },
+                pwd: "请输入密码",
+                rePwd: {
+                    required: "请输入密码",
+                    equalTo: "两次密码输入不一致"
+                },
+                realName: {
+                    required: "请输入真实姓名",
+                },
+                idCard: {
+                    required: "请输入身份证号"
+                },
+                phoneNo: {
+                    required: "请输入手机号码",
+                },
+            },
+        });
+    });
+    function initVerifyRules() {
+        // 身份证号码验证
+        jQuery.validator.addMethod("isIdCardNo", function (value, element) {
+            return this.optional(element) || isIdCardNos(value);
+        }, "请输入正确的身份证号码");
+        //数字和字母组合
+        jQuery.validator.addMethod("chrnum", function (value, element) {
+            var chrnum = /^([a-zA-Z0-9]+)$/;
+            return this.optional(element) || (chrnum.test(value));
+        }, "只能输入数字和字母(字符A-Z, a-z, 0-9)");
+        // 手机号码验证
+        jQuery.validator.addMethod("isMobile", function (value, element) {
+            var length = value.length;
+            var mobile = /^(13[0-9]{9})|(18[0-9]{9})|(14[0-9]{9})|(17[0-9]{9})|(15[0-9]{9})$/;
+            return this.optional(element) || (length == 11 && mobile.test(value));
+        }, "请正确填写您的手机号码");
+        // 汉字
+        jQuery.validator.addMethod("chcharacter", function (value, element) {
+            var tel = /^[\u0391-\uFFE5]+$/;
+            return this.optional(element) || (tel.test(value));
+        }, "请输入汉字");
+    }
+
+    //身份证号码的验证规则
+    function isIdCardNos(num) {
+        var len = num.length, re;
+        if (len == 15)
+            re = new RegExp(/^(\d{6})()?(\d{2})(\d{2})(\d{2})(\d{2})(\w)$/);
+        else if (len == 18)
+            re = new RegExp(/^(\d{6})()?(\d{4})(\d{2})(\d{2})(\d{3})(\w)$/);
+        else {
+            return false;
+        }
+        var a = num.match(re);
+        if (a != null) {
+            if (len == 15) {
+                var D = new Date("19" + a[3] + "/" + a[4] + "/" + a[5]);
+                var B = D.getYear() == a[3] && (D.getMonth() + 1) == a[4] && D.getDate() == a[5];
+            }
+            else {
+                var D = new Date(a[3] + "/" + a[4] + "/" + a[5]);
+                var B = D.getFullYear() == a[3] && (D.getMonth() + 1) == a[4] && D.getDate() == a[5];
+            }
+            if (!B) {
+                return false;
+            }
+        }
+        if (!re.test(num)) {
+            return false;
+        }
+        return true;
+    }
+</script>
+</body>
+</html>

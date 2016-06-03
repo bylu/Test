@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{dede:global.cfg_webname/}</title>
+  <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+  <meta name="description" content="{dede:global.cfg_description/}" />
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/style.css"/>
+</head>
+<body>
+<div id="Contet">
+<!--导航 开始-->
+  {dede:include filename="head.htm"/}
+<!--导航 结束-->
+
+  <!--banner 开始-->
+  <div id="banner">
+    <div class="pics" id="bannerPic">
+      <ul>
+        <li>
+          <a href="" target="_blank" style="background-image: url({dede:global.cfg_templets_skin/}/images/banner01.jpg)"></a>
+        </li>
+        <li>
+          <a href="" target="_blank" style="background-image: url({dede:global.cfg_templets_skin/}/images/banner02.jpg)"></a>
+        </li>
+        <li>
+          <a href="" target="_blank" style="background-image: url({dede:global.cfg_templets_skin/}/images/banner03.jpg)"></a>
+        </li>
+        <li>
+          <a href="" target="_blank" style="background-image: url({dede:global.cfg_templets_skin/}/images/banner04.jpg)"></a>
+        </li>
+      </ul>
+    </div>
+    <div class="ctrl"></div>
+  </div>
+  <!--banner 结束-->
+
+  <!--hot 开始-->
+  <dl class="hot" id="hot">
+    {dede:arclist typeid='1'  titlelen='45' row='4'  orderby='pubdate'}
+      <dd>
+      <a href='[field:arcurl/]' title='[field:title /]'><img src="[field:litpic/]" width="251" height="173"></a>
+      <ul>
+        <li class="link01"><a href="">进入官网</a></li>
+        <li class="link02"><a href="">游戏下载</a></li>
+      </ul>
+    </dd>
+    {/dede:arclist}
+  </dl>
+  <!--hot 结束-->
+  <!--热门产品 开始-->
+  <div class="Cp_bg">
+    <div class="Chanpin">
+      <div class="nav_title"><span class="listSty"></span><p>公司产品</p></div>
+      <div id="img">
+          <ul>
+          <!-- <h1>全民梦幻</h1>
+              <h2>角色扮演</h2>-->
+              {dede:arclist typeid='1'  titlelen='50' row='8' orderby='pubdate'}
+                <li>
+                  <a href='[field:arcurl/]' title='[field:title /]'>
+                    <img src='[field:litpic/]'width="98" height="98">
+                    <h1>[field:title/]</h1>
+                    <h2>[field:shorttitle/]</h2>
+                  </a>
+                </li>
+              {/dede:arclist}
+          </ul>
+      </div>
+    </div>
+    <div class="New">
+      <dl>
+       <a href="" target="_blank" class="more">更多</a>
+       <div id="new_content">
+          
+          {dede:arclist orderby='pubdate' titlelen='30' typeid=''  row='10'}
+            <dd>
+              (([field:pubdate  function='strftime("%m-%d",@me)'/]) )
+              <span>
+                <a href="[field:arcurl/]" target="_blank">[field:title/]</a>
+              </span>
+            </dd>
+          {/dede:arclist}
+       </div>
+      </dl>
+    </div>
+  </div>
+  <!--热门产品 结束-->
+
+  <!--合作媒体 开始-->
+  <div class="hezuo">
+    <div class="nav_title"><span class="listSty"></span><p>合作伙伴</p></div>
+    <div id="demo"  class="hezuo_ct">
+      <table>
+        <tbody>
+          <tr>
+            <td valign="top" id="marquePic1">
+              <table>
+                <tr> 
+                {dede:flink linktype="2" type="image" }
+                  <td valign="top">
+                   {dede:flink/}
+                  </td>
+                {/dede:flink}
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!--合作媒体 结束-->
+
+  <!--联系方式 开始-->
+  <div class="Contact">
+    <div class="nav_title"><span class="listSty"></span><p>联系我们</p></div>
+    <span class="shangwu_iocn"></span>
+    <span class="youbian_iocn"></span>
+    <span class="kefu_iocn"></span>
+    <a href="#" class="map_iocn"><em></em></a>
+    <div class="shangwu_txt">
+      <p>商务合作：wu.jiangchao@xxwan.com</p>
+      <p>意见反馈：liu.guohong@xxwan.com</p>
+    </div>
+    <div class="youbian_txt">
+      <p>地址：广州市天河区科韵路16号(广州信息港)A栋401A室</p>
+      <p>邮编：510665</p>
+    </div>
+    <div class="kefu_txt">
+      <p>客服：020-4008520775</p>
+      <p>媒体合作：020-4008520775</p>
+    </div>
+    <div class="map_txt"><p>点击按钮查看位置地图</p></div>
+    <div class="erweima"><img src="{dede:global.cfg_templets_skin/}/images/dream_games.png" width="140" height="140"></div>
+    <div class="erweima_txt"><h1>扫描微信 关注梦想手游</h1><h1>期待与你分享更多精彩</h1></div>
+  </div>
+  <!--联系方式 结束-->
+  <!--foot 开始-->
+   {dede:include filename="footer.htm"/}
+  <!--foot 结束-->
+</div>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery-1.8.1.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.cycle.all.min.js"></script> 
+<script type="text/javascript">
+  var speed=30
+  function Marquee(){ 
+    if(demo.scrollLeft>=(marquePic1.scrollWidth-$("#demo").width())){ 
+      demo.scrollLeft=0 
+    }else{ 
+      demo.scrollLeft++ 
+    }
+  } 
+  var MyMar=setInterval(Marquee,speed) 
+  demo.onmouseover=function() {clearInterval(MyMar)} 
+  demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)} 
+  $(function () {
+        $('#banner .pics ul').cycle({
+            fx:'fade',
+            delay:4000,
+            speed:500,
+            activePagerClass: 'active',
+            pager: '#banner .ctrl',
+            pagerEvent:"mouseover",pause:1,pauseOnPagerHover:1,
+            pagerAnchorBuilder: function (idx, slide) {
+                return '<a></a>';
+            }
+        })
+     }); 
+</script>
+</body>
+</html>

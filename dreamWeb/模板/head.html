@@ -1,0 +1,17 @@
+<!--导航 开始-->
+  <div id="nav_bg">
+    <div id="nav">
+      <div class="logo_top"><img src="images/logo_top.jpg" width="293" height="88"></div>
+      <ul class="menu">
+        <li><a  href='{dede:global.cfg_cmsurl/}/'>首页</a></li>
+            {dede:channelartlist  typeid='1,2,3,4' row='4'}
+            <li>
+				<a href='{dede:field name='typeurl'/}' >
+					{dede:field name='typename'/}
+				</a>
+			</li>
+			{/dede:channelartlist}
+      </ul>
+    </div>
+  </div>
+<!--导航 结束-->

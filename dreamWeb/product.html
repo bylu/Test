@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="description" content="{dede:global.cfg_description/}" />
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/page.css"/>
+</head>
+<body>
+<div id="Contet">
+  <!--导航 开始-->
+  {dede:include filename="head.htm"/}
+  <!--导航 结束-->
+  <!--产品列表 开始-->
+  <div class="Page_title_bg">
+    <div class="Page_title"><h1>产品中心</h1><h2>PRODUCT CENTER</h2></div>
+  </div>
+  <div class="Product">
+    <div id="tabbox2">
+      <div class="tabs" id="tabs2">                                                      
+        <ul>
+          <li><a class="tabone">网络游戏</a></li>
+          <li><a class="tabtwo">单机游戏</a></li>
+        </ul>
+      </div>
+      <div class="fix"></div>
+      <ul class="tab_conbox" id="tab_conbox2">
+        <li class="tab_contwo"  style="display: list-item;" id="a">
+          {dede:list pagesize='9' orderby='click'}
+          <div class="artlist">
+            <em class="Prc_icon">
+              <img src='[field:litpic/]' width="128" height="128">
+            </em>
+            <div class="Prc_txt">
+              <h1>[field:title/]
+                <span>类型：[field:shorttitle/]</span>
+                <span>更新时间：[field:pubdate function="GetDateTimeMK(@me)" /]</span>
+              </h1>
+              <p> 
+               [field:description function='cn_substr(@me,300)'/]......
+              </p>
+              <a href="" class="Prc_link01" title="进入官网">进入官网</a>
+              <a href="" class="Prc_link02" title="IOS版下载">IOS版下载</a>
+              <a href="" class="Prc_link03" title="安卓版下载">安卓版下载</a>
+            </div>
+          </div>
+          {/dede:list}
+        </li>
+        <li class="tab_contwo" id="b"></li>
+      </ul>
+    </div>
+  </div>
+  <!--产品列表 结束-->
+  <!--分页 start-->
+  <div id="pagenav" class="paging"></div>
+  <!--分页 end-->
+  <!--foot 开始-->
+  {dede:include filename="footer.htm"/}
+  <!--foot 结束-->
+</div>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery-1.8.1.js"></script>
+<script type="text/javascript">
+var pageNoa=1;
+var pageNob=1;
+$(document).ready(function() {
+  jQuery.jqtab = function(tabtit,tab_conbox,shijian) {
+    $(tab_conbox).find("li").hide();
+    $(tabtit).find("li:first").addClass("thistab").show(); 
+    $(tab_conbox).find("li:first").show();
+    $(tabtit).find("li").bind(shijian,function(){
+        $(this).addClass("thistab").siblings("li").removeClass("thistab"); 
+      var activeindex = $(tabtit).find("li").index(this);
+      $(tab_conbox).children().eq(activeindex).show().siblings().hide();
+      $("#pagea").hide();
+      $("#pageb").hide();
+      var val = $(tabtit).find("li:first").attr("class");
+      if(val == "thistab"){
+        $("#pagea").show();
+      }else{
+        $("#pageb").show();
+      }
+      return false;
+    });
+  };
+  /*调用方法如下：*/
+  $.jqtab("#tabs2","#tab_conbox2","click");
+});
+</script> 
+</body>
+</html>

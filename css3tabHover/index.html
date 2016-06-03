@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="index.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="tabs">
+		<div class="tabsheader">
+			<div class="border"></div>
+			<ul>
+				<li class="active"><a href="#tab-1" ripple="ripple" tab-id="1">导航一</a></li>
+				<li><a href="#tab-2" ripple="ripple" tab-id="2">导航二</a></li>
+				<li><a href="#tab-3" ripple="ripple" tab-id="3">导航三</a></li>
+				<li><a href="#tab-4" ripple="ripple" tab-id="4">导航四</a></li>
+				<li><a href="#tab-5" ripple="ripple" tab-id="5">导航五</a></li>
+			</ul>
+		</div>
+		<div class="tabscontent">
+			<div tab-id="1" class="tab active" style="display:block;">
+				<p>this is page1<br/>sljdslkdjs<br/></p>
+			</div>
+			<div tab-id="2" class="tab">
+				<p>this is page2</p><br/>
+				<p>page22</p><br/>
+				<p>page222</p>
+			</div>
+			<div tab-id="3" class="tab">
+				<p>this is page3</p>
+			</div>
+			<div tab-id="4" class="tab">
+				<p>this is page4</p>
+			</div>
+			<div tab-id="5" class="tab">
+				<p>this is page5</p>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//tabcontent 动态获取他的高度
+			function animateTabHeight(){
+				var tabHeight=$(".tab.active").height();
+				$(".tab-content").stop().css({height:tabHeight+"px"});
+			}
+			animateTabHeight();//调用
+         
+			//添加切换的头部样式
+			var activePos=$(".tabsheader .active").position();
+			function changePos(){
+				activePos=$(".tabsheader .active").position();
+				$(".border").stop().css({
+					left:activePos.left,
+					width:$(".tabsheader .active").width()
+				});
+			}
+            changePos();//调用
+			//切换
+			function changeTab(){
+				var getTabId=$(".tabsheader .active a").attr("tab-id");
+				$(".tab").stop().fadeOut(300,function(){
+					$(this).removeClass("active");
+				}).hide();
+				$(".tab[tab-id=" +getTabId +"]").stop().fadeIn(300,function(){
+					$(this).addClass("active");
+					animateTabHeight();// 调用自动获取高度
+				});
+			}
+
+			//header顶部切换效果
+			$(".tabsheader a").on("click",function(e){
+				e.preventDefault();
+				var tabId=$(this).attr("tab-id");
+				$(".tabsheader a").stop().parent().removeClass("active");
+				$(this).stop().parent().addClass("active ripple");
+                changePos();//调用那个添加选中的样式
+                $(".tab").stop().fadeOut(300,function(){
+					$(this).removeClass("active");
+				}).hide();
+				$(".tab[tab-id=" +tabId +"]").stop().fadeIn(300,function(){
+					$(this).addClass("active");
+					animateTabHeight();// 调用自动获取高度
+				});
+
+			});
+            
+			//添加那个动画效果
+            var tabItems=$(".tabsheader ul li")
+           	$('[ripple]').on('click', function (e) {
+	      	  var rippleDiv = $('<div class="ripple" />'), rippleOffset = $(this).offset(), rippleY = e.pageY - rippleOffset.top, rippleX = e.pageX - rippleOffset.left, ripple = $('.ripple');
+			        rippleDiv.css({
+			            top: rippleY - ripple.height() / 2,
+			            left: rippleX - ripple.width() / 2,
+			            background: $(this).attr('ripple-color')
+			        }).appendTo($(this));
+			        window.setTimeout(function () {
+			            rippleDiv.remove();
+			        }, 1500);
+	   			});
+		});
+
+	</script>
+</body>
+</html>

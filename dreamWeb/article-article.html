@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<meta name="keywords" content="">
+<meta name="Description" content="">
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/page.css">
+</head>
+<body>
+<div id="Contet">
+  <!--导航 开始-->
+  {dede:include filename="head.htm"/}
+  <!--导航 结束-->
+  <!--新闻内容 开始-->
+  <div class="Page_title_bg">
+    <div class="Page_title"><h1>新闻中心</h1><h2>NEWS CENTER</h2></div>
+  </div>
+  <div class="New_Ct">
+    <div class="New_Ct_title">
+      <h1>{dede:field.title/}</h1>
+      <h3>发布时间： {dede:field name='pubdate'  function='GetDateMk(@me)'/}   </h3>
+    </div>
+    <div class="guanzhu">
+      <div class="erweima"><img src="{dede:global.cfg_templets_skin/}/images/erweima.jpg" width="140" height="140"></div>
+      <div class="erweima_txt"><h1>扫描微信 关注梦想手游</h1><h1>期待与你分享更多精彩</h1></div>
+      <!-- <div class="bdsharebuttonbox" data-tag="share_1">
+        <a href="javascript:void(0);" class="sina share" data-cmd="tsina" title="关注新浪微博" ></a>
+        <a href="javascript:void(0);" data-cmd="tqq" title="关注腾讯微博" class="qq share"></a>
+        <a href="javascript:void(0);" data-cmd="qzone" class="qzone share"  title="分享到QQ空间"></a>
+      </div> -->
+    </div>
+    <div class="New_Ct_txt">
+      {dede:field.body/}
+    </div>
+  </div>
+  <!--新闻内容 结束-->
+  <!--foot 开始-->
+  {dede:include filename="footer.htm"/}
+  <!--foot 结束-->
+</div>
+</body>
+</html>

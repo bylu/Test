@@ -1,0 +1,42 @@
+*{padding:0;margin:0;}
+ul,li{list-style: none;}
+body{
+	width:100%;
+	background:-webkit-linear-gradient(45deg, rgba(66, 183, 245, 0.8) 0%, rgba(66, 245, 189, 0.4) 100%);
+	background:linear-gradient(45deg,rgba(66,183,245,0.8) 0% ,rgba(66,245,189,0.4) 100%);
+	color:rgba(0,0,0,0.6);
+	font-family:'Microsoft Yahei',"Roboto","sans-serif";
+	font-size:14px;
+	line-height: 1.6em;
+	-webkit-font-smoothing:antialiased;
+	-moz-font-smoothing:antialiased;
+}
+[ripple]{z-index:1;position: relative;overflow: hidden;}
+[ripple] .ripple{position: absolute;background: #fff;width:12px;height:12px;border-radius: 100%;-wenkit-animation:ripple 1.6s;animation:ripple 1.6s;}
+
+@keyframes ripple{
+	0%{-webkit-transform:scale(1);transform:scale(1);opacity: 0.2;}
+	100%{-webkit-transform:scale(40);transform:scale(40);opacity: 0;}
+}
+@-webkit-keyframes ripple{
+	0%{-webkit-transform:scale(1);transform:scale(1);opacity: 0.2;}
+	10%{-webkit-transform:scale(1); transform:scale(1);opacity: 0;}
+}
+.tabs{
+	position: relative;
+	background: #fff;
+	width:600px;
+	border-radius:4px;
+	box-shadow: 0 0 30px rgba(0,0,0,0.1);
+	box-sizing:border-box;
+	margin:100px auto 100px;
+	overflow: hidden;
+}
+.tabsheader{position:relative;background: #4285F4;overflow: hidden;}
+.border{position: absolute;bottom:0;background: #f4b142;width:auto;height:2px;-webkit-transition:0.3s ease; transition:0.3s ease;}
+.tabsheader ul{}
+.tabsheader ul li{float:left;display: inline-block;-webkit-transition:0.3s ease;transition:0.3s ease;}
+.tabsheader ul li a{display: block;box-sizing:border-box;padding:15px 20px;color:#fff; font-weight: 500;text-decoration: none;}
+
+.tabscontent{position:relative;padding:15px 20px;-webkit-transition:0.3s ease; transition:0.3s ease; overflow: hidden;}
+.tabscontent .tab{display: none; }
