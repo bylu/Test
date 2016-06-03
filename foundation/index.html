@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width.initial-scale=1" >
+	<title>Document</title>
+	<link rel="stylesheet" href="http://static.runoob.com/assets/foundation-5.5.3/foundation.min.css">
+	<script type="text/javascript" src="http://static.runoob.com/assets/jquery/2.0.3/jquery.min.js"></script>
+	<script type="text/javascript" src="http://static.runoob.com/assets/foundation-5.5.3/js/foundation.min.js"></script>
+	<script type="text/javascript" src="http://static.runoob.com/assets/foundation-5.5.3/js/vendor/modernizr.js"></script>
+</head>
+<body>
+	<div class="row">
+		<div class="medium-12 columns">
+			<div class="panel">
+				<h1>foundation页面</h1>
+				<p>重置窗口的大小，查看效果</p>
+				<button type="button" class="button small">I Like It!</button>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="medium-4 columns">
+			<h3>column01</h3>
+			<p>to learn more info from this  web</p>
+		</div>
+		<div class="medium-4 columns">
+			<h3>column02</h3>
+			<p>to learn more info from this  web</p>
+		</div>
+		<div class="medium-4 columns">
+			<h3>column03</h3>
+			<p>to learn more info from this  web</p>
+		</div>
+	</div>
+	<!--ctrl+L  选中一行
+		ctrl+enter  在下一行快速 插入
+		ctrl+shift+enter  在上一行快速插入
+		ctrl+shift+[  折叠代码
+		ctrl+shift+]  打开折叠代码
+		css样式中  ctrl+j 合并多行代码为一行
+		ctrl+shift+d 快速复制一行到下一行
+	    缩进：
+	    ctrl+tab 向左缩进
+	    ctrl+[  向左缩进对整行有效
+	    ctrl+]	向右缩进对整行有效
+      
+	-->
+    <div class="row">
+    	<div style="overflow-x:hidden">
+    		<table>
+    			<thead>
+					<th>first table tr</th>
+    				<th>second table tr</th>
+    				<th>third table tr</th>
+    				<th>four table tr</th>
+    				<th>five table tr</th>
+    				<th>six table tr</th>
+    				<th>seven table tr</th>
+    				<th>eight table tr</th>
+    				<th>nine table tr</th>
+    				<th>ten table tr</th>
+    			</thead>
+				<tbody>
+					<tr>
+						<td>john</td><td>lily</td><td>lala</td><td>rose</td><td>milk</td>
+						<td>hehe</td><td>nnnn</td><td>mmmm</td><td>llll</td><td>kkkk</td>
+					</tr>
+					<tr>
+						<td>rose</td><td>lala</td><td>lily</td><td>john</td><td>kkkk</td>
+						<td>milk</td><td>hehe</td><td>mmmm</td><td>nnnn</td><td>llll</td>
+					</tr>
+				</tbody>
+    		</table>
+    	</div>
+    </div>
+	<!--button的使用-->
+	<div class="row">
+		<!--ctrl_shift_d  快速选择一行复制到下一行-->
+		<button type="button" class="button">button1</button>
+		<button type="button" class="button secondary">button1</button>
+		<button type="button" class="button success">buttonsuccess</button>
+		<button type="button" class="button info">buttoninfo</button>
+		<button type="button" class="button warning">buttonwarning</button>
+		<button type="button" class="button alert">buttonalert</button>
+	</div>
+	<!--button 大小-->
+	<div class="row">
+		<button type="button" class="button large warning">Large btn</button>
+		<button type="button" class="button">Default</button>
+		<button type="button" class="button small info">small</button>
+		<button type="button" class="button tiny alert">tiny</button>
+	</div>
+	<!--圆角按钮-->
+	 <div class="row">
+	 	<button type="button" class="button">default button</button>
+	 	<button type="button" class="button radius">radius button</button>
+	 	<button type="button" class="button round">round button</button>
+	 </div>
+	 <!--延伸按钮-->
+	 <div class="row">
+	 	<button type="button" class="button">default button</button>
+	 	<button type="button" class="button expand">expand button</button>
+	 </div>
+	 <!--禁用按钮-->
+	 <div class="row">
+	 	<button type="button" class="button">default button</button>
+	 	<button type="button" class="button disabled">disabled button</button>
+	 </div>
+
+	 <!--按钮组-->
+	<div class="row">
+		<ul class="button-group"><!--水平一行显示-->
+			<li><button type="button" class="button">button01</button></li>
+			<li><button type="button" class="button">button02</button></li>
+			<li><button type="button" class="button">button03</button></li
+		</ul>
+		<ul class="button-group stack"> <!--垂直一列显示  stack-->
+			<li><button type="button" class="button">buttonveritail01</button></li>
+			<li><button type="button" class="button">buttonveritail02</button></li>
+			<li><button type="button" class="button">buttonveritail03</button></li>
+		</ul>
+		<ul class="button-group stack-for-small"><!--在小屏幕上水平显示的换成是垂直显示-->
+			<li><button type="button" class="button">apple01</button></li>
+			<li><button type="button" class="button">apple02</button></li>
+			<li><button type="button" class="button">apple03</button></li>
+			<li><button type="button" class="button">apple04</button></li>
+		</ul>
+		<ul class="button-group radius"><!--圆角按钮组的显示-->
+			<li><button type="button" class="button">radius01</button></li>
+			<li><button type="button" class="button">radius02</button></li>
+			<li><button type="button" class="button">radius03</button></li>
+		</ul>
+
+		<ul class="button-group round"><!--圆形按钮组-->
+			<li><button type="button" class="button">round01</button></li>
+			<li><button type="button" class="button">round02</button></li>
+			<li><button type="button" class="button">round03</button></li>
+		</ul>
+
+		<ul class="button-group even-3'"><!--均匀延展按钮-->
+			<li><button type="button" class="button">even-num1</button></li>
+			<li><button type="button" class="button">even-num2</button></li>
+			<li><button type="button" class="button">even-num3</button></li>
+		</ul>
+		<!--下拉按钮组-->
+		<a href="#" data-dropdown="id01" class="button dropdown">下拉选择按钮</a>
+		<ul id="id01" data-dropdown-content class="f-dropdown">
+			<li><a href="#">link1</a></li>
+			<li><a href="#">link2</a></li>
+			<li><a href="#">link3</a></li>
+		</ul>
+        <!--分割按钮-->
+        <button class="button split">split button<span data-dropdown="id01"></span></button>
+        <ul id="id01" data-dropdown-content class="f-dropdown">
+        	<li><a href="#">link 1</a></li>
+        	<li><a href="#">link 2</a></li>
+        	<li><a href="#">link 3</a></li>
+        </ul>
+	</div>
+
+
+	<script type="text/javascript">
+	//初始化组件
+	$(document).ready(function(){
+		$(document).foundation(); 
+
+	});
+	</script>
+</body>
+</html>

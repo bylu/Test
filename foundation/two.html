@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width.initial-scale=1" >
+	<title>Document</title>
+	<link rel="stylesheet" href="http://static.runoob.com/assets/foundation-5.5.3/foundation.min.css">
+	<script type="text/javascript" src="http://static.runoob.com/assets/jquery/2.0.3/jquery.min.js"></script>
+	<script type="text/javascript" src="http://static.runoob.com/assets/foundation-5.5.3/js/foundation.min.js"></script>
+	<script type="text/javascript" src="http://static.runoob.com/assets/foundation-5.5.3/js/vendor/modernizr.js"></script>
+</head>
+<body>
+	<div class="row">
+		<div data-alert class="alert-box">this is a default box<a href="#" class="close">x</a></div>
+		<div data-alert class="alert-box info">this is a default box<a href="#" class="close">x</a></div>
+	</div>
+    <div class="row">
+    	<p>foundation进度条</p>
+    	<div class="progress">
+    		<span class="meter" style="width:70%;"></span>
+    	</div>
+    	<div class="progress round alert">
+    		<span class="meter" style="width:60%;"></span>
+    	</div>
+
+    	<div class="progress success round">
+    		<span class="meter"><span class="percentage">50%</span></span>
+    	</div>
+
+    	<div>
+    		<a href="29.jpg" class="th radius">
+    			<img src="29.jpg" alt="show this img" />
+    		</a>
+    	</div>
+		<hr/>
+    	<br/>
+    	<!--弹框轮播-->
+    	<!-- <ul class="clearing-thumbs" data-clearing >
+    			<li ><a href="29.jpg" class="th"><img src="29.jpg" /></a></li>
+		    	<li><a href="29.jpg" class="th"><img data-caption="1img"src="22.jpg" /></a></li>
+		    	<li><a href="29.jpg" class="th"><img data-caption="2img"src="29.jpg" /></a></li>
+		    	<li><a href="29.jpg" class="th"><img data-caption="3img" src="22.jpg" /></a></li>
+		    	<li><a href="29.jpg" class="th"><img data-caption="4img" src="22.jpg" /></a></li>
+		    	<li><a href="29.jpg" class="th"><img data-caption="5img" src="29.jpg" /></a></li>
+    		</ul> -->
+    	<!--显示一张弹框出来轮播-->
+    	<ul class="clearing-thumbs clearing-feature" data-clearing>
+   			<li><a href="22.jpg" class="th"><img  src="22.jpg" width="200" height="100"></a></li>
+    		<li><a href="29.jpg" class="th"><img  src="29.jpg" width="200" height="100"></a></li>
+    		<li class="clearing-featured-img"><a href="22.jpg" class="th"><img src="22.jpg" width="200" height="100"></a></li>
+ 		</ul>
+    
+    </div>
+    <div class="row">
+        <p>下拉列表</p>
+        <a href="#" data-dropdown="id01" class="button dropdown">you can look for</a>
+        <ul id="id01" data-dropdown-content class="f-dropdown">
+            <li><a href="">link1</a></li>
+            <li><a href="">link2</a></li>
+            <li><a href="">link3</a></li>
+        </ul>
+        <!--用户下拉框中的内容信息-->
+        <a href="#" data-dropdown="id01" class="button dropdown">dropdown-content</a>
+        <div id="id01" data-dropdown-content class="f-dropdown">
+            <h4>show this title</h4>
+            <img src="22.jpg" />
+            <p>show this content you can find other pic</p>
+        </div>
+        <!--下拉菜单的方向-->
+        <a href="#" data-dropdown="id01" data-options="align:right" class="button dropdown">Right</a>
+        <ul id="id01" data-dropdown-content class="f-dropdown">
+            <li><a>lala01</a></li>
+            <li><a>lala02</a></li>
+            <li><a>lala02</a></li>
+        </ul>
+ 
+        <a href="#" data-dropdown="id02" data-options="align:left" class="button dropdown">left</a>
+        <ul id="id02" data-dropdown-content class="f-dropdown">
+            <li><a>lala01</a></li>
+            <li><a>lala02</a></li>
+            <li><a>lala02</a></li>
+        </ul>
+      
+        <a href="#" data-dropdown="id03" data-options="align:top" class="button dropdown">top</a>
+        <ul id="id03" data-dropdown-content class="f-dropdown">
+            <li><a>lala01</a></li>
+            <li><a>lala02</a></li>
+            <li><a>lala02</a></li>
+        </ul>
+     
+        <a href="#" data-dropdown="id04" data-options="align:bottom" class="button dropdown">bottom </a>
+        <ul id="id04" data-dropdown-content class="f-dropdown">
+            <li><a>lala01</a></li>
+            <li><a>lala02</a></li>
+            <li><a>lala02</a></li>
+        </ul>
+        <br/>
+        <a href="#" data-dropdown="id01" data-options="is_hover:true" class="button dropdown">Hover me</a>
+        <ul id="id01" data-dropdown-content class="f-dropdown">
+            <li><a href="">link01</a></li>
+            <li><a href="">link01-2</a></li>
+            <li><a href="">link01-3</a></li>
+        </ul>
+    </div>
+    <br/>
+    <br/>
+    <div class="row">
+        <p>foundation 折叠列表</p>
+        <ul class="accordion" data-accordion>
+            <li class="accordion-navigation">
+                <a href="#demo">点击此处进行内容显示</a>
+                <div id="demo" class="content" style="background:red;padiing:25px;">
+                    菜鸟教程的demo content
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <p>手风琴的效果的显示</p>
+        <ul class="accordion" data-accordion data-options="multi_expandL:true;">
+            <li class="accordion-navigation">
+                <a href="#demo">手风琴效果1</a>
+                <div id="demo" class="content active">
+                    demo1de 手风琴效果一
+                </div>
+            </li>
+            <li class="accordion-navigation">
+                <a href="#demo1">手风琴效果二</a>
+                <div id="demo1" class="content active">
+                    demo2de  手风琴效果二
+                </div>
+            </li>
+            <li class="accordion-navigation">
+                <a href="#demo2">手风琴效果三</a>
+                <div id="demo2" class="content active">
+                    demo2de 手风琴效果三
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <ul class="circle">
+            <li>list-item</li>
+            <li>list-item</li>
+            <li>list-item</li>
+        </ul>
+        
+        <ul class="square">
+            <li>list-item1</li>
+            <li>list-item1</li>
+            <li>list-item1</li>
+            <li>list-item1</li>
+        </ul>
+        
+        <ul class="no-bullet">
+            <li>list-item1</li>
+            <li>list-item1</li>
+            <li>list-item1</li>
+        </ul>
+        
+        <ul class="inline-list">
+            <li>list-item1</li>
+            <li>list-item1</li>
+            <li>list-item1</li>
+        </ul>
+
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">home</a></li>
+            <li><a href="#">home</a></li>
+        </ul>
+        
+        <ul class="tabs" data-tab>
+            <li class="tab-title active"><a href="#">home</a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <p>foundation水平 选项卡</p>
+        <ul class="tabs" data-tab>
+            <li class="tab-title active"><a href="#">home</a></li>
+            <li class="tab-title"><a href="#">menu1</a></li>
+            <li class="tab-title"><a href="#">menu2</a></li>
+            <li class="tab-title"><a href="#">menu3</a></li>
+        </ul>
+        <p>foundation垂直 选项卡</p>
+        <ul class="tabs vertical" data-tab>
+            <li class="tab-title"><a>ceshi list1</a></li>
+            <li class="tab-title"><a>ceshi list2</a></li>
+            <li class="tab-title"><a>ceshi list3</a></li>
+        </ul>
+        <hr/>
+        <br/>
+        <br/>
+
+        <style type="text/css">
+            .tab-content > .content .active{
+                -webkit-animation:fadeEffect 1s;
+                    animation:fadeEffect 1s;
+            }
+            @keyframes fadeEffect{
+                form{opacity: 0;}
+                to{opacity: 1;}
+            }
+            @-webkit-keyframes fadeEffect{
+                form{opacity: 0;}
+                to{opacity: 1;}
+            }
+        </style>
+        <p>foundation 切换选项卡</p>
+        <ul class="tabs" data-tab>
+            <li class="tab-title active"><a href="#home">home</a></li>
+            <li class="tab-title "><a href="#menu1">menu1</a></li>
+            <li class="tab-title"><a href="#menu2">menu2</a></li>
+            <li class="tab-title"><a href="#menu3">menu3</a></li>
+        </ul>
+        <div class="tabs-content">
+            <div class="content active" id="home">
+                <h3>home</h3>
+                <p>home is page first</p>
+            </div>
+            <div class="content" id="menu1">
+                <p>menu1 content</p>
+            </div>
+            <div class="content" id="menu2">
+                <p>menu2 content</p>
+            </div>
+            <div class="content" id="menu3">
+                <p>menu3 content</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <ul class="pricing-table">
+            <li class="title">base</li>
+            <li class="price">$19.99</li>
+            <li class="description">Great for small businesss</li>
+            <li class="bullet-item">24/7 support</li>
+            <li class="bullet-item">1GB Bandwidth</li>
+            <li class="cta-button"><a class="button radius" href="#">I will buy</a></li>
+        </ul>
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="medium-4 columns">
+            <ul class="pricing-table">
+                <li class="title">good01</li>
+                <li class="price">$10</li>
+                <li class="description">这是第一个物品，您可以先看看</li>
+                <li class="bullet-item">在卜蜂莲花</li>
+                <li class="bullet-item">农业路中州大道交叉口</li>
+                <li class="cta-button"><a class="button radius">buy</a></li>
+            </ul>
+        </div>
+        <div class="medium-4 columns">
+            <ul class="pricing-table">
+                <li class="title">good02</li>
+                <li class="price">$10</li>
+                <li class="description">这是第二个物品，您可以先看看</li>
+                <li class="bullet-item">在卜蜂莲花</li>
+                <li class="bullet-item">农业路中州大道交叉口</li>
+                <li class="cta-button"><a class="button radius">buy</a></li>
+            </ul>
+        </div>
+        <div class="medium-4 columns">
+            <ul class="pricing-table">
+                <li class="title">good03</li>
+                <li class="price">$10</li>
+                <li class="description">这是第三个物品，您可以先看看</li>
+                <li class="bullet-item">在卜蜂莲花</li>
+                <li class="bullet-item">农业路中州大道交叉口</li>
+                <li class="cta-button"><a class="button radius">buy</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <nav class="top-bar" data-topbar>
+            <ul class="title-area">
+                <li class="name">
+                    <h1><a><img src="logo.png"/></a></h1>
+                </li>
+                <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+            </ul>
+            <scetion class="top-bar-section">
+                <ul class="left">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">page 1</a></li>
+                    <li><a href="#">page 2</a></li>
+                    <li><a href="#">page 3</a></li>
+                </ul>
+                <ul class="right">
+                    <li><a>sign up</a></li>
+                    <li><a>login</a></li>
+                </ul>
+            </scetion>
+        </nav>
+    </div>
+    <div class="row sticky">
+        <nav class="top-bar" data-topbar  data-options="is_hover:false" data-options="sticky_on:[small,large]"><!--is_giver:false 必须点击的到时候才会打开折叠, 父标签设置sticky 属性 然后导航设置sticky_on:[small,large]  当滚定到一定的高度的时候导航会固定到顶部-->
+            <ul class="title-area">
+                <li class="name">
+                    <h1><a><img src="logo.png"/></a></h1>
+                </li>
+            </ul>
+            <scetion class="top-bar-section">
+                <ul class="left">
+                    <li class="active"><a>home</a></li>
+                    <li class="has-dropdown">
+                        <a>dropdown</a>
+                        <ul class="dropdown">
+                            <li><a>apple</a></li>
+                            <li><a>apple</a></li>
+                            <li class="divider"></li>
+                            <li><a>apple</a></li>
+                            <li><a>apple</a></li>
+                            <li class="has-dropdown">
+                                <a href="#">内嵌</a>
+                                <ul class="dropdown">
+                                    <li><a>内嵌1</a></li>
+                                    <li><a>内嵌2</a></li>
+                                    <li><a>内嵌3</a></li>
+                                </ul>
+                            </li>
+                            <li><a>apple</a></li>
+                            <li><a>apple</a></li>
+                            <li><a>apple</a></li>
+                            <li><a>apple</a></li>
+                        </ul>   
+                    </li>
+                </ul>
+            </scetion>
+        </nav>
+           <div class="content">
+               sfdsfd<br/>
+               fdfdfs<br/>
+               dsfsf<br/>
+               fsdfsfs<br/>
+               sdfsf<br/>
+               sdfsf<br/>
+               sdfs<br/>
+               fs<br/>
+               fs<br/>
+               f<br/>
+               sf<br/>
+               sf<br/>
+               s<br/>
+               fs<br/>
+               fs<br/>
+               f<br/>
+               sfs<br/>
+               s<br/>
+               s<br/>
+               s<br/>
+               s<br/>
+               s<br/>
+               s<br/>
+               s<br/>
+               s<br/>
+               s<br/>
+               s<br/>
+               s<br/>
+               s<br/>
+               s<br/>
+               s<br/>
+               s<br/>
+               s<br/>
+               s<br/>
+               s<br/>
+               s<br/>
+               s<br/>
+               s<br/>
+               s<br/>
+               s<br/>
+               s<br/>
+               s<br/>
+               s<br/>
+           </div>
+    </div>
+
+	<script type="text/javascript">
+	//初始化组件
+	$(document).ready(function(){
+		$(document).foundation(); 
+        var rndNum = Math.floor(Math.random() * 5 );
+        console.log(rndNum);
+	});
+    /*
+	$(function(){
+
+	});*/
+	</script>
+</body>
+</html>

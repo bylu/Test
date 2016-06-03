@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="http://static.runoob.com/assets/foundation-5.5.3/foundation.min.css">
+	<script type="text/javascript" src="http://static.runoob.com/assets/jquery/2.0.3/jquery.min.js"></script>
+	<script type="text/javascript" src="http://static.runoob.com/assets/foundation-5.5.3/js/foundation.min.js"></script>
+	<script type="text/javascript" src="http://static.runoob.com/assets/foundation-5.5.3/js/vendor/modernizr.js"></script>
+</head>
+<body style="height:1500px;padding:20px;">
+	<div class="row">
+		<div class="off-canvas-wrap" data-offcanvas>
+			<div class="inner-wrap">
+				<nav class="tab-bar">
+					<section class="left-small">
+						<a class="left-off-canvas-toggle menu-icon" href=""><span></span></a>
+					</section>
+					<section class="middle tab-bar-section">
+						<h1 class="title">off canvas example</h1>
+					</section>
+				</nav>
+				<!--滑动菜单-->
+				<aside class="left-off-canvas-menu">
+					<ul class="off-canvas-list test">
+						<li><a>ceshilist1</a></li>
+						<li><a>ceshilist2</a></li>
+						<li><a>ceshilist3</a></li>
+					</ul>
+				</aside>
+				<section class="main-section">
+					<h3>lorem ipsum</h3>
+					<p>dsdsds</p>
+					<span>we are family!</span>
+				</section>
+			</div>
+		</div>
+	</div>
+	<hr/>
+	<!--麦哲伦导航切换-->
+	<div class="row">
+		<div data-magellan-expedition="fixed">
+			<dl class="sub-nav">
+				<dd data-magellan-arrival="page1"><a href="#page1">page1title</a></dd>
+				<dd data-magellan-arrival="page2"><a href="#page2">page2title</a></dd>
+			</dl>
+		</div>
+		<div style="height:200px;background-color:#1abc9c;color:white">
+			<h3 data-magellan-destination="page1">page1content</h3>
+			<a name="page1"></a>
+			<p>滚动向下屏幕，查看导航栏上的变化</p>
+		</div>
+		<h3 data-magellan-destination="page2">page2content</h3>
+		<a name="page2"></a>
+		<p>滚动屏幕向上，查看导航的变化</p>
+	</div>
+
+     <!--麦哲伦导航选项的属性值就有
+		1，要创建的是一个外层div 添加上一个data-magellan-expedition="fixed" 来创建麦哲伦导航
+		然后再<dd>或<li>上添加data-magellan-arrival="value"属性，后面提那家一个与该属性值一样的链接page1
+
+		使用datd-magellan-destination="value" 属性来控制麦哲伦导航的目标，后面紧跟的<a>元素添加name="value"
+		属性，两个属性的值须与data-magellan-arrival的值是一样的
+		最后初始化foundation js，用户滚动页面时导航就会根据当前显示的内容自动切换
+
+     -->
+	
+	<div class="row">
+		<form>
+			input:
+			<input type="text" placeholder="name" />
+			textarea:
+			<textarea row="4" placeholder="address"></textarea>
+			select:
+			<select>
+				<option>1</option>
+				<option>1</option>
+				<option>1</option>
+			</select>
+		</form>
+	</div>
+	<div class="row">
+		<p>表单中使用label元素来设置标签，标签可以添加for属性和id属性，用户再点击标签或输入域是获得焦点</p>
+		<form>
+			<fieldset>
+				<legend>use submit form</legend>
+				<label for="name">input value
+					<input type="text" placeholder="name" id="name">
+				</label>
+				<small class="error">user write wrong name</small>
+
+
+				<label for="adr">label
+					<textarea row="4" placeholder="address" id="adr"></textarea>	
+				</label>
+				<label for="num">select
+					<select id="num">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select>
+				</label>
+				<label><input type="submit" value="submit" /></label>
+			</fieldset>
+		</form>
+	
+	</div>
+	<div class="row">
+		<p>foundation输入框尺寸</p>
+		<form>
+			<div class="row">
+				<div class="large-10 medium-7 columns">
+					<label>large-10 medium-7 (100% om small)
+						<input type="text" placeholder="Name" />
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-5 columns">
+					<lable>small-5
+						<input type="text" placeholder="small-5 name" />
+					</lable>
+				</div>
+			</div>
+			<div class="row">
+				<div class="medium-3 columns">
+					<label>medium-3 (100% on small)
+						<input type="text" placeholder="medium-3 name" />
+					</label>
+				</div>
+			</div>
+		</form>
+	</div>
+    <div class="row">
+    	<p>内联标签</p>
+    	<form>
+    		<div class="row">
+    			<div class="small-8">
+    				<div class="row">
+    					<div class="small-3 columns">
+    						<label for="name" class="inline right">姓名</label>
+    					</div>
+    					<div class="small-9 columns">
+    						<input type="text" id="name" placeholder="请输入你的姓名" />
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</form>
+    </div>
+    <div class="row">
+    	<p>前置和后置标签</p>
+    	<form>
+    		<div class="row">
+    			<div class="large-6 columns">
+    				<div class="row  collapse prefix-radius">
+    					<div class="small-3 columns">
+    						<span class="prefix">prefix</span>
+    					</div>
+    					<div class="small-9 columns">
+    						<input type="text" placeholder="please into you info" />
+    					</div>
+    				</div>
+    			</div>
+    			<div class="large-6 columns">
+    				<div class="row collapse prefix-radius">
+    					<div class="small-9 columns">
+    						<input type="text" placeholder="show you write info" />
+    					</div>
+    					<div class="small-3 columns">
+    						<span class="postfix">postfix</span>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</form>
+    </div>
+
+   <div class="row">
+   		<p>后置按钮提交</p>
+   		<form>
+   			<div class="row">
+   				<div class="large-12 columns">
+   					<div class="row collapse">
+   						<div class="small-10 columns">
+   							<input type="text" placeholder="搜索" />
+   						</div>
+   						<div class="small-2 columns">
+   							<a href="#" class="button postfix">提交</a>
+   						</div>
+   					</div>
+   				</div>
+   			</div>
+   		</form>
+   </div>
+
+	<div class="row">
+		<p>前置后置按钮圆形</p>
+		<form>
+			<div class="row">
+				<div class="larget-6 columns">
+					<div class="row collapse postfix-radius">
+						<div class="small-10 columns">
+							<input type="text" placeholder="myinfo" />
+						</div>
+						<div class="small-2 columns">
+							<a href="#" class="button postfix">btn</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="large-6 columns">
+					<div class="row collapse postfix-round">
+						<div class="small-10 columns">
+							<input type="text" placeholder="userwriteinfo" />
+						</div>
+						<div class="small-2 columns">
+							<a href="#" class="button postfix">btns</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+   <div class="row">
+   		<p>切换开关</p>
+   		<div style="padding:20px;">
+   			<h2>开关</h2>
+   			<form>
+   				<div class="switch">
+   					<input id="myswitch" type="checkbox" />
+   					<label for="myswitch"></label>
+   				</div>
+   			</form>
+   			<h2>开关大小</h2>
+   			<span>大开关</span>
+			<div class="switch large">
+				<input id="myswitch1" type="checkbox" />
+				<label for="myswitch1">large</label>
+			</div>
+   			
+   			<span>小开关</span>
+			<div class="switch small">
+				<input id="myswitch2" type="checkbox" />
+				<label for="myswitch2">small</label>
+			</div>
+   			<span>tiny</span>
+			<div class="switch tiny">
+				<input id="myswitch3" type="checkbox" />
+				<label for="myswitch3">tiny</label>
+			</div>
+   			<span>圆角</span>
+			<div class="switch radius">
+				<input id="myswitch4" type="checkbox" />
+				<label for="myswitch4"></label>
+			</div>
+            <span>圆形</span>
+            <div class="switch round">
+            	<input id="myswitch5" type="checkbox" />
+            	<label for="myswitch5"></label>
+            </div>
+   		</div>
+   </div>
+	<div class="row">
+		<p>foundation 滑块</p>
+		<div class="range-slider" data-slider>
+			<span class="range-slider-handle"></span>
+			<span class="range-slider-active-segment"> </span>
+		</div>
+		<div class="range-slider disabled" data-slider>
+			<span class="range-slider-handle"></span>
+			<span class="range-slider-active-segment"> </span>
+		</div>
+		<br/>
+		<hr/>
+		<span id="mySlider"></span>
+		<div class="range-slider vertical-range" data-slider data-options="vertical:true;display_selector:#mySlider;initial:20;">
+			<span class="range-slider-handle"></span>
+			<span class="range-slider-active-segment"> </span>
+		</div>
+		<hr/>
+		<p>使用input输入的数值</p>
+		<div class="row">
+			<div class="small-10 columns">
+				<div  class="range-slider" data-slider data-options="display_selector:#mySlider1;initial:72;">
+					<span class="range-slider-handle"></span>
+					<span class="range-slider-active-segment"> </span>
+				</div>
+			</div>
+			<div class="small-2 columns">
+				<input type="number" id="mySlider1" value="72" />
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<p>提示框</p>
+		<div class="small-12 columns">
+			<span data-tooltip title="hooray">hover over me!</span>
+		</div>
+		<Span data-tooltip class="has-tip" title="hooray">hover over me</Span><br/>
+		<span data-tooltip class="has-tip tip-top" title="topshow">top</span><br/>
+		<span data-tooltip class="has-tip tip-bottom" title="bottomshow">bottom</span><br/>
+		<span data-tooltip class="has-tip tip-left" title="leftshow">left</span><br/>
+		<span data-tooltip class="has-tip tip-right" title="rightshow">right</span><br/>
+		<span data-tooltip class="has-tip radius" title="radiusshow">radius</span><br/>
+		<span data-tooltip class="has-tip round" title="round">round</span><br/>
+	</div>
+	<hr/>
+	<div class="row">
+		<h2>模态框</h2>
+		<p>模态框是一个显示在页面头部的弹框</p>
+		<button type="button" class="button" data-reveal-id="dialogmodel">
+			点击
+		</button>
+	<div id="dialogmodel" class="reveal-modal" data-reveal>
+		<p>
+			this is a first content body
+			<button type="button" class="button" data-reveal-id="dialogmodel2">点击2</button>
+
+		</p>
+		<a class="close-reveal-modal">&times;</a>
+	</div>
+	<!--data-options="multiple_opened:true;"的使用-->
+	<div id="dialogmodel2" class="reveal-modal" data-reveal data-options="multiple_opened:true;">
+				<p>这是第二个模态框的显示</p>
+				<a class="close-reveal-modal">&times;</a>
+			</div>
+	</div>
+	<div class="row">
+		<p>图片均匀在频幕上显示</p>
+		<ul class="small-block-grid-3">
+			<li><div style="width:400px;height:300px;background:red;"></div></li>
+			<li><div style="width:400px;height:300px;background:yellow;"></div></li>
+			<li><div style="width:400px;height:300px;background:pink;"></div></li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+	//初始化组件
+	$(document).ready(function(){
+		$(document).foundation(); 
+        var rndNum = Math.floor(Math.random() * 5 );
+        console.log(rndNum);
+	});
+    /*
+	$(function(){
+
+	});*/
+	</script>
+
+</body>
+</html>

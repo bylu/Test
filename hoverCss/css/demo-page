@@ -1,0 +1,24 @@
+body {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+  font-family: sans-serif;
+  color: #333;
+  line-height: 140%;
+}
+
+img {
+  border: none;
+}
+#effects {
+  margin-top: 5em;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4em;
+}
+
+h2 {
+  margin-top: 2em;
+}
