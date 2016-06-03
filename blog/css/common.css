@@ -1,0 +1,339 @@
+/**
+ * 2016.4.14
+ */
+*{
+	padding:0;margin:0;
+}
+body{
+	width:100%;
+	font:12px/150% Microsoft YaHei;
+		/* background-color: #f6e0d2; */
+	/* background-color: #F2F2F2; */
+	background:url(../images/bgtiao.png); 
+	color:#222;
+}
+img{border:none;vertical-align: middle;}
+ul,li{list-style: none;}
+a{cursor: pointer;text-decoration: none}
+a,input{outline:none;}
+h1,h2,h3,h4{font-weight:normal;}
+.fl{float: left;}
+.fr{float: right;}
+.middleshow{
+	width:1000px;
+	margin:0px auto;
+	clear: both;
+}
+.wf100{
+	width:100%;
+	float: left;
+}
+/**
+ * header部分
+ */
+header{
+	width:100%;
+	/* height:50px; */
+	height:90px;
+	position: fixed;
+	top:0;
+	left:0;
+	background: url(../images/topfixed_bg.png) repeat-x #212121;
+	background-position: 0 bottom;
+	z-index:5;
+}
+.logo{
+	/* 
+	width:120px;
+	height:26px;
+	background: url(../images/logo.png) no-repeat; 
+	margin-top:10px;
+	*/
+	width:279px;
+	height:74px;
+	background:url(../images/logo.png) no-repeat;
+	margin-top: 5px
+}
+nav{
+	width:auto;
+	float: left;
+	margin:20px 0px 0px 50px;
+}
+nav ul li{
+	float: left;
+	display: inline-block;
+	margin:0 14px 0 14px;
+}
+nav ul li a {
+    color: #999;
+    display: block;
+    position: relative;
+    font-size: 16px;
+    line-height: 44px;
+    background-repeat: no-repeat;
+    height: 44px;
+    text-align: center;
+    letter-spacing: 5px;
+}
+nav ul li a:hover{
+	 color:#fff; text-shadow:1px 0 20px #fff; 
+}
+.search-form{width:15%;}
+#search{
+    margin: 30px 0px 0 0px;
+    height: 23px;
+    border: 1px solid #3F3F3F;
+    width: 100%;
+    border-radius: 20px;
+    background-image:url(../images/search.png);
+    background-repeat:no-repeat;
+    background-position: 90% center;
+    cursor: pointer;
+}
+.search_box{
+	background:#222222;
+}
+.search_box_focus{
+	background:#ddd;
+	border:1px solid #000;
+}
+#s {
+    background: transparent;
+    margin: 2px 0 0 3px;
+    padding: 0 5px;
+    height: 20px;
+    border: none;
+    color: #555;
+    float: left;
+    display: inline;
+    width: 95px;
+}
+/**
+ * container中间部分
+ */
+.cotainer{
+	position: relative;
+	width:100%;
+	margin-top:90px;
+	min-height: 700px;
+	height:auto;
+	background-image:url(../images/bg.jpg);
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+/**
+ * 模板部分
+ */
+.banner{
+	width:100%;
+	float: left;
+}
+.muban{margin:0px 0px 20px 0px; overflow:hidden; position:relative;background:url(../images/w60.png);}
+.showtit{
+	width:95%;
+	padding-left:5%;
+	height:35px;
+	line-height: 35px;
+	vertical-align: middle;
+	/*background:#e1b8b8;*/
+	 background:url(../images/title.png) repeat-x; 
+	color:#ad5353;
+	font-size: 16px;
+}
+.location{
+	width:13px;
+	height:35px;
+	margin-right:10px;
+	float: left;
+	background: url(../images/location.png) no-repeat 0 50%;
+}
+.mubanlist {width:100%;overflow: hidden;margin-top:30px;}
+.mubanlist .bd {width: 1000px; overflow: hidden; height: 160px;}
+.mubanlist .bd li { float: left; width:25%;  text-align: center;}
+.mubanlist .bd li a {color: #444866; display: block; width: 90%;margin:0% 10% 0% 0%; text-align:center;margin:0px auto; }
+.mubanlist .bd li img{width:100%;}
+.mubanlist .hd { border-top: 1px solid #dbe1e7; clear: both; height: 18px;}
+.mubanlist .hd ul {width: 100px; padding-left: 17px; height: 11px; margin: -6px auto 0; background-color: #fff;}
+.mubanlist .hd ul li {float: left; width: 11px; height: 11px; margin-right: 14px; border-radius: 6px; background-color: #b5c0cb; overflow: hidden; text-indent: -9999px; cursor: pointer;}
+.mubanlist .hd ul li.on { background-color: #ba5555;}
+/*leftcontent*/
+article{
+	width:70%;
+	float: left;
+	background:url(../images/w60.png);
+}
+
+.shownews section{
+	width:90%;
+	padding:0% 5%;
+	float: left;
+	margin-bottom: 2%;
+}
+.shownews section h2{
+ 	color: #222;
+ 	font-size:16px;
+ 	font-weight: bold;
+ 	padding:10px 0px;
+}
+
+.leftimg{
+	width:200px;
+	height:150px;
+	background:red;
+	opacity: .3;
+}
+
+.artIntro{
+	width:65%;
+}
+.artIntro p{
+	width:100%;
+	float: left;
+	text-indent:25px;
+	line-height: 23px;
+	font-size: 14px;
+	margin-bottom: 20px;
+	word-break:break-all;
+}
+.readmore{
+	float: right;
+	padding:5px 10px;
+	background-color: #db3652;
+	color:#fff;
+	font-size: 14px;
+	-webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+}
+
+/*rightcontent*/
+aside{
+	width:28%;
+	float: right;
+	/* background-color: pink;opacity: .3; */
+	color: #999;
+}
+.hotclick{
+	width:100%;
+	float: left;
+	margin-bottom: 20px;
+}
+.hotclick li{
+	width:93%;
+	float: left;
+	margin:4% 0% 4% 7%;
+	font-size: 14px;
+	height:20px;
+	white-space: nowrap;
+	text-overflow:ellipsis; 
+	overflow:hidden;
+}
+.hotclick li a{
+	width:100%
+}
+.hotclick li label{
+	width:10%;
+	float: left;
+	display: inline-block;
+	color:#fff;
+	text-align: center;
+	border-radius:50%;
+}
+.hotclick li span{
+	margin-left: 5%;
+	width:75%;
+	float: left;
+	display: inline-block;
+	color:#222;
+}
+
+.hotclick li a:hover ,.hotclick li span:hover{
+	color:#610000;
+}
+
+.num01{
+	background:#ea4163;
+}
+.num02{
+	background:#ad5353;
+}
+.num03{
+	background:#610000;
+}
+.showewm{
+	width:100%;
+	float: left;
+	margin-top:20px;
+	text-align: center;
+}
+
+
+/**
+ * footer
+ */
+footer{
+	width:100%;
+	float: left;
+	margin-top:20px;
+	background:url(../images/fengexian.png) repeat-x top center;
+	box-shadow: -3px -2px 3px #888888;
+}
+footer p{
+	width:100%;
+	float:left;
+	text-align: center;
+	border-top:1px solid #CBCBCB; 
+	padding:14px 0;
+	color:#666666;
+}
+
+/**
+ * article css
+ */
+.articleContainer{
+	min-height: 800px;
+	height:auto;
+}
+.articleContainer h2{
+	width:100%;
+	float: left;
+	margin:20px 0px 10px 0px;
+	text-align: center;
+}
+.datetime{
+	width:100%;
+	float: left;
+	text-align: center;
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+.articleContent{
+	color:#222;
+	font-size: 15px;
+	line-height: 25px;
+}
+.articleContent p{
+	text-indent: 25px;
+}
+.prev,.next{
+	width:40%;
+	margin:20px 15px;
+	white-space: nowrap;
+	text-overflow:ellipsis; 
+	overflow:hidden;
+	font-size:14px;
+}
+.aboutArticle{
+	width:90%;
+	margin:2% 5%;
+	float: left;
+}
+.aboutArticle  li{
+	width:100%;
+	float: left;
+	margin:1% 0%;
+	font-size: 15px;
+}

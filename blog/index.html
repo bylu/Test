@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><?php if(defined('SEO_TITLE') && SEO_TITLE != ''){ echo SEO_TITLE;}else{echo SITE_NAME.'个人博客';}?></title>
+	<meta name="keywords" content="<?php if(defined('SEO_KEYWORDS')){ echo SEO_KEYWORDS;}?>">
+	<meta name="description" content="<?php if(defined('SEO_DESCRIPTION')){echo SEO_DESCRIPTION;}?>">
+	<link rel="stylesheet" href="<?php echo SITE_PATH;?>templates/<?php echo TEMPLATE;?>/css/common.css">
+</head>
+<body>
+  	<header>
+		<div class="middleshow">
+			<h1>
+				<a class="logo fl" href="" title="web前端-web前端妹子博客"></a>
+			</h1>
+			<nav>
+				<ul>
+					<li>
+                        <a href="<?php echo SITE_PATH;?>" <?php if($cid<=0 && !strstr($_SERVER['QUERY_STRING'],'special') && !isset($topid) && !strstr($_SERVER['QUERY_STRING'],'lastupdate')) echo 'class="selected"';?>>首页
+                        </a>
+                       
+                    </li>
+                    <?php //print_r($c->categories);
+                        foreach($c->categories as $a){
+                            if($a['parent_id']=='0'){//只输出顶级分类
+                                $style='';
+                                if((intval($cid)>0 && ($a['cate_id'] == $cid || $a['cate_id']==$c->categories[$cid]['parent_id'])) || (isset($topid) && $topid == $a['cate_id'])) $style='class="selected"';
+                               if($a['cat_show'] == 1) echo('<li><a href="'.$a['surl'].'" '.$style.'>'.$a['cname'].'</a></li>');
+                            }
+                        }
+                    ?>
+                    <li>
+                        <a href="<?php echo $c->url->encode('special_list', array('host' => '/','p' => 1));?>" <?php if(strstr($_SERVER['QUERY_STRING'],'special')) echo 'class="selected"';?>>专题 </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $c->url->encode('lastupdate', array('host' => '/','p' => 1));?>" <?php if(strstr($_SERVER['QUERY_STRING'],'lastupdate')) echo 'class="selected"';?>>最新</a>
+                    </li>
+				</ul>
+			</nav>
+			<div class="search-form fr">
+				<div id="search" class="search_box">
+					<form role="search" method="get" id="searchform" action="">
+						<label for="s" class="hide-clip"></label>
+						<input type="text" name="s" id="s" value="" />
+					</form>
+				</div>
+			</div>
+		</div>
+ 	</header>
+	<div class="cotainer fl">
+		<div class="middleshow">
+			<div class="wf100 muban">
+				<p class="showtit">实例模板</p>
+				<div class="mubanlist">
+					<div class="bd">
+						<ul>
+							<li>
+								<a href='' title=''>
+									<img src='images/muban01.jpg'  alt="">
+								</a>
+							</li>
+							<li>
+								<a href='' title=''>
+									<img src='images/muban01.jpg'  alt="">
+								</a>
+							</li>
+							<li>
+								<a href='' title=''>
+									<img src='images/muban01.jpg'  alt="">
+								</a>
+							</li>
+							<li>
+								<a href='' title=''>
+									<img src='images/muban01.jpg'  alt="">
+								</a>
+							</li>
+							<li>
+								<a href='' title=''>
+									<img src='images/muban01.jpg'  alt="">
+								</a>
+							</li>
+							<li>
+								<a href='' title=''>
+									<img src='images/muban01.jpg'  alt="">
+								</a>
+							</li>
+							<li>
+								<a href='' title=''>
+									<img src='images/muban01.jpg'  alt="">
+								</a>
+							</li>
+							<li>
+								<a href='' title=''>
+									<img src='images/muban01.jpg'  alt="">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="hd">
+						<ul>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="wf100">
+				<article class="shownews">
+					<p class="showtit">推荐文章</p>
+			   	    <section>
+						<h2>郑州百易科技有限公司</h2>
+						<div class="wf100">
+							<div class="leftimg fl">
+								
+							</div>
+							<div class="artIntro fr">
+								<p>郑州百易科技有限公司坐落中州大道农业路交叉口苏荷中心，这里交通方便，公司是以自主研发游戏为主的公司。郑州百易科技有限公司坐落于中州大道农业路交叉口苏荷中心，这里交通方便，公司是以自主研发游戏为主的公司。</p>
+								<a class="readmore">阅读全文</a>
+							</div>
+						</div>
+			   	    </section>
+			   	 	
+			   	 	<section>
+						<h2>郑州百易科技有限公司</h2>
+						<div class="wf100">
+							<div class="leftimg fl">
+								
+							</div>
+							<div class="artIntro fr">
+								<p>郑州百易科技有限公司坐落中州大道农业路交叉口苏荷中心，这里交通方便，公司是以自主研发游戏为主的公司。郑州百易科技有限公司坐落于中州大道农业路交叉口苏荷中心，这里交通方便，公司是以自主研发游戏为主的公司。</p>
+								<a class="readmore">阅读全文</a>
+							</div>
+						</div>
+			   	    </section>
+					
+					<section>
+						<h2>郑州百易科技有限公司</h2>
+						<div class="wf100">
+							<div class="leftimg fl">
+								
+							</div>
+							<div class="artIntro fr">
+								<p>郑州百易科技有限公司坐落中州大道农业路交叉口苏荷中心，这里交通方便，公司是以自主研发游戏为主的公司。郑州百易科技有限公司坐落于中州大道农业路交叉口苏荷中心，这里交通方便，公司是以自主研发游戏为主的公司。</p>
+								<a class="readmore">阅读全文</a>
+							</div>
+						</div>
+			   	    </section>
+
+			   	    <section>
+						<h2>郑州百易科技有限公司</h2>
+						<div class="wf100">
+							<div class="leftimg fl">
+								
+							</div>
+							<div class="artIntro fr">
+								<p>郑州百易科技有限公司坐落中州大道农业路交叉口苏荷中心，这里交通方便，公司是以自主研发游戏为主的公司。郑州百易科技有限公司坐落于中州大道农业路交叉口苏荷中心，这里交通方便，公司是以自主研发游戏为主的公司。</p>
+								<a class="readmore">阅读全文</a>
+							</div>
+						</div>
+			   	    </section>
+
+			   	    <section>
+						<h2>郑州百易科技有限公司</h2>
+						<div class="wf100">
+							<div class="leftimg fl">
+								
+							</div>
+							<div class="artIntro fr">
+								<p>郑州百易科技有限公司坐落中州大道农业路交叉口苏荷中心，这里交通方便，公司是以自主研发游戏为主的公司。郑州百易科技有限公司坐落于中州大道农业路交叉口苏荷中心，这里交通方便，公司是以自主研发游戏为主的公司。</p>
+								<a class="readmore">阅读全文</a>
+							</div>
+						</div>
+			   	    </section>
+
+			    </article>
+			    <aside>
+			    	<div class="hotclick">
+			    		<p class="showtit">模板排行</p>
+				    	<ul>
+				    		<li><a href=""><label class="num01">1</label><span>郑州百易的网站</span></a></li>
+				    		<li><a href=""><label class="num02">2</label><span>郑州百易的网站</span></a></li>
+				    		<li><a href=""><label class="num03">3</label><span>郑州百易的网站</span></a></li>
+				    		<li><a href=""><label class="num03">4</label><span>郑州百易的网站</span></a></li>
+				    		<li><a href=""><label class="num03">5</label><span>郑州百易的网站</span></a></li>
+				    	</ul>
+			    	</div>
+			    	<div class="hotclick">
+			    		<p class="showtit">最新文章</p>
+				    	<ul>
+				    		<li><a>郑州百易科技网站</a></li>
+				    		<li><a>郑州百易科技网站</a></li>
+				    		<li><a>郑州百易科技网站</a></li>
+				    		<li><a>郑州百易科技网站</a></li>
+				    		<li><a>郑州百易科技网站</a></li>
+				    		<li><a>郑州百易科技网站</a></li>
+				    	</ul>
+			    	</div>
+			    	<div class="hotclick">
+			    		<p class="showtit">关注方式</p>
+			    		<p class="showewm"><img src="images/isux_weixin.png" /></p>
+			    	</div>
+			    </aside>
+			</div>
+			
+		</div>
+	</div>
+
+    <footer>
+    	<div class="middleshow">
+			<p>腾讯设计团队：IMWebCDCGDCMXDTGideasAlloyTeam</p>
+			<p>Copyright © 1998-2016 Tencent. All Rights Reserved Home | Contact | Jobs</p>
+    	</div>
+    </footer>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.8.0/jquery.min.js"></script>
+     <script type="text/javascript" src="<?php echo SITE_PATH;?>templates/<?php echo TEMPLATE;?>/js/jquerysuperslide.js"></script>
+    <script type="text/javascript">
+		$(function(){
+			jQuery('#search input').focus(function(){jQuery('#search').addClass('search_box_focus')});
+			jQuery('#search input').blur(function(){jQuery('#search').removeClass('search_box_focus')});
+		});
+
+		$(".mubanlist").slide({titCell:".hd ul",mainCell:".bd ul",effect:"leftLoop",autoPlay:true,autoPage:true,vis:4,scroll:2,trigger:"click",interTime:3000});
+ 	</script>
+</body>
+</html>

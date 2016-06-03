@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/common.css">
+	<title>文章页面</title>
+</head>
+<body>
+  	<header>
+		<div class="middleshow">
+			<h1>
+				<a class="logo fl" href="" title="web前端-web前端妹子博客"></a>
+			</h1>
+			<nav>
+				<ul>
+					<li><a>首页</a></li>
+					<li><a>模板分享</a></li>
+					<li><a>前段技术</a></li>
+					<li><a>生活创作</a></li>
+				</ul>
+			</nav>
+			<div class="search-form fr">
+				<div id="search" class="search_box">
+					<form role="search" method="get" id="searchform" action="">
+						<label for="s" class="hide-clip"></label>
+						<input type="text" name="s" id="s" value="" />
+					</form>
+				</div>
+			</div>
+		</div>
+ 	</header>
+	<div class="cotainer fl">
+		<div class="middleshow">
+			<div class="wf100">
+				<article class="shownews">
+					<div class="showtit"><span class="location"></span>当前位置：首页>郑州百易</div>
+			   	    <section class="articleContainer">
+						<h2>郑州百易科技有限公司</h2>
+						<p class="datetime">发布时间：2016-04-16  编辑：lulu</p>
+						<div class="wf100">
+							<div class="articleContent">
+								<p>郑州百易科技有限公司的官方网站欢迎你的访问，具体的网站咨询你可以在老版的网站中查看。
+									我们会尽快将新的网站的内容给发上去，为你访问新的网站提供更加快捷方便的方式。
+								</p>
+							</div>
+						</div>
+			   	    </section>
+			   	    <div class="wf100">
+						<div class="fl next">上一篇：<a>郑州百易科技有限公司的官方网站欢迎你的访问</a></div>
+						<div class="fr prev">下一篇：<a>郑州百易科技有限公司的官方网站欢迎你的访问</a></div>
+					</div>
+					<div class="wf100">
+						<p class="showtit">相关文章</p>
+						<ul class="aboutArticle">
+							<li><a><span>郑州百易科技网站<span><label class="time fr">2016-04-16</label></a></li>
+				    		<li><a><span>郑州百易科技网站<span><label class="time fr">2016-04-16</label></a></li>
+				    		<li><a><span>郑州百易科技网站<span><label class="time fr">2016-04-16</label></a></li>
+				    		<li><a><span>郑州百易科技网站<span><label class="time fr">2016-04-16</label></a></li>
+				    		<li><a><span>郑州百易科技网站<span><label class="time fr">2016-04-16</label></a></li>
+				    		<li><a><span>郑州百易科技网站<span><label class="time fr">2016-04-16</label></a></li>
+						</ul>
+					</div>
+			    </article>
+			    <aside>
+			    	<div class="hotclick">
+			    		<p class="showtit">模板排行</p>
+				    	<ul>
+				    		<li><a href=""><label class="num01">1</label><span>郑州百易的网站</span></a></li>
+				    		<li><a href=""><label class="num02">2</label><span>郑州百易的网站</span></a></li>
+				    		<li><a href=""><label class="num03">3</label><span>郑州百易的网站</span></a></li>
+				    		<li><a href=""><label class="num03">4</label><span>郑州百易的网站</span></a></li>
+				    		<li><a href=""><label class="num03">5</label><span>郑州百易的网站</span></a></li>
+				    	</ul>
+			    	</div>
+			    	<div class="hotclick">
+			    		<p class="showtit">最新文章</p>
+				    	<ul>
+				    		<li><a>郑州百易科技网站</a></li>
+				    		<li><a>郑州百易科技网站</a></li>
+				    		<li><a>郑州百易科技网站</a></li>
+				    		<li><a>郑州百易科技网站</a></li>
+				    		<li><a>郑州百易科技网站</a></li>
+				    		<li><a>郑州百易科技网站</a></li>
+				    	</ul>
+			    	</div>
+			    	<div class="hotclick">
+			    		<p class="showtit">关注方式</p>
+			    		<p class="showewm"><img src="images/isux_weixin.png" /></p>
+			    	</div>
+			    </aside>
+			</div>
+			
+		</div>
+	</div>
+
+    <footer>
+    	<div class="middleshow">
+			<p>腾讯设计团队：IMWebCDCGDCMXDTGideasAlloyTeam</p>
+			<p>Copyright © 1998-2016 Tencent. All Rights Reserved Home | Contact | Jobs</p>
+    	</div>
+    </footer>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquerysuperslide.js"></script>
+    <script type="text/javascript">
+		$(function(){
+			jQuery('#search input').focus(function(){jQuery('#search').addClass('search_box_focus')});
+			jQuery('#search input').blur(function(){jQuery('#search').removeClass('search_box_focus')});
+		});
+ 	</script>
+</body>
+</html>
