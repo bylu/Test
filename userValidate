@@ -1,0 +1,198 @@
+//字符验证      
+
+jQuery.validator.addMethod("stringCheck", function(value, element) {       
+    return this.optional(element) || /^[\u0391-\uFFE5\w]+$/.test(value);       
+}, "只能包括中文字、英文字母、数字和下划线");   
+  
+//中文字两个字节       
+jQuery.validator.addMethod("byteRangeLength", function(value, element, param) {       
+    var length = value.length;       
+    for(var i = 0; i < value.length; i++){       
+        if(value.charCodeAt(i) > 127){       
+        length++;       
+        }       
+    }       
+    return this.optional(element) || ( length >= param[0] && length <= param[1] );       
+}, "请确保输入的值在3-15个字节之间(一个中文字算2个字节)");   
+  
+//身份证号码验证       
+jQuery.validator.addMethod("isIdCardNo", function(value, element) {       
+    return this.optional(element) || isIdCardNo(value);       
+}, "请正确输入您的身份证号码");
+     
+//手机号码验证       
+jQuery.validator.addMethod("isMobile", function(value, element) {       
+    var length = value.length;   
+    var mobile = /^(((13[0-9]{1})|(15[0-9]{1}))+\d{8})$/;   
+    return this.optional(element) || (length == 11 && mobile.test(value));       
+}, "请正确填写您的手机号码");       
+     
+//电话号码验证       
+jQuery.validator.addMethod("isTel", function(value, element) {       
+    var tel = /^\d{3,4}-?\d{7,9}$/;    //电话号码格式010-12345678   
+    return this.optional(element) || (tel.test(value));       
+}, "请正确填写您的电话号码");   
+  
+//联系电话(手机/电话皆可)验证   
+jQuery.validator.addMethod("isPhone", function(value,element) {   
+    var length = value.length;   
+    var mobile = /^(((13[0-9]{1})|(15[0-9]{1}))+\d{8})$/;   
+    var tel = /^\d{3,4}-?\d{7,9}$/;   
+    return this.optional(element) || (tel.test(value) || mobile.test(value));   
+  
+}, "请正确填写您的联系电话");   
+     
+//邮政编码验证       
+jQuery.validator.addMethod("isZipCode", function(value, element) {       
+    var tel = /^[0-9]{6}$/;       
+    return this.optional(element) || (tel.test(value));      
+
+}, "请正确填写您的邮政编码");  
+
+ 
+
+initValidatorjs (异步验证用户名，手机号码，验证码，扩展验证)
+
+/**
+ * @author Administrator
+ */
+function initValidator(base){
+    //异步验证用户名
+    jQuery.validator.addMethod("checkUserName", function(value, element){
+        var result = false;
+        // 设置同步
+        $.ajaxSetup({
+            async: false
+        });
+        var param = {
+            userName: value
+        };
+        $.post(base + "/checkUserName.do", param, function(data){
+            result = (1 == data);
+        });
+        // 恢复异步
+        $.ajaxSetup({
+            async: true
+        });
+        return result;
+    }, "用户名已经存在");
+    
+    //异步验证手机号码
+    jQuery.validator.addMethod("checkSms", function(value, element){
+        var result = false;
+        // 设置同步
+        $.ajaxSetup({
+            async: false
+        });
+        var param = {
+            sms: value
+        };
+        $.post(base + "/checkSms.do", param, function(data){
+            result = (0 == data);
+            
+        });
+        // 恢复异步
+        $.ajaxSetup({
+            async: true
+        });
+        return result;
+    }, "手机号码已经存在");
+    
+    //异步验证验证码
+    jQuery.validator.addMethod("checkCode", function(value, element){
+        var result = false;
+        // 设置同步
+        $.ajaxSetup({
+            async: false
+        });
+        var param = {
+            userCode: value
+        };
+        $.post(base + "/checkCode.do", param, function(data){
+            result = (1 == data);
+            
+        });
+        // 恢复异步
+        $.ajaxSetup({
+            async: true
+        });
+        return result;
+    }, "验证码不正确");
+    
+    
+    $("#thisFrom").validate({
+        //设置验证规则   
+        rules: {
+            "userName": {
+                required: true,
+                userNameCheck: true,
+                checkUserName: true
+            },
+            "passWord": {
+                required: true,
+                rangelength: [6, 12]
+            },
+            "passWordAgain": {
+                required: true,
+                rangelength: [6, 12],
+                equalTo: "#passWord"
+            },
+            "corpName": {
+                required: true
+            },
+            "products": {
+                required: true
+            },
+            "name": {
+                required: true
+            },
+            "sms": {
+                required: true,
+                isMobile: true,
+                checkSms: true
+            },
+            "userCode": {
+                required: true,
+                checkCode:true
+            }
+        },
+        //设置错误信息  
+        messages: {
+            "userName": {
+                required: "请输入用户名",
+                userNameCheck: "请输入4-20位字母开头的字母或数字和下划线",
+                checkUserName: "用户名已经存在"
+            },
+            "passWord": {
+                required: "请输入密码",
+                rangelength: "密码长度为6-12位"
+            },
+            "passWordAgain": {
+                required: "请再次输入密码",
+                rangelength: "密码长度为6-12位",
+                equalTo: "两次输入密码不相同"
+            },
+            "corpName": {
+                required: "请输入公司名称"
+            },
+            "name": {
+                required: "请输入联系人"
+            },
+            "products": {
+                required: "请输入主营产品"
+            },
+            "sms": {
+                required: "请输入手机号码",
+                isMobile: "请输入有效的手机号码",
+                checkSms: "手机号码已经存在"
+            },
+            "userCode": {
+                required: "请输入验证码",
+                checkCode:"验证码不正确"
+            }
+        },
+        errorPlacement: function(error, element){
+            error.appendTo(element.parent("td").next("td"));
+        }
+    });
+}

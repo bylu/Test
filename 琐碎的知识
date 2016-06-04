@@ -1,0 +1,163 @@
+628
+669
+印度的女儿 盲山   韩公主 告密者 素媛 金福南杀人事件始末
+
+
+wordpress  new 
+ 用户名： weblulu
+ 密码：baiyikeji2841
+
+急事，慢慢地说；
+大事，清楚地说；
+小事，幽默地说；
+没把握的事，谨慎地说；
+没发生的事，不要胡说；
+做不到的事，别乱说。
+
+https://www.douban.com/note/320525780/
+http://www.cnblogs.com/lancee/archive/2011/11/16/2251439.html
+http://cnzhx.net/blog/wordpress-default-theme-page-template/
+
+上running  man
+
+wordpress 模板至少包含的东西
+  样式表：   style.css 
+  主页模板： index.php
+  category模板： archive.php
+  错误模板：     404.php
+  留言回复模板  comments.php
+  footer模板：   footer.php
+  header模板：  header.php
+  sidebar模板： 侧栏模板
+  page.php  内容页（page）模板
+  single.php 内容页（post）模板
+
+  searchforn.php  搜索表单模板
+
+  search.php  搜索结果模板
+
+
+张鑫旭的博客站：很有意义
+  http://www.zhangxinxu.com/life/2016/02/ted-the-plane-couldnt-play-the-piano/
+
+
+前端额面试题 ：
+
+  http://www.jianshu.com/p/10a7959033f8
+
+可以在CSs中写input:focus事件   
+div.row:nth-child(9) input:focus + span,
+div.row:nth-child(9) input:active + span {
+  padding: 3px 10px;
+  border-radius: 6px;
+  transform: translateY(-150%);
+}
+div.row:nth-child(9) input:focus + span:before,
+div.row:nth-child(9) input:active + span:before {
+  opacity: 1;
+}
+div.row:nth-child(10) input {
+  border-width: 1px 0;
+  border-radius: 0;
+}
+div.row:nth-child(10) input + span {
+  background: transparent;
+}
+div.row:nth-child(10) input:focus,
+div.row:nth-child(10) input:active {
+  border-width: 2px 0;
+  border-color: #000;
+}
+div.row:nth-child(10) input:focus + span,
+div.row:nth-child(10) input:active + span {
+  background: transparent;
+  transform: translateY(-120%);
+}
+div.row:nth-child(11) input {
+  border-radius: 0;
+  border-width: 1px 0;
+}
+div.row:nth-child(11) input + span {
+  background: transparent;
+}
+div.row:nth-child(11) input:focus + span,
+div.row:nth-child(11) input:active + span {
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 0;
+  border-width: 0 0 0 1px;
+  animation: halfLeft .6s ease-in;
+  animation-fill-mode: forwards;
+}
+
+
+ebkit-box
+
+1、之前要实现横列的web布局，通常就是float或者display：inline-block; 但是都不能做到真正的流体布局。至少width要自己去算百分比。
+2.flexible box 就可以实现真正意义上的流体布局。只要给出相应属性，浏览器会帮我们做额外的计算。
+
+提供的关于盒模型的几个属性：
+
+box-orient           子元素排列 vertical or horizontal
+box-flex             兄弟元素之间比例，仅作一个系数
+box-align            box 排列
+box-direction        box 方向
+box-flex-group       以组为单位的流体系数
+box-lines
+box-ordinal-group    以组为单位的子元素排列方向
+
+
+
+
+/*林允儿 http://kwcdn.000dn.com/swfs/67/31003yersyij/index.swf*/
+
+
+首页   模板分享   前段技术   生活创作
+web前端妹子一枚
+  用户名：baiyikejilu
+
+  密码：Aj5AqozGSH65tp(xnq
+
+wordprss.com  一个注册
+e-mail address  2643107334@qq.com 
+  username: webbaiyi
+  password: baiyikeji
+
+
+
+河南一高龄老农历经十载写村史
+李景芳
+李景芳
+豫西南方城县赵河镇平高台村八十四岁老农李景芳，历经十载，撰写成了本村村史《平高台村史》。目前，这部村史已被该县有关部门收存。
+　　李景芳一九一九年出生，年幼读过私塾，自幼勤奋好学，酷爱史书和写作。一九九四年春，开始运用农闲时间写作本村村史。他采取走访、座谈、查阅资料等形式，用第一人称形式记录平高台村的历史状况。去年以来，对近十年写作资料进行整理、修改，连缀成篇。今年九月初，一部具体细微的《平高台村史》编撰完毕，与世人见面。
+　　该村史共五点五万字，主要记录一九一一至一九四九年间平高台村的历史演变和风土民情。系统翔实地记载了平高台村的来历、发展及演变、村民姓氏变迁、出土的古文物、驻军、匪患以及庙会、剪发、放足、筑路、温疫等自然灾害、编查保甲户口、成立联防队等一系列社会状况。尤其详细记载了村民抗日、庆贺抗战胜利的状况。
+　　据有关专家讲，该村史揭示了旧中国豫南一个行政村数十年的动荡和辛酸，对研究二十世纪上半叶中国豫南行政村的演变、民族风情、自然灾害等具有重要参考价值。
+
+
+性格 懒
+
+爱好 吃
+
+兴趣 玩
+
+专业技能  睡
+
+外语水平  得看中文字幕
+
+政治面貌 难看
+
+参与群体：外貌协会
+
+常用交通工具 购物车
+
+对象：手机
+
+赵寅成： 霜花店  假如爱有天意  那年冬天风在吹   没关系，爱情吧  
+
+
+从不羡慕别人的优秀，因为相信自己也可以优秀。
+闲下来时看看书，书本里的故事，总有你学到的人生。
+
+毕竟不是作家，写不出那么好的文章。--因为没有丰富阅历和经验！
+
+也许每一个男子全都有过这样的两个女人，至少两个。娶了红玫瑰，久而久之，红的变了墙上的一抹蚊子血，白的还是“床前明月光”； 娶了白玫瑰，白的便是衣服上的一粒饭粘子，红的却是心口上的一颗朱砂痣。 ——《红玫瑰与白玫瑰》

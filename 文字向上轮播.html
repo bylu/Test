@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sliding Menu Effect</title>
+
+<script type="text/javascript" language="javascript" src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="myslideup.js"></script>
+/*myslideup 文件
+// JavaScript Document
+(function($){
+  $.fn.extend({
+    "slideUp":function(value){
+      
+      var docthis = this;
+      //榛樿鍙傛暟
+      value=$.extend({
+         "li_h":"30",
+         "time":2000,
+         "movetime":1000
+      },value)
+      
+      //鍚戜笂婊戝姩鍔ㄧ敾
+      function autoani(){
+        $("li:first",docthis).animate({"margin-top":-value.li_h},value.movetime,function(){
+          $(this).css("margin-top",0).appendTo(".line");
+        })
+      }
+      
+      //鑷姩闂撮殧鏃堕棿鍚戜笂婊戝姩
+      var anifun = setInterval(autoani,value.time);
+      
+      //鎮仠鏃跺仠姝㈡粦鍔紝绂诲紑鏃剁户缁墽琛�
+      $(docthis).children("li").hover(function(){
+        clearInterval(anifun);      //娓呴櫎鑷姩婊戝姩鍔ㄧ敾
+      },function(){
+        anifun = setInterval(autoani,value.time); //缁х画鎵ц鍔ㄧ敾
+      })
+    } 
+  })
+})(jQuery)
+
+ */
+
+<script type="text/javascript">
+$(function(){
+	$(".line").slideUp();	
+})
+</script>
+<style>
+  * {margin:0; padding:0}
+body {font:14px Helvetica, sans-serif; font-weight:bold; background:#FFF}
+ul.line{
+  width: 500px;
+  height: 30px;
+  background-color: #F8F8F8;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 2px solid #363636;
+  margin-top: 100px;
+  margin-left: 100px;
+} 
+ul.line li{height:30px;text-indent:15px; font-size:12px; line-height:30px;list-style:none} 
+
+</style>
+</head>
+<body>
+  <ul class="line">
+    <li style="margin-top: 0px; "><a title="getElementsByTagName的简写方式" href="#">getElementsByTagName的简写方式</a> 2010年06月24日 (4)</li>
+    <li style="margin-top: 0px; "><a title="一个简单的鼠标划过切换效果" href="#">一个简单的鼠标划过切换效果</a> 2010年05月23日 (4)</li>
+    <li style="margin-top: 0px; "><a title="奇或偶数行高亮显示及鼠标划过高亮显示类" href="#">奇或偶数行高亮显示及鼠标划过高亮显示类</a> 2010年05月05日 (5)</li>
+    <li style="margin-top: 0px; "><a title="一个简单的纵横向动画效果类" href="#">一个简单的纵横向动画效果类</a> 2010年05月02日 (4)</li>
+    <li style="margin-top: 0px; "><a title="document.getElementById的简写方式" href="#">document.getElementById的简写方式</a> 2010年04月18日 (1)</li>
+    <li style="margin-top: 0px; "><a title="两种简单实现菜单高亮显示的JS类" href="#">两种简单实现菜单高亮显示的JS类</a> 2010年04月17日 (10)</li>
+    <li style="margin-top: 0px; "><a title="简易的点击展开/关闭效果(原生JS版和JQ版)" href="#">简易的点击展开/关闭效果(原生JS版和JQ版)</a> 2010年08月02日 (6)</li>
+  </ul>
+</body>
+</html>

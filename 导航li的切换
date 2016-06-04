@@ -1,0 +1,10 @@
+$(document).ready(function(){
+	$(".pgwMenuCustom li").hover(function(){
+		$(this).find("ul").slideDown("slow");	
+	},function(){
+		$(this).find("ul").slideUp("fast");	
+	});
+});
+
+
+
